@@ -17,7 +17,7 @@
     align-items: center;
     background-image: linear-gradient(to right, #1d1c21, #2196F3);
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     padding-right: 3%;
     padding-left: 3%;
