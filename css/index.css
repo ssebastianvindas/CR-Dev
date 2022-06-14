@@ -15,7 +15,12 @@
     }
     
     #sct-banner .info-banner {
-        color: #fff;
+        align-items: top left;
+        color: #000;
+        display: flex;
+        font-size: 50px;
+        height: 600px;
+        justify-content: left;
     }
     
     .footer {
