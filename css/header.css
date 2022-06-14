@@ -15,7 +15,7 @@ body {
 
 .header-principal nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 40%;
 }
@@ -34,8 +34,8 @@ body {
 }
 
 .header-principal .logo img {
-    width: 100%;
-    height: 100px;
+    width: 80%;
+    height: 80%;
 }
 
 .btn-celeste {
