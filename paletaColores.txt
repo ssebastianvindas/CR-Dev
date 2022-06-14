@@ -1,6 +1,7 @@
 Paleta de colores pagina CR-DEV
 Venice Blue:#07528b
-
+Negro:#000
+Blanco:#fff
 
 
 
