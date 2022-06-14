@@ -55,6 +55,8 @@
     }
     
     p {
-        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: justify;
         text-size-adjust: 12px;
     }
