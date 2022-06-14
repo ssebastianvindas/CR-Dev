@@ -1,0 +1,10 @@
+#banner-contrato {
+    background-image: url('../images/contrato.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: center;
+    padding-left: 3%;
+}
