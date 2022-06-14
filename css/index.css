@@ -14,7 +14,7 @@
 }
 
 .btn-celeste {
-    background-color: #3abab4;
+    background-color: #07528b;
     border-radius: 5px;
     display: flex;
     height: 40px;
@@ -24,9 +24,9 @@
 }
 
 .header-principal .btn-celeste {
-    color: #1c1d21;
+    color: #fff;
 }
 
 .header-principal .btn-celeste:hover {
-    color: #fff;
+    color: #000;
 }
