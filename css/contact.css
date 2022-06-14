@@ -1,7 +1,10 @@
 #sct-contact {
-    display: inline-block;
-    background-color: black;
-    padding: 20px;
+    display: inline-table;
+    padding: 40px;
+    width: max-content;
+    height: max-content;
+    justify-content: space-evenly;
+    left: 2000px;
 }
 
 .input-email {
@@ -11,5 +14,8 @@
 #sct-contact .input {
     padding: 10px;
     border-radius: 5px;
-    background-color: aqua;
+}
+
+#sct-contact .input-email {
+    position: relative;
 }
