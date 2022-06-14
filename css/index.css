@@ -48,7 +48,7 @@
     color: #000;
 }
 
-.Sct-titulo {
+.sct-acerca .sct-titulo {
     display: flex;
     justify-content: center;
     font-size: 40px;
