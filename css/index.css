@@ -13,35 +13,20 @@
     padding-left: 3%;
 }
 
-#sct-banner .info-banner {
-    color: #000;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 60px;
-    margin-bottom: 20px;
-    padding: 20px 2%;
-    text-shadow: #f4f4f4 0px 0px 5px, #f4f4f4 0px 0px 10px, #f4f4f4 0px 0px 15px, #3abab4 0px 0px 20px, #3abab4 0px 0px 30px, #3abab4 0px 0px 40px, #3abab4 0px 0px 50px, #3abab4 0px 0px 75px;
-    width: 52%;
-}
-
-#sct-banner .info-banner p:nth-child(2) {
-    font-size: 95px;
-    font-weight: bold;
-}
-
-#sct-banner #txt-correo {
-    color: #378fa8;
-    opacity: 50%;
+.btn-celeste {
+    background-color: #3abab4;
+    border-radius: 5px;
+    display: flex;
     height: 40px;
-    width: 250px;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
 }
 
-#sct-banner .btn-celeste {
-    color: #000;
-    border: 0;
-    display: inline-block;
-    height: 40px;
+.header-principal .btn-celeste {
+    color: #1c1d21;
 }
 
-#sct-banner .btn-celeste:hover {
+.header-principal .btn-celeste:hover {
     color: #fff;
 }
