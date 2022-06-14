@@ -159,7 +159,7 @@
     
     .container {
         display: grid;
-        place-items: center;
+        place-items: top;
         text-align: center;
         height: 100vh
     }
@@ -167,6 +167,6 @@
     .title {
         font-family: "Montserrat", sans-serif;
         font-weight: 800;
-        font-size: 8.5vw;
+        font-size: 4.5vw;
         text-transform: uppercase;
     }
