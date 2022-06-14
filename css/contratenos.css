@@ -43,3 +43,7 @@
 .footer .btn-celeste:hover {
     color: #000;
 }
+
+ul {
+    list-style-type: circle;
+}
