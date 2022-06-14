@@ -15,9 +15,9 @@ body {
 
 .header-principal nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-    width: 40%;
+    width: 100%;
 }
 
 .header-principal a {
