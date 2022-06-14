@@ -45,19 +45,3 @@
 #sct-banner .btn-celeste:hover {
     color: #fff;
 }
-
-@media only screen and (max-width: 1000px) {
-    #sct-banner .info-banner {
-        color: #000;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-        font-size: 30px;
-        margin-bottom: 20px;
-        padding: 20px 2%;
-        text-shadow: #f4f4f4 0px 0px 5px, #f4f4f4 0px 0px 10px, #f4f4f4 0px 0px 15px, #3abab4 0px 0px 20px, #3abab4 0px 0px 30px, #3abab4 0px 0px 40px, #3abab4 0px 0px 50px, #3abab4 0px 0px 75px;
-        width: 52%;
-    }
-    #sct-banner .info-banner p:nth-child(2) {
-        font-size: 50px;
-        font-weight: bold;
-    }
-}
