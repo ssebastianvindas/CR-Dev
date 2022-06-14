@@ -13,7 +13,7 @@
     padding-left: 3%;
 }
 
-.btn-celeste {
+.footer .btn-celeste {
     background-color: #07528b;
     border-radius: 5px;
     display: flex;
@@ -23,10 +23,10 @@
     align-items: center;
 }
 
-.header-principal .btn-celeste {
+.footer .btn-celeste {
     color: #fff;
 }
 
-.header-principal .btn-celeste:hover {
+.footer .btn-celeste:hover {
     color: #000;
 }
