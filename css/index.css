@@ -49,6 +49,10 @@
         color: #000;
     }
     
+    .footer .acerca:hover {
+        color: #000;
+    }
+    
     h2 {
         display: flex;
         justify-content: center;
