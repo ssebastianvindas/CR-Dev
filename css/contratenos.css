@@ -8,3 +8,38 @@
     justify-content: center;
     padding-left: 3%;
 }
+
+.footer {
+    align-items: center;
+    background-image: linear-gradient(to right, #1d1c21, #2196F3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3%;
+    padding-left: 3%;
+    height: 80px;
+    text-decoration: none;
+}
+
+.footer .acerca {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .btn-celeste {
+    background-color: #07528b;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .btn-celeste {
+    color: #fff;
+}
+
+.footer .btn-celeste:hover {
+    color: #000;
+}
