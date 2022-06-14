@@ -3,24 +3,16 @@
     }
      */
     
-    #sct-banner {
-        background-image: url('../images/bannerinicial.jpg');
-        background-size: cover;
-        background-position: center;
+    .boton {
         display: flex;
-        flex-direction: column;
-        height: 600px;
-        justify-content: center;
-        padding-left: 3%;
+        justify-content: right;
+        align-items: right;
+        padding-right: 10%;
+        padding-bottom: 5%;
     }
     
-    #sct-banner .info-banner {
-        align-items: top left;
+    .boton .btn-celeste:hover {
         color: #000;
-        display: flex;
-        font-size: 50px;
-        height: 600px;
-        justify-content: left;
     }
     
     .footer {
@@ -96,6 +88,26 @@
         padding-right: 10%;
         text-align: justify;
         text-size-adjust: 12px;
+    }
+    
+    #sct-banner {
+        background-image: url('../images/bannerinicial.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        justify-content: center;
+        padding-left: 3%;
+    }
+    
+    #sct-banner .info-banner {
+        align-items: top left;
+        color: #000;
+        display: flex;
+        font-size: 50px;
+        height: 600px;
+        justify-content: left;
     }
     
     ul {
