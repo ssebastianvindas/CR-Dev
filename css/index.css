@@ -13,6 +13,17 @@
     padding-left: 3%;
 }
 
+.footer {
+    align-items: center;
+    background-image: linear-gradient(to right, #1d1c21, #2196F3);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 3%;
+    padding-left: 3%;
+    height: 80px;
+}
+
 .footer .btn-celeste {
     background-color: #07528b;
     border-radius: 5px;
