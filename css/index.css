@@ -53,3 +53,8 @@
         justify-content: center;
         font-size: 40px;
     }
+    
+    p {
+        text-align: center;
+        text-size-adjust: 12px;
+    }
