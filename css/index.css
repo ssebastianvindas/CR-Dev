@@ -9,6 +9,8 @@
         align-items: right;
         padding-right: 10%;
         padding-bottom: 5%;
+        background-color: #07528b;
+        opacity: 75%;
     }
     
     .boton .btn-celeste:hover {
