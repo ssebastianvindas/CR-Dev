@@ -9,8 +9,12 @@
         align-items: right;
         padding-right: 10%;
         padding-bottom: 5%;
+    }
+    
+    .boton .btn-celeste {
         background-color: #07528b;
         opacity: 75%;
+        color: #fff;
     }
     
     .boton .btn-celeste:hover {
@@ -74,6 +78,14 @@
     li {
         line-height: 40px;
         margin-bottom: 10px;
+    }
+    
+    .nosotros {
+        border: 2px solid #07528b;
+        border-radius: 5px;
+        background-color: #07528b;
+        color: #fff;
+        margin: 10%;
     }
     
     p {
