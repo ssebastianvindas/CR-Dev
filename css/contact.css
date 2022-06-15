@@ -1,10 +1,18 @@
 #sct-contact {
     display: inline-table;
     padding: 40px;
-    width: max-content;
+    width: 500px;
     height: max-content;
     justify-content: space-evenly;
-    left: 2000px;
+    position: relative;
+}
+
+#sct-contact #name,
+#sct-contact #group,
+#sct-contact #service,
+#sct-contact #email,
+#sct-contact #phone {
+    outline-color: #07528b;
 }
 
 .input-email {
@@ -14,8 +22,64 @@
 #sct-contact .input {
     padding: 10px;
     border-radius: 5px;
+    outline-color: #07528b;
+}
+
+#sct-contact .input-name {
+    position: relative;
+}
+
+#sct-contact #name,
+#sct-contact #group,
+#sct-contact #service {
+    position: relative;
+    width: 490px;
+}
+
+#sct-contact #group {
+    position: relative;
+    top: 10px;
+}
+
+#sct-contact #service {
+    position: relative;
+    top: 20px;
 }
 
 #sct-contact .input-email {
     position: relative;
+    top: 39px;
+}
+
+#sct-contact #email {
+    width: 270px;
+}
+
+#sct-contact .input-phone {
+    position: relative;
+    top: 0px;
+    left: 272px;
+}
+
+#sct-contact #phone {
+    position: relative;
+    left: 20px;
+    width: 198px;
+}
+
+#sct-contact #submit {
+    width: 100px;
+    position: relative;
+    top: 5px;
+    left: 390px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: yellowgreen;
+    cursor: pointer;
+    border-color: yellowgreen;
+}
+
+#sct-contact #submit:hover {
+    transition: 0.3s;
+    background-color: #fff;
 }
