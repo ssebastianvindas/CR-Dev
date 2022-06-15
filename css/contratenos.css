@@ -44,6 +44,10 @@
     color: #000;
 }
 
+#formulario .container {
+    display: block;
+}
+
 ul {
     list-style-type: circle;
 }
