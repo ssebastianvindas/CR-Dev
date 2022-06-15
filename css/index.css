@@ -75,6 +75,11 @@
         font-size: 5px;
     }
     
+    .img-acerca {
+        height: 100px;
+        width: 100%;
+    }
+    
     li {
         line-height: 40px;
         margin-bottom: 10px;
