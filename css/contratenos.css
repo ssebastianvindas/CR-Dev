@@ -4,9 +4,10 @@
     background-position: center;
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 700px;
     justify-content: center;
     padding-left: 3%;
+    opacity: 0.7;
 }
 
 .footer {
@@ -50,4 +51,8 @@
 
 ul {
     list-style-type: circle;
+}
+
+.box {
+    outline-color: #000;
 }

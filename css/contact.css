@@ -5,6 +5,9 @@
     height: max-content;
     justify-content: space-evenly;
     position: relative;
+    left: 1080px;
+    top: -500px;
+    ;
 }
 
 #sct-contact #name,
@@ -58,20 +61,20 @@
 #sct-contact .input-phone {
     position: relative;
     top: 0px;
-    left: 272px;
+    left: 301px;
 }
 
 #sct-contact #phone {
     position: relative;
     left: 20px;
-    width: 198px;
+    width: 168px;
 }
 
 #sct-contact #submit {
     width: 100px;
     position: relative;
-    top: 5px;
-    left: 390px;
+    top: 20px;
+    left: 230px;
     padding: 5px;
     border-radius: 3px;
     background-color: yellowgreen;
