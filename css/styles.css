@@ -1,0 +1,18 @@
+.contenedor {
+    width: 90%;
+    height: 400px;
+    margin: 5px;
+    border: 1px solid gray;
+}
+
+.izquierda,
+.derecha {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    background-color: gray;
+    transform: translateY(-50);
+    line-height: 50px;
+    border-radius: 50%;
+}
