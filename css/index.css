@@ -63,14 +63,12 @@
     h2 {
         display: flex;
         justify-content: center;
-        font-family: quantum;
         font-size: 40px;
     }
     
     h3 {
         text-decoration: bold;
         font-size: 20px;
-        
     }
     
     h4 {
