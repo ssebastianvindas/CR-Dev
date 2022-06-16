@@ -7,7 +7,7 @@
 
 .izquierda,
 .derecha {
-    position: absolute;
+    position: bottom;
     top: 50%;
     width: 50%;
     height: 50%;
