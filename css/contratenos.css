@@ -53,22 +53,91 @@ ul {
     list-style-type: circle;
 }
 
+
+/* Configuracion del formulario */
+
 .box {
     display: flex;
     position: relative;
     background-color: rgb(7, 82, 139, 0.40);
     width: 400px;
-    height: 200px;
+    height: 220px;
     justify-content: center;
     top: -450px;
     padding: 30px;
     left: 650px;
+    border-radius: 10px;
 }
 
 #sct-contact {
-    display: flex;
+    display: flexbox;
     position: relative;
     width: auto;
     height: auto;
     justify-content: center;
+    padding: 5px;
+}
+
+#sct-contact #submit {
+    width: 100px;
+    position: relative;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: yellowgreen;
+    cursor: pointer;
+    border-color: yellowgreen;
+}
+
+#sct-contact #submit:hover {
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+#sct-contact #name:hover,
+#sct-contact #group:hover,
+#sct-contact #service:hover,
+#sct-contact #email:hover,
+#sct-contact #phone:hover {
+    transition: 0.4s;
+    color: #000;
+}
+
+#sct-contact #name,
+#sct-contact #group,
+#sct-contact #service,
+#sct-contact #email,
+#sct-contact #phone {
+    position: relative;
+    outline-color: #07528b;
+}
+
+#sct-contact .input {
+    padding: 10px;
+    border-radius: 5px;
+    outline-color: #07528b;
+}
+
+#sct-contact #name,
+#sct-contact #group,
+#sct-contact #service {
+    width: 390px;
+}
+
+#sct-contact #service {
+    top: 20px;
+}
+
+#sct-contact #group {
+    top: 10px;
+}
+
+#sct-contact #phone {
+    left: 240px;
+    width: 150px;
+    top: -09px;
+}
+
+#sct-contact #email {
+    top: 30px;
+    width: 190px;
 }
