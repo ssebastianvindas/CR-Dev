@@ -8,9 +8,9 @@
 .izquierda,
 .derecha {
     position: bottom;
-    top: 50%;
-    width: 50%;
-    height: 50%;
+    top: 10%;
+    width: 10%;
+    height: 10%;
     background-color: gray;
     transform: translateY(-50);
     line-height: 50px;
