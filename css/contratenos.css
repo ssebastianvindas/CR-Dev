@@ -1,3 +1,7 @@
+body {
+    max-height: 800px;
+}
+
 #banner-contrato {
     background-image: url('../images/contrato.jpg');
     background-size: cover;
