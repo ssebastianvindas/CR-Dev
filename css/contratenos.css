@@ -9,7 +9,7 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 100vh;
     width: auto;
     justify-content: center;
     padding-left: 3%;
@@ -68,7 +68,6 @@ ul {
     width: 400px;
     height: 220px;
     justify-content: center;
-    top: -450px;
     padding: 30px;
     left: 650px;
     border-radius: 10px;
