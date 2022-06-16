@@ -8,6 +8,7 @@
 
 
     <!-- 2. Archivo de css externos -->
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,
@@ -30,24 +31,39 @@ Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,30
             <a href="index.html">Hover</a>
         </nav>
     </header>
-    <section id="banner-contrato">
-
-    </section>
-    <section id="formulario">
-        <div class="container">
-            <input type="text" placeholder="Nombre Completo" name="nombre">
-            <input type="text" placeholder="Nombre de la Empresa" name="empresa">
-            <input type="telephone" placeholder="Telefono" name="telefono">
-            <input type="email" placeholder="Correo Electronico" name="email">
+    <div id="banner-contrato">
+        <div class="box">
+            <section id="sct-contact">
+                <div class="input-name">
+                    <input type="text" id="name" required class="input" placeholder="Nombre completo">
+                    <label for="name" class="input-label"></label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="group" required class="input" placeholder="Nombre de su empresa">
+                    <label for="group" class="input-group"></label>
+                </div>
+                <div class="input-service">
+                    <input type="text" id="service" required class="input" placeholder="Servicio a contratar">
+                    <label for="service" class="input-service"></label>
+                </div>
+                <div class="input-email">
+                    <input type="email" id="email" required class="input" placeholder="Correo electronico">
+                    <label for="email" class="input-email"></label>
+                </div>
+                <div class="input-phone">
+                    <input type="tel" id="phone" required class="input" placeholder="Telefono">
+                    <label for="phone" class="input-phone"></label>
+                </div>
+                <div class="submit-button">
+                    <input type="submit" id="submit" value="Enviar">
+                </div>
+            </section>
         </div>
-
-
-
-    </section>
+    </div>
     <footer class="footer">
 
     </footer>
-</body>
 
+</body>
 
 </html>
