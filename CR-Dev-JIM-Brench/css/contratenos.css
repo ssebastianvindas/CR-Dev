@@ -1,0 +1,143 @@
+
+#banner-contrato {
+    background-image: url('../images/contrato.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: auto;
+    justify-content: center;
+    padding-left: 3%;
+}
+
+.footer {
+    align-items: center;
+    background-image: linear-gradient(to right, #1d1c21, #2196F3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3%;
+    padding-left: 3%;
+    height: 80px;
+    text-decoration: none;
+}
+
+.footer .acerca {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .btn-celeste {
+    background-color: #07528b;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .btn-celeste {
+    color: #fff;
+}
+
+.footer .btn-celeste:hover {
+    color: #000;
+}
+
+#formulario .container {
+    display: block;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+
+/* Configuracion del formulario */
+
+.box {
+    display: flex;
+    position: relative;
+    background-color: rgba(8, 83, 140, 0.4);
+    width: 500px;
+    height: 290px;
+    justify-content: center;
+    padding: 30px;
+    left: 650px;
+    border-radius: 10px;
+}
+
+#sct-contact {
+    display: flexbox;
+    position: relative;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    padding: 5px;
+}
+
+#sct-contact #submit {
+    width: 100px;
+    position: relative;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: yellowgreen;
+    cursor: pointer;
+    border-color: yellowgreen;
+}
+
+#sct-contact #submit:hover {
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+#sct-contact #name:hover,
+#sct-contact #group:hover,
+#sct-contact #service:hover,
+#sct-contact #email:hover,
+#sct-contact #phone:hover {
+    transition: 0.4s;
+    color: #000;
+}
+
+#sct-contact #name,
+#sct-contact #group,
+#sct-contact #service,
+#sct-contact #email,
+#sct-contact #phone {
+    position: relative;
+    outline-color: #07528b;
+}
+
+#sct-contact .input {
+    padding: 10px;
+    border-radius: 5px;
+    outline-color: #07528b;
+}
+
+#sct-contact #name,
+#sct-contact #group,
+#sct-contact #service {
+    width: 390px;
+}
+
+#sct-contact #service {
+    top: 20px;
+}
+
+#sct-contact #group {
+    top: 10px;
+}
+
+#sct-contact #phone {
+    left: 240px;
+    width: 150px;
+    top: -09px;
+}
+
+#sct-contact #email {
+    top: 30px;
+    width: 190px;
+}
