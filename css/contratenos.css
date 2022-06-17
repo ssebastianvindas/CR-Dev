@@ -65,8 +65,13 @@ ul {
     display: flex;
     position: relative;
     background-color: rgb(7, 82, 139, 0.40);
+<<<<<<< HEAD
     width: 400px;
     height: 220px;
+=======
+    width: 500px;
+    height: 290px;
+>>>>>>> guillermobranch
     justify-content: center;
     padding: 30px;
     left: 650px;

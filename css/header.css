@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -5,11 +9,10 @@ body {
 .header-principal {
     align-items: center;
     background-image: linear-gradient(to right, #1d1c21, #2196F3);
-    /* background-color: #1d1c21; */
     display: flex;
     justify-content: space-between;
     padding-right: 3%;
-    padding-left: 3%;
+    padding-left: 2%;
     height: 80px;
 }
 
