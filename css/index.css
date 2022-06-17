@@ -123,6 +123,12 @@ button:focus::after {
       opacity: 0;
   }
 }
+#sct-acerca{
+  background-color: #00000005;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #sct-acerca .ac-nosotros{
   font-size: 60px;
   text-shadow: 1px 1px 3px rgba(0, 140, 255, 0.562);
@@ -160,8 +166,8 @@ button:focus::after {
   border-radius: 5px;
   background-color: #07528b;
   color: #fff;
-  margin: 0 auto;
   width: 1200px;
+  margin-bottom: 45px;
 }
 
 #sct-acerca .nosotros p {
