@@ -28,6 +28,7 @@ body {
     color: #fff;
     font-size: 35px;
     font-family: azonix;
+    user-select: none;
 
 
 }
