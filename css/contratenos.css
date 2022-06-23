@@ -1,4 +1,3 @@
-
 #banner-contrato {
     background-image: url('../images/contrato.jpg');
     background-size: cover;
@@ -78,7 +77,7 @@ ul {
     padding: 5px;
 }
 
-#sct-contact #submit {
+#sct-contact .submit-button {
     width: 100px;
     position: relative;
     padding: 5px;
@@ -86,6 +85,33 @@ ul {
     background-color: yellowgreen;
     cursor: pointer;
     border-color: yellowgreen;
+}
+
+#sct-contact .button * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+#sct-contact .icon {
+    opacity: 0;
+}
+
+#sct-contact .button:focus {
+    width: 30px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+}
+
+#sct-contact .button:focus .text {
+    opacity: 0;
+}
+
+#sct-contact:focus .icon {
+    opacity: 1;
+    transition-delay: .5s;
 }
 
 #sct-contact #submit:hover {
