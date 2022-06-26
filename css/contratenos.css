@@ -1,4 +1,3 @@
-
 .banner-contrato {
     background-image: url('../images/contrato.jpg');
     background-size: cover;
@@ -47,7 +46,6 @@
 }
 
 
-
 /* Configuracion del formulario */
 
 .box {
@@ -64,20 +62,6 @@
     width: 100%;
     height: 100vh;
     justify-content: center;
-}
-
-#sct-contact #submit {
-    width: 100px;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: yellowgreen;
-    cursor: pointer;
-    border-color: yellowgreen;
-}
-
-#sct-contact #submit:hover {
-    transition: 0.3s;
-    background-color: #fff;
 }
 
 #sct-contact #name:hover,
@@ -127,4 +111,58 @@
 #sct-contact #email {
     top: 30px;
     width: 190px;
+}
+
+#sct-contact .submit-button {
+    position: relative;
+    width: 90px;
+    height: 40px;
+    font-size: 15px;
+    background-color: yellowgreen;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: width .5s;
+    border-radius: .5s;
+}
+
+#sct-contact .submit-button * {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+#sct-contact .icon {
+    opacity: 0;
+}
+
+#sct-contact .submit-button:focus {
+    width: 50px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    background-image: url("../images/check-fill.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sct-contact .submit-button:focus .text {
+    opacity: 0;
+}
+
+#sct-contact .submit-button:focus .icon {
+    opacity: 1;
+    transition-delay: .5s;
+}
+
+#sct-contact .info {
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(8, 83, 140, 0.4);
+    border-radius: 5px;
+    color: #fff;
+    top: -20px;
 }
