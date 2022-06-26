@@ -4,7 +4,7 @@ body {
 
 .header-principal {
     align-items: center;
-    background-image: linear-gradient(to right, #383838, #2196F3,#383838);
+    background-image: linear-gradient(to right, #383838, #2196F3, #383838);
     display: flex;
     padding-right: 3%;
     padding-left: 3%;
@@ -14,6 +14,7 @@ body {
     width: 100%;
     z-index: 20;
 }
+
 .header-principal .logo {
     margin-top: -10px;
     max-width: 110px;
@@ -23,12 +24,11 @@ body {
     width: 100%;
     height: 100%;
 }
-.header-principal .name a{
+
+.header-principal .name a {
     text-decoration: none;
     color: #fff;
     font-size: 35px;
-    font-family: azonix;
+    font-family: quantum;
     user-select: none;
-
-
 }
