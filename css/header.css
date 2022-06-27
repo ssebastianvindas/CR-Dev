@@ -1,33 +1,33 @@
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .header-principal {
-    align-items: center;
-    background-image: linear-gradient(to right, #383838, #2196F3,#383838);
-    display: flex;
-    padding-right: 3%;
-    padding-left: 3%;
-    height: 80px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 20;
+  align-items: center;
+  background-image: linear-gradient(to right, #383838, #2196f3, #383838);
+  display: flex;
+  padding-right: 3%;
+  padding-left: 3%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 40;
 }
 .header-principal .logo {
-    margin-top: -10px;
-    max-width: 110px;
+  margin-top: -10px;
+  max-width: 110px;
 }
 
 .header-principal .logo img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-.header-principal .name a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 35px;
-    font-family: azonix;
-
-
+.header-principal .name a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  font-family: quantum;
+  text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.747);
+  user-select: none;
 }

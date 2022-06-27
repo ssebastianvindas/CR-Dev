@@ -24,17 +24,30 @@
     <link rel="stylesheet" href="css/staff.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/menu-hamburger.css">
+    
     <title>CR-Dev</title>
   </head>
+  <body>
   <header class="header-principal">
     <div class="logo">
       <img src="images/Logo-CR-DEV.png" alt="Logo de CR-Dev" />
     </div>
     <div class="name">
-      <a href="">CR-Dev</a>
+      <a href="#sct-banner">CR-Dev</a>
     </div>
     <!-- nav -->
   </header>
+    <nav class="nav-container"">
+      <button class="nav-toggle" aria-label="Abrir menú"><i class="fa fa-bars"></i></button>
+      <div class="menu-items ">
+        <a class="nav-menu-link nav-menu-active" href="#sct-banner">Inicio</a>
+        <a class="nav-menu-link nav-menu-active" href="contratenos.html">Contrátenos</a>
+        <a class="nav-menu-link nav-menu-active" href="#sct-staff">Colaboradores</a>
+        <a class="nav-menu-link nav-menu-active" href="#sct-acerca">Acerca de Nosotros</a>
+        <a class="nav-menu-link nav-menu-active" href="#sct-portafolio">Portafolio</a>
+      </div>
+    </nav>
   <section id="sct-banner">
     <div class="info-banner"></div>
     <div class="wave">
@@ -136,7 +149,7 @@
     <H2 class="ac-nosotros">Acerca de Nosotros</H2>
     <div class="nosotros">
         <p>
-            <H3><strong>¿Quienes somos?</strong></H3>
+            <H3>¿Quiénes somos?</H3>
         </p>
         <p>CR-Dev es una empresa integrada por una amalgama de talento, juventud y experiencia; sin descuidar los más importantes y fundamentales valores morales. Esta empresa nace con el mayor deseo de poder ofrecer a sus clientes la más alta calidad
             a un costo accesible a las empresas. De esta manera, CR-Dev busca quitar el obstaculo de los altos costos de las soluciones informáticas y dar acceso a las PYMES, asi como a las empresas en general a las soluciones informáticas a la medida
@@ -164,7 +177,7 @@
       </div>
     </section>
   <section id="sct-portafolio">
-    <h2>portafolio</h2>
+    <h2>Portafolio</h2>
     <div class="container">
       <ul class="slider">
         <li id="slide1">
@@ -191,4 +204,7 @@
     <a href="#sct-portafolio" class="acerca">Portafolio</a>
     <a href="#sct-acerca" class="acerca">Acerca de Nosotros</a>
 </footer>
+<script src="js/menu-hamburguer.js"></script>
+<script src="https://kit.fontawesome.com/7e5b2d153f.js"crossorigin="anonymous"></script>
+</body>
 </html>

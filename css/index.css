@@ -1,25 +1,31 @@
 * {
   box-sizing: border-box;
 }
-:root{
-  --primary:rgba(100, 121, 165, 0.35);
-  --secondary:hsl(0, 0%, 26%,0.35);
+:root {
+  --primary: rgba(100, 121, 165, 0.35);
+  --secondary: hsl(0, 0%, 26%, 0.35);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-section[id]{
-  scroll-margin-top:80px ;
+section[id] {
+  scroll-margin-top: 80px;
 }
 #sct-banner {
-  background: linear-gradient(155deg, var(--primary),var(--secondary)),  url("../images/bannerinicial.jpg");
+  background: linear-gradient(155deg, var(--primary), var(--secondary)),
+    url("../images/bannerinicial.jpg");
   background-size: cover;
   background-position: center;
-  height:100vh;
+  height: 100vh;
 }
 .footer {
   align-items: center;
-  background-image: linear-gradient(155deg, rgb(29, 28, 33), rgb(32, 148, 243),rgb(29, 28, 33));
+  background-image: linear-gradient(
+    155deg,
+    rgb(29, 28, 33),
+    rgb(32, 148, 243),
+    rgb(29, 28, 33)
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,14 +53,18 @@ section[id]{
 .button {
   min-width: 300px;
   min-height: 60px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
   color: #fff;
   background: #07528b;
-  background: linear-gradient(90deg, rgb(128, 60, 192) 0%, rgb(140, 27, 193) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(128, 60, 192) 0%,
+    rgb(140, 27, 193) 100%
+  );
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(7, 7, 7, 0.64);
@@ -65,8 +75,8 @@ section[id]{
   padding: 10px;
 }
 
-button::before {
-  content: '';
+.button::before {
+  content: "";
   border-radius: 1000px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
@@ -77,7 +87,7 @@ button::before {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .button:hover,
@@ -86,13 +96,13 @@ button::before {
   transform: translateY(-6px);
 }
 
-button:hover::before,
-button:focus::before {
+.button:hover::before,
+.button:focus::before {
   opacity: 1;
 }
 
-button::after {
-  content: '';
+.button::after {
+  content: "";
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -105,31 +115,31 @@ button::after {
   animation: ring 1.5s infinite;
 }
 
-button:hover::after,
-button:focus::after {
+.button:hover::after,
+.button:focus::after {
   animation: none;
   display: none;
 }
 
 @keyframes ring {
   0% {
-      width: 30px;
-      height: 30px;
-      opacity: 1;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
   }
   100% {
-      width: 300px;
-      height: 300px;
-      opacity: 0;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
   }
 }
-#sct-acerca{
+#sct-acerca {
   background-color: #00000005;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#sct-acerca .ac-nosotros{
+#sct-acerca .ac-nosotros {
   font-size: 60px;
   text-shadow: 1px 1px 3px rgba(0, 140, 255, 0.562);
   font-family: quantum;
@@ -143,15 +153,14 @@ button:focus::after {
 }
 
 #sct-acerca .nosotros h3 {
-  text-decoration: bold;
-  font-size: 19px;
-  font-family: azonix;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: apex;
 }
 
 #sct-acerca .nosotros h4 {
-  font-size: 5px;
+  font-size: 10px;
 }
-
 
 #sct-acerca .nosotros li {
   line-height: 40px;
@@ -159,7 +168,7 @@ button:focus::after {
   font-size: 20px;
   padding-left: 10%;
   padding-right: 5%;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 .nosotros {
   border: 2px solid #07528b;
@@ -168,6 +177,8 @@ button:focus::after {
   color: #fff;
   width: 1200px;
   margin-bottom: 45px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 #sct-acerca .nosotros p {
@@ -177,10 +188,10 @@ button:focus::after {
   padding-right: 5%;
   text-align: justify;
   text-size-adjust: 12px;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 20px;
 }
-#sct-acerca .negrita{
+#sct-acerca .negrita {
   font-weight: bold;
   font-size: 17px;
 }
@@ -191,4 +202,3 @@ button:focus::after {
   text-align: justify;
   text-size-adjust: 12px;
 }
-

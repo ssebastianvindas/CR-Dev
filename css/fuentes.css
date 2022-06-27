@@ -6,5 +6,11 @@
   font-family: quantum;
   src: url(/fonts/Quantum.otf);
 }
-
-
+@font-face {
+  font-family: aqum;
+  src: url(/fonts/Aqum.ttf);
+}
+@font-face {
+  font-family: apex;
+  src: url(/fonts/Apex\ Mk3-ExtraLight.otf);
+}

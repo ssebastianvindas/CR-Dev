@@ -1,13 +1,13 @@
-#banner-contrato {
+.banner-contrato {
     background-image: url('../images/contrato.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100vh;
-    width: auto;
+    width: 100%;
     justify-content: center;
-    padding-left: 3%;
 }
 
 .footer {
@@ -45,78 +45,23 @@
     color: #000;
 }
 
-#formulario .container {
-    display: block;
-}
-
-ul {
-    list-style-type: circle;
-}
-
 
 /* Configuracion del formulario */
 
 .box {
     display: flex;
-    position: relative;
     background-color: rgba(8, 83, 140, 0.4);
     width: 500px;
-    height: 290px;
     justify-content: center;
     padding: 30px;
-    left: 650px;
     border-radius: 10px;
 }
 
 #sct-contact {
-    display: flexbox;
-    position: relative;
-    width: auto;
-    height: auto;
+    display: flex;
+    width: 100%;
+    height: 100vh;
     justify-content: center;
-    padding: 5px;
-}
-
-#sct-contact .submit-button {
-    width: 100px;
-    position: relative;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: yellowgreen;
-    cursor: pointer;
-    border-color: yellowgreen;
-}
-
-#sct-contact .button * {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity .25s;
-}
-
-#sct-contact .icon {
-    opacity: 0;
-}
-
-#sct-contact .button:focus {
-    width: 30px;
-    background-color: yellowgreen;
-    border-radius: 50%;
-}
-
-#sct-contact .button:focus .text {
-    opacity: 0;
-}
-
-#sct-contact:focus .icon {
-    opacity: 1;
-    transition-delay: .5s;
-}
-
-#sct-contact #submit:hover {
-    transition: 0.3s;
-    background-color: #fff;
 }
 
 #sct-contact #name:hover,
@@ -166,4 +111,58 @@ ul {
 #sct-contact #email {
     top: 30px;
     width: 190px;
+}
+
+#sct-contact .submit-button {
+    position: relative;
+    width: 90px;
+    height: 40px;
+    font-size: 15px;
+    background-color: yellowgreen;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: width .5s;
+    border-radius: .5s;
+}
+
+#sct-contact .submit-button * {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+#sct-contact .icon {
+    opacity: 0;
+}
+
+#sct-contact .submit-button:focus {
+    width: 50px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    background-image: url("../images/check-fill.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sct-contact .submit-button:focus .text {
+    opacity: 0;
+}
+
+#sct-contact .submit-button:focus .icon {
+    opacity: 1;
+    transition-delay: .5s;
+}
+
+#sct-contact .info {
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(8, 83, 140, 0.4);
+    border-radius: 5px;
+    color: #fff;
+    top: -20px;
 }
