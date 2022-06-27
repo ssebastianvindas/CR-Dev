@@ -11,6 +11,11 @@
   z-index: 50;
   cursor: pointer;
 }
+.nav-toggle:hover{
+  color: rgb(236, 236, 236);
+  font-size: 46px;
+  top: 13px;
+}
 
 .menu-items {
   display: flex;
