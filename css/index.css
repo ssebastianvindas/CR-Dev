@@ -42,12 +42,9 @@ section[id] {
 }
 
 .wrap {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  padding-right: 3%;
-  padding-top: 30%;
+  position: absolute;
+  bottom: 35%;
+  right: 3%;
 }
 
 .button {
