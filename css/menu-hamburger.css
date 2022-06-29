@@ -11,13 +11,15 @@
   z-index: 50;
   cursor: pointer;
 }
-
+i{
+  text-shadow: 0 0 3px red;
+  transition: all 500ms;
+}
 .menu-items {
   display: flex;
   flex-direction: column;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.664);
-  left: 0;
   top: -370px;
   width: 100%;
   text-align: center;
@@ -46,4 +48,7 @@
   transition: all 700ms;
   opacity: 1;
   top: 80px;
+}
+.fa-times{
+  transition: all 500ms;
 }

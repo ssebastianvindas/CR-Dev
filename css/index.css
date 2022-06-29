@@ -172,10 +172,13 @@ section[id] {
   border-radius: 5px;
   background-color: #07528b;
   color: #fff;
-  width: 1200px;
+  max-width: 1200px;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 45px;
   padding-top: 25px;
   padding-bottom: 25px;
+  flex-wrap: wrap;
 }
 
 #sct-acerca .nosotros p {
