@@ -12,7 +12,6 @@
   cursor: pointer;
 }
 i{
-  text-shadow: 0 0 3px red;
   transition: all 500ms;
 }
 .menu-items {
@@ -51,4 +50,8 @@ i{
 }
 .fa-times{
   transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
 }
