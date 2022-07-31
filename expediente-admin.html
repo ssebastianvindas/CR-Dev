@@ -52,27 +52,33 @@
                     <legend>Datos del Paciente</legend>
                     <div id="txt-fecha">
                         <label for="frm-dfecha">Fecha:</label>
-                        <input type="date" placeholder="Fecha" id="frm-dfecha">
+                        <input type="date" id="frm-dfecha">
                     </div>
+
                     <div class="frm-dnombreMasc">
-                        <div id="txt-mascota">
-                            <input type="text" placeholder="Nombre Completo de la Mascota">
-                        </div>
-                        <div>
-                            <input type="number" placeholder="identificación">
-                        </div>
+                        <!-- <div id="txt-mascota"> -->
+                        <label for="name-pet">Nombre de la Mascota:</label>
+                        <input type="text" placeholder="Nombre Completo de la Mascota" id="name-pet">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                        <label for="exp-id">Identificación:</label>
+                        <input type="number" placeholder="identificación" id="exp-id">
+                        <!-- </div> -->
                     </div>
                     <div class="frm-dnombreD">
-                        <div id="txt-propietario">
-                            <input type="text" placeholder="Nombre Completo del Dueño">
-                        </div>
-                        <div>
-                            <input type="number" placeholder="identificación">
-                        </div>
+                        <!-- <div id="txt-propietario"> -->
+                        <label for="name-owner">Nombre del Dueño:</label>
+                        <input type="text" placeholder="Nombre Completo del Dueño" id="name-owner">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                        <label for="exp-idowner">Identificación:</label>
+                        <input type="number" placeholder="identificación" id="exp-idowner">
+                        <!-- </div> -->
                     </div>
 
                     <div id="frm-dNombreMedico">
-                        <input type="text" placeholder="Médico de Cabecera">
+                        <label for="name-pet" id="exp-vet">Nombre del Veterinario:</label>
+                        <input type="text" placeholder="Médico de Cabecera" id="exp-vet">
                     </div>
 
                 </fieldset>
@@ -173,24 +179,30 @@
                     <fieldset class="frm-signos">
                         <legend>Signos Vitales</legend>
                         <div class="dv-signos">
-                            <div>
-                                <input type="number" placeholder="Presión Arterial">
-                            </div>
-                            <div>
-                                <input type="number" placeholder="Pulso">
-                            </div>
+                            <div class='signos'>
+                                <label for="exp-pa">Presión Arterial</label>
+                                <input type="number" placeholder="Presión Arterial" id="exp-pa">
+                                <!-- </div> -->
+                                <!-- <div class='signos'> -->
+                                <label for="exp-pulso">Pulso</label>
+                                <input type="number" placeholder="Pulso" id="exp-pulso">
+                                <!-- </div> -->
 
-                            <div>
-                                <input type="number" placeholder="Temperatura">
-                            </div>
-                            <div>
-                                <input type="number" placeholder="Peso">
-                            </div>
-                            <div>
-                                <input type="number" placeholder="Talla">
-                            </div>
-                            <div>
-                                <input type="number" placeholder="Edad">
+                                <!-- <div class='signos'> -->
+                                <label for="exp-temp">Temperatura</label>
+                                <input type="number" placeholder="Temperatura" id="exp-temp">
+                                <!-- </div> -->
+                                <!-- <div class='signos'> -->
+                                <label for="exp-peso">Peso</label>
+                                <input type="number" placeholder="Peso" id="exp-peso">
+                                <!-- </div> -->
+                                <!-- <div class='signos'> -->
+                                <label for="exp-talla">Talla</label>
+                                <input type="number" placeholder="Talla" id="exp-talla">
+                                <!-- </div> -->
+                                <!-- <div class='signos'> -->
+                                <label for="exp-edad">Edad</label>
+                                <input type="number" placeholder="Edad" id="exp-edad">
                             </div>
                         </div>
                     </fieldset>
@@ -308,40 +320,49 @@
             <div id="container-lab">
 
 
-                <fieldset id="frm-lab">
+                <fieldset id="frm-lab-exp">
                     <legend>Exámenes de Laboratorio</legend>
                     <form class="frm-expLab">
-                        <div id="dv-labFecha">
-                            <label for="frm-labDate">Fecha</label>
-                            <input type="date" class="form-lab" id="frm-labDate">
-                        </div>
-                        <div id="txt-pet">
-                            <input type="text" class="form-lab" id="lab-pet" placeholder="Nombre de la mascota">
-                        </div>
-                        <div id="txt-owner">
-                            <input type="text" class="form-lab" id="lab-owner" placeholder="Nombre del Dueño">
-                        </div>
-                        <div id="txt-examen">
-                            <input type="text" class="form-lab" id="lab-test" placeholder="Tipo de exámen realizado">
-                        </div>
-                        <div id="txt-resultados">
-                            <input type="text" class="form-lab" id="lab-result" placeholder="Resultados">
-                        </div>
-                        <div>
-                            <select id="lab-doctores">
-                        <option value="" class="frm-select"> Doctores </option>
-                        <option value="luis" class="frm-select">Dr. Luis Zumbado</option>
-                        <option value="mario" class="frm-select">Dr. Mario Castellas</option>
-                        <option value="cindy" class="frm-select">Dra. Cindy Frias</option>
-                        <option value="lucrecia" class="frm-select">Dra. Lucrecia Diaz</option>
-                    </select>
-                            <div>
-                                <button type="button" id="btn-lab">Agregar</button>
+                        <div class="exp-examen">
+                            <div id="dv-labFecha">
+                                <label for="frm-labDate">Fecha</label>
+                                <input type="date" class="form-lab" id="frm-labDate">
+                            </div>
+                            <div id="txt-pet">
+                                <label for="lab-pet">Nombre de la mascota:</label>
+                                <input type="text" class="form-lab" id="lab-pet" placeholder="Nombre de la mascota">
+                            </div>
+                            <div id="txt-owner">
+                                <label for="lab-owner">Nombre del dueño:</label>
+                                <input type="text" class="form-lab" id="lab-owner" placeholder="Nombre del Dueño">
+                            </div>
+                            <div id="txt-examen">
+                                <label for="lab-test">Tipo de exámen realizado:</label>
+                                <input type="text" class="form-lab" id="lab-test" placeholder="Tipo de exámen realizado">
+                            </div>
+                            <div id="txt-resultados">
+                                <label for="lab-result">Resultados:</label>
+                                <input type="text" class="form-lab" id="lab-result" placeholder="Resultados">
                             </div>
                         </div>
+                        <div id="exp-examen-doctores">
+                            <select id="lab-doctores">
+                            <option value="" class="frm-select"> Doctores </option>
+                            <option value="luis" class="frm-select">Dr. Luis Zumbado</option>
+                            <option value="mario" class="frm-select">Dr. Mario Castellas</option>
+                            <option value="cindy" class="frm-select">Dra. Cindy Frias</option>
+                            <option value="lucrecia" class="frm-select">Dra. Lucrecia Diaz</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="button" id="btn-lab">Agregar</button>
+                        </div>
+
 
                     </form>
                 </fieldset>
+
                 <div class="dv-tableLab">
                     <fieldset id="frm-tablaLab">
                         <legend>Listado de Exámenes de Laboratorio</legend>
@@ -432,31 +453,37 @@
 
                 </form>
             </fieldset>
+            <div class="btn-exp">
+                <div id="exp-save">
 
-        </div>
-    </section>
-    <section class="exp-buttons">
-        <div class="btn-exp">
-            <div id="exp-save">
-
-                <button type="button" id="btn-save">Guardar</button>
-            </div>
-            <div id="exp-print">
-                <button type="button" id="btn-print">Imprimir</button>
+                    <button type="button" id="btn-save">Guardar</button>
+                </div>
+                <div id="exp-print">
+                    <button type="button" id="btn-print">Imprimir</button>
+                </div>
             </div>
         </div>
+
     </section>
+
+
+
     <footer>
-        <div class="footer-direction">
-            <p>Curridabat, San Jose</p>
+        <div class="footer">
+            <div class="footer-direction">
+                <p>Curridabat, San Jose</p>
+            </div>
+            <div class="footer-email">
+                <p>mokaclinic@vetpet.com</p>
+            </div>
+            <div class="footer-redes">
+                <a href="#"><img src="imgs/icons/iconsDark/facebook-dark.png" alt="" /></a>
+                <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
+                <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
+            </div>
         </div>
-        <div class="footer-email">
-            <p>mokaclinic@vetpet.com</p>
-        </div>
-        <div class="footer-redes">
-            <a href="#"><img src="img/facebook-box-fill.png" alt="" /></a>
-            <a href="#"><img src="img/instagram-fill.png" alt="" /></a>
-            <a href="#"><img src="img/twitter-fill.png" alt="" /></a>
+        <div class="create-by">
+            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
         </div>
     </footer>
     <script src="js/recursos.js"></script>
