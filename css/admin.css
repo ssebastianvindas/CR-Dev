@@ -2,14 +2,13 @@
   box-sizing: border-box;
 }
 
-
 #cantidad-animales {
   margin-left: 10px;
   margin-bottom: 10px;
   width: 50px;
 }
 
-.container-dashboard-admin{
+.container-dashboard-admin {
   position: relative;
   top: 120px;
   flex-direction: row;
@@ -201,7 +200,6 @@ legend {
   width: 100px;
 }
 
-
 #txt-email {
   width: 250px;
 }
@@ -213,7 +211,6 @@ legend {
 #txt-paciente {
   width: 400px;
 }
-
 
 #txt-procedimientos {
   margin-right: 10px;
@@ -241,11 +238,11 @@ legend {
   width: 100px;
 }
 
-
-
-.tbl-facturacion{
+.tbl-facturacion {
   margin: 20px 0;
 }
-.btn-editar,.btn-eliminar{
+.btn-editar,
+.btn-eliminar {
   font-size: 13px;
 }
+

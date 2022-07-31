@@ -131,6 +131,34 @@ h2 {
 }
 
 
+@media only screen and (max-width: 971px) {
+    .footer {
+        flex-direction: column;
+    }
+    
+    .footer-direction p {
+        margin-top: 10px ;
+        padding: 10px 0;
+    }
+    
+    .footer-email {
+        left: 0px;
+        padding: 5px 0;
+
+    }
+    
+    
+    .footer-redes a img {
+        width: 30px;
+        padding: 5px 0;
+    }
+    .create-by{
+        margin-top: 50px;
+    }
+    
+
+  }
+
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
 
 html::-webkit-scrollbar {
@@ -167,13 +195,12 @@ html::-webkit-scrollbar-track {
 /*CSS HOTEL*/
 
 .sct-hotel {
-    width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
     flex-direction: column;
     position: relative;
+    margin: auto;
+    max-width: 1400px;
+    padding: 10px;
 }
 
 .sct-hotel>h2 {
@@ -181,11 +208,12 @@ html::-webkit-scrollbar-track {
 }
 
 .info-hotel {
-    height: 500px;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    padding: 0 3%;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
 }
 
 
@@ -193,22 +221,13 @@ html::-webkit-scrollbar-track {
 
 .card-photo-cat {
     display: flex;
-    background-image: url("/imgs/imgsindex/kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg");
+    max-width: 550px;
+    margin: auto;
+}
+.card-photo-cat .glass img {
     width: 100%;
-    height: 500px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-
-/*Sobre card-photo*/
-
-.glass {
-    width: 100%;
-    backdrop-filter: blur(1px);
-    background-color: rgba(6, 5, 4, 0.40);
-}
 
 
 /*Contenedor con el texto*/
@@ -217,10 +236,11 @@ html::-webkit-scrollbar-track {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    max-width: 550px;
     background-color: rgba(6, 5, 4, 0.95);
     color: #fff;
     padding: 20px 0;
+    margin: auto;
 }
 
 
