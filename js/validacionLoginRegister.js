@@ -75,3 +75,7 @@ let validarFormRegister = () => {
 
 btnIniciarSesion.addEventListener("click", validarFormLogin);
 btnRegistrar.addEventListener("click", validarFormRegister);
+
+txtContrasennaLogin.addEventListener("keyup", () => {
+  localStorage.clear();
+});

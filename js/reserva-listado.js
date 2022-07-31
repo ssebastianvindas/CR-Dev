@@ -1,6 +1,7 @@
 const cuerpoTabla = document.querySelector('#tbl-hotel tbody');
 const botonReservaBack = document.getElementById("btn-reservaAtras");
 let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
+let nickname = document.querySelector('.nickname')
 
 const llenarTabla = () => {
 
@@ -54,19 +55,35 @@ const llenarTabla = () => {
     });
 };
 
+let cambiarNickname = ()=>{
+        switch (usuarioConectado.rol) {
+            case 1:
+                nickname.textContent = 'Administrador'
+                break;
+            case 2:
+                nickname.textContent = 'secretaria'
+                break;
+            case 3:
+                window.location.href = "cliente.html";
+                break;
+            case 4:
+                window.location.href = "veterinario.html";
+                break;
+        }
+}
+window.addEventListener('load',cambiarNickname)
 let regresarPrincipal = () => {
-
     switch (usuarioConectado.rol) {
-        case "1":
-            window.location.href = "admin.html";
+        case 1:
+            window.location.href = "dashboard-admin.html";
             break;
-        case "2":
+        case 2:
             window.location.href = "secretaria.html";
             break;
-        case "3":
+        case 3:
             window.location.href = "cliente.html";
             break;
-        case "4":
+        case 4:
             window.location.href = "veterinario.html";
             break;
     }

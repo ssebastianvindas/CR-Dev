@@ -11,7 +11,7 @@ const rederigirUsuarios = () => {
       window.location.href = "dashboard-admin.html";
       break;
     case 2:
-      window.location.href = "index.html";
+      window.location.href = "dashboard-secretaria.html";
       break;
     case 3:
       window.location.href = "index.html";
