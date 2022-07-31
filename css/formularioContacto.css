@@ -1,0 +1,213 @@
+  /*Tamaño del mapa*/
+    
+  #form-map {
+    margin-top: 40px;
+    height: 275px;
+    width: 400px;
+}
+/*Controla el boton que se encuentra sobre el mapa para la geolocalizacion*/
+
+.custom-map-control-button {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Roboto, Arial, sans-serif;
+    overflow: hidden;
+    height: 40px;
+    cursor: pointer;
+}
+/*Controla el hover del boton*/
+
+.custom-map-control-button:hover {
+    background: rgb(235, 235, 235);
+}
+/*Tamaño y margenes del form*/
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -30px;
+    width: 100%;
+    gap: 20px;
+}
+/*Secciones de inputs: nombre, mascota, telefono y correo*/
+
+.division {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+/*Form section*/
+
+.form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(/imgs/imgsindex/cat.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Contiene el blur*/
+
+.blur-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.048);
+    backdrop-filter: blur(2px);
+    padding: 100px 0 ;
+    
+}
+/*Este mueve el tama;o del form*/
+
+.form-container {
+    margin: 0 3%;
+    max-width: 1150px;
+    border: 2px solid #1ba67d;
+    padding: 40px 10px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+/*Container del titulo de contactenos*/
+
+.formTitle {
+    margin: auto;
+    position: relative;
+    top: -60px;
+    font-size: 30px;
+    background-color: #fff;
+    padding: 5px;
+    width: fit-content;
+    border: 1px solid #1ba67d;
+    border-radius: 5px;
+}
+.formTitle h2{
+    padding: 0;
+}
+/*Inputs generales*/
+
+.box-direction input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.infoBox input,
+.box-nameArea input,
+.box-petNameArea input,
+.box-phone input,
+.box-email input {
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.infoBox textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.box-nameArea,
+.box-petNameArea,
+.box-phone,
+.box-email,
+.box-direction,
+.infoBox {
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+}
+/*Labels*/
+
+.box-nameArea label,
+.box-petNameArea label,
+.box-phone label,
+.box-email label,
+.infoBox label {
+    height: 100%;
+    position: absolute;
+    padding: 10px;
+
+}
+
+.checkCall label,
+.checkMail label,
+.checkWhats label {
+    display: flex;
+    padding: 5px;
+}
+/*Checkboxes*/
+
+.checkCall,
+.checkMail,
+.checkWhats {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.checkCall::after,
+.checkMail:focus,
+.checkWhats:focus {
+    transition: 1s;
+    color: #30da7a;
+}
+
+.checksBoxes {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+/*Submit button*/
+
+#btn-send {
+    padding: 10px 0;
+    border-radius: 3px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #03412e;
+    color: #fff;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #1ba67d;
+}
+
+input:hover,
+textarea:hover {
+    transition: 1s;
+    border-color: #1ba67d;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -30px;
+}
+
+#btn-send:hover {
+    transition: 1s;
+    background: #051d27;
+    color: #30da7a;
+}
+
+.box-direction {
+    padding: 10px;
+}
+
+
+.infoBox {
+    overflow: auto;
+}

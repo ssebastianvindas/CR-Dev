@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+
+#cantidad-animales {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 50px;
+}
+
+.container-dashboard-admin{
+  position: relative;
+  top: 120px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-image: url(../imgs/users/background-user-dashboard.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 81vh;
+}
+
+.div-animales {
+  display: flex;
+  justify-content: center;
+}
+
+.div-date {
+  display: flex;
+  justify-content: center;
+}
+
+.div-cuartos {
+  display: flex;
+  justify-content: center;
+}
+
+#fecha-entrada {
+  margin-left: 10px;
+}
+
+#fecha-salida {
+  margin-left: 10px;
+}
+
+.fieldset-billing {
+  border: 3px solid black;
+  width: 670px;
+}
+
+.fieldset-hotel {
+  border: 3px solid black;
+  width: 400px;
+}
+
+.frm-cantidad {
+  margin: 10px;
+  margin-left: 35px;
+}
+
+.frm-cedjur {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.frm-consecutivo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 250px;
+}
+
+.frm-email {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.frm-fecha {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.frm-mascota {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.frm-total {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: 400px;
+}
+
+.frm-users {
+  border: 3px solid #000;
+  width: 600px;
+}
+
+.input-invalid {
+  border: 2px solid red;
+}
+
+.input-valid {
+  border: transparent;
+}
+
+/* Style the tab */
+.tab {
+  background-color: #2f323a;
+  max-width: 15%;
+  height: 81vh;
+}
+
+.tab button {
+  background-color: inherit;
+  color: white;
+  padding: 22px 16px;
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  margin-bottom: 25px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.tab button:hover {
+  background-color: #269c57;
+  font-size: 22px;
+}
+
+.tab button.active {
+  background-color: #ffffff;
+  color: #269c57;
+}
+
+.tabcontent {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 0;
+  width: 85%;
+  height: 81vh;
+  margin: auto;
+  display: none;
+}
+
+.tabcontentDisplay {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+legend {
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  padding: 5px 0;
+}
+
+.center-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 81vh;
+  overflow: auto;
+}
+.center-fieldset {
+  padding: 20px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+#txt-cantidad {
+  width: 50px;
+  margin-right: 15px;
+}
+
+#txt-cliente {
+  width: 300px;
+}
+
+#txt-consecutivo {
+  width: 100px;
+}
+
+
+#txt-email {
+  width: 250px;
+}
+
+#txt-juridica {
+  width: 100px;
+}
+
+#txt-paciente {
+  width: 400px;
+}
+
+
+#txt-procedimientos {
+  margin-right: 10px;
+  width: 165px;
+}
+
+#txt-precio {
+  width: 80px;
+}
+#txt-subtotal {
+  margin-left: 27px;
+  width: 100px;
+}
+#txt-total {
+  margin-left: 54px;
+  width: 100px;
+}
+
+#txt-descuento {
+  margin-left: 0px;
+  margin: 10px;
+  width: 100px;
+}
+#txt-telefono {
+  width: 100px;
+}
+
+
+
+.tbl-facturacion{
+  margin: 20px 0;
+}
+.btn-editar,.btn-eliminar{
+  font-size: 13px;
+}

@@ -1,0 +1,112 @@
+.btn-ver {
+    margin-right: 5px;
+    background-color: #575757;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 800;
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.btn-ver:hover {
+    background-color: #18b158;
+    border: 2px solid #18b158;
+    color: #fff;
+}
+
+
+/*Modal*/
+
+.modal-expediente {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal-informacion {
+    height: 350px;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-save {
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+#btn-save {
+    background-color: #18b158;
+    font-size: 14px;
+    padding: 6px;
+    border-radius: 7px;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+#btn-save:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #29ae6e, #04552e);
+    backdrop-filter: blur(1px);
+}
+
+.lil-tainer {
+    border: 1px solid #000;
+    border-radius: 5px;
+}

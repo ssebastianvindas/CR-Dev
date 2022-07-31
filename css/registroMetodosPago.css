@@ -1,0 +1,183 @@
+.sct-form {
+  position: relative;
+  top: 120px;
+  width: 100%;
+  font-family: monospace;
+  /* background-image: url(/imgs/users/background-user-dashboard.png);
+  background-position: center;
+  background-size: cover; */
+  height: 81vh;
+}
+.sct-form h1 {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 30px;
+  color: #18b158;
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 20px auto;
+  gap: 20px;
+  padding: 30px 0;
+  background-color: rgba(218, 218, 218, 0.349);
+  box-shadow: 0 0 5px #000;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-image: url(/imgs/users/fondo1.png);
+  background-position: center;
+  background-size: cover;
+
+}
+.form-container label {
+  font-size: 20px;
+}
+.form-container p {
+  font-size: 20px;
+}
+.form-container input {
+  font-size: 18px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-container select {
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+input:focus {
+  outline: none;
+}
+#form-metodos-pago {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.inputs-container {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.slash {
+  font-size: 18px;
+  font-weight: bold;
+}
+.input-mes,
+.input-año {
+  width: 80px;
+  font-size: 18px;
+  padding: 5px;
+}
+.grupo-cvv {
+  margin-left: 100px;
+}
+.input-cvv {
+  width: 80px;
+}
+
+.grupo-c {
+  display: flex;
+}
+.grupo-c input {
+  text-align: center;
+}
+
+.btn-salir {
+  position: absolute;
+  color: #000000;
+  text-decoration: none;
+  font-size: 17px;
+  top: 45px;
+  left: 30px;
+}
+.btn-salir:hover i {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+.btn-salir:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.btn-salir i {
+  padding-right: 5px;
+  color: #18b158;
+}
+
+.fa-credit-card {
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+  font-size: 25px;
+}
+#num-tarjeta {
+  padding-left: 45px;
+}
+.btn-container {
+  width: 150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-container button {
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #18b158;
+  background-color: #000000e5;
+  backdrop-filter: blur(1px);
+  cursor: pointer;
+}
+.btn-container button:hover {
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #00ff6a;
+  background-color: #000000d2;
+  backdrop-filter: blur(1px);
+}
+
+.input-invalid {
+  border: 2px solid red;
+}
+.input-valid {
+  border: 2px solid green;
+}
+.grupo-tipo {
+  display: flex;
+  gap: 55px;
+}
+.slt-tipo {
+  width: 100%;
+  margin-top: -10px;
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+}

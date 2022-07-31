@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo método de pago</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header-admin.css" />
+    <link rel="stylesheet" href="css/registroMetodosPago.css" />
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body>
+    <header class="header-container">
+      <a href="#" id="btn-usuario">
+        <i class="fa-solid fa-user"></i>Administrador
+        <i class="fa-solid fa-caret-down"></i>
+      </a>
+      <div class="logo-container">
+        <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+      </div>
+      <div class="menu-icons">
+        <a href="dashboard-admin.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+      </div>
+    </header>
+    <nav class="menu-header">
+      <a href="">Expedientes</a>
+      <a href="">Reservaciones</a>
+      <a href="">Citas</a>
+      <a href="">Mascotas</a>
+      <a href="">Métodos de pago</a>
+    </nav>
+    <section class="sct-form">
+      <h1>Nuevo método de pago</h1>
+      <div class="form-container">
+        <a href="/listadoMetodosPago.html" class="btn-salir"
+          ><i class="fa-solid fa-reply"></i>Volver</a
+        >
+        <div class="img-container">
+          <img src="imgs/logo-moka.png" alt="" />
+        </div>
+        <form id="form-metodos-pago">
+          <div class="inputs-container">
+            <label for="txt-nombre">Nombre del titular de la tarjeta</label>
+            <input type="text" id="txt-nombre" />
+          </div>
+          <div class="inputs-container">
+            <label for="num-tarjeta">Número de tarjeta</label>
+            <input type="number" id="num-tarjeta" />
+            <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <label for="tipo">Tipo</label>
+          <div class="grupo-tipo">
+              <select name="tipo" id="tipo" class="slt-tipo">
+                <option value="">--- Seleccione el tipo de tarjeta ---</option>
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+          <div class="grupo-c">
+            <div class="inputs-container grupo-expiracion">
+              <label for="num-mes num-año">Fecha de expiración</label>
+              <div>
+                <input type="number" class="input-mes" id="num-mes" />
+                <span class="slash">/</span>
+                <input type="number" class="input-año" id="num-año" />
+              </div>
+            </div>
+            <div class="inputs-container grupo-cvv">
+              <label for="num-cvv">CVV</label>
+              <input type="number" class="input-cvv" id="num-cvv" />
+            </div>
+          </div>
+          <div class="inputs-container">
+            <label for="txt-direccion">Dirección de facturación</label>
+            <input type="text" id="txt-direccion" />
+          </div>
+          <div class="btn-container">
+            <button type="button" id="btn-guardar">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+          <div class="footer-direction">
+              <p>Curridabat, San Jose</p>
+          </div>
+          <div class="footer-email">
+              <p>mokaclinic@vetpet.com</p>
+          </div>
+          <div class="footer-redes">
+              <a href="#"><img src="imgs/icons/iconsDark/facebook-dark.png" alt="" /></a>
+              <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
+              <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
+          </div>
+      </div>
+      <div class="create-by">
+          <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+      </div>
+  </footer>
+    <!-- js -->
+    <script
+      src="https://kit.fontawesome.com/c02f88807d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/validacionFormMetodosPago.js"></script>
+  </body>
+</html>

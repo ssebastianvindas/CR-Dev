@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/expediente.css">
+    <link rel="stylesheet" href="css/menuUser.css" />
+    <link rel="stylesheet" href="css/header-admin.css" />
+    <link rel="stylesheet" href="css/tablas.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/botones.css">
+    <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+    <title>Expediente Clínico</title>
+</head>
+
+<body>
+    <header class="header-container">
+        <a href="#" id="btn-usuario">
+            <i class="fa-solid fa-user"></i>Administrador
+            <i class="fa-solid fa-caret-down"></i>
+        </a>
+        <div class="logo-container">
+            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+        </div>
+        <div class="menu-icons">
+            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+        </div>
+    </header>
+
+    <nav class="menu-header">
+        <a href="index.html">Inicio</a>
+        <a href="dashboard-admin.html" id="btn-dashboard">Dashboard Principal</a>
+        <a href="citas.html">Citas</a>
+
+    </nav>
+
+
+    <section class="sct-tabs" id="sct-expediente">
+        <button class="tablink" onclick="openPage('exp-principal', this, 'forestgreen')" id="defaultOpen">Expedientes</button>
+        <button class="tablink" onclick="openPage('exp-rx', this, 'black')">Radiografías</button>
+        <button class="tablink" onclick="openPage('exp-lab', this, 'darkslategrey')">Exámenes</button>
+        <button class="tablink" onclick="openPage('exp-medicamentos', this, 'darkseagreen')">Medicamentos y Prescripciones</button>
+
+        <div id="exp-principal" class="tabcontent">
+            <h3>Ingrese los datos del paciente</h3>
+            <form class="form-expediente">
+                <fieldset class="frm-datos">
+                    <legend>Datos del Paciente</legend>
+                    <div id="txt-fecha">
+                        <label for="frm-dfecha">Fecha:</label>
+                        <input type="date" placeholder="Fecha" id="frm-dfecha">
+                    </div>
+                    <div class="frm-dnombreMasc">
+                        <div id="txt-mascota">
+                            <input type="text" placeholder="Nombre Completo de la Mascota">
+                        </div>
+                        <div>
+                            <input type="number" placeholder="identificación">
+                        </div>
+                    </div>
+                    <div class="frm-dnombreD">
+                        <div id="txt-propietario">
+                            <input type="text" placeholder="Nombre Completo del Dueño">
+                        </div>
+                        <div>
+                            <input type="number" placeholder="identificación">
+                        </div>
+                    </div>
+
+                    <div id="frm-dNombreMedico">
+                        <input type="text" placeholder="Médico de Cabecera">
+                    </div>
+
+                </fieldset>
+                <fieldset class="frm-qp">
+                    <legend>Queja Principal</legend>
+                    <input type="text" placeholder="Queja Principal">
+                </fieldset>
+                <fieldset class="frm-padecimientos">
+                    <legend>Padecimientos:</legend>
+                    <div class="pd-chk">
+                        <div>
+                            <input type="checkbox" id="chk-tos" class="pd-chkbox" value="tos">
+                            <label for="chk-tos" class="lbl-chkbox">Tos</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-resfrio" class="pd-chkbox" value="resfrio">
+                            <label for="chk-resfrio" class="lbl-chkbox">Resfrío</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-fiebre" class="pd-chkbox" value="fiebre">
+                            <label for="chk-fiebre" class="lbl-chkbox">Fiebre</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-brucelosis" class="pd-chkbox" value="brucelosis">
+                            <label for="chk-brucelosis" class="lbl-chkbox">Brucelosis</label>
+                        </div>
+                    </div>
+                    <div class="pd-chk">
+                        <div>
+                            <input type="checkbox" id="chk-distemper" class="pd-chkbox" value="distemper">
+                            <label for="chk-distemper" class="lbl-chkbox">Distemper</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-cb" class="pd-chkbox" value="cb">
+                            <label for="chk-cb" class="lbl-chkbox">Carbunco Bacteridiano</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-hongos" class="pd-chkbox" value="hongos">
+                            <label for="chk-hongos" class="lbl-chkbox">Hongos</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-moquillo" class="pd-chkbox" value="moquillo">
+                            <label for="chk-moquillo" class="lbl-chkbox">Moquillo</label>
+                        </div>
+                    </div>
+                    <div class="pd-chk">
+                        <div>
+                            <input type="checkbox" id="chk-viriosis" class="pd-chkbox" value="viriosis">
+                            <label for="chk-viriosis" class="lbl-chkbox">Viriosis</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-parvo" class="pd-chkbox" value="parvo">
+                            <label for="chk-parvo" class="lbl-chkbox">Parvovirosis</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-hepatitis" class="pd-chkbox" value="hepatitis">
+                            <label for="chk-hepatitis" class="lbl-chkbox">Hepatitis</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-laringo" class="pd-chkbox" value="laringo">
+                            <label for="chk-laringo" class="lbl-chkbox">Laringotraqueitis</label>
+                        </div>
+                    </div>
+                    <div class="pd-chk">
+                        <div>
+                            <input type="checkbox" id="chk-gastro" class="pd-chkbox" value="gastro">
+                            <label for="chk-gastro" class="lbl-chkbox" class="pd-chkbox">Gastroenteritis</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-rabia" class="pd-chkbox" value="rabia">
+                            <label for="chk-rabia" class="lbl-chkbox">Rabia</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-lepto" class="pd-chkbox" value="lepto">
+                            <label for="chk-lepto" class="lbl-chkbox">Leptospirosis</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-tp" class="pd-chkbox" value="tp">
+                            <label for="chk-tp" class="lbl-chkbox">Tos de las perreras</label>
+                        </div>
+                    </div>
+                    <div class="pd-chk">
+                        <div>
+                            <input type="checkbox" id="chk-parasitos" class="pd-chkbox" value="parasitos">
+                            <label for="chk-parasitos" class="lbl-chkbox">Parásitos</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-lehismania" class="pd-chkbox" value="lehismania">
+                            <label for="chk-lehismania" class="lbl-chkbox">Lehismania</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chk-filarias" class="pd-chkbox" value="filarias">
+                            <label for="chk-filarias" class="lbl-chkbox">Filarias</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div id="dv-signosMain">
+                    <fieldset class="frm-signos">
+                        <legend>Signos Vitales</legend>
+                        <div class="dv-signos">
+                            <div>
+                                <input type="number" placeholder="Presión Arterial">
+                            </div>
+                            <div>
+                                <input type="number" placeholder="Pulso">
+                            </div>
+
+                            <div>
+                                <input type="number" placeholder="Temperatura">
+                            </div>
+                            <div>
+                                <input type="number" placeholder="Peso">
+                            </div>
+                            <div>
+                                <input type="number" placeholder="Talla">
+                            </div>
+                            <div>
+                                <input type="number" placeholder="Edad">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="frm-vacunas">
+                        <legend>Vacunas</legend>
+                        <div id="dv-vacuna">
+                            <div id="fecha-vacuna">
+                                <label for=""> Fecha de aplicación:</label>
+                                <input type="date" id="input-dateVac" placeholder="Fecha de Aplicación">
+                            </div>
+                            <div id="nombre-vacuna">
+                                <input type="text" id="input-vacuna" placeholder="Nombre de la vacuna">
+                            </div>
+                            <div>
+                                <button type="button" id="btn-agregarVacuna">Agregar</button>
+                            </div>
+                        </div>
+                        <table class="tbl-vacunas" id="tbl-vacuna">
+                            <thead>
+                                <tr>
+                                    <th>Fecha de vacunación</th>
+                                    <th>Nombre de la vacuna</th>
+                                    <th>Acciones</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+                <fieldset class="frm-evolucion">
+                    <legend>Tratamiento Realizado</legend>
+                    <div id="dv-tx">
+                        <div id="fecha-tx">
+                            <label for=""> Fecha:</label>
+                            <input type="date" id="input-txDate">
+                        </div>
+                        <div id="tx-evolucionado">
+                            <input type="text" id="input-txEvol" placeholder="Procedimientos Realizado">
+                        </div>
+                        <div>
+                            <button type="button" id="btn-agregarTx">Agregar</button>
+                        </div>
+                    </div>
+                    <table class="tbl-procedimientos" id="tbl-procedimiento">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Nombre del Procedimiento</th>
+                                <th>Acciones</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="exp-rx" class="tabcontent">
+            <h3>Radiografías</h3>
+
+
+            <div id="frameprincipal">
+                <div class="rxframe">
+                    <img src="" alt="rx-1" id="exp-rx0" class="rx">
+                </div>
+                <div class="rxframe">
+                    <img src="" alt="rx-1" id="exp-rx1" class="rx">
+                </div>
+                <div class="rxframe">
+                    <img src="" alt="rx-2" id="exp-rx2" class="rx">
+                </div>
+                <div class="rxframe">
+                    <img src="" alt="rx-3" id="exp-rx3" class="rx">
+                </div>
+                <div class="rxframe">
+                    <img src="" alt="rx-4" id="exp-rx4" class="rx">
+                </div>
+                <div class="rxframe">
+                    <img src="" alt="rx-5" id="exp-rx5" class="rx">
+                </div>
+                <div class="rxframe">
+                    <img src="" alt="rx-6" id="exp-rx6" class="rx">
+                </div>
+                <div class="rxframe">
+                    <img src="" alt="rx-7" id="exp-rx7" class="rx">
+                </div>
+
+            </div>
+
+            <button id="btn-rx">Incluir Radiografía</button>
+        </div>
+
+        <div id="exp-lab" class="tabcontent">
+            <div>
+                <h3>Ingreso y Consulta de exámenes clínicos</h3>
+            </div>
+
+
+            <div id="container-lab">
+
+
+                <fieldset id="frm-lab">
+                    <legend>Exámenes de Laboratorio</legend>
+                    <form class="frm-expLab">
+                        <div id="dv-labFecha">
+                            <label for="frm-labDate">Fecha</label>
+                            <input type="date" class="form-lab" id="frm-labDate">
+                        </div>
+                        <div id="txt-pet">
+                            <input type="text" class="form-lab" id="lab-pet" placeholder="Nombre de la mascota">
+                        </div>
+                        <div id="txt-owner">
+                            <input type="text" class="form-lab" id="lab-owner" placeholder="Nombre del Dueño">
+                        </div>
+                        <div id="txt-examen">
+                            <input type="text" class="form-lab" id="lab-test" placeholder="Tipo de exámen realizado">
+                        </div>
+                        <div id="txt-resultados">
+                            <input type="text" class="form-lab" id="lab-result" placeholder="Resultados">
+                        </div>
+                        <div>
+                            <select id="lab-doctores">
+                        <option value="" class="frm-select"> Doctores </option>
+                        <option value="luis" class="frm-select">Dr. Luis Zumbado</option>
+                        <option value="mario" class="frm-select">Dr. Mario Castellas</option>
+                        <option value="cindy" class="frm-select">Dra. Cindy Frias</option>
+                        <option value="lucrecia" class="frm-select">Dra. Lucrecia Diaz</option>
+                    </select>
+                            <div>
+                                <button type="button" id="btn-lab">Agregar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </fieldset>
+                <div class="dv-tableLab">
+                    <fieldset id="frm-tablaLab">
+                        <legend>Listado de Exámenes de Laboratorio</legend>
+                        <table id="tbl-lab">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Nombre de la mascota</th>
+                                    <th>Nombre del Dueño</th>
+                                    <th>Examen Realizado</th>
+                                    <th>Resultados</th>
+                                    <th>Acciones</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div id="exp-medicamentos" class="tabcontent">
+            <h3>Prescripciones</h3>
+
+            <fieldset class="frm-medicamentosData">
+                <form class="formulario-medicamentos">
+                    <div id="form-receta-fecha">
+                        <label for="">Fecha:</label>
+                        <input type="date" class="formulario-receta" id="med-date">
+                    </div>
+                    <div>
+                        <label for="med-pet">Nombre de mascota:</label>
+                        <input type="text" class="formulario-receta" id="med-pet" placeholder="Nombre de la mascota">
+                    </div>
+                    <div>
+                        <select id="med-doctores">
+                                <option value="" class="frm-select"> Doctores </option>
+                                <option value="Dr. Luis Zumbado" class="frm-select">Dr. Luis Zumbado</option>
+                                <option value="Dr. Mario Castellas" class="frm-select">Dr. Mario Castellas</option>
+                                <option value="Dra. Cindy Frias" class="frm-select">Dra. Cindy Frias</option>
+                                <option value="Dra. Lucrecia Diaz" class="frm-select">Dra. Lucrecia Diaz</option>
+                            </select>
+                    </div>
+                    <div>
+                        <label for="med-med">Nombre del Medicamento:</label>
+                        <input type="text" class="formulario-receta" id="med-med" placeholder="Nombre del Medicamento">
+                    </div>
+                    <div>
+                        <button type="button" id="btn-med">Agregar Medicamento</button>
+                    </div>
+                </form>
+            </fieldset>
+            <fieldset class="frm-medicamentosTable">
+                <legend>Lista de medicamentos por recetar</legend>
+                <table id="tbl-receta" class="tbl-recetas">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Nombre de la Mascota</th>
+                            <th>Doctor</th>
+                            <th>Medicamentos</th>
+                            <th>Acciones</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                </form>
+            </fieldset>
+
+        </div>
+    </section>
+    <section class="exp-buttons">
+        <div class="btn-exp">
+            <div id="exp-save">
+
+                <button type="button" id="btn-save">Guardar</button>
+            </div>
+            <div id="exp-print">
+                <button type="button" id="btn-print">Imprimir</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-direction">
+            <p>Curridabat, San Jose</p>
+        </div>
+        <div class="footer-email">
+            <p>mokaclinic@vetpet.com</p>
+        </div>
+        <div class="footer-redes">
+            <a href="#"><img src="img/facebook-box-fill.png" alt="" /></a>
+            <a href="#"><img src="img/instagram-fill.png" alt="" /></a>
+            <a href="#"><img src="img/twitter-fill.png" alt="" /></a>
+        </div>
+    </footer>
+    <script src="js/recursos.js"></script>
+    <script src="js/lista-procedimientos.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/validar.js"></script>
+    <script src="js/expediente.js"></script>
+    <script src="js/exp-agregar.js"></script>
+    <script src="js/openFile.js"></script>
+    <script src="js/admin.js"></script>
+    <!-- <script src="js/vacunas-listar.js"></script> -->
+
+
+</body>
+
+</html>

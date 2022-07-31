@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Métodos de pago</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header-admin.css" />
+    <link rel="stylesheet" href="css/listadoMetodosPago.css" />
+    <link rel="stylesheet" href="css/menuUser.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/font-varela.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <a href="#" id="btn-usuario">
+        <i class="fa-solid fa-user"></i>Administrador
+        <i class="fa-solid fa-caret-down"></i>
+      </a>
+      <div class="logo-container">
+        <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+      </div>
+      <div class="menu-icons">
+        <a href="dashboard-admin.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+      </div>
+    </header>
+
+    <nav class="menu-header">
+      <a href="lista-facturas.html">Consultar Facturas</a>
+      <a href="citas.html">Consultar Citas de la Veterinaria</a>
+      <a href="usuarios-consultar.html">Consultar Usuarios</a>
+      <a href="reserva-listado.html">Consultar Reservas del Hotel</a>
+    </nav>
+    <section class="container">
+      <div class="tbl-container">
+        <a href="#" class="btn-salir"
+          ><i class="fa-solid fa-reply"></i>Volver</a
+        >
+        <h1>Métodos de pago</h1>
+        <table id="tbl-users" class="tbl-info">
+          <thead>
+            <tr>
+              <th>Nombre del titular</th>
+              <th>Tipo</th>
+              <th>Número de tarjeta</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="btn-container">
+          <button type="button" onclick="location.href='registroMetodosPago.html'">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="menu-user-container ocultar-menu">
+      <div class="menu-user">
+        <div class="img-user-container">
+          <img src="imgs/users/users1.jpg" alt="" />
+        </div>
+        <div class="enleces">
+          <a href="perfil-usuario.html"
+            ><i class="fa-solid fa-gear"></i>Perfil</a
+          >
+          <a href="#"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
+          <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
+          <a href="listadoMetodosPago.html"
+            ><i class="fa-solid fa-wallet"></i>Métodos de pago</a
+          >
+          <a href="#"
+            ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
+          >
+          <a href="index.html"
+            ><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a
+          >
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="footer-direction">
+          <p>Curridabat, San Jose</p>
+        </div>
+        <div class="footer-email">
+          <p>mokaclinic@vetpet.com</p>
+        </div>
+        <div class="footer-redes">
+          <a href="#"
+            ><img src="imgs/icons/iconsDark/facebook-dark.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="imgs/icons/iconsDark/instagram-dark.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="/imgs/icons/iconsDark/twitter-dark.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="create-by">
+        <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+      </div>
+    </footer>
+    <!-- js -->
+    <script
+      src="https://kit.fontawesome.com/c02f88807d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/metodosdepagoinfo.js"></script>
+    <script src="js/listado-metodos-pagos.js"></script>
+    <script src="js/navUser.js"></script>
+  </body>
+</html>

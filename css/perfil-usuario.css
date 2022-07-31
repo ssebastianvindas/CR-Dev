@@ -1,0 +1,14 @@
+.sct-perfil{
+    position: relative;
+    top: 120px;
+    background-color: aquamarine;
+}
+.img-perfil-container{
+    width: 300px;
+    height: 300px;
+}
+.img-perfil-container img{
+    width: 100%;
+    height: 100%;
+}
+

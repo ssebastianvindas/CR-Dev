@@ -1,0 +1,85 @@
+#btn-cantidad {
+    margin-left: 515px;
+}
+
+#btn-imprimir {
+    margin: 10px;
+    margin-left: 530px;
+}
+
+#btn-lab {
+    border-radius: 5%;
+    width: 120px;
+    height: 30px;
+    margin-left: 430px;
+}
+
+#btn-med {
+    margin-left: 520px;
+}
+
+#btn-print {
+    border-radius: 5%;
+    margin-top: 6%;
+    margin-right: 5%;
+    padding-right: 10%;
+    width: 100px;
+    height: 40px;
+}
+
+#btn-print:hover {
+    background-color: #568656;
+}
+
+#btn-registrar {
+    margin-left: 270px;
+}
+
+#btn-rx {
+    border-radius: 5%;
+    margin-top: 10%;
+    width: 180px;
+    height: 40px;
+    margin-left: 1255px;
+}
+
+#btn-save {
+    border-radius: 5%;
+    margin-top: 6%;
+    margin-right: 5%;
+    padding-right: 10%;
+    width: 100px;
+    height: 40px;
+}
+
+#btn-save:hover {
+    background-color: #568656;
+}
+
+.btn-exp {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 500px;
+}
+
+#btn-userAdd {
+    margin-left: 380px;
+}
+
+.exp-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.exp-save {
+    background-color: darkolivegreen;
+    border-radius: 5%;
+    padding-right: 5%;
+}
+
+.exp-print {
+    background-color: darkolivegreen;
+    border-radius: 5%;
+}

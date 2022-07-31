@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login y Register</title>
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-varela.css">
+    <!-- css reset -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+    <!-- formulario de login y registro -->
+    <section class="form-all">
+        <div class="contenedor-todo">
+            <div class="caja-trasera">
+                <!-- iniciar sesión -->
+                <div class="caja-trasera-login">
+                    <h3>
+                        <span class="questions-marks-styles">¿</span>Ya tienes una cuenta
+                        <span class="questions-marks-styles">?</span>
+                    </h3>
+                    <p>Inicia sesión para entrar a Moka</p>
+                    <button type="button" id="btn-login">
+              Login<i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+                    <div class="icons-container">
+                        <a aria-label="facebook" href="" class="social-icon"><img src="imgs/icons/iconsWhite/facebook.png" alt="" /></a>
+                        <a aria-label="instagram" href="" class="social-icon"><img src="imgs/icons/iconsWhite/instagram.png" alt="" /></a>
+                        <a aria-label="twitter" href="" class="social-icon"><img src="imgs/icons/iconsWhite/twitter.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- registrarse -->
+                <div class="caja-trasera-register">
+                    <h3>
+                        <span class="questions-marks-styles">¿</span>Aun no tienes una cuenta
+                        <span class="questions-marks-styles">?</span>
+                    </h3>
+                    <p>Regístrate para ser parte de Moka</p>
+                    <button type="button" id="btn-register">
+              Register<i class="fa-solid fa-clipboard-list"></i>
+            </button>
+                    <div class="icons-container">
+                        <a aria-label="facebook" href="" class="social-icon"><img src="imgs/icons/iconsWhite/facebook.png" alt="" /></a>
+                        <a aria-label="instagram" href="" class="social-icon"><img src="imgs/icons/iconsWhite/instagram.png" alt="" /></a>
+                        <a aria-label="twitter" href="" class="social-icon"><img src="imgs/icons/iconsWhite/twitter.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor-login-register">
+                <!-- login -->
+                <form id="form-login" class="formulario-login">
+                    <h2>Iniciar sesión</h2>
+                    <div class="card--label-input" id="grupo__usuario">
+                        <input type="text" placeholder="Usuario" name="login-usuario" id="login-usuario" class="formulario-input border-general" />
+                        <label for="Usuario" class="form-label">Usuario</label>
+                        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener números, letras y guion bajo.</p>
+                    </div>
+                    <div class="card--label-input" id="grupo__password">
+                        <input type="password" placeholder="contraseña" name="login-password" id="login-password" class="formulario-input border-general" />
+                        <label for="" class="form-label">Contraseña</label>
+                        <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                        <button type="button" id="btn-password-1" class="btn-password btn-password1" title="show password">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+                    </div>
+                    <div class="container-btn-iniciar-sesion">
+                        <button type="button" id="btn-login-form" class="btn-forms">
+                Iniciar sesión
+              </button>
+                    </div>
+                </form>
+                <!-- register -->
+                <form id="form-register" class="formulario-register">
+                    <h2>Registrarse</h2>
+                    <div class="card--label-input" id="grupo__name">
+                        <input type="text" name="register-name" id="register-name" placeholder="Nombre completo" class="formulario-input border-general" required />
+                        <label for="" class="form-label">Nombre completo</label>
+                        <p class="formulario__input-error-register">El nombre solo puede contener letras y acentos.</p>
+                    </div>
+                    <div class="card--label-input" id="grupo__user">
+                        <input type="text" name="register-user" placeholder="Usuario" id="register-user" class="formulario-input border-general" />
+                        <label for="" class="form-label">Usuario</label>
+                        <p class="formulario__input-error-register">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener números, letras y guion bajo.</p>
+                    </div>
+                    <div class="card--label-input" id="grupo__number">
+                        <input type="text" name="register-number" placeholder="Usuario" id="register-number" class="formulario-input border-general" />
+                        <label for="register-number" class="form-label">Número</label>
+                        <p class="formulario__input-error-register">El teléfono solo puede contener números y el máximo son 14 dígitos.</p>
+                    </div>
+                    <div class="card--label-input" id="grupo__email">
+                        <input type="email" placeholder="Correo electrónico" id="register-email" name="register-email" class="formulario-input border-general" />
+                        <label for="register-email" class="form-label">Correo electrónico</label
+              >
+              <p class="formulario__input-error-register">El correo solo puede contener letras, números, puntos, guiones y guion bajo.</p>
+            </div>
+            <div class="card--label-input"  id="grupo__password2">
+              <input
+                type="password"
+                placeholder="Contraseña"
+                name="register-password2"
+                id="register-password2"
+                class="formulario-input border-general"
+              />
+              <label for="register-password" class="form-label"
+                >Contraseña</label
+              >
+              <p class="formulario__input-error-register">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+              <button
+                type="button"
+                class="btn-password btn-password2"
+                id="btn-password-2"
+                title="show password"
+              >
+              <i class="ri-eye-fill"></i>
+              </button>
+            </div>
+            <div class="container-btn-register">
+              <button type="button" id="btn-register-form" class="btn-forms btn-register">
+                Registrarse
+              </button>
+              <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Te has registrado exitosamente!</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/login.js"></script>
+    <script src="js/usuarios.js"></script>
+    <script src="js/loginRegister.js"></script>
+    <script src="js/validacionLoginRegister.js"></script>
+  </body>
+</html>

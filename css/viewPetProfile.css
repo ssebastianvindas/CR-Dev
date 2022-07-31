@@ -1,0 +1,65 @@
+    .tab-expediente-display {
+        display: flex;
+        max-width: 95%;
+        background-color: #2f323a;
+        overflow: hidden;
+        border: 1px solid #000;
+    }
+    
+    .tab-expediente-display button {
+        background-color: inherit;
+        color: white;
+        padding: 10px 6px;
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        text-align: center;
+    }
+    
+    .tab-expediente-display button:hover {
+        background-color: #269c57;
+        font-size: 24px;
+    }
+    
+    .tab-expediente-display button.active {
+        background-color: #ffffff;
+        color: #269c57;
+    }
+    
+    .tabcontentPet {
+        position: absolute;
+        top: 400px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: auto;
+        display: none;
+    }
+    
+    .profile-display-box {
+        border-radius: 10px;
+        margin: 5px;
+        padding: 20px;
+    }
+    
+    .profile-display-box-titulo {
+        font-size: 30px;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #18b158;
+    }
+    
+    .profile-display-box-observaciones {
+        padding-bottom: 25px;
+        border-bottom: 2px solid #18b158;
+    }

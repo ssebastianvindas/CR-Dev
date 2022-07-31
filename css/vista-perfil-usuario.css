@@ -1,0 +1,94 @@
+*{box-sizing: border-box;}
+.sct-perfil {
+  width: 100%;
+  position: relative;
+  top: 119px;
+  background-image: url(/imgs/users/fondo1.png);
+  background-size: cover;
+  background-position: center;
+  font-family: "Varela Round", sans-serif;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+.sct-perfil h1 {
+  text-align: center;
+  font-size: 30px;
+  padding: 25px 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+.content {
+  background-color: #2f323aec;
+  backdrop-filter: blur(1);
+  margin:  auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  padding: 50px 0;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.img-perfil-container {
+  width: 250px;
+  height: 250px;
+  margin-top: -170px;
+}
+.img-perfil-container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.content-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  font-size: 20px;
+  width: 550px;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+.content-info .nombre-container,
+.email-container,
+.numero-container,
+.direccion-container {
+  width: 210px;
+}
+.content-info .nombre-container span i,
+.email-container span i,
+.numero-container span i,
+.direccion-container span i {
+  margin-right: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+.content-info .nombre-container span,
+.email-container span,
+.numero-container span,
+.direccion-container span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #03af5f;
+}
+.content-info .nombre-container p,
+.email-container p,
+.numero-container p,
+.direccion-container p {
+  font-size: 18px;
+  font-weight: 100;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+
