@@ -80,10 +80,14 @@
 
 #exp-principal {
     color: black;
+    background-color: #228b22;
+    height: 81vh;
 }
 
 #exp-medicamentos {
     color: #000;
+    background-color: #8fbc8f;
+    height: 81vh;
 }
 
 fieldset {
