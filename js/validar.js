@@ -73,7 +73,7 @@ let confirmar = () => {
             Swal.fire({
                 title: 'Padecimientos Vacíos!',
                 text: 'Por favor revise que no se le paso por alto llenar los padecimientos.',
-                imageUrl: '../img/sick.jpg',
+                imageUrl: '../imgs/sick.jpg',
                 imageWidth: 400,
                 imageHeight: 200,
                 imageAlt: 'Padecimientos',
