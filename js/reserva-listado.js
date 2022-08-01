@@ -65,10 +65,10 @@ let cambiarNickname = () => {
             nickname.textContent = 'Secretaria'
             break;
         case 3:
-            nickname.textContent = 'Cliente'
+            nickname.textContent = 'Veterinario'
             break;
         case 4:
-            nickname.textContent = 'Veterinario'
+            nickname.textContent = 'Cliente'
             break;
     }
 }
