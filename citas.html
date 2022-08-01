@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="css/header-Admin.css" />
     <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
     <title>Citas del día</title>
-        <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="css/font-varela.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-varela.css">
 </head>
 
 <body>
@@ -42,46 +42,41 @@
         <div class="tab">
             <button class="tablinks" onclick="openCity(event, 'cita-listar')">Consultar Citas</button>
             <button class="tablinks" onclick="openCity(event, 'cita-doctor')">Citas del dia por Doctor</button>
+            <button class="tablinks" onclick="openCity(event, 'cita-pendientes')">Citas sin Asignar</button>
+
         </div>
 
         <!-- Tab content -->
-        <div id="cita-nueva" class="tabcontent">
-            <h3>Ingrese una nueva cita</h3>
-            <form class="frm-citas-new">
-                <div id="img-citas">
-                    <fieldset class="frm-cita">
-                        <legend>Crear una nueva cita</legend>
-                        <div id="hofe">
-                            <label for="newCita-date">Fecha:</label>
-                            <input type="date" id="newCita-date">
-                            <label for="newCita-date">Hora:</label>
-                            <input type="time" id="newCita-date">
-
-                        </div>
-                        <div class="txt-citas">
-                            <input type="text" class="frm-citas" placeholder="Nombre de la mascota">
-                        </div>
-                        <div class="txt-citas">
-                            <input type="text" class="frm-citas" placeholder="Nombre del dueño">
-                        </div>
-                        <div class="txt-citas">
-                            <input type="text" class="frm-citas" placeholder="Procedimiento">
-                        </div>
-                        <div class="txt-citas">
-                            <select id="citas-doctores">
-                            <option value="" class="frm-select"> Doctores </option>
-                            <option value="luis" class="frm-select">Dr. Luis Zumbado</option>
-                            <option value="mario" class="frm-select">Dr. Mario Castellas</option>
-                            <option value="cindy" class="frm-select">Dra. Cindy Frias</option>
-                            <option value="lucrecia" class="frm-select">Dra. Lucrecia Diaz</option>
-                        </select>
-                        </div>
-                        <div id="dv-btnCitas">
-                            <button type="button" id="btn-citasNew">Agregar Cita</button>
-                        </div>
-                    </fieldset>
-                </div>
-            </form>
+        <div id="cita-pendientes" class="tabcontent">
+            <div class="tbl-container">
+                <h1>Citas Pendientes de Asignar</h1>
+                <table id="tbl-pendientes" class="tbl-general">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Nombre del Paciente</th>
+                            <th>Nombre del Dueño</th>
+                            <th>Procedimiento</th>
+                            <th>Doctor</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>02/11/2022</td>
+                            <td>10:30am</td>
+                            <td>Dusty</td>
+                            <td>Alberto Coto Calvo</td>
+                            <td>Vacuna</td>
+                            <td>Dr. Luis Zumbado</td>
+                            <td>Pendiente</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div id="cita-listar" class="tabcontent">
@@ -96,17 +91,20 @@
                             <th>Nombre del Dueño</th>
                             <th>Procedimiento</th>
                             <th>Doctor</th>
+                            <td>Estado</td>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>02/11/2022</th>
-                            <th>10:30am</th>
-                            <th>Dusty</th>
-                            <th>Alberto Coto Calvo</th>
-                            <th>Vacuna</th>
-                            <th>Dr. Luis Zumbado</th>
+                            <td>02/11/2022</td>
+                            <td>10:30am</td>
+                            <td>Dusty</td>
+                            <td>Alberto Coto Calvo</td>
+                            <td>Vacuna</td>
+                            <td>Dr. Luis Zumbado</td>
+                            <td>Pendiente</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -138,17 +136,20 @@
                             <th>Nombre del Dueño</th>
                             <th>Procedimiento</th>
                             <th>Doctor</th>
+                            <td>Estado</td>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>02/11/2022</th>
-                            <th>10:30am</th>
-                            <th>Dusty</th>
-                            <th>Alberto Coto Calvo</th>
-                            <th>Vacuna</th>
-                            <th>Dr. Luis Zumbado</th>
+                            <td>02/11/2022</td>
+                            <td>10:30am</td>
+                            <td>Dusty</td>
+                            <td>Alberto Coto Calvo</td>
+                            <td>Vacuna</td>
+                            <td>Dr. Luis Zumbado</td>
+                            <td>Pendiente</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -170,31 +171,31 @@
             </div>
         </div>
     </div>
-        
-        <footer>
-            <div class="footer">
-                <div class="footer-direction">
-                    <p>Curridabat, San Jose</p>
-                </div>
-                <div class="footer-email">
-                    <p>mokaclinic@vetpet.com</p>
-                </div>
-                <div class="footer-redes">
-                    <a href="#"><img src="imgs/icons/iconsDark/facebook-dark.png" alt="" /></a>
-                    <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
-                    <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
-                </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-direction">
+                <p>Curridabat, San Jose</p>
             </div>
-            <div class="create-by">
-                <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+            <div class="footer-email">
+                <p>mokaclinic@vetpet.com</p>
             </div>
-        </footer>
-        <script src="js/cita-new.js"></script>
-        <script src="js/citas.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="js/citas-listar.js"></script>
-        <script src="js/validar-citas.js"></script>
-        <script src="js/navUser.js"></script>
+            <div class="footer-redes">
+                <a href="#"><img src="imgs/icons/iconsDark/facebook-dark.png" alt="" /></a>
+                <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
+                <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="create-by">
+            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+        </div>
+    </footer>
+    <script src="js/cita-new.js"></script>
+    <script src="js/citas.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/citas-listar.js"></script>
+    <script src="js/validar-citas.js"></script>
+    <script src="js/navUser.js"></script>
 </body>
 
 </html>
