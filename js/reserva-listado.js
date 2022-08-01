@@ -55,23 +55,23 @@ const llenarTabla = () => {
     });
 };
 
-let cambiarNickname = ()=>{
-        switch (usuarioConectado.rol) {
-            case 1:
-                nickname.textContent = 'Administrador'
-                break;
-            case 2:
-                nickname.textContent = 'secretaria'
-                break;
-            case 3:
-                window.location.href = "cliente.html";
-                break;
-            case 4:
-                window.location.href = "veterinario.html";
-                break;
-        }
+let cambiarNickname = () => {
+    switch (usuarioConectado.rol) {
+        case 1:
+            nickname.textContent = 'Administrador'
+            break;
+        case 2:
+            nickname.textContent = 'secretaria'
+            break;
+        case 3:
+            nickname.textContent = 'Administrador'
+            break;
+        case 4:
+            nickname.textContent = 'Administrador'
+            break;
+    }
 }
-window.addEventListener('load',cambiarNickname)
+window.addEventListener('load', cambiarNickname)
 let regresarPrincipal = () => {
     switch (usuarioConectado.rol) {
         case 1:

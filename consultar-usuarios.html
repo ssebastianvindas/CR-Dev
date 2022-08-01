@@ -6,34 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/jim-header.css">
-    <link rel="stylesheet" href="css/tablas.css">
+    <link rel="stylesheet" href="css/botones.css">
     <link rel="stylesheet" href="css/menuUser.css" />
-    <link rel="stylesheet" href="css/headerUser.css" />
-    <link rel="stylesheet" href="css/consultar-usuarios.css">
-
+    <link rel="stylesheet" href="css/header-admin.css" />
+    <link rel="stylesheet" href="css/tablas.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/citas.css">
+    <link rel="stylesheet" href="css/admin.css">
     <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
-    <title>Listado de Usuarios</title>
+    <title>Listado de Facturas</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-varela.css" />
 </head>
 
 <body>
     <header class="header-container">
         <a href="#" id="btn-usuario">
-            <i class="fa-solid fa-user"></i>Monica
+            <i class="fa-solid fa-user"></i>Administrador
             <i class="fa-solid fa-caret-down"></i>
         </a>
         <div class="logo-container">
-            <img src="imgs/logo-moka.png" alt="logo moka" />
+            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
         </div>
         <div class="menu-icons">
             <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
             <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
         </div>
     </header>
-    <nav class="menu">
-
-        <a href="#" id="btn-backMain">Dashboard Principal</a>
-
+    <nav class="menu-header">
+        <a href="dashboard-admin.html" id="btn-dash">Dashboard Principal</a>
     </nav>
     <div class="menu-user-container ocultar-menu">
         <div class="menu-user">
@@ -53,15 +57,13 @@
 
 
 
-
-    <section class="container-usuarios">
+    <section class="container">
         <div class="tbl-container">
-
             <h1>Listado de Usuarios</h1>
-            <table id="tbl-usuarios">
+            <table id="tbl-usuarios" class="tbl-general">
                 <thead>
                     <tr>
-                        <th>Identificación de Usuario|</th>
+                        <th>ID del Usuario</th>
                         <th>Nombre de Usuario</th>
                         <th>Contraseña</th>
                         <th>Rol</th>
@@ -79,6 +81,8 @@
 
                 </tbody>
             </table>
+        </div>
+
     </section>
     <script src="js/usuarios.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

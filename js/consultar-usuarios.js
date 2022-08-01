@@ -10,9 +10,9 @@ const llenarUsuarios = () => {
 
         let fila = cuerpoTabla.insertRow();
 
-        fila.insertCell().textContent = user.identificacion;
+        fila.insertCell().textContent = user.usuario;
         fila.insertCell().textContent = user.nombre;
-        fila.insertCell().textContent = user.contrasena;
+        fila.insertCell().textContent = user.contrasenna;
         fila.insertCell().textContent = user.rol;
 
 
