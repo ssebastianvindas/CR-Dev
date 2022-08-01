@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,37 +14,34 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/font-varela.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="header-container">
-      <a href="#" id="btn-usuario">
-        <i class="fa-solid fa-user"></i>Administrador
-        <i class="fa-solid fa-caret-down"></i>
-      </a>
-      <div class="logo-container">
-        <img src="imgs/logo/logo-moka.png" alt="logo moka" />
-      </div>
-      <div class="menu-icons">
-        <a href="dashboard-admin.html"><i class="fa-solid fa-house"></i>Inicio</a>
-        <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
-      </div>
+        <div>
+            <a href="#" id="btn-usuario">
+                <i class="fa-solid fa-user"></i><span class="nickname"></span>
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+        </div>
+        <div class="logo-container">
+            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+        </div>
+        <div class="menu-icons">
+            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+        </div>
     </header>
 
     <nav class="menu-header">
-      <a href="lista-facturas.html">Consultar Facturas</a>
-      <a href="citas.html">Consultar Citas de la Veterinaria</a>
-      <a href="usuarios-consultar.html">Consultar Usuarios</a>
-      <a href="reserva-listado.html">Consultar Reservas del Hotel</a>
+        <a href="#" class="btn-dashboard-principal" id="btn-dashboard">Dashboard Principal</a>
+
     </nav>
     <section class="container">
-      <div class="tbl-container">
-        <a href="#" class="btn-salir"
-          ><i class="fa-solid fa-reply"></i>Volver</a
+        <div class="tbl-container">
+            <a href="#" class="btn-salir"><i class="fa-solid fa-reply"></i>Volver</a
         >
         <h1>Métodos de pago</h1>
         <table id="tbl-users" class="tbl-info">
@@ -74,9 +72,8 @@
             ><i class="fa-solid fa-gear"></i>Perfil</a
           >
           <a href="#"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
-          <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
-          <a href="listadoMetodosPago.html"
-            ><i class="fa-solid fa-wallet"></i>Métodos de pago</a
+            <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
+            <a href="listadoMetodosPago.html"><i class="fa-solid fa-wallet"></i>Métodos de pago</a
           >
           <a href="#"
             ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
@@ -99,26 +96,21 @@
           <a href="#"
             ><img src="imgs/icons/iconsDark/facebook-dark.png" alt=""
           /></a>
-          <a href="#"
-            ><img src="imgs/icons/iconsDark/instagram-dark.png" alt=""
-          /></a>
-          <a href="#"
-            ><img src="/imgs/icons/iconsDark/twitter-dark.png" alt=""
-          /></a>
+            <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
+            <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
         </div>
-      </div>
-      <div class="create-by">
-        <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
-      </div>
-    </footer>
-    <!-- js -->
-    <script
-      src="https://kit.fontawesome.com/c02f88807d.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/metodosdepagoinfo.js"></script>
-    <script src="js/listado-metodos-pagos.js"></script>
-    <script src="js/navUser.js"></script>
-  </body>
+        </div>
+        <div class="create-by">
+            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+        </div>
+        </footer>
+        <!-- js -->
+        <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/metodosdepagoinfo.js"></script>
+        <script src="js/listado-metodos-pagos.js"></script>
+        <script src="js/navUser.js"></script>
+        <script src="js/regresar-dashboard.js"></script>
+</body>
+
 </html>

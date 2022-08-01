@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,204 +16,199 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-    href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-    rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/font-varela.css" />
     <!-- pasar al main en pagar facturas -->
     <link rel="stylesheet" href="css/pagar-facturas.css">
-    <link rel="stylesheet" href="css/pagar.css"> 
+    <link rel="stylesheet" href="css/pagar.css">
 
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="header-container">
-      <a href="#" id="btn-usuario">
-        <i class="fa-solid fa-user"></i>Administrador
-        <i class="fa-solid fa-caret-down"></i>
-      </a>
-      <div class="logo-container">
-        <img src="imgs/logo/logo-moka.png" alt="logo moka" />
-      </div>
-      <div class="menu-icons">
-        <a href="dashboard-admin.html"><i class="fa-solid fa-house"></i>Inicio</a>
-        <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
-      </div>
+        <div>
+            <a href="#" id="btn-usuario">
+                <i class="fa-solid fa-user"></i><span class="nickname"></span>
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+        </div>
+        <div class="logo-container">
+            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+        </div>
+        <div class="menu-icons">
+            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+        </div>
     </header>
+
     <nav class="menu-header">
-      <a href="#" id="expedientes">Expedientes</a>
-      <a href="#" id="reservaciones">Reservaciones</a>
-      <a href="#" id="citas">Citas</a>
-      <a href="#" id="mascotaasd">Mascotas</a>
-      <a href="#" id="metodos-de-pago">Métodos de pago</a>
+        <a href="#" class="btn-dashboard-principal" id="btn-reservaAtras">Dashboard Principal</a>
     </nav>
     <section class="sct-perfil">
-      <div class="content">
-        <div class="img-perfil-container">
-          <img src="imgs/users/users1.jpg" alt="" />
-        </div>
-          <h1>ricardo24j</h1>
-        <div class="content-info">
-          <div class="nombre-container">
-            <span><i class="fa-solid fa-user"></i>Nombre completo</span>
-            <p>Ricardo Jimenez Castro</p>
-          </div>
-          <div class="email-container">
-            <span><i class="fa-solid fa-at"></i>Correo Electrónico</span>
-            <p>ricardo24@gmail.com</p>
-          </div>
-        </div>
-        <div class="content-info">
-          <div class="numero-container">
-            <span><i class="fa-solid fa-phone"></i>Número</span>
-            <p>8346-5347</p>
-          </div>
-          <div class="direccion-container">
-            <span><i class="fa-solid fa-map-pin"></i>Dirección</span>
-            <p>Curridabat,Guayabos,San Jose</p>
-          </div>
-        </div>
-        <div class="tbl-container">
-          <h2 class="title-tbl">Mis mascotas</h2>
-          <table id="tbl-users" class="tbl-info">
-            <thead>
-              <tr>
-                <th class="id-mascota ">Filtrar:</th>
-                <th><input type="text"></th>
-                <th><button type="button" class="btn-ver btn-agregar" id="btn-rol">Agregar</button></th>
-              </tr>
-              <tr>
-                <th class="id-mascota">ID</th>
-                <th>Nombre de la mascota</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="id-mascota">#1</td>
-                <td><a href="#" class="btn-perfil-mascota">Bruno</a></td>
-                <td><button type="button" class="btn-editar"><i class="fa-solid fa-pencil"></i></button> <button type="button" class="btn-eliminar"><i class="fa-solid fa-trash-can"></i></button></td>
-              </tr>
-              <tr>
-                <td class="id-mascota">#2</td>
-                <td><a href="#"  class="btn-perfil-mascota">Jack</a></td>
-                <td><button type="button" class="btn-editar"><i class="fa-solid fa-pencil"></i></button> <button type="button" class="btn-eliminar"><i class="fa-solid fa-trash-can"></i></button></td>
-              </tr>
-              <tr>
-                <td class="id-mascota">#3</td>
-                <td><a href="#"  class="btn-perfil-mascota">Olivia</a></td>
-                <td><button type="button" class="btn-editar"><i class="fa-solid fa-pencil"></i></button> <button type="button" class="btn-eliminar"><i class="fa-solid fa-trash-can"></i></button></td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
-      <div class="modal-rol" id="modal-register-mascota">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-username">
-                <label>Nueva mascota</label>
+        <div class="content">
+            <div class="img-perfil-container">
+                <img src="imgs/users/users1.jpg" alt="" />
             </div>
-            <div class="modal-roles">
-                <form class="form-mascota">
-                  <div class="container-info-mascota">
-                    <div class="img-mascota-container">
-                      <img id="imagenPrevisualizacion">
-                      <div id="div_file">
-                        <p id="texto">Agregar foto</p>
-                        <input type="file" id="seleccionArchivos" class="btn-seleccionar-foto" accept="image/*">
-                      </div>
+            <h1>ricardo24j</h1>
+            <div class="content-info">
+                <div class="nombre-container">
+                    <span><i class="fa-solid fa-user"></i>Nombre completo</span>
+                    <p>Ricardo Jimenez Castro</p>
+                </div>
+                <div class="email-container">
+                    <span><i class="fa-solid fa-at"></i>Correo Electrónico</span>
+                    <p>ricardo24@gmail.com</p>
+                </div>
+            </div>
+            <div class="content-info">
+                <div class="numero-container">
+                    <span><i class="fa-solid fa-phone"></i>Número</span>
+                    <p>8346-5347</p>
+                </div>
+                <div class="direccion-container">
+                    <span><i class="fa-solid fa-map-pin"></i>Dirección</span>
+                    <p>Curridabat,Guayabos,San Jose</p>
+                </div>
+            </div>
+            <div class="tbl-container">
+                <h2 class="title-tbl">Mis mascotas</h2>
+                <table id="tbl-users" class="tbl-info">
+                    <thead>
+                        <tr>
+                            <th class="id-mascota ">Filtrar:</th>
+                            <th><input type="text"></th>
+                            <th><button type="button" class="btn-ver btn-agregar" id="btn-rol">Agregar</button></th>
+                        </tr>
+                        <tr>
+                            <th class="id-mascota">ID</th>
+                            <th>Nombre de la mascota</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="id-mascota">#1</td>
+                            <td><a href="#" class="btn-perfil-mascota">Bruno</a></td>
+                            <td><button type="button" class="btn-editar"><i class="fa-solid fa-pencil"></i></button> <button type="button" class="btn-eliminar"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="id-mascota">#2</td>
+                            <td><a href="#" class="btn-perfil-mascota">Jack</a></td>
+                            <td><button type="button" class="btn-editar"><i class="fa-solid fa-pencil"></i></button> <button type="button" class="btn-eliminar"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="id-mascota">#3</td>
+                            <td><a href="#" class="btn-perfil-mascota">Olivia</a></td>
+                            <td><button type="button" class="btn-editar"><i class="fa-solid fa-pencil"></i></button> <button type="button" class="btn-eliminar"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-rol" id="modal-register-mascota">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-username">
+                        <label>Nueva mascota</label>
                     </div>
-                    <div class="pet-info">
-                      <div class="content-nombre-mascota">
-                        <label for="txt-nombre-mascota" class="nombre-mascota">Nombre de la mascota</label>
-                        <input type="text" id="txt-nombre-mascota">
-                      </div>
-                      <div class="content-nombre-mascota">
-                        <label for="txt-nombre-mascota" class="nombre-mascota">Cuidados</label>
-                        <textarea name="cuidados" id="cuidados-pet" cols="20" rows="5" placeholder="opcional"></textarea>
-                      </div>
+                    <div class="modal-roles">
+                        <form class="form-mascota">
+                            <div class="container-info-mascota">
+                                <div class="img-mascota-container">
+                                    <img id="imagenPrevisualizacion">
+                                    <div id="div_file">
+                                        <p id="texto">Agregar foto</p>
+                                        <input type="file" id="seleccionArchivos" class="btn-seleccionar-foto" accept="image/*">
+                                    </div>
+                                </div>
+                                <div class="pet-info">
+                                    <div class="content-nombre-mascota">
+                                        <label for="txt-nombre-mascota" class="nombre-mascota">Nombre de la mascota</label>
+                                        <input type="text" id="txt-nombre-mascota">
+                                    </div>
+                                    <div class="content-nombre-mascota">
+                                        <label for="txt-nombre-mascota" class="nombre-mascota">Cuidados</label>
+                                        <textarea name="cuidados" id="cuidados-pet" cols="20" rows="5" placeholder="opcional"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                  </div>
-                </form>
+                    <div class="modal-save">
+                        <button type="button" id="btn-save">Guardar</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-save">
-                <button type="button" id="btn-save">Guardar</button>
-            </div>
-        </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="modal-pagar-facturas" id="modal-metodo-pagar">
-    <div class="modal-content-pay">
-        <span class="close-modal">&times;</span>
-        <div class="modal-pay">
-            <label>Pagar factura</label>
-        </div>
-        <div class="modal-form-pay">
-            <form class="form-pagar">
-              <div class="container-info-pagar">
-                <div class="img-container-pay"><img src="imgs/logo/logo-moka.png" alt="Logo de  Veterinaria Moka"></div>
-              <div>
-              <div class="inputs-container">
-                <label for="txt-nombre">Nombre del titular de la tarjeta</label>
-                <input type="text" id="txt-nombre" />
-              </div>
-              <div class="inputs-container">
-                <label for="num-tarjeta">Número de tarjeta</label>
-                <input type="number" id="num-tarjeta" />
-                <i class="fa-solid fa-credit-card"></i>
-              </div>
-              <div class="inputs-container">
-              <label for="tipo">Tipo</label>
-              <div class="grupo-tipo">
-                  <select name="tipo" id="tipo" class="slt-tipo">
+    <div class="modal-pagar-facturas" id="modal-metodo-pagar">
+        <div class="modal-content-pay">
+            <span class="close-modal">&times;</span>
+            <div class="modal-pay">
+                <label>Pagar factura</label>
+            </div>
+            <div class="modal-form-pay">
+                <form class="form-pagar">
+                    <div class="container-info-pagar">
+                        <div class="img-container-pay"><img src="imgs/logo/logo-moka.png" alt="Logo de  Veterinaria Moka"></div>
+                        <div>
+                            <div class="inputs-container">
+                                <label for="txt-nombre">Nombre del titular de la tarjeta</label>
+                                <input type="text" id="txt-nombre" />
+                            </div>
+                            <div class="inputs-container">
+                                <label for="num-tarjeta">Número de tarjeta</label>
+                                <input type="number" id="num-tarjeta" />
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <div class="inputs-container">
+                                <label for="tipo">Tipo</label>
+                                <div class="grupo-tipo">
+                                    <select name="tipo" id="tipo" class="slt-tipo">
                     <option value="">--- Seleccione el tipo de tarjeta ---</option>
                     <option value="Visa">Visa</option>
                     <option value="MasterCard">MasterCard</option>
                     <option value="Otro">Otro</option>
                   </select>
-                </div>
-              </div>
-              <div class="grupo-c">
-                <div class="inputs-container grupo-expiracion">
-                  <label for="num-mes num-año">Fecha de expiración</label>
-                  <div>
-                    <input type="number" class="input-mes" id="num-mes" />
-                    <span class="slash">/</span>
-                    <input type="number" class="input-año" id="num-año" />
-                  </div>
-                </div>
-                <div class="inputs-container grupo-cvv">
-                  <label for="num-cvv">CVV</label>
-                  <input type="number" class="input-cvv" id="num-cvv" />
-                </div>
-              </div>
-              <div class="inputs-container">
-                <label for="txt-direccion">Dirección de facturación</label>
-                <input type="text" id="txt-direccion" />
-              </div>
-            </div> 
+                                </div>
+                            </div>
+                            <div class="grupo-c">
+                                <div class="inputs-container grupo-expiracion">
+                                    <label for="num-mes num-año">Fecha de expiración</label>
+                                    <div>
+                                        <input type="number" class="input-mes" id="num-mes" />
+                                        <span class="slash">/</span>
+                                        <input type="number" class="input-año" id="num-año" />
+                                    </div>
+                                </div>
+                                <div class="inputs-container grupo-cvv">
+                                    <label for="num-cvv">CVV</label>
+                                    <input type="number" class="input-cvv" id="num-cvv" />
+                                </div>
+                            </div>
+                            <div class="inputs-container">
+                                <label for="txt-direccion">Dirección de facturación</label>
+                                <input type="text" id="txt-direccion" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            </form>
-        </div>
-        <div class="modal-btn-pay">
-            <button type="button" class="btn-pagar" id="btn-pay">Pagar</button>
+            <div class="modal-btn-pay">
+                <button type="button" class="btn-pagar" id="btn-pay">Pagar</button>
+            </div>
         </div>
     </div>
-  </div>
-  <div class="menu-user-container ocultar-menu">
-    <div class="menu-user">
-      <div class="img-user-container">
-        <img src="imgs/users/users1.jpg" alt="" />
-      </div>
-      <div class="enleces">
-        <a href="perfil-usuario.html"
-          ><i class="fa-solid fa-gear"></i>Perfil</a
+    <div class="menu-user-container ocultar-menu">
+        <div class="menu-user">
+            <div class="img-user-container">
+                <img src="imgs/users/users1.jpg" alt="" />
+            </div>
+            <div class="enleces">
+                <a href="perfil-usuario.html"><i class="fa-solid fa-gear"></i>Perfil</a
         >
         <a href="#"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
-        <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
-        <a href="listadoMetodosPago.html"
-          ><i class="fa-solid fa-wallet"></i>Métodos de pago</a
+                <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
+                <a href="listadoMetodosPago.html"><i class="fa-solid fa-wallet"></i>Métodos de pago</a
         >
         <a href="#"
           ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
@@ -233,23 +229,22 @@
         </div>
         <div class="footer-redes">
             <a href="#"><img src="imgs/icons/iconsDark/facebook-dark.png" alt="" /></a>
-            <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
-            <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
+                <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
+                <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
+            </div>
         </div>
-    </div>
-    <div class="create-by">
-        <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
-    </div>
-</footer>
-    <!-- js -->
-    <script
-      src="https://kit.fontawesome.com/c02f88807d.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/nueva-mascota.js"></script>
-    <script src="js/listado-mascotas.js"></script>
-    <script src="js/pagar-facturas.js"></script>
-    <script src="js/navUser.js"></script>
-  </body>
+        <div class="create-by">
+            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+        </div>
+        </footer>
+        <!-- js -->
+        <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/nueva-mascota.js"></script>
+        <script src="js/listado-mascotas.js"></script>
+        <script src="js/pagar-facturas.js"></script>
+        <script src="js/navUser.js"></script>
+        <script src="js/regresar-dashboard.js"></script>
+</body>
+
 </html>
