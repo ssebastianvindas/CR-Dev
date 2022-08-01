@@ -15,27 +15,36 @@
 
 <body>
     <header class="header-container">
+        <div>
+            <a href="#" id="btn-usuario">
+                <i class="fa-solid fa-user"></i><span class="nickname"></span>
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+        </div>
         <div class="logo-container">
             <img src="imgs/logo/logo-moka.png" alt="logo moka" />
         </div>
-        <div class="home"><a href="moka.html">Hotel</a></div>
-        <nav class="menu-icons">
+        <div class="menu-icons">
+            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
             <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
-            <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>Login</a
-        >
-      </nav>
+        </div>
     </header>
+
+    <nav class="menu-header">
+        <a href="#" class="btn-dashboard-principal" id="btn-dashboard">Dashboard Principal</a>
+    </nav>
+
+
     <section class="sct-hotel">
-      <div class="info-hotel-container">
-        <h1>Hospedaje especializado</h1>
-        <p>
-          Contamos con las mejores instalaciones para el cuidado de tu mascota
-        </p>
-      </div>
-      <div class="img-animales-container">
-        <div class="img-perro">
-          <img src="imgs/hotel/perro.png" alt="" /><span class="txt-perros"
-            >Perros</span >
+        <div class="info-hotel-container">
+            <h1>Hospedaje especializado</h1>
+            <p>
+                Contamos con las mejores instalaciones para el cuidado de tu mascota
+            </p>
+        </div>
+        <div class="img-animales-container">
+            <div class="img-perro">
+                <img src="imgs/hotel/perro.png" alt="" /><span class="txt-perros">Perros</span >
             
         </div>
         <div class="img-perro">
@@ -80,5 +89,6 @@
     </section>
     <!-- js -->
     <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+    <script src="js/regresar-dashboard.js"></script> 
   </body>
 </html>
