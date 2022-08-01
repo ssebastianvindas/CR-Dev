@@ -37,10 +37,9 @@
     </header>
 
     <nav class="menu-header">
-        <a href="list-expediente.html" id="expedientes">Expediente</a>
-        <a href="list-reservaciones.html" id="reservaciones">Reservaciones</a>
-        <a href="list-citas.html" id="citas">Citas</a>
-        <a href="list-pagos.html" id="citas">Pagos</a>
+        <nav class="menu-header">
+            <a href="dashboard-admin.html" id="btn-dash">Dashboard Principal</a>
+        </nav>
     </nav>
 
     <div class="menu-user-container ocultar-menu">
@@ -62,7 +61,7 @@
 
     <section class="container">
         <div class="tbl-container">
-            <a href="dash-usuario.html" class="btn-salir"><i class="fa-solid fa-reply"></i>Volver</a>
+
             <h1>Listado de reservaciones</h1>
             <table id="tbl-users" class="tbl-info">
                 <thead>
@@ -83,16 +82,18 @@
                         <td><button class="btn-ver" id="btn-expediente">Ver reservación</button></td>
                     </tr>
                 </tbody>
-                <tbody>
-                    <tr>
-                        <td>Juls</td>
-                        <td>23/07/22</td>
-                        <td>27/07/22</td>
-                        <td>1</td>
-                        <td><button class="btn-ver" id="btn-expediente">Ver reservación</button></td>
-                    </tr>
-                </tbody>
+
+                <tr>
+                    <td>Juls</td>
+                    <td>23/07/22</td>
+                    <td>27/07/22</td>
+                    <td>1</td>
+                    <td><button class="btn-ver" id="btn-expediente">Ver reservación</button></td>
+                </tr>
+
             </table>
+        </div>
+
     </section>
     <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
     <script src="js/navUser.js"></script>
