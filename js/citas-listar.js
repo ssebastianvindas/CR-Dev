@@ -3,8 +3,7 @@ const cuerpoTablaPendiente = document.querySelector('#tbl-pendientes tbody');
 const cuerpoTablaDoctor = document.querySelector('#tbl-doctor tbody');
 const seleccion = document.getElementById('cita-listar-doctores');
 const selectFiltroTabla = document.getElementById('cita-listar-doctores');
-const botonBack = document.getElementById("btn-back");
-let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
+const nickname = document.querySelector('.nickname');
 
 const llenarTablaDia = () => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
@@ -269,25 +268,27 @@ const llenarTablaPendientes = () => {
     });
 };
 
-let validarBack = () => {
-
+let cambiarNickname = () => {
+    let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
     switch (usuarioConectado.rol) {
-        case "1":
-            window.location.href = "admin.html";
+        case 1:
+            nickname.textContent = 'Administrador'
             break;
-        case "2":
-            window.location.href = "secretaria.html";
+        case 2:
+            nickname.textContent = 'Secretaria'
             break;
-        case "3":
-            window.location.href = "cliente.html";
+        case 3:
+            nickname.textContent = 'Cliente'
             break;
-        case "4":
-            window.location.href = "veterinario.html";
+        case 4:
+            nickname.textContent = 'Veterinario'
             break;
     }
-};
+}
 
-botonBack.addEventListener("click", validarBack);
+window.addEventListener('load', cambiarNickname);
+
+
 
 llenarTablaDia();
 llenarTablaDoctores();

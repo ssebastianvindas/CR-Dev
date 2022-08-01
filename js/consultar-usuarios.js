@@ -1,6 +1,6 @@
 'use strict';
 const cuerpoTabla = document.querySelector('#tbl-usuarios tbody');
-const botonBackMain = document.getElementById("btn-backMain");
+const nickname = document.querySelector('.nickname');
 
 const llenarUsuarios = () => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
@@ -61,25 +61,23 @@ const llenarUsuarios = () => {
 
     });
 };
-
-llenarUsuarios();
-
-let dirigirBackMain = () => {
-
+let cambiarNickname = () => {
+    let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
     switch (usuarioConectado.rol) {
-        case "1":
-            window.location.href = "admin.html";
+        case 1:
+            nickname.textContent = 'Administrador'
             break;
-        case "2":
-            window.location.href = "secretaria.html";
+        case 2:
+            nickname.textContent = 'secretaria'
             break;
-        case "3":
-            window.location.href = "cliente.html";
+        case 3:
+            nickname.textContent = 'Administrador'
             break;
-        case "4":
-            window.location.href = "veterinario.html";
+        case 4:
+            nickname.textContent = 'Administrador'
             break;
     }
-};
+}
+window.addEventListener('load', cambiarNickname)
 
-botonBackMain.addEventListener("click", dirigirBackMain);
+llenarUsuarios();

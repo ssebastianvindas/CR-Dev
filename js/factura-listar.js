@@ -1,6 +1,6 @@
 const cuerpoTabla = document.querySelector('#tbl-factura tbody');
 const botonDashboard = document.getElementById("btn-dash");
-let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
+const nickname = document.querySelector('.nickname');
 const llenarTabla = () => {
     cuerpoTabla.innerHTML = '';
 
@@ -60,7 +60,7 @@ const llenarTabla = () => {
 };
 
 let validarUsuariosBack = () => {
-
+    let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
     switch (usuarioConectado.rol) {
         case "1":
             window.location.href = "admin.html";
@@ -76,6 +76,24 @@ let validarUsuariosBack = () => {
             break;
     }
 };
+let cambiarNickname = () => {
+    let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
+    switch (usuarioConectado.rol) {
+        case 1:
+            nickname.textContent = 'Administrador'
+            break;
+        case 2:
+            nickname.textContent = 'secretaria'
+            break;
+        case 3:
+            nickname.textContent = 'Administrador'
+            break;
+        case 4:
+            nickname.textContent = 'Administrador'
+            break;
+    }
+}
+window.addEventListener('load', cambiarNickname)
 
 botonDashboard.addEventListener("click", validarUsuariosBack);
 llenarTabla();
