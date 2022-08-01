@@ -3,7 +3,7 @@ const rxImage = document.querySelectorAll('.rx');
 
 let cargarImagen = () => {
     rxImage.forEach((rx) => {
-        rx.src = 'img/rx.jpg';
+        rx.src = '../imgs/rx.jpg';
 
     });
 };
