@@ -1,12 +1,12 @@
 let txtUsuario = document.querySelector('#login-usuario')
 let txtContrasenna = document.querySelector('#login-password')
-let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
+
 let opcionesNav = document.querySelectorAll("nav a");
 
 // nav
 
 const rederigirUsuarios = () => {
-    console.log(usuarioConectado.rol);
+    let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
     switch (usuarioConectado.rol) {
         case 1:
             window.location.href = "dashboard-admin.html";
