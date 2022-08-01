@@ -16,7 +16,7 @@ for (const ver of btnRol) {
     ver.addEventListener('click', displayModal);
 }
 
-span.addEventListener('click', closeModal);
+
 
 let cambiarNickname = () => {
     let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
@@ -36,4 +36,5 @@ let cambiarNickname = () => {
     }
 }
 
-window.addEventListener('load', cambiarNickname)
+window.addEventListener('load', cambiarNickname);
+span.addEventListener('click', closeModal);
