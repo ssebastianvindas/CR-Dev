@@ -6,6 +6,7 @@ let opcionesNav = document.querySelectorAll("nav a");
 // nav
 
 const rederigirUsuarios = () => {
+    console.log(usuarioConectado.rol);
     switch (usuarioConectado.rol) {
         case 1:
             window.location.href = "dashboard-admin.html";
@@ -18,6 +19,9 @@ const rederigirUsuarios = () => {
             break;
         case 4:
             window.location.href = "dash-usuario.html";
+            break;
+        default:
+            window.location.href = "dashboard-admin.html";
             break;
     }
 };
