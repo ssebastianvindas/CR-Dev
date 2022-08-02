@@ -61,23 +61,6 @@ const llenarUsuarios = () => {
 
     });
 };
-let cambiarNickname = () => {
-    let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
-    switch (usuarioConectado.rol) {
-        case 1:
-            nickname.textContent = 'Administrador'
-            break;
-        case 2:
-            nickname.textContent = 'secretaria'
-            break;
-        case 3:
-            nickname.textContent = 'Administrador'
-            break;
-        case 4:
-            nickname.textContent = 'Administrador'
-            break;
-    }
-}
-window.addEventListener('load', cambiarNickname)
+
 
 llenarUsuarios();

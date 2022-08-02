@@ -58,42 +58,4 @@ const llenarTabla = () => {
 
     });
 };
-
-let validarUsuariosBack = () => {
-    let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
-    switch (usuarioConectado.rol) {
-        case "1":
-            window.location.href = "admin.html";
-            break;
-        case "2":
-            window.location.href = "secretaria.html";
-            break;
-        case "3":
-            window.location.href = "cliente.html";
-            break;
-        case "4":
-            window.location.href = "veterinario.html";
-            break;
-    }
-};
-let cambiarNickname = () => {
-    let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
-    switch (usuarioConectado.rol) {
-        case 1:
-            nickname.textContent = 'Administrador'
-            break;
-        case 2:
-            nickname.textContent = 'secretaria'
-            break;
-        case 3:
-            nickname.textContent = 'Administrador'
-            break;
-        case 4:
-            nickname.textContent = 'Administrador'
-            break;
-    }
-}
-window.addEventListener('load', cambiarNickname)
-
-botonDashboard.addEventListener("click", validarUsuariosBack);
 llenarTabla();

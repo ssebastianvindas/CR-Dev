@@ -1,4 +1,4 @@
-let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
+
 
 
 function openModulo(evt, modulo) {

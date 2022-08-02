@@ -24,10 +24,12 @@
 
 <body>
     <header class="header-container">
-        <a href="#" id="btn-usuario">
-            <i class="fa-solid fa-user"></i>Administrador
-            <i class="fa-solid fa-caret-down"></i>
-        </a>
+        <div>
+            <a href="#" id="btn-usuario">
+                <i class="fa-solid fa-user"></i><span class="nickname"></span>
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+        </div>
         <div class="logo-container">
             <img src="imgs/logo/logo-moka.png" alt="logo moka" />
         </div>
@@ -47,7 +49,7 @@
     <div class="menu-user-container ocultar-menu">
         <div class="menu-user">
             <div class="img-user-container">
-                <img src="imgs/users/users1.jpg" alt="" />
+                <img id="img-perfil"  src="" alt="" />
             </div>
             <div class="enleces">
                 <a href="perfil-usuario.html"><i class="fa-solid fa-gear"></i>Perfil</a>
@@ -277,6 +279,7 @@
     <script src="js/facturacion-registro.js"></script>
     <script src="js/navUser.js"></script>
     <script src="js/reserva-hotel.js"></script>
+    <script src="js/cambiar-nickname.js"></script>
 </body>
 
 </html>

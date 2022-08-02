@@ -1,6 +1,5 @@
 const cuerpoTabla = document.querySelector('#tbl-factura tbody');
 const botonDashboard = document.getElementById("btn-dash");
-let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
 const llenarTabla = () => {
     cuerpoTabla.innerHTML = '';
 
@@ -58,24 +57,4 @@ const llenarTabla = () => {
 
     });
 };
-
-let validarUsuariosBack = () => {
-
-    switch (usuarioConectado.rol) {
-        case "1":
-            window.location.href = "admin.html";
-            break;
-        case "2":
-            window.location.href = "secretaria.html";
-            break;
-        case "3":
-            window.location.href = "cliente.html";
-            break;
-        case "4":
-            window.location.href = "veterinario.html";
-            break;
-    }
-};
-
-botonDashboard.addEventListener("click", validarUsuariosBack);
 llenarTabla();

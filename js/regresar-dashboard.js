@@ -16,5 +16,4 @@ let regresarPrincipal = () => {
             break;
     }
 };
-
 botonReservaBack.addEventListener("click", regresarPrincipal);

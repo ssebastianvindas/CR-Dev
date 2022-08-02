@@ -1,5 +1,4 @@
 const botonDash = document.getElementById("btn-dashboard");
-let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
 
 function openPage(pageName, elmnt, color) {
     // Hide all elements with class="tabcontent" by default */
@@ -25,22 +24,3 @@ function openPage(pageName, elmnt, color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-let validarUsers = () => {
-    console.log(usuarioConectado.rol);
-    switch (usuarioConectado.rol) {
-        case "1":
-            window.location.href = "admin.html";
-            break;
-        case "2":
-            window.location.href = "secretaria.html";
-            break;
-        case "3":
-            window.location.href = "cliente.html";
-            break;
-        case "4":
-            window.location.href = "veterinario.html";
-            break;
-    }
-};
-
-botonDash.addEventListener("click", validarUsers);
