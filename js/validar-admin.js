@@ -32,7 +32,7 @@ let validarUser = () => {
                 text: 'La información ha sido ingresada con éxito en el expediente clínico',
                 confirmButtonText: "Entendido"
             }).then(() => {
-                window.location.href = "admin.html";
+                regresarPrincipal();
             });
 
 
