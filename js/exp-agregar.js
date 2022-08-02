@@ -139,7 +139,7 @@ function llenarTablaTx() {
             }
         })
     })
-}
+};
 
 function llenarTablaLab() {
     let dFecha = dateLab.value;

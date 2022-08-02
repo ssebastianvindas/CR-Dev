@@ -238,8 +238,16 @@ fieldset {
     border: transparent;
 }
 
+#lab-doctores {
+    margin-left: 285px;
+}
+
+#labo-doctores {
+    margin-left: 285px;
+}
+
 #med-doctores {
-    margin-left: 532px;
+    margin-left: 520px;
 }
 
 #med-med {
