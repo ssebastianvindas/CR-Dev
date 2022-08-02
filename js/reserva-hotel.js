@@ -55,7 +55,7 @@ const obtenerDatosRegistro = () => {
         'text': 'Su numero de confirmacion le llegara al correo',
         'confirmButtonText': 'Continuar'
     }).then(() => {
-        window.location.href = 'reserva-listado.html'
+        regresarPrincipal();
 
     });
 
