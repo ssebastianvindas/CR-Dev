@@ -2,7 +2,7 @@ const cuerpoTabla = document.querySelector('#tbl-hotel tbody');
 
 const llenarTabla = () => {
 
-    //cuerpoTabla.innerHTML = ''; //limpia el contenido del html
+    cuerpoTabla.innerHTML = ''; //limpia el contenido del html
 
     reservas.forEach(reservaTemporal => {
         let fila = cuerpoTabla.insertRow(); //Crea una fila
