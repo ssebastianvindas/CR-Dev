@@ -60,7 +60,7 @@
                     <div class="frm-dnombreMasc">
                         <!-- <div id="txt-mascota"> -->
                         <label for="name-pet">Nombre de la Mascota:</label>
-                        <input type="text" placeholder="Nombre Completo de la Mascota" id="name-pet" name="mascota" value="Hola">
+                        <input type="text" placeholder="Nombre Completo de la Mascota" id="name-pet">
                         <!-- </div> -->
                         <!-- <div> -->
                         <label for="exp-id">Identificación:</label>
@@ -79,14 +79,14 @@
                     </div>
 
                     <div id="frm-dNombreMedico">
-                        <label for="name-pet" id="exp-vet">Nombre del Veterinario:</label>
+                        <label for="name-pet">Nombre del Veterinario:</label>
                         <input type="text" placeholder="Médico de Cabecera" id="exp-vet">
                     </div>
 
                 </fieldset>
                 <fieldset class="frm-qp">
                     <legend>Queja Principal</legend>
-                    <input type="text" placeholder="Queja Principal">
+                    <input type="text" placeholder="Queja Principal" id="exp-queja">
                 </fieldset>
                 <fieldset class="frm-padecimientos">
                     <legend>Padecimientos:</legend>
@@ -183,7 +183,7 @@
                         <div class="dv-signos">
                             <div class='signos'>
                                 <label for="exp-pa">Presión Arterial</label>
-                                <input type="number" placeholder="Presión Arterial" id="exp-pa">
+                                <input type="text" placeholder="Presión Arterial" id="exp-pa">
                                 <!-- </div> -->
                                 <!-- <div class='signos'> -->
                                 <label for="exp-pulso">Pulso</label>
@@ -347,14 +347,28 @@
                                 <input type="text" class="form-lab" id="lab-result" placeholder="Resultados">
                             </div>
                         </div>
-                        <div id="exp-examen-doctores">
-                            <select id="lab-doctores">
-                            <option value="" class="frm-select"> Doctores </option>
-                            <option value="luis" class="frm-select">Dr. Luis Zumbado</option>
-                            <option value="mario" class="frm-select">Dr. Mario Castellas</option>
-                            <option value="cindy" class="frm-select">Dra. Cindy Frias</option>
-                            <option value="lucrecia" class="frm-select">Dra. Lucrecia Diaz</option>
-                            </select>
+                        <div id="lab-doctores">
+                            <select id="citas-doctores">
+                                <option value="" class="frm-select">Doctores</option>
+                                <option value="Dr. Amir Gupta" class="frm-select">
+                                  Dr. Amir Gupta
+                                </option>
+                                <option value="Dra. Rosa Sánchez" class="frm-select">
+                                  Dra. Rosa Sánchez
+                                </option>
+                                <option value="Dr. Oriol Puig" class="frm-select">
+                                  Dr.Oriol Puig
+                                </option>
+                                <option value="Dr. Pedro Sanchez" class="frm-select">
+                                  Dr.Pedro Sanchez
+                                </option>
+                                <option value="Dra. Elizabeth Olsen" class="frm-select">
+                                  Dra.Elizabeth Olsen
+                                </option>
+                                <option value="Dr. Manuel Rodríguez" class="frm-select">
+                                  Dr.Manuel Rodríguez
+                                </option>
+                              </select>
                         </div>
 
                         <div>
