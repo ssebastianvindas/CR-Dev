@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,89 +16,106 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/font-varela.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/font-varela.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header-container">
-        <div>
-            <a href="#" id="btn-usuario">
-                <i class="fa-solid fa-user"></i><span class="nickname"></span>
-                <i class="fa-solid fa-caret-down"></i>
-            </a>
-        </div>
-        <div class="logo-container">
-            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
-        </div>
-        <div class="menu-icons">
-            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
-            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
-        </div>
+      <div>
+        <a href="#" id="btn-usuario">
+          <i class="fa-solid fa-user"></i><span class="nickname"></span>
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+      </div>
+      <div class="logo-container">
+        <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+      </div>
+      <div class="menu-icons">
+        <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+      </div>
     </header>
 
     <nav class="menu-header">
-        <a href="#" class="btn-dashboard-principal" id="btn-reservaAtras">Dashboard Principal</a>
+      <a href="#" class="btn-dashboard-principal" id="btn-reservaAtras"
+        >Dashboard Principal</a
+      >
     </nav>
 
     <div class="menu-user-container ocultar-menu">
-        <div class="menu-user">
-            <div class="img-user-container">
-                <img id="img-perfil" src="" alt="" />
-            </div>
-            <div class="enleces">
-                <a href="#"><i class="fa-solid fa-gear"></i>Perfil</a>
-                <a href="list-citas.html"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
-                <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
-                <a href="#"><i class="fa-solid fa-wallet"></i>Métodos de pago</a>
-                <a href="#"><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a>
-                <a href="index.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a>
-            </div>
+      <div class="menu-user">
+        <div class="img-user-container">
+          <img id="img-perfil" src="" alt="" />
         </div>
+        <div class="enleces">
+          <a href="#"><i class="fa-solid fa-gear"></i>Perfil</a>
+          <a href="list-citas.html"
+            ><i class="fa-solid fa-calendar-days"></i>Mis citas</a
+          >
+          <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
+          <a href="#"><i class="fa-solid fa-wallet"></i>Métodos de pago</a>
+          <a href="#"
+            ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
+          >
+          <a href="index.html"
+            ><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a
+          >
+        </div>
+      </div>
     </div>
 
-
     <section class="container">
-        <div class="tbl-container">
+      <div class="tbl-container">
+        <h1>Listado de reservaciones</h1>
+        <table id="tbl-users" class="tbl-general">
+          <thead>
+            <tr>
+              <th>Mascota</th>
+              <th>Check in</th>
+              <th>Check out</th>
+              <th>Numero de cuartos</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Coquito</td>
+              <td>20/07/22</td>
+              <td>25/07/22</td>
+              <td>1</td>
+              <td>
+                <button class="btn-ver" id="btn-expediente">
+                  Ver reservación
+                </button>
+              </td>
+            </tr>
 
-            <h1>Listado de reservaciones</h1>
-            <table id="tbl-users" class="tbl-general">
-                <thead>
-                    <tr>
-                        <th>Mascota</th>
-                        <th>Check in</th>
-                        <th>Check out</th>
-                        <th>Numero de cuartos</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Coquito</td>
-                        <td>20/07/22</td>
-                        <td>25/07/22</td>
-                        <td>1</td>
-                        <td><button class="btn-ver" id="btn-expediente">Ver reservación</button></td>
-                    </tr>
-
-
-                    <tr>
-                        <td>Juls</td>
-                        <td>23/07/22</td>
-                        <td>27/07/22</td>
-                        <td>1</td>
-                        <td><button class="btn-ver" id="btn-expediente">Ver reservación</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
+            <tr>
+              <td>Juls</td>
+              <td>23/07/22</td>
+              <td>27/07/22</td>
+              <td>1</td>
+              <td>
+                <button class="btn-ver" id="btn-expediente">
+                  Ver reservación
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
-    <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c02f88807d.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/navUser.js"></script>
     <script src="js/list-expediente.js"></script>
     <script src="js/regresar-dashboard.js"></script>
     <script src="js/cambiar-nickname.js"></script>
-</body>
-
+  </body>
 </html>

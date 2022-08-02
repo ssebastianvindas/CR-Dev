@@ -1,5 +1,5 @@
 .banner-contrato {
-    background-image: url('../images/contrato.jpg');
+    background-image: url('../imgs/contrato.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -141,7 +141,7 @@
     width: 50px;
     background-color: yellowgreen;
     border-radius: 50%;
-    background-image: url("../images/check-fill.png");
+    background-image: url("../imgs/check-fill.png");
     background-repeat: no-repeat;
     background-position: center;
 }

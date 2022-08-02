@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,118 +14,138 @@
     <link rel="stylesheet" href="css/list-citas.css" />
     <link rel="stylesheet" href="css/ranking-citas.css" />
     <!-- fonts -->
-    <link rel="stylesheet" href="css/font-varela.css">
+    <link rel="stylesheet" href="css/font-varela.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header class="header-container">
-        <div>
-            <a href="#" id="btn-usuario">
-                <i class="fa-solid fa-user"></i><span class="nickname"></span>
-                <i class="fa-solid fa-caret-down"></i>
-            </a>
-        </div>
-        <div class="logo-container">
-            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
-        </div>
-        <div class="menu-icons">
-            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
-            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
-        </div>
+      <div>
+        <a href="#" id="btn-usuario">
+          <i class="fa-solid fa-user"></i><span class="nickname"></span>
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+      </div>
+      <div class="logo-container">
+        <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+      </div>
+      <div class="menu-icons">
+        <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+      </div>
     </header>
 
     <nav class="menu-header">
-        <a href="#" class="btn-dashboard-principal" id="btn-reservaAtras">Dashboard Principal</a>
+      <a href="#" class="btn-dashboard-principal" id="btn-reservaAtras"
+        >Dashboard Principal</a
+      >
     </nav>
     <section class="container">
-        <div class="main-container">
-            <div class="tbl-container">
-
-                <h1>Listado de Citas</h1>
-                <table id="tbl-users" class="tbl-info">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                            <th>Mascota</th>
-                            <th>Motivo de cita</th>
-                            <th>Veterinario</th>
-                            <th>Estado de la cita</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>28/07/2022</td>
-                            <td>10:00</td>
-                            <td>Coquito</td>
-                            <td>Vomitos</td>
-                            <td>Paul</td>
-                            <td>Pendiente</td>
-                            <td><button class="btn-ver" id="btn-expediente">Calificar Veterinario</button></td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>28/07/2022</td>
-                            <td>10:30</td>
-                            <td>Juls</td>
-                            <td>Sangrado</td>
-                            <td>John</td>
-                            <td>Cancelada</td>
-                            <td><button class="btn-ver" id="btn-expediente">Calificar Veterinario</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="main-container">
+        <div class="tbl-container">
+          <h1>Listado de Citas</h1>
+          <table id="tbl-users" class="tbl-info">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Mascota</th>
+                <th>Motivo de cita</th>
+                <th>Veterinario</th>
+                <th>Estado de la cita</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>28/07/2022</td>
+                <td>10:00</td>
+                <td>Coquito</td>
+                <td>Vomitos</td>
+                <td>Paul</td>
+                <td>Pendiente</td>
+                <td>
+                  <button class="btn-ver" id="btn-expediente">
+                    Calificar Veterinario
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>28/07/2022</td>
+                <td>10:30</td>
+                <td>Juls</td>
+                <td>Sangrado</td>
+                <td>John</td>
+                <td>Cancelada</td>
+                <td>
+                  <button class="btn-ver" id="btn-expediente">
+                    Calificar Veterinario
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </section>
     <div class="modal-expediente" id="modal-citas">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-ranking">
-                <form class="form-ranking">
-                    <h2>Ranking</h2>
-                    <div class="clasificacion">
-                        <p>Calificacion a brindar al veterinario</p>
-                        <input id="radio1" type="radio" name="estrellas" value="3">
-                        <label for="radio1" class="estrellas">★</label>
-                        <input id="radio2" type="radio" name="estrellas" value="2">
-                        <label for="radio2" class="estrellas">★</label>
-                        <input id="radio3" type="radio" name="estrellas" value="1">
-                        <label for="radio3" class="estrellas">★</label>
-                    </div>
-                </form>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-ranking">
+          <form class="form-ranking">
+            <h2>Ranking</h2>
+            <div class="clasificacion">
+              <p>Calificacion a brindar al veterinario</p>
+              <input id="radio1" type="radio" name="estrellas" value="3" />
+              <label for="radio1" class="estrellas">★</label>
+              <input id="radio2" type="radio" name="estrellas" value="2" />
+              <label for="radio2" class="estrellas">★</label>
+              <input id="radio3" type="radio" name="estrellas" value="1" />
+              <label for="radio3" class="estrellas">★</label>
             </div>
-            <div class="modal-save">
-                <button type="button" id="btn-save">Calificar</button>
-            </div>
+          </form>
         </div>
+        <div class="modal-save">
+          <button type="button" id="btn-save">Calificar</button>
+        </div>
+      </div>
     </div>
     <div class="menu-user-container ocultar-menu">
-        <div class="menu-user">
-            <div class="img-user-container">
-                <img src="imgs/users/users1.jpg" alt="" />
-            </div>
-            <div class="enleces">
-                <a href="#"><i class="fa-solid fa-gear"></i>Perfil</a>
-                <a href="list-citas.html"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
-                <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
-                <a href="#"><i class="fa-solid fa-wallet"></i>Métodos de pago</a>
-                <a href="#"><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a>
-                <a href="index.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a>
-            </div>
+      <div class="menu-user">
+        <div class="img-user-container">
+          <img src="imgs/users/users1.jpg" alt="" />
         </div>
+        <div class="enleces">
+          <a href="#"><i class="fa-solid fa-gear"></i>Perfil</a>
+          <a href="list-citas.html"
+            ><i class="fa-solid fa-calendar-days"></i>Mis citas</a
+          >
+          <a href="#"><i class="fa-solid fa-paw"></i>Mi mascotas</a>
+          <a href="#"><i class="fa-solid fa-wallet"></i>Métodos de pago</a>
+          <a href="#"
+            ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
+          >
+          <a href="index.html"
+            ><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a
+          >
+        </div>
+      </div>
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c02f88807d.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/navUser.js"></script>
     <script src="js/list-citas.js"></script>
     <script src="js/regresar-dashboard.js"></script>
     <script src="js/cambiar-nickname.js"></script>
-</body>
-
+  </body>
 </html>
