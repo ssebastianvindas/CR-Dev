@@ -37,7 +37,7 @@ let citas = [{
     'nombreMascota': 'Samson',
     'nombreOwner': 'Alexander Bermudez',
     'procedimiento': 'Cita de control',
-    'doctor': 'Dr. Luis Granera',
+    'doctor': 'Dr. Amir Gupta',
     'estado': 'activo'
 }, {
     'fecha': '05/06/2022',
@@ -45,6 +45,14 @@ let citas = [{
     'nombreMascota': 'Guardian',
     'nombreOwner': 'Gabriel Coto',
     'procedimiento': 'Cirugia',
-    'doctor': 'Dr. Luis Granera',
+    'doctor': 'Dr. Amir Gupta',
+    'estado': 'activo'
+}, {
+    'fecha': '17/05/2022',
+    'hora': '1:00pm',
+    'nombreMascota': 'Dusty',
+    'nombreOwner': 'Gabriel Coto',
+    'procedimiento': 'Castración',
+    'doctor': 'Dr. Amir Gupta',
     'estado': 'activo'
 }];
