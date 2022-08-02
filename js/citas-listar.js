@@ -3,7 +3,7 @@ const cuerpoTablaPendiente = document.querySelector('#tbl-pendientes tbody');
 const cuerpoTablaDoctor = document.querySelector('#tbl-doctor tbody');
 const seleccion = document.getElementById('cita-listar-doctores');
 const selectFiltroTabla = document.getElementById('cita-listar-doctores');
-const nickname = document.querySelector('.nickname');
+
 
 const llenarTablaDia = () => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
