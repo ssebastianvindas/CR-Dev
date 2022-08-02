@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="css/headerUser.css" />
     <link rel="stylesheet" href="css/dashboardUsuario.css" />
     <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="stylesheet" href="css/citas.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,8 +55,10 @@
                 <a href="perfil-usuario.html"><i class="fa-solid fa-gear"></i>Perfil</a
           >
           <a href="#"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
-                <a href="perfil-usuario.html"><i class="fa-solid fa-paw"></i>Mis mascotas</a>
-                <a href="listadoMetodosPago.html"><i class="fa-solid fa-wallet"></i>Métodos de pago</a
+                <a href="perfil-usuario.html"><i class="fa-solid fa-paw"></i>Mis mascotas</a
+          >
+          <a href="listadoMetodosPago.html"
+            ><i class="fa-solid fa-wallet"></i>Métodos de pago</a
           >
           <a href="#"
             ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
@@ -74,40 +80,90 @@
             Crear reservación
           </button>
         </div>
-
         <div id="appointment" class="tabcontent">
-          <div class="tabcontentDisplay>">
-            <form class="dashboard--usuario-nueva-cita center-form">
-              <fieldset class="form-title-appointment center-fieldset">
-                <legend>Agenda tu cita!</legend>
-
-                <div class="dashboard-container-cita">
-                  <label for="form-cita">Cliente: </label>
-                  <input type="text" class="form-citas" />
+          <form class="frm-citas-new center-form">
+            <h3>Módulo de Citas</h3>
+            <div id="img-citas">
+              <fieldset class="frm-cita center-fieldset">
+                <legend>Crear una nueva cita</legend>
+                <div id="hofe">
+                  <label for="newCita-date">Fecha:</label>
+                  <input type="date" id="newCita-date" />
+                  <label for="newCita-date">Hora:</label>
+                  <input type="time" id="newCita-date" />
                 </div>
-                <div class="dashboard-container-cita">
-                  <label for="form-cita">Motivo de cita: </label>
-                  <input type="areatext" class="form-citas" />
+                <div class="txt-citas">
+                  <input
+                    type="text"
+                    class="frm-citas"
+                    placeholder="Nombre de la mascota"
+                  />
                 </div>
-                <div class="dashboard-container-cita">
-                  <label for="form-cita">Fecha y hora deseada: </label>
-                  <input type="datetime-local" class="form-citas" />
+                <div class="txt-citas">
+                  <input
+                    type="text"
+                    class="frm-citas"
+                    placeholder="Nombre del dueño"
+                  />
                 </div>
-                <div class="dashboard-container-cita">
-                  <label for="form-cita">Mascota</label>
-                  <select id="mascotas">
-                    <option value="" class="form-select">---Mascotas---</option>
-                    <option value="pet" class="form-select">Coquito</option>
-                    <option value="pet" class="form-select">Juls</option>
+                <div class="txt-citas">
+                  <input
+                    type="text"
+                    class="frm-citas"
+                    placeholder="Procedimiento"
+                  />
+                </div>
+                <div class="txt-citas">
+                  <select id="citas-doctores">
+                    <option value="" class="frm-select">Doctores</option>
+                    <option value="luis" class="frm-select">
+                      Dr. Luis Zumbado
+                    </option>
+                    <option value="mario" class="frm-select">
+                      Dr. Mario Castellas
+                    </option>
+                    <option value="cindy" class="frm-select">
+                      Dra. Cindy Frias
+                    </option>
+                    <option value="lucrecia" class="frm-select">
+                      Dra. Lucrecia Diaz
+                    </option>
                   </select>
-                  <button type="button" class="btn-agendar-cita">
-                    Agendar
-                  </button>
+                </div>
+                <div id="dv-btnCitas">
+                  <button type="button" id="btn-citasNew">Agregar Cita</button>
                 </div>
               </fieldset>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
+        <div id="reservation" class="tabcontent">
+          <form class="center-form">
+            <h3>Reservaciones del Hotel</h3>
+            <fieldset class="fieldset-hotel center-fieldset">
+              <legend>Registro de Nueva Reserva</legend>
+  
+              <div class="div-date">
+                <label for="txt-date">Fecha de Entrada</label>
+                <input type="date" name="" id="fecha-entrada" />
+              </div>
+              <div class="div-cuartos">
+                <label for="cantidad-cuartos">Fecha de Salida</label>
+                <input type="date" name="" id="fecha-salida" />
+              </div>
+              <div class="div-animales">
+                <label for="cantidad-animales">Numero de animales</label>
+                <input type="number" name="" id="cantidad-animales" min="0" />
+              </div>
+              <div>
+                <button type="button" id="btn-registrar">
+                  Registrar Reserva
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <!--
         <div id="reservation" class="tabcontent">
           <form class="dashboard--usuario-nueva-reservacion center-form">
             <fieldset class="form-title-reservation center-fieldset">
@@ -125,6 +181,7 @@
             </fieldset>
           </form>
         </div>
+      -->
       </div>
     </section>
 
@@ -151,9 +208,15 @@
 
         <!-- js -->
         <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/navUser.js"></script>
         <script src="js/dashboardUsuario.js"></script>
         <script src="js/cambiar-nickname.js"></script>
+        <script src="js/validar-citas-cliente.js"></script>
+        <script src="js/cita-new.js"></script>
+        <script src="js/reserva-hotel-cliente.js"></script>
+
+
 </body>
 
 </html>
