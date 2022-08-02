@@ -61,7 +61,7 @@ let validarPay = () => {
             text: "El pago realizado con éxito",
             confirmButtonText: "Entendido",
         }).then(() => {
-            window.location.href = 'list-pagos.html'
+            window.location.href = '../list-pagos.html'
         })
     }
 };

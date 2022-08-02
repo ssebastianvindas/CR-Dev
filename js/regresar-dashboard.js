@@ -3,16 +3,16 @@ let regresarPrincipal = () => {
     let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
     switch (usuarioConectado.rol) {
         case 1:
-            window.location.href = "dashboard-admin.html";
+            window.location.href = "../dashboard-admin.html";
             break;
         case 2:
-            window.location.href = "dashboard-secretaria.html";
+            window.location.href = "../dashboard-secretaria.html";
             break;
         case 3:
-            window.location.href = "dashboard-veterinario.html";
+            window.location.href = "../dashboard-veterinario.html";
             break;
         case 4:
-            window.location.href = "dash-usuario.html";
+            window.location.href = "../dash-usuario.html";
             break;
     }
 };
