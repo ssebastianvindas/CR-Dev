@@ -12,6 +12,7 @@ const llenarUsuarios = () => {
 
         fila.insertCell().textContent = user.usuario;
         fila.insertCell().textContent = user.nombre;
+        fila.insertCell().textContent = user.telefono;
         fila.insertCell().textContent = user.contrasenna;
         fila.insertCell().textContent = user.rol;
 

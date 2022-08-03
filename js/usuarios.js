@@ -1,6 +1,7 @@
 let usuarios = [{
         usuario: "coto12",
         nombre: "Alberto Coto",
+        telefono: '87232015',
         correo: "coto@gmail.com",
         contrasenna: "abc123",
         rol: 1,
