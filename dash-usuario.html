@@ -93,6 +93,7 @@
                   <input type="time" id="newCita-date" />
                 </div>
                 <div class="txt-citas">
+                  <label class="label-cita-cliente">Nombre de la mascota</label>
                   <input
                     type="text"
                     class="frm-citas"
@@ -100,6 +101,7 @@
                   />
                 </div>
                 <div class="txt-citas">
+                  <label class="label-cita-cliente">Nombre del dueño</label>
                   <input
                     type="text"
                     class="frm-citas"
@@ -107,6 +109,7 @@
                   />
                 </div>
                 <div class="txt-citas">
+                  <label class="label-cita-cliente">Procedimiento a solicitar</label>
                   <input
                     type="text"
                     class="frm-citas"
@@ -137,7 +140,7 @@
                   </select>
                 </div>
                 <div id="dv-btnCitas">
-                  <button type="button" id="btn-citasNew">Agregar Cita</button>
+                  <button type="button" class="btn-ver" id="btn-citasNew">Agregar Cita</button>
                 </div>
               </fieldset>
             </div>
@@ -147,22 +150,22 @@
           <form class="center-form">
             <h3>Reservaciones del Hotel</h3>
             <fieldset class="fieldset-hotel center-fieldset">
-              <legend>Registro de Nueva Reserva</legend>
+              <legend class="label-reservacion-cliente">Registro de Nueva Reserva</legend>
   
               <div class="div-date">
-                <label for="txt-date">Fecha de Entrada</label>
+                <label for="txt-date" class="label-reservacion-cliente">Fecha de Entrada</label>
                 <input type="date" name="" id="fecha-entrada" />
               </div>
               <div class="div-cuartos">
-                <label for="cantidad-cuartos">Fecha de Salida</label>
+                <label for="cantidad-cuartos" class="label-reservacion-cliente">Fecha de Salida</label>
                 <input type="date" name="" id="fecha-salida" />
               </div>
               <div class="div-animales">
-                <label for="cantidad-animales">Numero de animales</label>
+                <label for="cantidad-animales" class="label-reservacion-cliente">Numero de animales</label>
                 <input type="number" name="" id="cantidad-animales" min="0" />
               </div>
               <div>
-                <button type="button" id="btn-registrar">
+                <button type="button" class="btn-ver" id="btn-registrar">
                   Registrar Reserva
                 </button>
               </div>
