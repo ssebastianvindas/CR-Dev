@@ -69,8 +69,23 @@ const validar = () => {
     if (inputName.value == '' || inputPet.value == '' || inputPhone.value == '' || inputEmail.value == '' || inputDirection.value == '' || inputOtherDirection.value == '' || inputInformation.value == '') {
         error = true;
         inputName.classList.add('input-error');
+
+        Swal.fire({
+            icon: 'warning',
+            title: 'Campos incompletos',
+            text: 'Por favor, ingrese todos los datos.',
+            confirmButtonText: 'Entendido'
+        })
+
     } else {
         inputName.classList.remove('input-error');
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Enviado',
+            text: 'Pronto te contactaremos.',
+            confirmButtonText: "Entendido"
+        });
     }
 
     if (error) {

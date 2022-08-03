@@ -1,6 +1,7 @@
 const campos1 = document.querySelectorAll(".frm-citas-new input");
 const btnAgregar1 = document.querySelector('#btn-citasNew');
-const selector1 = document.querySelector('#citas-doctores')
+const selector1 = document.querySelector('#citas-doctores');
+
 let validarForm = () => {
     campos1.forEach((input) => {
 

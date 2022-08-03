@@ -1,0 +1,34 @@
+const inputs = document.querySelectorAll('input');
+
+const btnSendCR = document.getElementById('submit');
+
+let validarContactenosCR = () => {
+
+    inputs.forEach((inputValidation) => {
+
+        if (inputValidation.value === "") {
+            inputValidation.classList.add("input-invalid");
+
+            Swal.fire({
+                icon: 'warning',
+                title: 'Campos incompletos',
+                text: 'Por favor revise que los campos esten llenos',
+                confirmButtonText: 'Entendido'
+            })
+        } else {
+            inputValidation.classList.remove("input-valid");
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Enviado',
+                text: 'Pronto te contactaremos.',
+                confirmButtonText: "Entendido"
+            });
+
+        }
+    })
+};
+
+
+
+btnSendCR.addEventListener('click', validarContactenosCR)

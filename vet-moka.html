@@ -117,7 +117,7 @@
               <img src="imgs/carrusel/img4.jpg" alt="" />
               <div class="card-description">
                 <div class="card-title">
-                  <h4>Dra.Rosa Sánchez</h4> 
+                  <h4>Dra.Rosa Sánchez</h4>
                 </div>
                 <div class="card-text">
                   <p>Licenciada en Veterinaria por la Universidad UAB.</p>
@@ -179,7 +179,10 @@
       <div class="info-hotel">
         <div class="card-photo-cat">
           <div class="glass">
-            <img src="imgs/imgsindex/kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg" alt="">
+            <img
+              src="imgs/imgsindex/kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg"
+              alt=""
+            />
           </div>
         </div>
         <div class="card-wrapped">
@@ -377,62 +380,61 @@
                                     <div class="box-nameArea">
                                         <input type="text" id="name" required />
                                         <label for="name"><i class="fa-solid fa-user"></i> Nombre</label
+                  >
+                </div>
+                <div class="box-petNameArea">
+                  <input type="text" id="petName" required />
+                  <label for="petName"
+                    ><i class="fa-solid fa-paw"></i> Tipo de animal</label
+                  >
+                </div>
+              </div>
+              <div class="division">
+                <div class="box-phone">
+                  <input type="number" id="phone" required />
+                  <label for="phone"
+                    ><i class="fa-solid fa-phone"></i> Numero de teléfono</label
+                  >
+                </div>
+                <div class="box-email">
+                  <input type="email" id="email" required />
+                  <label for="email"
+                    ><i class="fa-solid fa-envelope"></i> Correo
+                    electrónico</label
+                  >
+                </div>
+              </div>
+              <div class="infoBox">
+                <textarea id="message" rows="3" required></textarea>
+                <label for="message"
+                  ><i class="fa-solid fa-info"></i> Información</label
                 >
               </div>
-              <div class="box-petNameArea">
-                <input type="text" id="petName" required />
-                <label for="petName"
-                  ><i class="fa-solid fa-paw"></i> Tipo de animal</label
-                >
+              <div class="checksBoxes">
+                <div class="checkCall">
+                  <input type="checkbox" id="call" /> Recibir llamada
+                </div>
+                <div class="checkMail">
+                  <input type="checkbox" id="mail" /> Recibir correo
+                </div>
+                <div class="checkWhats">
+                  <input type="checkbox" id="whats" /> Recibir mensaje
+                </div>
+              </div>
+              <button type="button" id="btn-send">
+                Enviar <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+            <div>
+              <div id="form-map"></div>
+              <div class="box-direction">
+                <input
+                  type="text"
+                  id="textDirection"
+                  placeholder="Danos una referencia para mayor exactitud"
+                />
               </div>
             </div>
-            <div class="division">
-              <div class="box-phone">
-                <input type="number" id="phone" required />
-                <label for="phone"
-                  ><i class="fa-solid fa-phone"></i> Numero de teléfono</label
-                >
-              </div>
-              <div class="box-email">
-                <input type="email" id="email" required />
-                <label for="email"
-                  ><i class="fa-solid fa-envelope"></i> Correo
-                  electrónico</label
-                >
-              </div>
-            </div>
-            <div class="infoBox">
-              <textarea id="message" rows="3" required></textarea>
-              <label for="message"
-                ><i class="fa-solid fa-info"></i> Información</label
-              >
-            </div>
-            <div class="checksBoxes">
-              <div class="checkCall">
-                <input type="checkbox" id="call" /> Recibir llamada
-              </div>
-              <div class="checkMail">
-                <input type="checkbox" id="mail" /> Recibir correo
-              </div>
-              <div class="checkWhats">
-                <input type="checkbox" id="whats" /> Recibir mensaje
-              </div>
-            </div>
-            <button type="button" id="btn-send">
-              Enviar <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </div>
-          <div>
-
-            <div id="form-map"></div>
-            <div class="box-direction">
-              <input
-              type="text"
-              id="textDirection"
-              placeholder="Danos una referencia para mayor exactitud"
-              />
-            </div>
-          </div>
           </form>
         </div>
       </div>
@@ -460,6 +462,7 @@
     </footer>
     <!-- scripst -->
     <script src="js/mapForm.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbe_yIKBbi4YG3-tlEvw9Qb_UbM1Or74k&callback=initMap"></script>
     <script src="js/index.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
