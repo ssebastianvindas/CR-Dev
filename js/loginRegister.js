@@ -44,7 +44,7 @@ const validarCredenciales = (usuarioLogin, contrasennaLogin) => {
     if (usuarioValidado == false) {
         Swal.fire({
             icon: "warning",
-            title: "No se a podido iniciar sesión",
+            title: "No se ha podido iniciar sesión",
             text: "El correo del usuario o la contraseña son incorrectos",
             confirmButtonText: "Entendido",
         });
