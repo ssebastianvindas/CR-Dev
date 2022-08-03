@@ -38,7 +38,7 @@ let usuarios = [{
         nombre: "Monica Carvajal Perez",
         correo: "monica12@gmail.com",
         contrasenna: "abc123",
-        rol: 1,
+        rol: 4,
     },
 ];
 
