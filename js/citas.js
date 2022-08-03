@@ -50,8 +50,8 @@ let citas = [{
 }, {
     'fecha': '17/05/2022',
     'hora': '1:00pm',
-    'nombreMascota': 'Dusty',
-    'nombreOwner': 'Gabriel Coto',
+    'nombreMascota': 'Olivia',
+    'nombreOwner': 'Monica Carvajal Perez',
     'procedimiento': 'Castración',
     'doctor': 'Dr. Amir Gupta',
     'estado': 'activo'
