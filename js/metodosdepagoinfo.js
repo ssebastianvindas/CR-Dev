@@ -1,12 +1,11 @@
-let metodosPago = [
-  {
-    titular: "Susana Vindas Torres",
-    tipo: "MasterCard",
-    numero: "************3454",
-  },
-  {
-    titular: "Susana Vindas Torres",
-    tipo: "Visa",
-    numero: "************1043",
-  }
+let metodosPago = [{
+        titular: "Susana Vindas Perez",
+        tipo: "MasterCard",
+        numero: "************3454",
+    },
+    {
+        titular: "Monica Carvajal Perez",
+        tipo: "Visa",
+        numero: "************1043",
+    }
 ];
