@@ -166,11 +166,3 @@
     color: #fff;
     top: -20px;
 }
-
-.input-invalid {
-    border: 1px solid red;
-}
-
-.input-valid {
-    border: 1px solid green;
-}
