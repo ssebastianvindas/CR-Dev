@@ -16,7 +16,8 @@ const vacunaDateInput = document.querySelector('#input-dateVac');
 const vacunaInput = document.querySelector('#input-vacuna');
 const txDate = document.querySelector('#input-txDate');
 const txTreatment = document.querySelector('#input-txEvol');
-
+const InputTextDate = document.querySelector('#input-txDate');
+const InputTextEvol = document.querySelector('#input-txEvol');
 
 
 
@@ -81,6 +82,53 @@ function llenarTablaVac() {
 
 
 }
+let validarTx = () => {
+
+    let error = false;
+
+    if (InputTextDate.value == '') {
+        error = true;
+        InputTextDate.classList.add('input-invalid');
+        InputTextDate.classList.remove('input-valid');
+    } else {
+        InputTextDate.classList.remove('input-invalid');
+        InputTextDate.classList.add('input-valid');
+    }
+
+    if (InputTextEvol.value == '') {
+        error = true;
+        InputTextEvol.classList.add('input-invalid');
+        InputTextEvol.classList.remove('input-valid');
+    } else {
+        InputTextEvol.classList.remove('input-invalid');
+        InputTextEvol.classList.add('input-valid');
+    }
+
+
+    if (error == true) {
+        Swal.fire({
+            'icon': 'warning',
+            'title': 'Datos ingresados incorrectamente',
+            'text': 'Por favor revise los campos resaltados',
+            'confirmButtonText': 'Entendido'
+        });
+
+    } else {
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Datos ingresados correctamente',
+            'text': 'La factura se ha creado adecuadamente',
+            'confirmButtonText': 'Entendido'
+        }).then(() => {
+            llenarTablaTx();
+        });
+    }
+
+
+
+
+
+};
 
 function llenarTablaTx() {
     let dateTx = txDate.value;
@@ -298,6 +346,6 @@ function llenarTablaMed() {
 }
 
 botonMed.addEventListener('click', llenarTablaMed);
-botonTx.addEventListener('click', llenarTablaTx);
+botonTx.addEventListener('click', validarTx);
 botonVac.addEventListener('click', llenarTablaVac);
 botonLab.addEventListener('click', llenarTablaLab);

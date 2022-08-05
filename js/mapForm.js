@@ -60,15 +60,22 @@ const inputOtherDirection = document.getElementById('textDirection');
 const inputInformation = document.getElementById('message');
 
 const inputCall = document.getElementById('call');
+const textCall = document.getElementById('textCall');
 const inputMail = document.getElementById('mail');
 const inputWhats = document.getElementById('whats');
 
 const validar = () => {
+
     let error = false;
 
-    if (inputName.value == '' || inputPet.value == '' || inputPhone.value == '' || inputEmail.value == '' || inputDirection.value == '' || inputOtherDirection.value == '' || inputInformation.value == '') {
+    if (inputName.value === '' || inputPet.value === '' || inputPhone.value === '' || inputEmail.value === '' || inputDirection.value === '' || inputOtherDirection.value === '') {
         error = true;
         inputName.classList.add('input-error');
+        inputPet.classList.add('input-error');
+        inputPhone.classList.add('input-error');
+        inputEmail.classList.add('input-error');
+        inputDirection.classList.add('input-error');
+        inputOtherDirection.classList.add('input-error');
 
         Swal.fire({
             icon: 'warning',
@@ -76,9 +83,19 @@ const validar = () => {
             text: 'Por favor, ingrese todos los datos.',
             confirmButtonText: 'Entendido'
         })
-
     } else {
         inputName.classList.remove('input-error');
+        inputPet.classList.remove('input-error');
+        inputPhone.classList.remove('input-error');
+        inputEmail.classList.remove('input-error');
+        inputDirection.classList.remove('input-error');
+        inputOtherDirection.classList.remove('input-error');
+        inputName.classList.add('input-correct');
+        inputPet.classList.add('input-correct');
+        inputPhone.classList.add('input-correct');
+        inputEmail.classList.add('input-correct');
+        inputDirection.classList.add('input-correct');
+        inputOtherDirection.classList.add('input-correct');
 
         Swal.fire({
             icon: 'success',

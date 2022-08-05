@@ -1,6 +1,8 @@
 const camposUser = document.querySelectorAll(".frm-userName");
 const btnAgregarUser = document.querySelector('#btn-userAdd');
-const selectorUser = document.querySelector('#roles')
+const selectorUser = document.querySelector('#roles');
+const btnProcedimiento = document.querySelector('#btn-agregarTx');
+
 let validarUser = () => {
     camposUser.forEach((input) => {
 
@@ -41,5 +43,9 @@ let validarUser = () => {
 
     });
 };
+
+
+
+
 
 btnAgregarUser.addEventListener('click', validarUser)

@@ -28,8 +28,8 @@ let validarForm = () => {
 
             Swal.fire({
                 icon: 'success',
-                title: 'Expediente Archivado',
-                text: 'La información ha sido ingresada con éxito en el expediente clínico',
+                title: 'Cita agendada',
+                text: 'Se ha creado la cita',
                 confirmButtonText: "Entendido"
             }).then(() => {
                 regresarPrincipal();

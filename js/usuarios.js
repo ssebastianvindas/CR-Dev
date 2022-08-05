@@ -1,6 +1,7 @@
 let usuarios = [{
         usuario: "coto12",
         nombre: "Alberto Coto",
+        telefono: '87232015',
         correo: "coto@gmail.com",
         contrasenna: "abc123",
         rol: 1,
@@ -8,6 +9,7 @@ let usuarios = [{
     {
         usuario: "javier12",
         nombre: "Javier",
+        telefono: '80801523',
         correo: "javier@gmail.com",
         contrasenna: "abc123",
         rol: 2,
@@ -15,6 +17,7 @@ let usuarios = [{
     {
         usuario: "guille12",
         nombre: "Guillermo",
+        telefono: '88450012',
         correo: "guille@gmail.com",
         contrasenna: "abc123",
         rol: 3,
@@ -22,6 +25,7 @@ let usuarios = [{
     {
         usuario: "sebas12",
         nombre: "Sebastian",
+        telefono: '81235858',
         correo: "sebas@gmail.com",
         contrasenna: "abc123",
         rol: 4,
@@ -29,6 +33,7 @@ let usuarios = [{
     {
         usuario: "jim12",
         nombre: "Jim Bolaños Zúñiga",
+        telefono: '87352289',
         correo: "jim@gmail.com",
         contrasenna: "abc123",
         rol: 1,
@@ -36,9 +41,10 @@ let usuarios = [{
     {
         usuario: "Monica",
         nombre: "Monica Carvajal Perez",
+        telefono: '80808888',
         correo: "monica12@gmail.com",
         contrasenna: "abc123",
-        rol: 1,
+        rol: 4,
     },
 ];
 

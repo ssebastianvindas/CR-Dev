@@ -1,134 +1,151 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 
 /* icons */
 
-/*  */
-.contact-container {
-  position: relative;
-  top: 80px;
-  text-align: center;
-  background-image: url(/imgs/imgsindex/krista-mangulsone-9gz3wfHr65U-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
+/*  */
+
+.contact-container {
+    position: relative;
+    top: 80px;
+    text-align: center;
+    background-image: url(/imgs/imgsindex/krista-mangulsone-9gz3wfHr65U-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 .glass {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-  gap: 75px;
-  background-color: rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(1px);
-  padding: 0px 0px 60px 0;
-  color: #fff;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    gap: 75px;
+    background-color: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(1px);
+    padding: 0px 0px 60px 0;
+    color: #fff;
+    flex-wrap: wrap;
 }
+
 .contact-container h3 {
-  font-size: 30px;
-  padding: 60px 0 30px 0;
+    font-size: 30px;
+    padding: 60px 0 30px 0;
 }
+
 .map-container {
-  width: 400px;
+    width: 400px;
 }
-.map{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#map{
-  color: black;
-  text-align: start;
+
+#map {
+    color: black;
+    text-align: start;
 }
-#map h1{
-  text-align: start;
-  font-size: 14px;
-  color: #000;
-  font-weight: bold;
-  padding: 0;
+
+#map h1 {
+    text-align: start;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    padding: 0;
 }
-#map p{
-  text-align: start;
-  font-size: 14px;
-  color: #000;
+
+#map p {
+    text-align: start;
+    font-size: 14px;
+    color: #000;
 }
 
 
 /* enlace btn mas informacion */
+
 .more-info {
-  display: flex;
-  align-items: center;
-  margin-top: 80px;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
 }
+
 .more-info a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: #00000088;
-  backdrop-filter: blur(1px);
-  padding: 20px;
-  border: 2px solid #00000088;
-  transition: all .5s ease;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
+    visibility: hidden;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #00000088;
+    backdrop-filter: blur(1px);
+    padding: 20px;
+    border: 2px solid #00000088;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
 }
-.more-info a:hover{
-  border: 2px solid #30da7a;
-  background-color: #01361838;
-  backdrop-filter: blur(1px);
+
+.more-info a:hover {
+    border: 2px solid #30da7a;
+    background-color: #01361838;
+    backdrop-filter: blur(1px);
 }
 
 .info-contact-container {
-  width: 400px;
-  color: #fff;
+    width: 400px;
+    color: #fff;
 }
+
 .info-contact-container .info-contact {
-  background-color: rgba(0, 0, 0, 0.541);
-  backdrop-filter: blur(1px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
 }
+
 .info-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
 .info-container .icon a img {
-  width: 30px;
+    width: 30px;
 }
+
 
 /* styles mapa */
+
 #map {
-  height: 440px;
-  width:100%;
+    height: 440px;
+    width: 100%;
 }
 
-
-.marker{
-  background-image:url(/imgs/icons/location-dot-solid.svg);
-  background-size: 25px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+.marker {
+    background-image: url(/imgs/icons/location-dot-solid.svg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
 .mapboxgl-popup {
-  max-width: 200px;
+    max-width: 200px;
 }
 
 .mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
