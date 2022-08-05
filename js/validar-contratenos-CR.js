@@ -12,11 +12,12 @@ let validarContactenosCR = () => {
             Swal.fire({
                 icon: 'warning',
                 title: 'Campos incompletos',
-                text: 'Por favor revise que los campos esten llenos',
+                text: 'Por favor revise que los campos marcados con rojo esten completos',
                 confirmButtonText: 'Entendido'
             })
         } else {
-            inputValidation.classList.remove("input-valid");
+            inputValidation.classList.remove("input-invalid");
+            inputValidation.classList.add("input-valid");
 
             Swal.fire({
                 icon: 'success',
