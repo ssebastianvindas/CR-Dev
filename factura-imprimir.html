@@ -61,22 +61,30 @@
     <section class="sct-factura-imprimir">
         <form class="frm-factura-imprimir">
             <fieldset class="frm-fieldset-factura-imprimir">
-                <legend>Factura a Cancelar</legend>
-                <div>
-                    <label>Fecha:</label>
-                    <label id="factura-pagar-fecha">17/05/2022</label>
+                <legend>Factura Emitida</legend>
+                <div class="factura-imprimir-logo">
+                    <img src="imgs/logo/logo-moka.png" alt="logo Veterinaria Moka">
                 </div>
-                <div>
-                    <label>Nombre del Cliente:</label>
-                    <label id="factura-pagar-cliente">Monica Carvajal Perez</label>
+                <div class="frm-fieldset-factura-imprimir-line1">
+                    <div>
+                        <label>Nombre del Cliente:</label>
+                        <label id="factura-pagar-cliente">Monica Carvajal Perez</label>
+                    </div>
+                    <div class="dv-factura-fecha">
+                        <label>Fecha:</label>
+                        <label id="factura-pagar-fecha">17/05/2022</label>
+                    </div>
                 </div>
-                <div>
-                    <label>Factura #:</label>
-                    <label id="factura-pagar-numero">10001001001001</label>
-                </div>
-                <div>
-                    <label>Nombre de la mascota:</label>
-                    <label id="factura-pagar-mascota">Olivia</label>
+                <div class="frm-fieldset-factura-imprimir-line1">
+
+                    <div>
+                        <label>Nombre de la mascota:</label>
+                        <label id="factura-pagar-mascota">Olivia</label>
+                    </div>
+                    <div>
+                        <label>Factura #:</label>
+                        <label id="factura-pagar-numero">10001001001001</label>
+                    </div>
                 </div>
                 <table id="tbl-factura-pagar" class="tbl-general">
                     <thead>
@@ -125,10 +133,28 @@
                             </td>
                         </tr>
                     </tbody>
+
+                </table>
+                <div class="factura-imprimir-total">
+                    <div>
+                        <label>Subtotal:</label>
+                        <label>100,000 colones</label>
+                    </div>
+                    <div>
+                        <label>Impuesto:</label>
+                        <label>13,000 colones</label>
+                    </div>
+                    <div>
+                        <label>Total:</label>
+                        <label>113,000 colones</label>
+                    </div>
+
+                </div>
             </fieldset>
-
-
-
+            <div class="btn-factura-imprimir">
+                <button type="button" id="btn-factura-imprimir">Imprimir</button>
+                <button type="button" id="btn-factura-enviar">Enviar</button>
+            </div>
         </form>
     </section>
     <footer>
@@ -152,6 +178,7 @@
     <script src="js/navUser.js"></script>
     <script src="js/regresar-dashboard.js"></script>
     <script src="js/cambiar-nickname.js"></script>
+    <script src="js/factura-enviar.js"></script>
 </body>
 
 </html>
