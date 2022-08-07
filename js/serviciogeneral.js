@@ -12,3 +12,5 @@ const registrarDatos = async(pdatos, pendpoint) => {
 
 
 };
+// script a agregar para AXIOS
+//<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
