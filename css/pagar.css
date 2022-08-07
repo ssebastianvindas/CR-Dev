@@ -1,0 +1,103 @@
+.form-pagar label {
+  font-size: 20px;
+  font-weight: 600;
+}
+.form-container p {
+  font-size: 20px;
+}
+.form-pagar input {
+  font-size: 18px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  border-style: solid;
+  border-color: black;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-pagar select {
+  font-size: 18px;
+  padding: 5px;
+}
+input:focus {
+  outline: none;
+}
+#form-metodos-pago {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.inputs-container {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 13px 0;
+}
+.slash {
+  font-size: 18px;
+  font-weight: bold;
+}
+.input-mes,
+.input-año {
+  width: 80px;
+  font-size: 18px;
+  padding: 5px;
+}
+.grupo-cvv {
+  margin-left: 100px;
+}
+.input-cvv {
+  width: 80px;
+}
+
+.grupo-c {
+  display: flex;
+}
+.grupo-c input {
+  text-align: center;
+}
+
+.fa-credit-card {
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+  font-size: 25px;
+}
+#num-tarjeta {
+  padding-left: 45px;
+}
+
+.input-invalid {
+  border: 2px solid red !important;
+}
+.input-valid {
+  border: 2px solid green !important;
+}
+
+.slt-tipo {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1599px) {
+  .form-pagar label {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}

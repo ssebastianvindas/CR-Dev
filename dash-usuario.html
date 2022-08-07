@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuario</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/menuUser.css" />
+    <link rel="stylesheet" href="css/headerUser.css" />
+    <link rel="stylesheet" href="css/dashboardUsuario.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="stylesheet" href="css/citas.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-varela.css" />
+</head>
+
+<body>
+    <header class="header-container">
+        <div>
+            <a href="#" id="btn-usuario">
+                <i class="fa-solid fa-user"></i><span class="nickname"></span>
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+        </div>
+        <div class="logo-container">
+            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+        </div>
+        <div class="menu-icons">
+            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+        </div>
+    </header>
+
+    <nav class="menu-header">
+        <a href="list-expediente.html" id="expedientes">Expediente</a>
+        <a href="list-reservaciones.html" id="reservaciones">Reservaciones</a>
+        <a href="list-citas.html" id="citas">Citas</a>
+        <a href="list-pagos.html" id="pagos">Pagos</a>
+    </nav>
+
+    <div class="menu-user-container ocultar-menu">
+        <div class="menu-user">
+            <div class="img-user-container">
+                <img id="img-perfil" src="" alt="" />
+            </div>
+            <div class="enleces">
+                <a href="perfil-usuario.html"><i class="fa-solid fa-gear"></i>Perfil</a
+          >
+          <a href="#"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
+                <a href="perfil-usuario.html"><i class="fa-solid fa-paw"></i>Mis mascotas</a
+          >
+          <a href="listadoMetodosPago.html"
+            ><i class="fa-solid fa-wallet"></i>Métodos de pago</a
+          >
+          <a href="#"
+            ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
+          >
+          <a href="vet-moka.html"
+            ><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container-dashboard-usuario">
+        <div class="tab">
+          <button class="tablinks" onclick="openModule(event, 'appointment')">
+            Crear cita
+          </button>
+          <button class="tablinks" onclick="openModule(event, 'reservation')">
+            Crear reservación
+          </button>
+        </div>
+        <div id="appointment" class="tabcontent">
+          <form class="frm-citas-new center-form">
+            <h3>Módulo de Citas</h3>
+            <div id="img-citas">
+              <fieldset class="frm-cita center-fieldset">
+                <legend>Crear una nueva cita</legend>
+                <div id="hofe">
+                  <label for="newCita-date">Fecha:</label>
+                  <input type="date" id="newCita-date" />
+                  <label for="newCita-date">Hora:</label>
+                  <input type="time" id="newCita-date" />
+                </div>
+                <div class="txt-citas">
+                  <label class="label-cita-cliente">Nombre de la mascota</label>
+                  <input
+                    type="text"
+                    class="frm-citas"
+                    placeholder="Nombre de la mascota"
+                  />
+                </div>
+                <div class="txt-citas">
+                  <label class="label-cita-cliente">Nombre del dueño</label>
+                  <input
+                    type="text"
+                    class="frm-citas"
+                    placeholder="Nombre del dueño"
+                  />
+                </div>
+                <div class="txt-citas">
+                  <label class="label-cita-cliente">Procedimiento a solicitar</label>
+                  <input
+                    type="text"
+                    class="frm-citas"
+                    placeholder="Procedimiento"
+                  />
+                </div>
+                <div class="txt-citas">
+                  <select id="citas-doctores">
+                    <option value="" class="frm-select">Doctores</option>
+                    <option value="Dr. Amir Gupta" class="frm-select">
+                      Dr. Amir Gupta
+                    </option>
+                    <option value="Dra. Rosa Sánchez" class="frm-select">
+                      Dra. Rosa Sánchez
+                    </option>
+                    <option value="Dr. Oriol Puig" class="frm-select">
+                      Dr.Oriol Puig
+                    </option>
+                    <option value="Dr. Pedro Sanchez" class="frm-select">
+                      Dr.Pedro Sanchez
+                    </option>
+                    <option value="Dra. Elizabeth Olsen" class="frm-select">
+                      Dra.Elizabeth Olsen
+                    </option>
+                    <option value="Dr. Manuel Rodríguez" class="frm-select">
+                      Dr.Manuel Rodríguez
+                    </option>
+                  </select>
+                </div>
+                <div id="dv-btnCitas">
+                  <button type="button" class="btn-ver" id="btn-citasNew">Agregar Cita</button>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+        <div id="reservation" class="tabcontent">
+          <form class="center-form">
+            <h3>Reservaciones del Hotel</h3>
+            <fieldset class="fieldset-hotel center-fieldset">
+              <legend class="label-reservacion-cliente">Registro de Nueva Reserva</legend>
+  
+              <div class="div-date">
+                <label for="txt-date" class="label-reservacion-cliente">Fecha de Entrada</label>
+                <input type="date" name="" id="fecha-entrada" />
+              </div>
+              <div class="div-cuartos">
+                <label for="cantidad-cuartos" class="label-reservacion-cliente">Fecha de Salida</label>
+                <input type="date" name="" id="fecha-salida" />
+              </div>
+              <div class="div-animales">
+                <label for="cantidad-animales" class="label-reservacion-cliente">Numero de animales</label>
+                <input type="number" name="" id="cantidad-animales" min="0" />
+              </div>
+              <div>
+                <button type="button" class="btn-ver" id="btn-registrar">
+                  Registrar Reserva
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <!--
+        <div id="reservation" class="tabcontent">
+          <form class="dashboard--usuario-nueva-reservacion center-form">
+            <fieldset class="form-title-reservation center-fieldset">
+              <legend>Reserva una habitacion!</legend>
+
+              <div class="dashboard-container-reservacion">
+                <label for="form-cita">Mascota: </label>
+                <input type="text" class="form-reservacion" />
+              </div>
+              <div class="dashborad-container-reservacion">
+                <label for="form-cita">Fecha y hora deseada: </label>
+                <input type="datetime-local" class="form-reservacion" />
+              </div>
+              <button type="button" class="btn-agendar-cita">Reservar</button>
+            </fieldset>
+          </form>
+        </div>
+      -->
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-direction">
+          <p>Curridabat, San Jose</p>
+        </div>
+        <div class="footer-email">
+          <p>mokaclinic@vetpet.com</p>
+        </div>
+        <div class="footer-redes">
+          <a href="#"
+            ><img src="imgs/icons/iconsDark/facebook-dark.png" alt=""
+          /></a>
+                <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
+                <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="create-by">
+            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+        </div>
+        </footer>
+
+        <!-- js -->
+        <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/navUser.js"></script>
+        <script src="js/dashboardUsuario.js"></script>
+        <script src="js/cambiar-nickname.js"></script>
+        <script src="js/validar-citas-cliente.js"></script>
+        <script src="js/cita-new.js"></script>
+        <script src="js/reserva-hotel-cliente.js"></script>
+
+
+</body>
+
+</html>

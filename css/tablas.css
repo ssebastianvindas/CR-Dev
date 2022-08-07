@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    top: 120px;
+    height: 81vh;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.container h1 {
+    text-align: center;
+    padding: 40px;
+}
+
+.tbl-container {
+    margin: auto;
+    margin-top: 30px;
+    width: 75%;
+    padding: 20px 0;
+}
+
+#tbl-lab {
+    background-color: #f2f2f2;
+    margin-top: 3%;
+    color: #000;
+}
+
+#tbl-lab thead {
+    background: #000;
+    color: #fff;
+}
+
+#tbl-lab thead tr {
+    border-bottom: 2px solid #0e726d
+}
+
+#tbl-lab thead tr th {
+    padding: 5px 0;
+}
+
+#tbl-lab tbody tr {
+    border-bottom: 2px solid #0e5754;
+}
+
+#tbl-lab tbody tr:nth-child(even) {
+    background: rgb(24, 107, 107);
+    color: #fff;
+}
+
+#tbl-lab tbody tr td {
+    padding: 10px 0%;
+    width: 5%;
+    text-align: center;
+}
+
+.tbl-factura {
+    background-color: #f2f2f2;
+    color: #000;
+    width: 100%;
+    margin-bottom: 15%;
+}
+
+#tbl-hotel {
+    background-color: #f2f2f2;
+    color: #000;
+    width: 50%;
+    margin-bottom: 15%;
+    font-size: 20px;
+}
+
+.tbl-general {
+    background-color: #f2f2f2;
+    color: #000;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15%;
+}
+
+.tbl-general thead {
+    background: #000;
+    color: #fff;
+}
+
+.tbl-general thead tr {
+    border-bottom: 2px solid #0e726d
+}
+
+.tbl-general thead tr th {
+    padding: 5px 0;
+}
+
+.tbl-general tbody tr {
+    border-bottom: 2px solid #0e5754;
+}
+
+.tbl-general tbody tr:nth-child(even) {
+    background: rgb(24, 107, 107);
+    color: #fff;
+}
+
+.tbl-general tbody tr td {
+    padding: 10px 1%;
+    width: 5%;
+    text-align: center;
+}
+
+.tbl-procedimientos {
+    background-color: #f2f2f2;
+    margin-top: 3%;
+    color: #000;
+}
+
+.tbl-procedimientos thead {
+    background: #000;
+    color: #fff;
+}
+
+.tbl-procedimientos thead tr {
+    border-bottom: 2px solid #0e726d
+}
+
+.tbl-procedimientos thead tr th {
+    padding: 5px 0;
+}
+
+.tbl-procedimientos tbody tr {
+    border-bottom: 2px solid #0e5754;
+}
+
+.tbl-procedimientos tbody tr:nth-child(even) {
+    background: rgb(24, 107, 107);
+    color: #fff;
+}
+
+.tbl-procedimientos tbody tr td {
+    padding: 10px 1%;
+    width: 5%;
+    text-align: center;
+}
+
+.tbl-vacunas {
+    background-color: #f2f2f2;
+    margin-top: 3%;
+    color: #000;
+}
+
+.tbl-vacunas thead {
+    background: #000;
+    color: #fff;
+}
+
+.tbl-vacunas thead tr {
+    border-bottom: 2px solid #0e726d
+}
+
+.tbl-vacunas thead tr th {
+    padding: 5px 0;
+}
+
+.tbl-vacunas tbody tr {
+    border-bottom: 2px solid #0e5754;
+}
+
+.tbl-vacunas tbody tr:nth-child(even) {
+    background: rgb(24, 107, 107);
+    color: #fff;
+}
+
+.tbl-vacunas tbody tr td {
+    padding: 10px 1%;
+    width: 5%;
+    text-align: center;
+}
+
+.tbl-recetas {
+    background-color: #f2f2f2;
+    margin-top: 3%;
+    color: #000;
+}
+
+.tbl-recetas thead {
+    background: #000;
+    color: #fff;
+}
+
+.tbl-recetas thead tr {
+    border-bottom: 2px solid #0e726d
+}
+
+.tbl-recetas thead tr th {
+    padding: 5px 0;
+}
+
+.tbl-recetas tbody tr {
+    border-bottom: 2px solid #0e5754;
+}
+
+.tbl-recetas tbody tr:nth-child(even) {
+    background: rgb(24, 107, 107);
+    color: #fff;
+}
+
+.tbl-recetas tbody tr td {
+    padding: 10px 1%;
+    width: 5%;
+    text-align: center;
+}
+
+.btn-editar {
+    background-color: #575757;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 800;
+    cursor: pointer;
+    /*
+    width: 75px;
+    */
+    width: 100px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    margin: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #f5a31a;
+    border: 2px solid rgb(0, 0, 0);
+    color: #000;
+}
+
+.btn-eliminar {
+    background-color: #d32626da;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px 5px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    width: 75px;
+}
+
+.btn-eliminar:hover {
+    border: 2px solid rgb(0, 0, 0);
+    color: #000;
+}
+
+.tbl-container h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 0 20px 0;
+    color: #18b158;
+}
