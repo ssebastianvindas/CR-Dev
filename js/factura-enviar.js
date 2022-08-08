@@ -10,3 +10,5 @@ let enviarFactura = () => {
 let imprimirFactura = () => {
     window.print();
 };
+
+btnImprimir.addEventListener('click', imprimirFactura);

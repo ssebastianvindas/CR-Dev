@@ -22,7 +22,7 @@ const llenarTabla = () => {
 
         //Creación del botón de editar
         let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
+        btnEditar.textContent = 'Pagar';
         btnEditar.type = 'button';
         btnEditar.classList.add('btn-editar');
 
@@ -35,6 +35,19 @@ const llenarTabla = () => {
         //Agregar el botón de editar y eliminar a la celda de acciones
         tdAcciones.appendChild(btnEditar);
         tdAcciones.appendChild(btnEliminar);
+        btnEditar.addEventListener('click', () => {
+            Swal.fire({
+                title: '¿Está seguro que desea pagar la factura?',
+                text: "Se producirá una versión imprimible de la factura",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '¡Sí, pagar!'
+            }).then((result) => {
+                window.location.href = '../factura-imprimir.html';
+            })
+        });
 
         btnEliminar.addEventListener('click', () => {
             Swal.fire({
