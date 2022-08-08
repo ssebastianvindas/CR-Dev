@@ -8,7 +8,14 @@ let enviarFactura = () => {
 };
 
 let imprimirFactura = () => {
+
+    let printContents = document.getElementById('imp1').innerHTML;
+    window.open();
+    document.write(printContents);
+
     window.print();
+    window.close();
+
 };
 
 btnImprimir.addEventListener('click', imprimirFactura);
