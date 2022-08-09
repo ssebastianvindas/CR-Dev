@@ -17,8 +17,8 @@ const MedMed = document.querySelector('#med-med');
 
 
 
-let contador = 0;
 
+l
 let validarForm = () => {
     inputs.forEach((input) => {
 
@@ -44,7 +44,7 @@ let validarForm = () => {
                 text: 'La información ha sido ingresada con éxito en el expediente clínico',
                 confirmButtonText: "Entendido"
             }).then(() => {
-                registrarDatos();
+                getDatos();
             });
 
 
