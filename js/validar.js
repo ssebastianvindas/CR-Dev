@@ -14,11 +14,50 @@ const MedDate = document.querySelector('#med-date');
 const MedPet = document.querySelector('#med-pet');
 const MedSelect = document.querySelector('#med-doctores');
 const MedMed = document.querySelector('#med-med');
+//Toma de inputs para getDatos
+const expGetFecha = document.getElementById('frm-dfecha');
+const expGetMascota = document.getElementById('name-pet');
+const expGetMascotaId = document.getElementById('exp-id');
+const expGetOwner = document.getElementById('name-owner');
+const expGetOwnerId = document.getElementById('exp-idowner');
+const expGetVet = document.getElementById('exp-vet');
+const expGetQueja = document.getElementById('expQPrincipal');
+const expChkTos = document.getElementById('chk-tos');
+const expChkResfrio = document.getElementById('chk-resfrio');
+const expChkFiebre = document.getElementById('chk-fiebre');
+const expChkBrucelosis = document.getElementById('chk-brucelosis');
+const expChkDistemper = document.getElementById('chk-distemper');
+const expChkCarbunco = document.getElementById('chk-cb');
+const expChkHongos = document.getElementById('chk-hongos');
+const expChkMoquillo = document.getElementById('chk-moquillo');
+const expChkViriosis = document.getElementById('chk-viriosis');
+const expChkParvo = document.getElementById('chk-parvo');
+const expChkHepatitis = document.getElementById('chk-hepatitis');
+const expChkLaringo = document.getElementById('chk-laringo');
+const expChkGastro = document.getElementById('chk-gastro');
+const expChkRabia = document.getElementById('chk-rabia');
+const expChkLepto = document.getElementById('chk-lepto');
+const expChkTp = document.getElementById('chk-tp');
+const expChkParasitos = document.getElementById('chk-parasitos');
+const expChkLehismania = document.getElementById('chk-lehismania');
+const expChkFilarias = document.getElementById('chk-filarias');
+const expPresionArterial = document.getElementById('exp-pa');
+const expPulso = document.getElementById('exp-pulso');
+const expTemperatura = document.getElementById('exp-temp');
+const expPeso = document.getElementById('exp-peso');
+const expTalla = document.getElementById('exp-talla');
+const expEdad = document.getElementById('exp-edad');
 
 
 
 
-l
+
+let getDatos = () => {
+
+    registrarDatos('registrar-expediente', );
+
+};
+
 let validarForm = () => {
     inputs.forEach((input) => {
 
