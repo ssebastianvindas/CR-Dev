@@ -1,4 +1,4 @@
-const registrarDatos = async(endpoint, data, redireccion) => {
+const registrarDatos = async(endpoint, data) => {
     let url = `http://localhost:3000/api/${endpoint}`;
 
     await axios({
@@ -12,7 +12,7 @@ const registrarDatos = async(endpoint, data, redireccion) => {
             'title': 'Felicidades',
             'text': response.data.msj
         }).then(() => {
-            window.location.href = redireccion;
+            // regresarPrincipal();
         });
     }).catch(error => {
         Swal.fire({
@@ -24,7 +24,7 @@ const registrarDatos = async(endpoint, data, redireccion) => {
 
 };
 
-const obtenerDatos = async(endpoint) => {
+const getDatos = async(endpoint) => {
     let url = `http://localhost:3000/api/${endpoint}`;
     let listaDatos = [];
     await axios({

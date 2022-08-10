@@ -345,6 +345,12 @@ fieldset {
     width: 1050px;
 }
 
+#txt-examen {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 #txt-examen input {
     width: 549px;
 }

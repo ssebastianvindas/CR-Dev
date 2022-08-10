@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll("form input");
 const btnRegister = document.querySelector('#btn-save');
+const botonTx = document.querySelector('#btn-agregarTx');
 const checkbox = document.querySelectorAll('.pd-chkbox');
 const labels = document.querySelectorAll('.lbl-chkbox');
 const formLabDate = document.getElementById('frm-labDate');
@@ -8,12 +9,17 @@ const formLabOwner = document.getElementById('lab-owner');
 const formLabTest = document.getElementById('lab-test');
 const formLabResult = document.getElementById('lab-result');
 const formLabSelect = document.getElementById('lab-doctores');
+const btnVac = document.getElementById('btn-agregarVacuna');
 const btnLab = document.querySelector('#btn-lab');
 const btnMed = document.querySelector('#btn-med');
 const MedDate = document.querySelector('#med-date');
 const MedPet = document.querySelector('#med-pet');
 const MedSelect = document.querySelector('#med-doctores');
 const MedMed = document.querySelector('#med-med');
+const vacFecha = document.querySelector('#input-dateVac');
+const vacNombre = document.querySelector('#input-vacuna');
+const InputTextDate = document.querySelector('#input-txDate');
+const InputTextEvol = document.querySelector('#input-txEvol');
 //Toma de inputs para getDatos
 const expGetFecha = document.getElementById('frm-dfecha');
 const expGetMascota = document.getElementById('name-pet');
@@ -52,9 +58,98 @@ const expEdad = document.getElementById('exp-edad');
 
 
 
-let getDatos = () => {
 
-    registrarDatos('registrar-expediente', );
+let AlmacenarDatos = () => {
+    let Datos = {
+        fecha: expGetFecha.value,
+        mascota: expGetMascota.value,
+        mascotaId: expGetMascotaId.value,
+        owner: expGetOwner.value,
+        ownerId: expGetOwnerId.value,
+        veterinario: expGetVet.value,
+        quejaprincipal: expGetQueja.value,
+        tos: expChkTos.value,
+        resfrio: expChkResfrio.value,
+        fiebre: expChkFiebre.value,
+        brucelosis: expChkBrucelosis.value,
+        distemper: expChkDistemper.value,
+        carbunco: expChkCarbunco.value,
+        hongos: expChkHongos.value,
+        moquillo: expChkMoquillo.value,
+        viriosis: expChkViriosis.value,
+        parvo: expChkParvo.value,
+        hepatitis: expChkHepatitis.value,
+        laringo: expChkLaringo.value,
+        gastro: expChkGastro.value,
+        rabia: expChkRabia.value,
+        lepto: expChkLepto.value,
+        tp: expChkTp.value,
+        parasitos: expChkParasitos.value,
+        lehismania: expChkLehismania.value,
+        filarias: expChkFilarias.value,
+        presionarterial: expPresionArterial.value,
+        pulso: expPulso.value,
+        temperatura: expTemperatura.value,
+        peso: expPeso.value,
+        talla: expTalla.value,
+        edad: expEdad.value,
+        radiografia: 'imgs/radiografia.png'
+
+
+    };
+    registrarDatos('registrar-expediente', Datos);
+
+};
+
+let almacenarVacunas = () => {
+    let vacunasDatos = {
+        mascotaId: expGetMascotaId.value,
+        fecha: vacFecha.value,
+        vacuna: vacNombre.value
+    };
+
+    registrarDatos('registrar-vacunas', vacunasDatos);
+
+};
+
+let almacenarTx = () => {
+    let tratamientoDatos = {
+        mascotaId: expGetMascotaId.value,
+        fecha: InputTextDate.value,
+        tratamiento: InputTextEvol.value
+    };
+
+    registrarDatos('registrar-tratamientos', tratamientoDatos);
+
+};
+
+let almacenarLab = () => {
+    let LabDatos = {
+        mascotaId: expGetMascotaId.value,
+        fecha: formLabDate.value,
+        mascota: formLabPet.value,
+        owner: formLabOwner.value,
+        examen: formLabTest.value,
+        resultados: formLabResult.value
+
+    };
+
+    registrarDatos('registrar-laboratorios', LabDatos);
+
+};
+
+let almacenarMed = () => {
+    let MedDatos = {
+        mascotaId: expGetMascotaId.value,
+        fecha: formLabDate.value,
+        mascota: formLabPet.value,
+        owner: formLabOwner.value,
+        examen: formLabTest.value,
+        resultados: formLabResult.value
+
+    };
+
+    registrarDatos('registrar-medicamentos', MedDatos);
 
 };
 
@@ -83,7 +178,8 @@ let validarForm = () => {
                 text: 'La información ha sido ingresada con éxito en el expediente clínico',
                 confirmButtonText: "Entendido"
             }).then(() => {
-                getDatos();
+
+                AlmacenarDatos();
             });
 
 
@@ -203,6 +299,8 @@ let validarLab = () => {
             'title': 'Datos ingresados correctamente',
             'text': 'El registro se ha creado adecuadamente',
             'confirmButtonText': 'Entendido'
+        }).then(() => {
+            almacenarLab();
         });
     }
 
@@ -269,7 +367,98 @@ let validarMed = () => {
 
 };
 
-btnMed.addEventListener("click", validarMed)
-btnLab.addEventListener("click", validarLab)
-btnRegister.addEventListener('click', validarForm)
-btnRegister.addEventListener('mouseover', confirmar)
+let validarVac = () => {
+    let error = false;
+
+    if (VacFecha.value == '') {
+        error = true;
+        VacFecha.classList.add('input-invalid');
+        VacFecha.classList.remove('input-valid');
+    } else {
+        VacFecha.classList.remove('input-invalid');
+        VacFecha.classList.add('input-valid');
+    }
+
+    if (VacNombre.value == '') {
+        error = true;
+        VacNombre.classList.add('input-invalid');
+        VacNombre.classList.remove('input-valid');
+    } else {
+        VacNombre.classList.remove('input-invalid');
+        VacNombre.classList.add('input-valid');
+    }
+
+
+
+    if (error == true) {
+        Swal.fire({
+            'icon': 'warning',
+            'title': 'Datos ingresados incorrectamente',
+            'text': 'Por favor revise los campos resaltados',
+            'confirmButtonText': 'Entendido'
+        });
+
+    } else {
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Datos ingresados correctamente',
+            'text': 'La receta se ha creado adecuadamente',
+            'confirmButtonText': 'Entendido'
+        }).then(() => {
+
+            almacenarVacunas();
+        });
+    }
+
+};
+
+let validarTx = () => {
+
+    let error = false;
+
+    if (InputTextDate.value == '') {
+        error = true;
+        InputTextDate.classList.add('input-invalid');
+        InputTextDate.classList.remove('input-valid');
+    } else {
+        InputTextDate.classList.remove('input-invalid');
+        InputTextDate.classList.add('input-valid');
+    }
+
+    if (InputTextEvol.value == '') {
+        error = true;
+        InputTextEvol.classList.add('input-invalid');
+        InputTextEvol.classList.remove('input-valid');
+    } else {
+        InputTextEvol.classList.remove('input-invalid');
+        InputTextEvol.classList.add('input-valid');
+    }
+
+
+    if (error == true) {
+        Swal.fire({
+            'icon': 'warning',
+            'title': 'Datos ingresados incorrectamente',
+            'text': 'Por favor revise los campos resaltados',
+            'confirmButtonText': 'Entendido'
+        });
+
+    } else {
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Datos ingresados correctamente',
+            'text': 'La factura se ha creado adecuadamente',
+            'confirmButtonText': 'Entendido'
+        }).then(() => {
+            almacenarTx();
+        });
+    }
+
+};
+
+btnMed.addEventListener("click", validarMed);
+btnLab.addEventListener("click", validarLab);
+btnVac.addEventListener("click", validarVac);
+botonTx.addEventListener('click', validarTx);
+btnRegister.addEventListener('click', validarForm);
+btnRegister.addEventListener('mouseover', confirmar);

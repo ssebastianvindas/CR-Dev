@@ -3,7 +3,19 @@ const cuerpoTablaPendiente = document.querySelector('#tbl-pendientes tbody');
 const cuerpoTablaDoctor = document.querySelector('#tbl-doctor tbody');
 const seleccion = document.getElementById('cita-listar-doctores');
 const selectFiltroTabla = document.getElementById('cita-listar-doctores');
+let citas = [];
 
+const llenarCitas = async() => {
+
+    citas = await getDatos('obtener-citas');
+
+
+    llenarTablaDia();
+    llenarTablaDoctores();
+    llenarTablaPendientes();
+
+
+};
 
 const llenarTablaDia = () => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
@@ -15,8 +27,8 @@ const llenarTablaDia = () => {
 
         fila.insertCell().textContent = cita.fecha;
         fila.insertCell().textContent = cita.hora;
-        fila.insertCell().textContent = cita.nombreMascota;
-        fila.insertCell().textContent = cita.nombreOwner;
+        fila.insertCell().textContent = cita.nombremascota;
+        fila.insertCell().textContent = cita.nombreduenno;
         fila.insertCell().textContent = cita.procedimiento;
         fila.insertCell().textContent = cita.doctor;
         fila.insertCell().textContent = cita.estado;
@@ -69,13 +81,13 @@ const llenarTablaDoctor = () => {
     cuerpoTablaDoctor.innerHTML = '';
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     citas.forEach(cita => {
-        if (cita.doctor === seleccion.value) {
+        if (cita.doctor == seleccion.value) {
             let fila = cuerpoTablaDoctor.insertRow();
 
             fila.insertCell().textContent = cita.fecha;
             fila.insertCell().textContent = cita.hora;
-            fila.insertCell().textContent = cita.nombreMascota;
-            fila.insertCell().textContent = cita.nombreOwner;
+            fila.insertCell().textContent = cita.nombremascota;
+            fila.insertCell().textContent = cita.nombreduenno;
             fila.insertCell().textContent = cita.procedimiento;
             fila.insertCell().textContent = cita.doctor;
             fila.insertCell().textContent = cita.estado;
@@ -131,13 +143,11 @@ const llenarTablaDoctores = () => {
     cuerpoTablaDoctor.innerHTML = '';
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     citas.forEach(cita => {
-
         let fila = cuerpoTablaDoctor.insertRow();
-
         fila.insertCell().textContent = cita.fecha;
         fila.insertCell().textContent = cita.hora;
-        fila.insertCell().textContent = cita.nombreMascota;
-        fila.insertCell().textContent = cita.nombreOwner;
+        fila.insertCell().textContent = cita.nombremascota;
+        fila.insertCell().textContent = cita.nombreduenno;
         fila.insertCell().textContent = cita.procedimiento;
         fila.insertCell().textContent = cita.doctor;
         fila.insertCell().textContent = cita.estado;
@@ -197,8 +207,8 @@ const llenarTablaPendientes = () => {
 
         fila.insertCell().textContent = cita.fecha;
         fila.insertCell().textContent = cita.hora;
-        fila.insertCell().textContent = cita.nombreMascota;
-        fila.insertCell().textContent = cita.nombreOwner;
+        fila.insertCell().textContent = cita.nombremascota;
+        fila.insertCell().textContent = cita.nombreduenno;
         fila.insertCell().textContent = cita.procedimiento;
         fila.insertCell().textContent = cita.doctor;
         fila.insertCell().textContent = cita.estado;
@@ -271,7 +281,5 @@ const llenarTablaPendientes = () => {
 
 
 
-llenarTablaDia();
-llenarTablaDoctores();
-llenarTablaPendientes();
+llenarCitas();
 selectFiltroTabla.addEventListener('change', llenarTablaDoctor);
