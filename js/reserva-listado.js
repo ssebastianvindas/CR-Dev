@@ -1,15 +1,21 @@
 const cuerpoTabla = document.querySelector('#tbl-hotel tbody');
+let reservasDatos = [];
+
+const incializarArreglo = async() => {
+    reservasDatos = await getDatos("obtener-reservas");
+    llenarTabla();
+}
 
 const llenarTabla = () => {
 
     cuerpoTabla.innerHTML = ''; //limpia el contenido del html
 
-    reservas.forEach(reservaTemporal => {
+    reservasDatos.forEach(reservaTemporal => {
         let fila = cuerpoTabla.insertRow(); //Crea una fila
 
-        fila.insertCell().textContent = reservaTemporal.fechaReserva;
+        fila.insertCell().textContent = reservaTemporal.fechaEntrada;
         fila.insertCell().textContent = reservaTemporal.fechaSalida;
-        fila.insertCell().textContent = reservaTemporal.cantAnimales;
+        fila.insertCell().textContent = reservaTemporal.numMascotas;
         // Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
 
@@ -52,9 +58,4 @@ const llenarTabla = () => {
     });
 };
 
-
-
-
-
-
-llenarTabla();
+incializarArreglo();
