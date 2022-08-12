@@ -13,7 +13,7 @@ const registrarDatos = async(endpoint, data) => {
             'title': 'Felicidades',
             'text': response.data.msj
         }).then(() => {
-
+            regresarPrincipal();
 
         });
     }).catch(error => {
@@ -24,7 +24,7 @@ const registrarDatos = async(endpoint, data) => {
         });
 
     });
-    regresarPrincipal();
+
 };
 
 const getDatos = async(endpoint) => {
