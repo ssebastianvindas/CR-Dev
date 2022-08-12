@@ -12,7 +12,7 @@ const registrarDatos = async(endpoint, data) => {
             'title': 'Felicidades',
             'text': response.data.msj
         }).then(() => {
-            // regresarPrincipal();
+            regresarPrincipal();
         });
     }).catch(error => {
         Swal.fire({

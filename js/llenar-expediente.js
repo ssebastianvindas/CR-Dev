@@ -42,6 +42,29 @@ const cuerpoTablaVacunas = document.getElementById('tbl-vacuna');
 const cuerpoTablaLaboratorios = document.getElementById('tbl-lab');
 const cuerpoTablaProcemientos = document.getElementById('tbl-procedimiento');
 const cuerpoTablaRecetas = document.getElementById('tbl-receta');
+const expediente = [];
+const vacunas = [];
+const procedimientos = [];
+const laboratorios = [];
+const medicamentos = [];
+
+
+const llenarRegExpediente = async() => {
+    expediente = await getDatos("obtener-expedientes");
+    llenarExpediente();
+    vacunas = await getDatos("obtener-vacunas");
+    llenarVacunas();
+    laboratorios = await getDatos("obtener-laboratorios");
+    llenarLaboratorios();
+    procedimientos = await getDatos("obtener-tratamientos");
+    llenarProcedimientos();
+    recetas = await getDatos("obtener-medicamentos");
+    llenarRecetas();
+
+};
+
+
+
 
 const llenarVacunas = () => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
@@ -299,45 +322,32 @@ const llenarRecetas = () => {
 };
 
 let llenarExpediente = () => {
-    expFecha.value = '2022-05-17';
-    namePet.value = 'Dusty';
-    expId.value = '110890528';
-    nameOwner.value = 'Gabriel Coto';
-    expIdOwner.value = '121600787';
-    expVet.value = 'Dr. Amir Gupta';
-    expQueja.value = 'El perro se escapa y es agresivo';
-    chkTos.checked = true;
-    chkBrucelosis.checked = true;
-    chkHongos.checked = true;
-    chkParvo.checked = true;
-    chkRabia.checked = true;
-    chkParasitos.checked = true;
-    chkFilarias.checked = true;
-    expPa.value = '120/80';
-    expPulso.value = '80';
-    expTemp.value = '36.5';
-    expPeso.value = '45';
-    expTalla.value = '110';
-    expEdad.value = '3';
+    expFecha.value = expediente.fecha;
+    namePet.value = expediente.mascota;
+    expId.value = expediente.mascotaId;
+    nameOwner.value = expediente.owner;
+    expIdOwner.value = expediente.ownerId;
+    expVet.value = expediente.veterinario;
+    expQueja.value = expediente.quejaprincipal;
+    chkTos.checked = expediente.tos;
+    chkBrucelosis.checked = expediente.brucelosis;
+    chkHongos.checked = expediente.hongos;
+    chkParvo.checked = expediente.parvo;
+    chkRabia.checked = expediente.rabia;
+    chkParasitos.checked = expediente.parasitos;
+    chkFilarias.checked = expediente.filarias;
+    expPa.value = expediente.presionarterial;
+    expPulso.value = expediente.pulso;
+    expTemp.value = expediente.temperatura;
+    expPeso.value = expediente.peso;
+    expTalla.value = expediente.talla;
+    expEdad.value = expediente.edad;
     rxImage.forEach((rx) => {
-        rx.src = '../imgs/rx.jpg';
+        rx.src = expediente.radiografia;
 
     });
 
-    labFecha.value = '2022-05-17';
-    labPet.value = 'Dusty';
-    labOwner.value = 'Gabriel Coto';
-    labTest.value = 'Fórmula Rojas';
-    labResult.value = 'Hemoglobina:Normal, Hematocrito:Normal, Suero:Normal';
-    labDoctores.value = 'Dr. Amir Gupta';
 
-
-
-
-    llenarVacunas();
-    llenarProcedimientos();
-    llenarLaboratorios();
-    llenarRecetas();
 };
 
-llenarExpediente();
+llenarRegExpediente();

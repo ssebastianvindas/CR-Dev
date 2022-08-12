@@ -96,6 +96,7 @@ let AlmacenarDatos = () => {
         radiografia: 'imgs/radiografia.png'
 
 
+
     };
     registrarDatos('registrar-expediente', Datos);
 
@@ -141,11 +142,11 @@ let almacenarLab = () => {
 let almacenarMed = () => {
     let MedDatos = {
         mascotaId: expGetMascotaId.value,
-        fecha: formLabDate.value,
-        mascota: formLabPet.value,
-        owner: formLabOwner.value,
-        examen: formLabTest.value,
-        resultados: formLabResult.value
+        fecha: MedDate.value,
+        mascota: MedPet.value,
+        doctor: MedSelect.value,
+        medicamento: MedMed.value
+
 
     };
 
@@ -215,12 +216,7 @@ let confirmar = () => {
                 confirmButtonText: 'Entendido'
             });
         };
-        //**  else {
-        //     labels.forEach((lbl) => {
-        //         lbl.classList.remove("input-invalid");
-        //         lbl.classList.add("input-valid");
-        //     });
-        // }; 
+
 
     };
 
@@ -362,6 +358,8 @@ let validarMed = () => {
             'title': 'Datos ingresados correctamente',
             'text': 'La receta se ha creado adecuadamente',
             'confirmButtonText': 'Entendido'
+        }).then(() => {
+            almacenarMed();
         });
     }
 
@@ -370,22 +368,22 @@ let validarMed = () => {
 let validarVac = () => {
     let error = false;
 
-    if (VacFecha.value == '') {
+    if (vacFecha.value == '') {
         error = true;
-        VacFecha.classList.add('input-invalid');
-        VacFecha.classList.remove('input-valid');
+        vacFecha.classList.add('input-invalid');
+        vacFecha.classList.remove('input-valid');
     } else {
-        VacFecha.classList.remove('input-invalid');
-        VacFecha.classList.add('input-valid');
+        vacFecha.classList.remove('input-invalid');
+        vacFecha.classList.add('input-valid');
     }
 
-    if (VacNombre.value == '') {
+    if (vacNombre.value == '') {
         error = true;
-        VacNombre.classList.add('input-invalid');
-        VacNombre.classList.remove('input-valid');
+        vacNombre.classList.add('input-invalid');
+        vacNombre.classList.remove('input-valid');
     } else {
-        VacNombre.classList.remove('input-invalid');
-        VacNombre.classList.add('input-valid');
+        vacNombre.classList.remove('input-invalid');
+        vacNombre.classList.add('input-valid');
     }
 
 

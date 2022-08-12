@@ -1,6 +1,12 @@
 const cuerpoTabla = document.querySelector('#tbl-factura tbody');
 const botonDashboard = document.getElementById("btn-dash");
 const nickname = document.querySelector('.nickname');
+let facturas = [];
+const llenarRegistros = async() => {
+    facturas = await getDatos("/obtener-facturas");
+    mostrarTabla();
+};
+
 const llenarTabla = () => {
     cuerpoTabla.innerHTML = '';
 
