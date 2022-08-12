@@ -7,26 +7,22 @@ const registrarDatos = async(endpoint, data) => {
         'responseType': 'json',
         'data': data
     }).then(response => {
-
         Swal.fire({
             'icon': 'success',
             'title': 'Felicidades',
             'text': response.data.msj
         }).then(() => {
             regresarPrincipal();
-
         });
     }).catch(error => {
         Swal.fire({
             'icon': 'error',
             'title': 'Ha ocurrido un error',
             'text': error
-        });
-
+        })
     });
 
 };
-
 const getDatos = async(endpoint) => {
     let url = `http://localhost:3000/api/${endpoint}`;
     let listaDatos = [];

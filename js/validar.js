@@ -102,16 +102,7 @@ let AlmacenarDatos = () => {
 
 };
 
-let almacenarVacunas = () => {
-    let vacunasDatos = {
-        mascotaId: expGetMascotaId.value,
-        fecha: vacFecha.value,
-        vacuna: vacNombre.value
-    };
 
-    registrarDatos('registrar-vacunas', vacunasDatos);
-
-};
 
 let almacenarTx = () => {
     let tratamientoDatos = {
@@ -400,11 +391,20 @@ let validarVac = () => {
         Swal.fire({
             'icon': 'success',
             'title': 'Datos ingresados correctamente',
-            'text': 'La receta se ha creado adecuadamente',
+            'text': 'La vacuna se ha ingresado adecuadamente',
             'confirmButtonText': 'Entendido'
         }).then(() => {
 
-            almacenarVacunas();
+
+            let vacunasDatos = {
+                mascotaId: expGetMascotaId.value,
+                fecha: vacFecha.value,
+                vacuna: vacNombre.value
+            };
+
+
+            registrarDatos('registrar-vacunas', vacunasDatos)
+
         });
     }
 
@@ -454,9 +454,9 @@ let validarTx = () => {
 
 };
 
-btnMed.addEventListener("click", validarMed);
-btnLab.addEventListener("click", validarLab);
-btnVac.addEventListener("click", validarVac);
-botonTx.addEventListener('click', validarTx);
-btnRegister.addEventListener('click', validarForm);
-btnRegister.addEventListener('mouseover', confirmar);
+btnMed.addEventListener("click", validarMed)
+btnLab.addEventListener("click", validarLab)
+btnVac.addEventListener("click", validarVac)
+botonTx.addEventListener('click', validarTx)
+btnRegister.addEventListener('click', validarForm)
+btnRegister.addEventListener('mouseover', confirmar)
