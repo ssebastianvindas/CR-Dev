@@ -7,21 +7,24 @@ const registrarDatos = async(endpoint, data) => {
         'responseType': 'json',
         'data': data
     }).then(response => {
+
         Swal.fire({
             'icon': 'success',
             'title': 'Felicidades',
             'text': response.data.msj
         }).then(() => {
-            regresarPrincipal();
+
+
         });
     }).catch(error => {
         Swal.fire({
             'icon': 'error',
             'title': 'Ha ocurrido un error',
             'text': error
-        })
-    });
+        });
 
+    });
+    regresarPrincipal();
 };
 
 const getDatos = async(endpoint) => {
