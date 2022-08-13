@@ -47,19 +47,19 @@ let vacunas = [];
 let procedimientos = [];
 let laboratorios = [];
 let medicamentos = [];
-let recetas = [];
+
 
 
 const llenarRegExpediente = async() => {
     expediente = await getDatos("obtener-expediente");
-    llenarExpediente();
+    //llenarExpediente();
     vacunas = await getDatos("obtener-vacunas");
     llenarVacunas();
     laboratorios = await getDatos("obtener-laboratorios");
     llenarLaboratorios();
     procedimientos = await getDatos("obtener-tratamientos");
     llenarProcedimientos();
-    recetas = await getDatos("obtener-medicamentos");
+    medicamentos = await getDatos("obtener-medicamentos");
     llenarRecetas();
 
 };
@@ -323,32 +323,36 @@ const llenarRecetas = () => {
 };
 
 let llenarExpediente = () => {
-    expFecha.value = expediente.fecha;
-    namePet.value = expediente.mascota;
-    expId.value = expediente.mascotaId;
-    nameOwner.value = expediente.owner;
-    expIdOwner.value = expediente.ownerId;
-    expVet.value = expediente.veterinario;
-    expQueja.value = expediente.quejaprincipal;
-    chkTos.checked = expediente.tos;
-    chkBrucelosis.checked = expediente.brucelosis;
-    chkHongos.checked = expediente.hongos;
-    chkParvo.checked = expediente.parvo;
-    chkRabia.checked = expediente.rabia;
-    chkParasitos.checked = expediente.parasitos;
-    chkFilarias.checked = expediente.filarias;
-    expPa.value = expediente.presionarterial;
-    expPulso.value = expediente.pulso;
-    expTemp.value = expediente.temperatura;
-    expPeso.value = expediente.peso;
-    expTalla.value = expediente.talla;
-    expEdad.value = expediente.edad;
-    rxImage.forEach((rx) => {
-        rx.src = expediente.radiografia;
+    expediente.forEach(exp => {
+        if (parseInt(expId.value) === exp.mascotaId) {
+            expFecha.value = exp.fecha;
+            namePet.value = exp.mascota;
+            expId.value = exp.mascotaId;
+            nameOwner.value = exp.owner;
+            expIdOwner.value = exp.ownerId;
+            expVet.value = exp.veterinario;
+            expQueja.value = exp.quejaprincipal;
+            chkTos.checked = exp.tos;
+            chkBrucelosis.checked = exp.brucelosis;
+            chkHongos.checked = exp.hongos;
+            chkParvo.checked = exp.parvo;
+            chkRabia.checked = exp.rabia;
+            chkParasitos.checked = exp.parasitos;
+            chkFilarias.checked = exp.filarias;
+            expPa.value = exp.presionarterial;
+            expPulso.value = exp.pulso;
+            expTemp.value = exp.temperatura;
+            expPeso.value = exp.peso;
+            expTalla.value = exp.talla;
+            expEdad.value = exp.edad;
+        }
+        // rxImage.forEach((rx) => {
+        //     rx.src = expediente.radiografia;
 
+        // });
     });
-
 
 };
 
 llenarRegExpediente();
+expId.addEventListener('keyup', llenarExpediente);
