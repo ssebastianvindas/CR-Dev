@@ -1,6 +1,7 @@
 const botonReservaBack = document.querySelector(".btn-dashboard-principal");
 let regresarPrincipal = () => {
     let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
+
     switch (usuarioConectado.rol) {
         case 1:
             window.location.href = "../dashboard-admin.html";
