@@ -42,15 +42,16 @@ const cuerpoTablaVacunas = document.getElementById('tbl-vacuna');
 const cuerpoTablaLaboratorios = document.getElementById('tbl-lab');
 const cuerpoTablaProcemientos = document.getElementById('tbl-procedimiento');
 const cuerpoTablaRecetas = document.getElementById('tbl-receta');
-const expediente = [];
-const vacunas = [];
-const procedimientos = [];
-const laboratorios = [];
-const medicamentos = [];
+let expediente = [];
+let vacunas = [];
+let procedimientos = [];
+let laboratorios = [];
+let medicamentos = [];
+let recetas = [];
 
 
 const llenarRegExpediente = async() => {
-    expediente = await getDatos("obtener-expedientes");
+    expediente = await getDatos("obtener-expediente");
     llenarExpediente();
     vacunas = await getDatos("obtener-vacunas");
     llenarVacunas();

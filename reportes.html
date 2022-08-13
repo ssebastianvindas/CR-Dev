@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/menuUser.css" />
     <link rel="stylesheet" href="css/header-Admin.css" />
     <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
-    <title>Reportes de Ingresos</title>
+    <title>Módulo de Reportes</title>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,19 +44,28 @@
 
     <section class="container">
       <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'cita-listar')">
+        <button class="tablinks" onclick="openCity(event, 'reportes-veterinaria')">
           Ingresos de la Veterinaria
         </button>
-        <button class="tablinks" onclick="openCity(event, 'cita-doctor')">
+        <button class="tablinks" onclick="openCity(event, 'reportes-hotel')">
           Ingresos del Hotel
         </button>
-        
+        <button class="tablinks" onclick="openCity(event, 'reportes-citas')">
+          Citas
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'reportes-calificaciones')">
+            Calificaciones
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'reportes-reserva-hotel')">
+            Reservaciones del Hotel
+          </button>
+
       </div>
 
       <!-- Tab content -->
-      <div id="cita-pendientes" class="tabcontent">
+      <div id="reportes-veterinaria" class="tabcontent">
         <div class="tbl-container">
-          <h1>Ingresos de la Veterinaria</h1>
+          <h1>Reporte de Ingresos de la Veterinaria</h1>
           <table id="tbl-pendientes" class="tbl-general">
             <thead>
               <tr>
@@ -86,9 +95,9 @@
         </div>
       </div>
 
-      <div id="cita-listar" class="tabcontent">
+      <div id="reportes-hotel" class="tabcontent">
         <div class="tbl-container">
-          <h1>Citas del día</h1>
+          <h1>Reporte de Ingresos del Hotel</h1>
           <table id="tbl-users" class="tbl-general">
             <thead>
               <tr>
@@ -118,9 +127,9 @@
         </div>
       </div>
 
-      <div id="cita-doctor" class="tabcontent">
+      <div id="reportes-citas" class="tabcontent">
         <div class="tbl-container">
-          <h1>Citas del día por Doctor</h1>
+          <h1>Reportes de Citas</h1>
           <div>
             <select id="cita-listar-doctores">
               <option value="" class="frm-select">Doctores</option>
@@ -172,7 +181,73 @@
           </table>
         </div>
       </div>
+
+      <div id="reportes-calificaciones" class="tabcontent">
+        <div class="tbl-container">
+          <h1>Reportes de las Calificaciones</h1>
+          <table id="tbl-users" class="tbl-general">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Nombre del Paciente</th>
+                <th>Nombre del Dueño</th>
+                <th>Procedimiento</th>
+                <th>Doctor</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>02/11/2022</td>
+                <td>10:30am</td>
+                <td>Dusty</td>
+                <td>Alberto Coto Calvo</td>
+                <td>Vacuna</td>
+                <td>Dr. Luis Zumbado</td>
+                <td>Pendiente</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="reportes-reserva-hotel" class="tabcontent">
+        <div class="tbl-container">
+          <h1>Reservas del Hotel</h1>
+          <table id="tbl-users" class="tbl-general">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Nombre del Paciente</th>
+                <th>Nombre del Dueño</th>
+                <th>Procedimiento</th>
+                <th>Doctor</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>02/11/2022</td>
+                <td>10:30am</td>
+                <td>Dusty</td>
+                <td>Alberto Coto Calvo</td>
+                <td>Vacuna</td>
+                <td>Dr. Luis Zumbado</td>
+                <td>Pendiente</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
+
+
     <div class="menu-user-container ocultar-menu">
       <div class="menu-user">
         <div class="img-user-container">

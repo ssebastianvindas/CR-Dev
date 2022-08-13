@@ -44,7 +44,7 @@
         <a href="citas.html">Consultar Citas de la Veterinaria</a>
         <a href="consultar-usuarios.html">Consultar Usuarios</a>
         <a href="reserva-listado.html">Consultar Reservas del Hotel</a>
-        <a href="reportes.html">Consultar Ingresos</a>
+        <a href="reportes.html">Consultar Reportes</a>
     </nav>
 
     <div class="menu-user-container ocultar-menu">
@@ -331,7 +331,7 @@
               <label for="frm-citas">Monto de los ingresos</label>
               <input type="number" class="frm-userName" />
             </div>
-           
+            <button type="button" id="btn-ingresos-veterinaria">Agregar Ingresos</button>
           </fieldset>
         </form>
       </div>
@@ -340,40 +340,18 @@
         <form class="frm-usuarios-new center-form">
     
           <fieldset class="frm-users center-fieldset">
-            <legend>Registrar un Nuevo Usuario</legend>
+            <legend>Registrar ingresos diarios del Hotel</legend>
             <div class="txt-citas">
-              <label for="frm-userName">Nombre de Usuario</label>
-              <input type="text" class="frm-userName" />
+              <label for="frm-userName">Fecha</label>
+              <input type="date" class="frm-userName" />
             </div>
             <div class="txt-citas">
-              <label for="frm-citas">Contraseña</label>
-              <input type="text" class="frm-userName" />
+              <label for="frm-citas">Monto de los ingresos</label>
+              <input type="number" class="frm-userName" />
             </div>
-            <div class="txt-citas">
-              <label for="frm-fullName">Nombre Completo</label>
-              <input type="text" class="frm-userName"/>
-            </div>
-            <div class="txt-citas">
-              <label for="frm-phone">Número de teléfono</label>
-              <input type="number" class="frm-userName"/>
-            </div>
-            <div class="txt-citas">
-              <label for="frm-mail">Correo electrónico</label>
-              <input type="text" class="frm-userName"/>
-            </div>
-            <div class="txt-citas">
-              <select id="roles">
-                <option value="" class="frm-select">---Roles---</option>
-                <option value="secretaria" class="frm-select">
-                  Secretari@
-                </option>
-                <option value="veterinario" class="frm-select">
-                  Veterinari@
-                </option>
-                <option value="cliente" class="frm-select">Cliente</option>
-              </select>
-              <button type="button" id="btn-userAdd">Agregar Usuario</button>
-            </div>
+            
+              <button type="button" id="btn-ingresos-hotel">Agregar Ingresos</button>
+           
           </fieldset>
         </form>
       </div>

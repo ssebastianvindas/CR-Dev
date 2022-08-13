@@ -55,7 +55,7 @@ const expTalla = document.getElementById('exp-talla');
 const expEdad = document.getElementById('exp-edad');
 
 
-
+let contador = 0;
 
 
 
@@ -68,25 +68,25 @@ let AlmacenarDatos = () => {
         ownerId: expGetOwnerId.value,
         veterinario: expGetVet.value,
         quejaprincipal: expGetQueja.value,
-        tos: expChkTos.value,
-        resfrio: expChkResfrio.value,
-        fiebre: expChkFiebre.value,
-        brucelosis: expChkBrucelosis.value,
-        distemper: expChkDistemper.value,
-        carbunco: expChkCarbunco.value,
-        hongos: expChkHongos.value,
-        moquillo: expChkMoquillo.value,
-        viriosis: expChkViriosis.value,
-        parvo: expChkParvo.value,
-        hepatitis: expChkHepatitis.value,
-        laringo: expChkLaringo.value,
-        gastro: expChkGastro.value,
-        rabia: expChkRabia.value,
-        lepto: expChkLepto.value,
-        tp: expChkTp.value,
-        parasitos: expChkParasitos.value,
-        lehismania: expChkLehismania.value,
-        filarias: expChkFilarias.value,
+        tos: expChkTos.checked,
+        resfrio: expChkResfrio.checked,
+        fiebre: expChkFiebre.checked,
+        brucelosis: expChkBrucelosis.checked,
+        distemper: expChkDistemper.checked,
+        carbunco: expChkCarbunco.checked,
+        hongos: expChkHongos.checked,
+        moquillo: expChkMoquillo.checked,
+        viriosis: expChkViriosis.checked,
+        parvo: expChkParvo.checked,
+        hepatitis: expChkHepatitis.checked,
+        laringo: expChkLaringo.checked,
+        gastro: expChkGastro.checked,
+        rabia: expChkRabia.checked,
+        lepto: expChkLepto.checked,
+        tp: expChkTp.checked,
+        parasitos: expChkParasitos.checked,
+        lehismania: expChkLehismania.checked,
+        filarias: expChkFilarias.checked,
         presionarterial: expPresionArterial.value,
         pulso: expPulso.value,
         temperatura: expTemperatura.value,
@@ -98,6 +98,7 @@ let AlmacenarDatos = () => {
 
 
     };
+    console.log(expChkFilarias.value);
     registrarDatos('registrar-expediente', Datos);
 
 };
@@ -122,7 +123,8 @@ let almacenarLab = () => {
         mascota: formLabPet.value,
         owner: formLabOwner.value,
         examen: formLabTest.value,
-        resultados: formLabResult.value
+        resultados: formLabResult.value,
+        doctor: formLabSelect.value
 
     };
 
@@ -458,5 +460,6 @@ btnMed.addEventListener("click", validarMed)
 btnLab.addEventListener("click", validarLab)
 btnVac.addEventListener("click", validarVac)
 botonTx.addEventListener('click', validarTx)
-btnRegister.addEventListener('click', validarForm)
+
 btnRegister.addEventListener('mouseover', confirmar)
+btnRegister.addEventListener('click', validarForm)
