@@ -21,13 +21,13 @@ const llenarTabla = () => {
 
         //Creación del botón de editar
         let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
         btnEditar.type = 'button';
         btnEditar.classList.add('btn-editar');
 
         //Creación del botón de eliminar
         let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Eliminar';
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
         btnEliminar.type = 'button';
         btnEliminar.classList.add('btn-eliminar');
 

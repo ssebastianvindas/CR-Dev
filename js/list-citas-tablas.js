@@ -21,14 +21,15 @@ const llenarTablaList = () => {
         // Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
 
-        //Creación del boton editar
+        //Creación del botón de editar
         let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Calificar Veterinario';
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
         btnEditar.type = 'button';
         btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
+
+        //Creación del botón de eliminar
         let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Cancelar';
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
         btnEliminar.type = 'button';
         btnEliminar.classList.add('btn-eliminar');
 

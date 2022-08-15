@@ -25,14 +25,15 @@ const llenarTablaDia = () => {
         // Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
 
-        //Creación del boton editar
+        //Creación del botón de editar
         let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
         btnEditar.type = 'button';
         btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
+
+        //Creación del botón de eliminar
         let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Cancelar';
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
         btnEliminar.type = 'button';
         btnEliminar.classList.add('btn-eliminar');
 
@@ -69,7 +70,7 @@ const llenarTablaDoctor = () => {
     cuerpoTablaDoctor.innerHTML = '';
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     citas.forEach(cita => {
-        if (cita.doctor === seleccion.value) {
+        if (cita.doctor == seleccion.value) {
             let fila = cuerpoTablaDoctor.insertRow();
 
             fila.insertCell().textContent = cita.fecha;
@@ -84,16 +85,17 @@ const llenarTablaDoctor = () => {
             // Creación de la celda para los botones
             let tdAcciones = fila.insertCell();
 
-            //Creación del boton editar
-            let btnEditar = document.createElement('button');
-            btnEditar.textContent = 'Editar';
-            btnEditar.type = 'button';
-            btnEditar.classList.add('btn-editar');
-            //Creacion del boton eliminar
-            let btnEliminar = document.createElement('button');
-            btnEliminar.textContent = 'Cancelar';
-            btnEliminar.type = 'button';
-            btnEliminar.classList.add('btn-eliminar');
+        //Creación del botón de editar
+        let btnEditar = document.createElement('button');
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+        btnEditar.type = 'button';
+        btnEditar.classList.add('btn-editar');
+
+        //Creación del botón de eliminar
+        let btnEliminar = document.createElement('button');
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        btnEliminar.type = 'button';
+        btnEliminar.classList.add('btn-eliminar');
 
             //Agregar el boton de editar a la celda acciones
             tdAcciones.appendChild(btnEditar);
@@ -146,14 +148,15 @@ const llenarTablaDoctores = () => {
         // Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
 
-        //Creación del boton editar
+        //Creación del botón de editar
         let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
         btnEditar.type = 'button';
         btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
+
+        //Creación del botón de eliminar
         let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Cancelar';
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
         btnEliminar.type = 'button';
         btnEliminar.classList.add('btn-eliminar');
 
@@ -207,14 +210,15 @@ const llenarTablaPendientes = () => {
         // Creación de la celda para los botones
         let tdAccionesPendiente = fila.insertCell();
 
-        //Creación del boton editar
+        //Creación del botón de editar
         let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Asignar';
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
         btnEditar.type = 'button';
         btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
+
+        //Creación del botón de eliminar
         let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Cancelar';
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
         btnEliminar.type = 'button';
         btnEliminar.classList.add('btn-eliminar');
 

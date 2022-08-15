@@ -16,17 +16,17 @@ const llenarTabla = () => {
     // creacion de los botones de las acciones editar y eliminar
     //Para iteracion solo debe mostrar un mensaje
 
-    // boton de editar
-    let btnEditar = document.createElement("button");
-    btnEditar.textContent = "Editar";
-    btnEditar.type = "button";
-    btnEditar.classList.add("btn-editar");
+        //Creación del botón de editar
+        let btnEditar = document.createElement('button');
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+        btnEditar.type = 'button';
+        btnEditar.classList.add('btn-editar');
 
-    // boton de borrar
-    let btnBorrar = document.createElement("button");
-    btnBorrar.textContent = "Eliminar";
-    btnBorrar.type = "button";
-    btnBorrar.classList.add("btn-eliminar");
+        //Creación del botón de eliminar
+        let btnEliminar = document.createElement('button');
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        btnEliminar.type = 'button';
+        btnEliminar.classList.add('btn-eliminar');
 
     btnBorrar.addEventListener("click", () => {
       Swal.fire({
