@@ -44,9 +44,9 @@ const validarReserva = () => {
 const obtenerDatosRegistro = () => {
     //variable tipo JSON
     let reserva = {
-        fechaEntrada : inputEntrada.value,
-        fechaSalida : inputSalida.value,
-        numMascotas : inputAnimales.value
+        fechaEntrada: inputEntrada.value,
+        fechaSalida: inputSalida.value,
+        numMascotas: inputAnimales.value
     };
     Swal.fire({
         'icon': 'success',
