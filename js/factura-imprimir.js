@@ -32,22 +32,21 @@ const facturaLlenar = () => {
 const llenarTablaFact = () => {
     cuerpoTablaFact.innerHTML = '';
 
+
     facturaPrint.forEach(facturaTemp => {
 
-        let fila = cuerpoTablaFact.insertRow();
-
-        // fila.insertCell().textContent = facturaTemp.juridica;
-        // fila.insertCell().textContent = facturaTemp.consecutivo;
-        // fila.insertCell().textContent = facturaTemp.fecha;
-        // fila.insertCell().textContent = facturaTemp.cliente;
-        fila.insertCell().textContent = facturaTemp.cantidad;
-        fila.insertCell().textContent = facturaTemp.subtotal;
-        fila.insertCell().textContent = facturaTemp.impuesto;
-        fila.insertCell().textContent = facturaTemp.total;
-        monto += facturaTemp.subtotal;
-        imp = facturaTemp.impuesto;
+        if (FacturaID.consecutivo === facturaTemp.consecutivo) {
+            let fila = cuerpoTablaFact.insertRow();
 
 
+            fila.insertCell().textContent = facturaTemp.cantidad;
+            fila.insertCell().textContent = facturaTemp.procedimiento;
+            fila.insertCell().textContent = facturaTemp.subtotal;
+            fila.insertCell().textContent = facturaTemp.total;
+            monto += facturaTemp.subtotal;
+            imp = facturaTemp.impuesto;
+
+        }
 
 
 

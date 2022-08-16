@@ -71,11 +71,7 @@ const llenarTabla = () => {
                 confirmButtonText: '¡Sí, eliminar!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire(
-                        '¡Factura eliminado!',
-                        'La factura fue borrado',
-                        'success'
-                    )
+                    eliminarDatos('eliminar-facturas', facturaTemp._id);
                 }
             })
         });
