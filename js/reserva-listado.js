@@ -1,5 +1,16 @@
 const cuerpoTabla = document.querySelector('#tbl-hotel tbody');
+let reservas = [];
 
+const llenarReservas = async() => {
+
+    reservas = await getDatos('obtener-reservas');
+
+
+    llenarTabla();
+
+
+
+};
 const llenarTabla = () => {
 
     cuerpoTabla.innerHTML = ''; //limpia el contenido del html
@@ -57,4 +68,4 @@ const llenarTabla = () => {
 
 
 
-llenarTabla();
+llenarReservas();
