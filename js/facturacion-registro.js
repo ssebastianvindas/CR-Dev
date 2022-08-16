@@ -147,14 +147,19 @@ const obtenerDatos = () => {
         'juridica': inputJuridica.value,
         'consecutivo': inputConsecutivo.value,
         'fecha': inputFecha.value,
-        'paciente': inputPaciente.value,
+        'cliente': inputCliente.value,
         'email': inputEmail.value,
         'telefono': inputTelefono.value,
         'paciente': inputPaciente.value,
+        'cantidad:': inputCantidad.value,
+        'procedimiento': inputProcedimiento.value,
+        'monto': inputPrecio.value,
         'subtotal': inputSubtotal.value,
-        'descuento': inputDescuento.value,
+        'impuesto': inputDescuento.value,
         'total': inputTotal.value,
     };
+    registrarDatos("registrar-facturas", factura);
+
     Swal.fire({
         'icon': 'success',
         'title': 'Datos ingresados correctamente',

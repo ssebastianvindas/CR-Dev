@@ -40,7 +40,7 @@ const llenarTablaFact = () => {
         // fila.insertCell().textContent = facturaTemp.consecutivo;
         // fila.insertCell().textContent = facturaTemp.fecha;
         // fila.insertCell().textContent = facturaTemp.cliente;
-        fila.insertCell().textContent = facturaTemp.paciente;
+        fila.insertCell().textContent = facturaTemp.cantidad;
         fila.insertCell().textContent = facturaTemp.subtotal;
         fila.insertCell().textContent = facturaTemp.impuesto;
         fila.insertCell().textContent = facturaTemp.total;

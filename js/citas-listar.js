@@ -65,11 +65,8 @@ const llenarTablaDia = () => {
                 confirmButtonText: 'Sí, eliminar!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'La cita fue cancelada.',
-                        'success'
-                    )
+                    eliminarDatos('eliminar-cita', cita._id);
+
                 }
             })
         });
@@ -125,11 +122,7 @@ const llenarTablaDoctor = () => {
                     confirmButtonText: 'Sí, eliminar!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        Swal.fire(
-                            'Eliminado!',
-                            'La cita fue cancelada.',
-                            'success'
-                        )
+                        eliminarDatos('eliminar-cita', cita._id);
                     }
                 })
             });
@@ -185,11 +178,7 @@ const llenarTablaDoctores = () => {
                 confirmButtonText: 'Sí, eliminar!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'La cita fue cancelada.',
-                        'success'
-                    )
+                    eliminarDatos('eliminar-cita', cita._id);
                 }
             })
         });
@@ -246,11 +235,7 @@ const llenarTablaPendientes = () => {
                 confirmButtonText: 'Sí, eliminar!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'La cita fue cancelada.',
-                        'success'
-                    )
+                    eliminarDatos('eliminar-cita', cita._id);
                 }
             })
         });
