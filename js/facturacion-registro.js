@@ -143,15 +143,16 @@ const validar = () => {
 
 };
 const obtenerDatos = () => {
+
     let factura = {
         'juridica': inputJuridica.value,
         'consecutivo': inputConsecutivo.value,
         'fecha': inputFecha.value,
-        'cliente': inputCliente.value,
+        'paciente': inputPaciente.value,
         'email': inputEmail.value,
         'telefono': inputTelefono.value,
-        'paciente': inputPaciente.value,
-        'cantidad:': inputCantidad.value,
+        'cliente': inputCliente.value,
+        'cantidad': inputCantidad.value,
         'procedimiento': inputProcedimiento.value,
         'monto': inputPrecio.value,
         'subtotal': inputSubtotal.value,
