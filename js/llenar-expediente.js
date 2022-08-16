@@ -267,6 +267,7 @@ const llenarRecetas = () => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
     cuerpoTablaRecetas.innerHTML = '';
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
+
     medicamentos.forEach(med => {
 
         let fila = cuerpoTablaRecetas.insertRow();

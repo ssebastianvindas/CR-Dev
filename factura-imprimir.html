@@ -139,15 +139,15 @@
                     <div class="factura-imprimir-total">
                         <div>
                             <label>Subtotal:</label>
-                            <label>100,000 colones</label>
+                            <label id="subtotal">100,000 colones</label>
                         </div>
                         <div>
                             <label>Impuesto:</label>
-                            <label>13,000 colones</label>
+                            <label id="impuesto">13,000 colones</label>
                         </div>
                         <div>
                             <label>Total:</label>
-                            <label>113,000 colones</label>
+                            <label id="total">113,000 colones</label>
                         </div>
 
                     </div>
@@ -177,6 +177,9 @@
             <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/servicio-general.js"></script>
+    <script src="js/factura-imprimir.js"></script>
     <script src="js/navUser.js"></script>
     <script src="js/regresar-dashboard.js"></script>
     <script src="js/cambiar-nickname.js"></script>

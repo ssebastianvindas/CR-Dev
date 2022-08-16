@@ -1,17 +1,17 @@
-const cuerpoTabla = document.querySelector('#tbl-factura tbody');
+const cuerpoTablaFactura = document.querySelector('#tbl-factura tbody');
 const botonDashboard = document.getElementById("btn-dash");
 const nickname = document.querySelector('.nickname');
-let facturas = [];
+let facturasDatos = [];
 const llenarRegistros = async() => {
-    facturas = await getDatos("/obtener-facturas");
-    mostrarTabla();
+    facturasDatos = await getDatos("obtener-facturas");
+    llenarTabla();
 };
 
 const llenarTabla = () => {
-    cuerpoTabla.innerHTML = '';
+    cuerpoTablaFactura.innerHTML = '';
 
-    facturas.forEach(facturaTemp => {
-        let fila = cuerpoTabla.insertRow();
+    facturasDatos.forEach(facturaTemp => {
+        let fila = cuerpoTablaFactura.insertRow();
 
         fila.insertCell().textContent = facturaTemp.juridica;
         fila.insertCell().textContent = facturaTemp.consecutivo;
@@ -21,7 +21,7 @@ const llenarTabla = () => {
         fila.insertCell().textContent = facturaTemp.telefono;
         fila.insertCell().textContent = facturaTemp.paciente;
         fila.insertCell().textContent = facturaTemp.subtotal;
-        fila.insertCell().textContent = facturaTemp.descuento;
+        fila.insertCell().textContent = facturaTemp.impuesto;
         fila.insertCell().textContent = facturaTemp.total;
 
         let tdAcciones = fila.insertCell();
@@ -51,6 +51,11 @@ const llenarTabla = () => {
                 cancelButtonColor: '#d33',
                 confirmButtonText: '¡Sí, pagar!'
             }).then((result) => {
+                const infoFactura = {
+                    consecutivo: facturaTemp.consecutivo
+                }
+
+                window.localStorage.setItem('facturaId', JSON.stringify(infoFactura));
                 window.location.href = '../factura-imprimir.html';
             })
         });
@@ -77,4 +82,4 @@ const llenarTabla = () => {
 
     });
 };
-llenarTabla();
+llenarRegistros();
