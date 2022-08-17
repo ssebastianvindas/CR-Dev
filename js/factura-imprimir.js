@@ -21,7 +21,7 @@ const facturaLlenar = () => {
     facturaPrint.forEach(fact => {
         if (FacturaID.consecutivo === fact.consecutivo) {
             clienteFactura.textContent = fact.cliente;
-            fechaFactura.textContent = fact.fecha;
+            fechaFactura.textContent = moment(fact.fecha).format('DD-MM-YYYY');
             mascotaFactura.textContent = fact.paciente;
             facturaFactura.textContent = fact.consecutivo;
             llenarTablaFact();
@@ -37,8 +37,6 @@ const llenarTablaFact = () => {
 
         if (FacturaID.consecutivo === facturaTemp.consecutivo) {
             let fila = cuerpoTablaFact.insertRow();
-
-
             fila.insertCell().textContent = facturaTemp.cantidad;
             fila.insertCell().textContent = facturaTemp.procedimiento;
             fila.insertCell().textContent = facturaTemp.subtotal;

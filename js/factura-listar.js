@@ -15,7 +15,7 @@ const llenarTabla = () => {
 
         fila.insertCell().textContent = facturaTemp.juridica;
         fila.insertCell().textContent = facturaTemp.consecutivo;
-        fila.insertCell().textContent = facturaTemp.fecha;
+        fila.insertCell().textContent = moment(facturaTemp.fecha).format('DD-MM-YYYY');
         fila.insertCell().textContent = facturaTemp.cliente;
         fila.insertCell().textContent = facturaTemp.email;
         fila.insertCell().textContent = facturaTemp.telefono;

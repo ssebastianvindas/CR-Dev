@@ -72,56 +72,56 @@ const llenarVacunas = () => {
     cuerpoTablaVacunas.innerHTML = '';
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     vacunas.forEach(vacuna => {
+        if (expId.value === vacuna.mascotaId) {
+            let fila = cuerpoTablaVacunas.insertRow();
 
-        let fila = cuerpoTablaVacunas.insertRow();
-
-        fila.insertCell().textContent = vacuna.fecha;
-        fila.insertCell().textContent = vacuna.vacuna;
-
-
-
-        // Creación de la celda para los botones
-        let tdAccionesVac = fila.insertCell();
-
-        //Creación del boton editar
-        let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
-        btnEditar.type = 'button';
-        btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
-        let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Eliminar';
-        btnEliminar.type = 'button';
-        btnEliminar.classList.add('btn-eliminar');
-
-        //Agregar el boton de editar a la celda acciones
-        tdAccionesVac.appendChild(btnEditar);
-
-        //Agregar el boton de eliminar a la celda acciones
-        tdAccionesVac.appendChild(btnEliminar);
+            fila.insertCell().textContent = vacuna.fecha;
+            fila.insertCell().textContent = vacuna.vacuna;
 
 
-        btnEliminar.addEventListener('click', () => {
-            Swal.fire({
-                title: 'Está seguro que desea eliminar la vacuna?',
-                text: "La acción no se puede revertir!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, eliminar!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'La vacuna fue eliminada.',
-                        'success'
-                    )
-                }
-            })
-        });
+
+            // Creación de la celda para los botones
+            let tdAccionesVac = fila.insertCell();
+
+            //Creación del boton editar
+            let btnEditar = document.createElement('button');
+            btnEditar.textContent = 'Editar';
+            btnEditar.type = 'button';
+            btnEditar.classList.add('btn-editar');
+            //Creacion del boton eliminar
+            let btnEliminar = document.createElement('button');
+            btnEliminar.textContent = 'Eliminar';
+            btnEliminar.type = 'button';
+            btnEliminar.classList.add('btn-eliminar');
+
+            //Agregar el boton de editar a la celda acciones
+            tdAccionesVac.appendChild(btnEditar);
+
+            //Agregar el boton de eliminar a la celda acciones
+            tdAccionesVac.appendChild(btnEliminar);
 
 
+            btnEliminar.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'Está seguro que desea eliminar la vacuna?',
+                    text: "La acción no se puede revertir!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, eliminar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            'Eliminado!',
+                            'La vacuna fue eliminada.',
+                            'success'
+                        )
+                    }
+                })
+            });
+
+        }
 
     });
 };

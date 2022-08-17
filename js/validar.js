@@ -98,7 +98,7 @@ let AlmacenarDatos = () => {
 
 
     };
-    console.log(expChkFilarias.value);
+
     registrarDatos('registrar-expediente', Datos);
 
 };

@@ -18,9 +18,9 @@ const llenarTabla = () => {
     reservas.forEach(reservaTemporal => {
         let fila = cuerpoTabla.insertRow(); //Crea una fila
 
-        fila.insertCell().textContent = reservaTemporal.fechaReserva;
-        fila.insertCell().textContent = reservaTemporal.fechaSalida;
-        fila.insertCell().textContent = reservaTemporal.cantAnimales;
+        fila.insertCell().textContent = moment(reservaTemporal.fechaEntrada).format('DD-MM-YYYY');
+        fila.insertCell().textContent = moment(reservaTemporal.fechaSalida).format('DD-MM-YYYY');
+        fila.insertCell().textContent = reservaTemporal.numMascotas;
         // Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
 
@@ -52,11 +52,7 @@ const llenarTabla = () => {
                 confirmButtonText: 'Sí, eliminar!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'La cita fue eliminado.',
-                        'success'
-                    )
+                    eliminarDatos('eliminar-reservas', reservaTemporal._id);
                 }
             })
         });
