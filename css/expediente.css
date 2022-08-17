@@ -298,6 +298,8 @@ fieldset {
     width: 300px;
     height: 400px;
     margin-top: 5%;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .sct-tabs {

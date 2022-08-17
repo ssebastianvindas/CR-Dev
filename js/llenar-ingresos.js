@@ -8,7 +8,7 @@ const llenarRegistrosIngresos = async() => {
     ingresos = await getDatos("obtener-facturas");
 
     ingresos.forEach(income => {
-        if (moment(income.fecha).format('DD-MM-YYYY') === fechaVeterinaria.value) {
+        if (moment(income.fecha).format('DD-MM-YYYY') === moment(fechaVeterinaria.value).format('DD-MM-YYYY')) {
             montoTotal += income.total;
         }
 

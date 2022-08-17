@@ -298,24 +298,33 @@
             <legend>Registro de Nueva Reserva</legend>
 
             <div class="div-date">
+              <div>
               <label for="txt-date">Fecha de Entrada</label>
               <input type="date" name="" id="fecha-entrada" />
-            </div>
-            <div class="div-cuartos">
+              </div>
+              <div>
               <label for="cantidad-cuartos">Fecha de Salida</label>
               <input type="date" name="" id="fecha-salida" />
+              </div>
             </div>
             <div class="div-animales">
+
+             
               <label for="cantidad-animales">Numero de animales</label>
               <input type="number" name="" id="cantidad-animales" min="0" />
-            </div>
+              </div>
+              <div class="txt-citas">
+              <label for="frm-monto-reserva">Monto de la reservación:</label>
+              <input type="number" id="frm-monto-reserva" />
+              </div>
+             
             <div>
               <button type="button" id="btn-registrar">
                 Registrar Reserva
               </button>
             </div>
           </fieldset>
-        </form>
+        </form> 
       </div>
 
       <div id="ingresos-veterinaria" class="tabcontent">
@@ -349,6 +358,7 @@
               <label for="frm-citas">Monto de los ingresos</label>
               <input type="number" class="frm-userName" id="frm-monto-hotel" />
             </div>
+            
             
               <button type="button" id="btn-ingresos-hotel">Agregar Ingresos</button>
            

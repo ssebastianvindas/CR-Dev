@@ -18,9 +18,11 @@ const llenarTabla = () => {
     reservas.forEach(reservaTemporal => {
         let fila = cuerpoTabla.insertRow(); //Crea una fila
 
-        fila.insertCell().textContent = moment(reservaTemporal.fechaEntrada).format('DD-MM-YYYY');
-        fila.insertCell().textContent = moment(reservaTemporal.fechaSalida).format('DD-MM-YYYY');
+        fila.insertCell().textContent = moment(reservaTemporal.fechaEntrada).add(1, 'd').format('DD-MM-YYYY');
+        fila.insertCell().textContent = moment(reservaTemporal.fechaSalida).add(1, 'd').format('DD-MM-YYYY');
         fila.insertCell().textContent = reservaTemporal.numMascotas;
+        fila.insertCell().textContent = reservaTemporal.monto;
+
         // Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
 

@@ -22,12 +22,14 @@
 
 .div-animales {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-top: 40px;
 }
 
 .div-date {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .div-cuartos {

@@ -2,6 +2,8 @@ const inputEntrada = document.getElementById('fecha-entrada');
 const inputSalida = document.getElementById('fecha-salida');
 const inputAnimales = document.getElementById('cantidad-animales');
 const btnGuardar = document.getElementById('btn-registrar');
+const inputMonto = document.getElementById('frm-monto-reserva');
+
 
 const validarReserva = () => {
 
@@ -28,6 +30,7 @@ const validarReserva = () => {
         inputAnimales.classList.remove('input-invalid')
     }
 
+
     if (error == true) {
         Swal.fire({
             'icon': 'warning',
@@ -46,7 +49,8 @@ const obtenerDatosRegistro = () => {
     let reserva = {
         'fechaEntrada': inputEntrada.value,
         'fechaSalida': inputSalida.value,
-        'numMascotas': inputAnimales.value
+        'numMascotas': inputAnimales.value,
+        'monto': inputMonto.value
     };
 
     Swal.fire({
@@ -61,4 +65,29 @@ const obtenerDatosRegistro = () => {
 
 };
 
+
+function getNumberOfDays(start, end) {
+    const date1 = new Date(start);
+    const date2 = new Date(end);
+
+    // One day in milliseconds
+    const oneDay = 1000 * 60 * 60 * 24;
+
+    // Calculating the time difference between two dates
+    const diffInTime = date2.getTime() - date1.getTime();
+
+    // Calculating the no. of days between two dates
+    const diffInDays = Math.round(diffInTime / oneDay);
+
+    return diffInDays;
+}
+
+inputAnimales.addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') {
+        let dias = getNumberOfDays(inputEntrada.value, inputSalida.value);
+        let monto = 0;
+        monto = parseInt(inputAnimales.value) * (dias * 5000);
+        inputMonto.value = monto;
+    }
+});
 btnGuardar.addEventListener('click', validarReserva);

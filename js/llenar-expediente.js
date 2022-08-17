@@ -52,7 +52,7 @@ let medicamentos = [];
 
 const llenarRegExpediente = async() => {
     expediente = await getDatos("obtener-expediente");
-    //llenarExpediente();
+    llenarExpediente();
     vacunas = await getDatos("obtener-vacunas");
     llenarVacunas();
     laboratorios = await getDatos("obtener-laboratorios");
@@ -72,10 +72,11 @@ const llenarVacunas = () => {
     cuerpoTablaVacunas.innerHTML = '';
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     vacunas.forEach(vacuna => {
+
         if (expId.value === vacuna.mascotaId) {
             let fila = cuerpoTablaVacunas.insertRow();
 
-            fila.insertCell().textContent = vacuna.fecha;
+            fila.insertCell().textContent = moment(vacuna.fecha).format('DD-MM-YYYY');
             fila.insertCell().textContent = vacuna.vacuna;
 
 
@@ -131,74 +132,74 @@ const llenarProcedimientos = () => {
     cuerpoTablaProcemientos.innerHTML = '';
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     procedimientos.forEach(proc => {
+        if (expId.value === proc.mascotaId) {
+            let fila = cuerpoTablaProcemientos.insertRow();
 
-        let fila = cuerpoTablaProcemientos.insertRow();
-
-        fila.insertCell().textContent = proc.fecha;
-        fila.insertCell().textContent = proc.procedimiento;
-
-
-        // Creación de la celda para los botones
-        let tdAccionesProc = fila.insertCell();
-
-        //Creación del boton editar
-        let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
-        btnEditar.type = 'button';
-        btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
-        let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Eliminar';
-        btnEliminar.type = 'button';
-        btnEliminar.classList.add('btn-eliminar');
-
-        //Agregar el boton de editar a la celda acciones
-        tdAccionesProc.appendChild(btnEditar);
-
-        //Agregar el boton de eliminar a la celda acciones
-        tdAccionesProc.appendChild(btnEliminar);
+            fila.insertCell().textContent = moment(proc.fecha).format('DD-MM-YYYY');
+            fila.insertCell().textContent = proc.tratamiento;
 
 
-        btnEliminar.addEventListener('click', () => {
-            Swal.fire({
-                title: 'Está seguro que desea eliminar el procedimiento?',
-                text: "La acción no se puede revertir!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, eliminar!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'El procedimiento fue eliminado.',
-                        'success'
-                    )
-                }
-            })
-        });
+            // Creación de la celda para los botones
+            let tdAccionesProc = fila.insertCell();
 
-        btnEditar.addEventListener('click', () => {
-            Swal.fire({
-                title: 'Está seguro que desea modificar el procedimiento?',
-                text: "La acción no se puede revertir!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, Asignar!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'El procedimiento fue modificado.',
-                        'success'
-                    )
-                }
-            })
-        });
+            //Creación del boton editar
+            let btnEditar = document.createElement('button');
+            btnEditar.textContent = 'Editar';
+            btnEditar.type = 'button';
+            btnEditar.classList.add('btn-editar');
+            //Creacion del boton eliminar
+            let btnEliminar = document.createElement('button');
+            btnEliminar.textContent = 'Eliminar';
+            btnEliminar.type = 'button';
+            btnEliminar.classList.add('btn-eliminar');
 
+            //Agregar el boton de editar a la celda acciones
+            tdAccionesProc.appendChild(btnEditar);
+
+            //Agregar el boton de eliminar a la celda acciones
+            tdAccionesProc.appendChild(btnEliminar);
+
+
+            btnEliminar.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'Está seguro que desea eliminar el procedimiento?',
+                    text: "La acción no se puede revertir!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, eliminar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            'Eliminado!',
+                            'El procedimiento fue eliminado.',
+                            'success'
+                        )
+                    }
+                })
+            });
+
+            btnEditar.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'Está seguro que desea modificar el procedimiento?',
+                    text: "La acción no se puede revertir!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, Asignar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            'Eliminado!',
+                            'El procedimiento fue modificado.',
+                            'success'
+                        )
+                    }
+                })
+            });
+        }
     });
 };
 
@@ -207,58 +208,58 @@ const llenarLaboratorios = () => {
     cuerpoTablaLaboratorios.innerHTML = '';
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     laboratorios.forEach(lab => {
+        if (expId.value === lab.mascotaId) {
+            let fila = cuerpoTablaLaboratorios.insertRow();
 
-        let fila = cuerpoTablaLaboratorios.insertRow();
-
-        fila.insertCell().textContent = lab.fecha;
-        fila.insertCell().textContent = lab.mascota;
-        fila.insertCell().textContent = lab.owner;
-        fila.insertCell().textContent = lab.examen;
-        fila.insertCell().textContent = lab.resultados;
-        fila.insertCell().textContent = lab.doctor;
-
-
-        // Creación de la celda para los botones
-        let tdAccionesLab = fila.insertCell();
-
-        //Creación del boton editar
-        let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
-        btnEditar.type = 'button';
-        btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
-        let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Eliminar';
-        btnEliminar.type = 'button';
-        btnEliminar.classList.add('btn-eliminar');
-
-        //Agregar el boton de editar a la celda acciones
-        tdAccionesLab.appendChild(btnEditar);
-
-        //Agregar el boton de eliminar a la celda acciones
-        tdAccionesLab.appendChild(btnEliminar);
+            fila.insertCell().textContent = moment(lab.fecha).format('DD-MM-YYYY');
+            fila.insertCell().textContent = lab.mascota;
+            fila.insertCell().textContent = lab.owner;
+            fila.insertCell().textContent = lab.examen;
+            fila.insertCell().textContent = lab.resultados;
+            fila.insertCell().textContent = lab.doctor;
 
 
-        btnEliminar.addEventListener('click', () => {
-            Swal.fire({
-                title: 'Está seguro que desea cancelar el Laboratorio?',
-                text: "La acción no se puede revertir!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, eliminar!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'El laboratorio fue cancelado.',
-                        'success'
-                    )
-                }
-            })
-        });
+            // Creación de la celda para los botones
+            let tdAccionesLab = fila.insertCell();
 
+            //Creación del boton editar
+            let btnEditar = document.createElement('button');
+            btnEditar.textContent = 'Editar';
+            btnEditar.type = 'button';
+            btnEditar.classList.add('btn-editar');
+            //Creacion del boton eliminar
+            let btnEliminar = document.createElement('button');
+            btnEliminar.textContent = 'Eliminar';
+            btnEliminar.type = 'button';
+            btnEliminar.classList.add('btn-eliminar');
+
+            //Agregar el boton de editar a la celda acciones
+            tdAccionesLab.appendChild(btnEditar);
+
+            //Agregar el boton de eliminar a la celda acciones
+            tdAccionesLab.appendChild(btnEliminar);
+
+
+            btnEliminar.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'Está seguro que desea cancelar el Laboratorio?',
+                    text: "La acción no se puede revertir!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, eliminar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            'Eliminado!',
+                            'El laboratorio fue cancelado.',
+                            'success'
+                        )
+                    }
+                })
+            });
+        }
 
     });
 };
@@ -269,56 +270,56 @@ const llenarRecetas = () => {
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
 
     medicamentos.forEach(med => {
+        if (expId.value === med.mascotaId) {
+            let fila = cuerpoTablaRecetas.insertRow();
 
-        let fila = cuerpoTablaRecetas.insertRow();
-
-        fila.insertCell().textContent = med.fecha;
-        fila.insertCell().textContent = med.mascota;
-        fila.insertCell().textContent = med.doctor;
-        fila.insertCell().textContent = med.medicamentos;
-
-
-        // Creación de la celda para los botones
-        let tdAccionesMed = fila.insertCell();
-
-        //Creación del boton editar
-        let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
-        btnEditar.type = 'button';
-        btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
-        let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Eliminar';
-        btnEliminar.type = 'button';
-        btnEliminar.classList.add('btn-eliminar');
-
-        //Agregar el boton de editar a la celda acciones
-        tdAccionesMed.appendChild(btnEditar);
-
-        //Agregar el boton de eliminar a la celda acciones
-        tdAccionesMed.appendChild(btnEliminar);
+            fila.insertCell().textContent = moment(med.fecha).format('DD-MM-YYYY');
+            fila.insertCell().textContent = med.mascota;
+            fila.insertCell().textContent = med.doctor;
+            fila.insertCell().textContent = med.medicamento;
 
 
-        btnEliminar.addEventListener('click', () => {
-            Swal.fire({
-                title: 'Está seguro que desea eliminar el registro?',
-                text: "La acción no se puede revertir!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, eliminar!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'Eliminado!',
-                        'El registro fue eliminado.',
-                        'success'
-                    )
-                }
-            })
-        });
+            // Creación de la celda para los botones
+            let tdAccionesMed = fila.insertCell();
 
+            //Creación del boton editar
+            let btnEditar = document.createElement('button');
+            btnEditar.textContent = 'Editar';
+            btnEditar.type = 'button';
+            btnEditar.classList.add('btn-editar');
+            //Creacion del boton eliminar
+            let btnEliminar = document.createElement('button');
+            btnEliminar.textContent = 'Eliminar';
+            btnEliminar.type = 'button';
+            btnEliminar.classList.add('btn-eliminar');
+
+            //Agregar el boton de editar a la celda acciones
+            tdAccionesMed.appendChild(btnEditar);
+
+            //Agregar el boton de eliminar a la celda acciones
+            tdAccionesMed.appendChild(btnEliminar);
+
+
+            btnEliminar.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'Está seguro que desea eliminar el registro?',
+                    text: "La acción no se puede revertir!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, eliminar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            'Eliminado!',
+                            'El registro fue eliminado.',
+                            'success'
+                        )
+                    }
+                })
+            });
+        }
 
     });
 };
@@ -326,7 +327,7 @@ const llenarRecetas = () => {
 let llenarExpediente = () => {
     expediente.forEach(exp => {
         if (parseInt(expId.value) === exp.mascotaId) {
-            expFecha.value = exp.fecha;
+            expFecha.value = moment(exp.fecha).format('YYYY-MM-DD');
             namePet.value = exp.mascota;
             expId.value = exp.mascotaId;
             nameOwner.value = exp.owner;
@@ -346,14 +347,14 @@ let llenarExpediente = () => {
             expPeso.value = exp.peso;
             expTalla.value = exp.talla;
             expEdad.value = exp.edad;
-        }
-        // rxImage.forEach((rx) => {
-        //     rx.src = expediente.radiografia;
+            rxImage.forEach(rx => {
+                rx.src = exp.radiografia;
+            });
 
-        // });
+        }
     });
 
 };
 
-llenarRegExpediente();
-expId.addEventListener('keyup', llenarExpediente);
+
+expId.addEventListener('keyup', llenarRegExpediente);
