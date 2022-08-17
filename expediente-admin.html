@@ -7,11 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/expediente.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/menuUser.css" />
     <link rel="stylesheet" href="css/header-admin.css" />
     <link rel="stylesheet" href="css/tablas.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/botones.css">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/font-varela.css" />
     <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
     <title>Expediente Clínico</title>
 </head>
@@ -254,11 +262,6 @@
 
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
 
                             </tbody>
                         </table>
@@ -288,11 +291,6 @@
 
                         </thead>
                         <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
 
                         </tbody>
                     </table>
@@ -352,19 +350,19 @@
                                 <label for="frm-labDate">Fecha</label>
                                 <input type="date" class="form-lab" id="frm-labDate">
                             </div>
-                            <div id="txt-pet">
+                            <div id="txt-pet" class="txt-lab">
                                 <label for="lab-pet">Nombre de la mascota:</label>
                                 <input type="text" class="form-lab" id="lab-pet" placeholder="Nombre de la mascota">
                             </div>
-                            <div id="txt-owner">
+                            <div id="txt-owner" class="txt-lab">
                                 <label for="lab-owner">Nombre del dueño:</label>
                                 <input type="text" class="form-lab" id="lab-owner" placeholder="Nombre del Dueño">
                             </div>
-                            <div id="txt-examen">
+                            <div id="txt-examen" class="txt-lab">
                                 <label for="lab-test">Tipo de exámen realizado:</label>
                                 <input type="text" class="form-lab" id="lab-test" placeholder="Tipo de exámen realizado">
                             </div>
-                            <div id="txt-resultados">
+                            <div id="txt-resultados" class="txt-lab">
                                 <label for="lab-result">Resultados:</label>
                                 <input type="text" class="form-lab" id="lab-result" placeholder="Resultados">
                             </div>
@@ -417,14 +415,6 @@
 
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
 
                             </tbody>
                         </table>
@@ -492,14 +482,6 @@
 
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
                     </tbody>
                 </table>
 
@@ -522,22 +504,28 @@
 
     <footer>
         <div class="footer">
-            <div class="footer-direction">
-                <p>Curridabat, San Jose</p>
-            </div>
-            <div class="footer-email">
-                <p>mokaclinic@vetpet.com</p>
-            </div>
-            <div class="footer-redes">
-                <a href="#"><img src="imgs/icons/iconsDark/facebook-dark.png" alt="" /></a>
-                <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
-                <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
-            </div>
+          <div class="footer-direction">
+            <p>Curridabat, San Jose</p>
+          </div>
+          <div class="footer-email">
+            <p>mokaclinic@vetpet.com</p>
+          </div>
+          <div class="footer-redes">
+            <a href="#"
+              ><img src="imgs/icons/iconsDark/facebook-dark.png" alt=""
+            /></a>
+            <a href="#"
+              ><img src="imgs/icons/iconsDark/instagram-dark.png" alt=""
+            /></a>
+            <a href="#"
+              ><img src="/imgs/icons/iconsDark/twitter-dark.png" alt=""
+            /></a>
+          </div>
         </div>
         <div class="create-by">
-            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+          <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
         </div>
-        </footer>
+      </footer>
         <script src="js/recursos.js"></script>
         <script src="js/navUser.js"></script>
         <script src="js/lista-procedimientos.js"></script>

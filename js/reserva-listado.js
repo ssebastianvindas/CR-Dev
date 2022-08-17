@@ -1,26 +1,33 @@
 const cuerpoTabla = document.querySelector('#tbl-hotel tbody');
+let reservasDatos = [];
+
+const incializarArreglo = async() => {
+    reservasDatos = await getDatos("obtener-reservas");
+    llenarTabla();
+}
 
 const llenarTabla = () => {
 
     cuerpoTabla.innerHTML = ''; //limpia el contenido del html
 
-    reservas.forEach(reservaTemporal => {
+    reservasDatos.forEach(reservaTemporal => {
         let fila = cuerpoTabla.insertRow(); //Crea una fila
 
-        fila.insertCell().textContent = reservaTemporal.fechaReserva;
+        fila.insertCell().textContent = reservaTemporal.fechaEntrada;
         fila.insertCell().textContent = reservaTemporal.fechaSalida;
-        fila.insertCell().textContent = reservaTemporal.cantAnimales;
+        fila.insertCell().textContent = reservaTemporal.numMascotas;
         // Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
 
-        //Creación del boton editar
+        //Creación del botón de editar
         let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
         btnEditar.type = 'button';
         btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
+
+        //Creación del botón de eliminar
         let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Eliminar';
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
         btnEliminar.type = 'button';
         btnEliminar.classList.add('btn-eliminar');
 
@@ -52,9 +59,4 @@ const llenarTabla = () => {
     });
 };
 
-
-
-
-
-
-llenarTabla();
+incializarArreglo();

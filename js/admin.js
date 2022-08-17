@@ -1,6 +1,3 @@
-
-
-
 function openModulo(evt, modulo) {
     // Declare all variables
     let i, tabcontent, tablinks;
