@@ -6,12 +6,10 @@ let montoTotalHotel = 0;
 
 const llenarRegistrosIngresosHotel = async() => {
     ingresosHotel = await getDatos("obtener-reservas");
-
     ingresosHotel.forEach(income => {
-        if (moment(income.fecha).format('DD-MM-YYY') === moment(fechaHotel.value).format('DD-MM-YYYY')) {
+        if (moment(income.fechaEntrada).add('1','d').format('DD-MM-YYYY') === moment(fechaHotel.value).format('DD-MM-YYYY')) {
             montoTotalHotel += income.monto;
         }
-
     });
 
     montoHotel.value = montoTotalHotel;
