@@ -56,7 +56,8 @@ const llenarTabla = () => {
                 }
 
                 window.localStorage.setItem('facturaId', JSON.stringify(infoFactura));
-                window.location.href = '../factura-imprimir.html';
+                window.open('../factura-imprimir.html', '_blank');
+
             })
         });
 

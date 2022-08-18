@@ -69,3 +69,5 @@ app.use("/api", require("./routes/laboratorios.routes"));
 app.use("/api", require("./routes/medicamentos.routes"));
 app.use("/api", require("./routes/facturas.routes"));
 app.use("/api", require("./routes/reservas.routes"));
+app.use("/api", require("./routes/ingresosHotel.routes"));
+app.use("/api", require("./routes/ingresosVete.routes"));
