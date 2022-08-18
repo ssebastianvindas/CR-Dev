@@ -1,22 +1,24 @@
 'use strict';
-const fechaVeterinaria = document.getElementById('frm-fecha-hotel');
-const montoVeterinaria = document.getElementById('frm-monto-hotel');
-let ingresos = [];
-let montoTotal = 0;
+const fechaHotel = document.getElementById('frm-fecha-hotel');
+const montoHotel = document.getElementById('frm-monto-hotel');
+let ingresosHotel = [];
+let montoTotalHotel = 0;
 
-const llenarRegistrosIngresos = async() => {
-    ingresos = await getDatos("obtener-facturas");
+const llenarRegistrosIngresosHotel = async() => {
+    ingresosHotel = await getDatos("obtener-reservas");
 
-    ingresos.forEach(income => {
-        montoTotal += income.total;
+    ingresosHotel.forEach(income => {
+        if (income.fecha === fechaHotel.value) {
+            montoTotalHotel += income.monto;
+        }
 
     });
 
-    montoVeterinaria.value = montoTotal;
+    montoHotel.value = montoTotal;
 };
 
-fechaVeterinaria.addEventListener('keyup', function(e) {
+fechaHotel.addEventListener('keyup', function(e) {
     if (e.key === 'Enter') {
-        llenarRegistrosIngresos();
+        llenarRegistrosIngresosHotel();
     }
 });
