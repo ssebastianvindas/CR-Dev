@@ -36,7 +36,7 @@ router.get("/obtener-usuarios", (req, res) => {
   Usuario.find((error, lista) => {
     if (error) {
       res.json({
-        msj: "No se pudo hacer el listado de usuario",
+        msj: "No se pudo hacer el listado de usuarios",
         error,
       });
     } else {
@@ -53,7 +53,22 @@ router.put("/actualizar-usuario", (req, res) => {});
 
 // ruta para eliminar la información de cada usuario
 router.delete("/eliminar-usuario", (req, res) => {
-
+  let body = req.body;
+  Usuario.remove({ _id: body._id }, (err, result) => {
+    if (err) {
+      res.json({
+        resultado: false,
+        msj: "No se pudo eliminar los datos: ",
+        err,
+      });
+    } else {
+      res.json({
+        resultado: true,
+        msj: "Los datos se eliminarion de manera correcta",
+        result,
+      });
+    }
+  });
 });
 
 module.exports = router;

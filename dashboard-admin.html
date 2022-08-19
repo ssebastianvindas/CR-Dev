@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/reserva.css">
+    <link rel="stylesheet" href="css/reserva.css" />
     <link rel="stylesheet" href="css/botones.css" />
     <link rel="stylesheet" href="css/menuUser.css" />
     <link rel="stylesheet" href="css/header-admin.css" />
@@ -14,50 +13,60 @@
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/citas.css" />
     <link rel="stylesheet" href="css/admin.css" />
-    <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c02f88807d.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Dashboard del Administrador</title>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/font-varela.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header-container">
-        <div>
-            <a href="#" id="btn-usuario">
-                <i class="fa-solid fa-user"></i><span class="nickname"></span>
-                <i class="fa-solid fa-caret-down"></i>
-            </a>
-        </div>
-        <div class="logo-container">
-            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
-        </div>
-        <div class="menu-icons">
-            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
-            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
-        </div>
+      <div>
+        <a href="#" id="btn-usuario">
+          <i class="fa-solid fa-user"></i><span class="nickname"></span>
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+      </div>
+      <div class="logo-container">
+        <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+      </div>
+      <div class="menu-icons">
+        <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+      </div>
     </header>
 
     <nav class="menu-header">
-        <a href="lista-facturas.html">Consultar Facturas</a>
-        <a href="citas.html">Consultar Citas de la Veterinaria</a>
-        <a href="consultar-usuarios.html">Consultar Usuarios</a>
-        <a href="reserva-listado.html">Consultar Reservas del Hotel</a>
-        <a href="reportes.html">Consultar Reportes</a>
+      <a href="lista-facturas.html">Consultar Facturas</a>
+      <a href="citas.html">Consultar Citas de la Veterinaria</a>
+      <a href="consultar-usuarios.html">Consultar Usuarios</a>
+      <a href="reserva-listado.html">Consultar Reservas del Hotel</a>
+      <a href="reportes.html">Consultar Reportes</a>
     </nav>
 
     <div class="menu-user-container ocultar-menu">
-        <div class="menu-user">
-            <div class="img-user-container">
-                <img id="img-perfil" src="" alt="" />
-            </div>
-            <div class="enleces">
-                <a href="perfil-usuario.html"><i class="fa-solid fa-gear"></i>Perfil</a
+      <div class="menu-user">
+        <div class="img-user-container">
+          <img id="img-perfil" src="" alt="" />
+        </div>
+        <div class="enleces">
+          <a href="perfil-usuario.html"
+            ><i class="fa-solid fa-gear"></i>Perfil</a
           >
-          <a href="citas.html"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
-                <a href="perfil-usuario.html"><i class="fa-solid fa-paw"></i>Mis mascotas</a
+          <a href="citas.html"
+            ><i class="fa-solid fa-calendar-days"></i>Mis citas</a
+          >
+          <a href="perfil-usuario.html"
+            ><i class="fa-solid fa-paw"></i>Mis mascotas</a
           >
           <a href="listadoMetodosPago.html"
             ><i class="fa-solid fa-wallet"></i>Métodos de pago</a
@@ -89,7 +98,10 @@
         <button class="tablinks" onclick="openModulo(event, 'expediente')">
           Expedientes
         </button>
-        <button class="tablinks" onclick="openModulo(event, 'ingresos-veterinaria')">
+        <button
+          class="tablinks"
+          onclick="openModulo(event, 'ingresos-veterinaria')"
+        >
           Ingresos de la Veterinaria
         </button>
         <button class="tablinks" onclick="openModulo(event, 'ingresos-hotel')">
@@ -98,7 +110,6 @@
       </div>
       <div id="users" class="tabcontent">
         <form class="frm-usuarios-new center-form">
-    
           <fieldset class="frm-users center-fieldset">
             <legend>Registrar un Nuevo Usuario</legend>
             <div class="txt-citas">
@@ -111,15 +122,15 @@
             </div>
             <div class="txt-citas">
               <label for="frm-fullName">Nombre Completo</label>
-              <input type="text" class="frm-userName"/>
+              <input type="text" class="frm-userName" />
             </div>
             <div class="txt-citas">
               <label for="frm-phone">Número de teléfono</label>
-              <input type="number" class="frm-userName"/>
+              <input type="number" class="frm-userName" />
             </div>
             <div class="txt-citas">
               <label for="frm-mail">Correo electrónico</label>
-              <input type="text" class="frm-userName"/>
+              <input type="text" class="frm-userName" />
             </div>
             <div class="txt-citas">
               <select id="roles">
@@ -140,7 +151,6 @@
 
       <div id="billing" class="tabcontent">
         <form class="center-form">
-         
           <fieldset
             class="fieldset-billing center-fieldset"
             id="fieldset-billing"
@@ -227,7 +237,6 @@
 
       <div id="appointment" class="tabcontent">
         <form class="frm-citas-new center-form">
-         
           <div id="img-citas">
             <fieldset class="frm-cita center-fieldset">
               <legend>Crear una nueva cita</legend>
@@ -242,7 +251,8 @@
                 <input
                   type="text"
                   class="frm-citas"
-                  placeholder="Nombre de la mascota" id="newCita-name-pet"
+                  placeholder="Nombre de la mascota"
+                  id="newCita-name-pet"
                 />
               </div>
               <div class="txt-citas">
@@ -250,15 +260,19 @@
                 <input
                   type="text"
                   class="frm-citas"
-                  placeholder="Nombre del dueño" id="newCita-name-user"
+                  placeholder="Nombre del dueño"
+                  id="newCita-name-user"
                 />
               </div>
               <div class="txt-citas">
-                <label class="label-cita-cliente">Procedimiento a solicitar</label>
+                <label class="label-cita-cliente"
+                  >Procedimiento a solicitar</label
+                >
                 <input
                   type="text"
                   class="frm-citas"
-                  placeholder="Procedimiento" id="newCita-procedimientos"
+                  placeholder="Procedimiento"
+                  id="newCita-procedimientos"
                 />
               </div>
               <div class="txt-citas">
@@ -294,43 +308,39 @@
 
       <div id="reservation" class="tabcontent">
         <form class="center-form">
-          
           <fieldset class="fieldset-hotel center-fieldset">
             <legend>Registro de Nueva Reserva</legend>
 
             <div class="div-date">
               <div>
-              <label for="txt-date">Fecha de Entrada</label>
-              <input type="date" name="" id="fecha-entrada" />
+                <label for="txt-date">Fecha de Entrada</label>
+                <input type="date" name="" id="fecha-entrada" />
               </div>
               <div>
-              <label for="cantidad-cuartos">Fecha de Salida</label>
-              <input type="date" name="" id="fecha-salida" />
+                <label for="cantidad-cuartos">Fecha de Salida</label>
+                <input type="date" name="" id="fecha-salida" />
               </div>
             </div>
             <div class="div-animales">
-
-             
               <label for="cantidad-animales">Numero de animales</label>
               <input type="number" name="" id="cantidad-animales" min="0" />
-              </div>
-              <div class="txt-citas">
+            </div>
+            <div class="txt-citas">
               <label for="frm-monto-reserva">Monto de la reservación:</label>
               <input type="number" id="frm-monto-reserva" />
-              </div>
-             
+            </div>
+
             <div>
               <button type="button" id="btn-registrar">
                 Registrar Reserva
               </button>
             </div>
           </fieldset>
-        </form> 
+        </form>
       </div>
 
       <div id="ingresos-veterinaria" class="tabcontent">
         <form class="frm-usuarios-new center-form">
-    
           <fieldset class="frm-users center-fieldset">
             <legend>Registrar los ingresos del día</legend>
             <div class="txt-citas">
@@ -339,16 +349,17 @@
             </div>
             <div class="txt-citas">
               <label for="frm-citas">Monto de los ingresos</label>
-              <input type="number" class="frm-userName" id="frm-vet-monto"/>
+              <input type="number" class="frm-userName" id="frm-vet-monto" />
             </div>
-            <button type="button" id="btn-ingresos-veterinaria">Agregar Ingresos</button>
+            <button type="button" id="btn-ingresos-veterinaria">
+              Agregar Ingresos
+            </button>
           </fieldset>
         </form>
       </div>
 
       <div id="ingresos-hotel" class="tabcontent">
         <form class="frm-usuarios-new center-form">
-    
           <fieldset class="frm-users center-fieldset">
             <legend>Registrar ingresos diarios del Hotel</legend>
             <div class="txt-citas">
@@ -359,10 +370,10 @@
               <label for="frm-citas">Monto de los ingresos</label>
               <input type="number" class="frm-userName" id="frm-monto-hotel" />
             </div>
-            
-            
-              <button type="button" id="btn-ingresos-hotel">Agregar Ingresos</button>
-           
+
+            <button type="button" id="btn-ingresos-hotel">
+              Agregar Ingresos
+            </button>
           </fieldset>
         </form>
       </div>
@@ -380,31 +391,35 @@
           <a href="#"
             ><img src="imgs/icons/iconsDark/facebook-dark.png" alt=""
           /></a>
-                <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
-                <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
-            </div>
+          <a href="#"
+            ><img src="imgs/icons/iconsDark/instagram-dark.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="/imgs/icons/iconsDark/twitter-dark.png" alt=""
+          /></a>
         </div>
-        <div class="create-by">
-            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
-        </div>
-        </footer>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-        <script src="js/servicio-general.js"></script>
-        <!-- <script src="js/registrar-citas-admin.js"></script> -->
-        <script src="js/admin.js"></script>
-        <script src="js/validar-citas.js"></script>
-        <script src="js/cita-new.js"></script>
-        <script src="js/validar-admin.js"></script>
-        <script src="js/admin-listar.js"></script>
-        <script src="js/facturacion-registro.js"></script>
-        <script src="js/llenar-ingresos.js"></script>
-        <script src="js/llenar-ingresos-hotel.js"></script>
-        <script src="js/navUser.js"></script>
-        <script src="js/reserva-hotel.js"></script>
-        <script src="js/cambiar-nickname.js"></script>
-        <script src="js/validar-ingresos-hotel.js"></script>
-</body>
-
+      </div>
+      <div class="create-by">
+        <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+      </div>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="js/servicio-general.js"></script>
+    <!-- <script src="js/registrar-citas-admin.js"></script> -->
+    <script src="js/admin.js"></script>
+    <script src="js/registrar-usuario-admin.js"></script>
+    <script src="js/validar-citas.js"></script>
+    <script src="js/cita-new.js"></script>
+    <script src="js/validar-admin.js"></script>
+    <script src="js/admin-listar.js"></script>
+    <script src="js/facturacion-registro.js"></script>
+    <script src="js/llenar-ingresos.js"></script>
+    <script src="js/llenar-ingresos-hotel.js"></script>
+    <script src="js/navUser.js"></script>
+    <script src="js/reserva-hotel.js"></script>
+    <script src="js/cambiar-nickname.js"></script>
+    <script src="js/validar-ingresos-hotel.js"></script>
+  </body>
 </html>

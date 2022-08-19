@@ -14,13 +14,4 @@ const schemaUsuario = new mongoose.Schema({
   estado: { type: Number, required: true },
 });
 
-// rol
-// 1 ----> admin
-// 2 ----> secretaria
-// 3 ----> veterinario
-// 4 ----> cliente
-
-// estado: pueden haber mas
-// 1 activo
-// 2 inactivo
 module.exports = mongoose.model("Usuario", schemaUsuario, "usuarios");
