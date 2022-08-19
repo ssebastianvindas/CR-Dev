@@ -1,6 +1,8 @@
 'use strict';
 const fechaVeterinaria = document.getElementById('frm-vet-fecha');
 const montoVeterinaria = document.getElementById('frm-vet-monto');
+const btnIngresosHotel = document.getElementById('btn-ingresos-veterinaria');
+
 let ingresos = [];
 let montoTotal = 0;
 
@@ -23,3 +25,12 @@ fechaVeterinaria.addEventListener('keyup', function(e) {
         llenarRegistrosIngresos();
     }
 });
+let registrarIngresos = () => {
+    let ingresosVeterinaria = {
+        fecha: fechaVeterinaria.value,
+        monto: montoVeterinaria.value
+    };
+    registrarDatos("registrar-ingresosVete", ingresosVeterinaria);
+};
+
+btnIngresosHotel.addEventListener('click', registrarIngresos)
