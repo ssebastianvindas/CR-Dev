@@ -1,67 +1,58 @@
-'use strict';
-const cuerpoTabla = document.querySelector('#tbl-usuarios tbody');
-const nickname = document.querySelector('.nickname');
+"use strict";
+const cuerpoTabla = document.querySelector("#tbl-usuarios tbody");
+let listaUsuarios = [];
 
-const llenarUsuarios = () => {
-    //Limpia el contenido que tiene el cuerpo de la tabla.
-    cuerpoTabla.innerHTML = '';
-    //Para cada usuario que se encuentre dentro de la coleccion de usuarios
-    usuarios.forEach(user => {
-
-        let fila = cuerpoTabla.insertRow();
-
-        fila.insertCell().textContent = user.usuario;
-        fila.insertCell().textContent = user.nombre;
-        fila.insertCell().textContent = user.telefono;
-        fila.insertCell().textContent = user.contrasenna;
-        fila.insertCell().textContent = user.rol;
-
-
-        // Creación de la celda para los botones
-        let tdAccionesUser = fila.insertCell();
-
-        //Creación del boton editar
-        let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Editar';
-        btnEditar.type = 'button';
-        btnEditar.classList.add('btn-editar');
-        //Creacion del boton eliminar
-        let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Eliminar';
-        btnEliminar.type = 'button';
-        btnEliminar.classList.add('btn-eliminar');
-
-        //Agregar el boton de editar a la celda acciones
-        tdAccionesUser.appendChild(btnEditar);
-
-        //Agregar el boton de eliminar a la celda acciones
-        tdAccionesUser.appendChild(btnEliminar);
-        btnEditar.addEventListener('click', () => { window.location.href = "" });
-
-
-        btnEliminar.addEventListener('click', () => {
-            Swal.fire({
-                title: 'Está seguro que desea eliminar el usuario?',
-                text: "La acción no se puede revertir!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, eliminar!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    cuerpoTabla.innerHTML = '';
-                    Swal.fire(
-                        'Eliminado!',
-                        'El usuario fue eliminado.',
-                        'success'
-                    )
-                }
-            })
-        });
-
-    });
+const inicializarListas = async () => {
+  listaUsuarios = await getDatos("/obtener-usuarios");
+  mostrarTabla();
 };
 
+const mostrarTabla = async () => {
+  cuerpoTabla.innerHTML = "";
 
-llenarUsuarios();
+  listaUsuarios.forEach((usuario) => {
+    let fila = cuerpoTabla.insertRow();
+    fila.insertCell().innerText = usuario.nombre;
+    fila.insertCell().innerText = usuario.direccion;
+    fila.insertCell().innerText = usuario.usuario;
+    fila.insertCell().innerText = usuario.numero;
+    fila.insertCell().innerText = usuario.correo;
+    fila.insertCell().innerText = obtenerNombreRol(usuario.rol);
+    fila.insertCell().innerText = obtenerNombreEstado(usuario.estado);
+
+    let tdAcciones = fila.insertCell();
+    //Creación del botón de editar
+    let btnEditar = document.createElement("button");
+    btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+    btnEditar.type = "button";
+    btnEditar.classList.add("btn-editar");
+
+    //Creación del botón de eliminar
+    let btnEliminar = document.createElement("button");
+    btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    btnEliminar.type = "button";
+    btnEliminar.classList.add("btn-eliminar");
+
+    //Agregar el botón de editar y eliminar a la celda de acciones
+    tdAcciones.appendChild(btnEditar);
+    tdAcciones.appendChild(btnEliminar);
+    btnEliminar.addEventListener("click", () => {
+      Swal.fire({
+        title: "¿Está seguro que desea eliminar la información?",
+        text: "La acción no se puede revertir",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "¡Sí, eliminar!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          eliminarDatos("/eliminar-usuario", usuario._id);
+          Swal.fire("Usuario eliminado!", "El usuario fue borrado", "success");
+        }
+      });
+    });
+  });
+};
+inicializarListas();
+

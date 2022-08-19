@@ -3,8 +3,11 @@ let txtContrasenna = document.querySelector('#login-password')
 
 let opcionesNav = document.querySelectorAll("nav a");
 
-// nav
+let listaUsuarios = [];
 
+const inicializarListas = async () => {
+  listaUsuarios = await getDatos("/obtener-usuarios");
+};
 const rederigirUsuarios = () => {
     let usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
     switch (usuarioConectado.rol) {
@@ -30,24 +33,39 @@ const iniciarSesion = () => {
     let usuarioLogin = txtUsuario.value;
     let contrasennaLogin = txtContrasenna.value;
     validarCredenciales(usuarioLogin, contrasennaLogin);
+    
 };
 
 const validarCredenciales = (usuarioLogin, contrasennaLogin) => {
     let usuarioValidado = false;
-    usuarios.forEach((objUsuario) => {
-        if (objUsuario.usuario == usuarioLogin && objUsuario.contrasenna == contrasennaLogin) {
-            usuarioValidado = true;
-            localStorage.setItem("usuarioConectado", JSON.stringify(objUsuario));
-        }
+    let usuarioInactivo = false;
+    listaUsuarios.forEach((objUsuario) => {
+            if (objUsuario.usuario == usuarioLogin && objUsuario.contrasenna == contrasennaLogin && objUsuario.estado == 1) {
+                usuarioValidado = true;
+                localStorage.setItem("usuarioConectado", JSON.stringify(objUsuario));
+            } else if(objUsuario.estado == 2){
+                usuarioInactivo = true
+                localStorage.setItem("usuarioConectado", JSON.stringify(objUsuario));
+            }
+
     });
 
     if (usuarioValidado == false) {
-        Swal.fire({
-            icon: "warning",
-            title: "No se ha podido iniciar sesión",
-            text: "El correo del usuario o la contraseña son incorrectos",
-            confirmButtonText: "Entendido",
-        });
+        if(usuarioInactivo = true){
+            Swal.fire({
+                icon: "warning",
+                title: "usuario Inactivo",
+                text: "Por favor ponerse en contacto con el administador",
+                confirmButtonText: "Entendido",
+            });
+        }else{
+            Swal.fire({
+                icon: "warning",
+                title: "No se ha podido iniciar sesión",
+                text: "El correo del usuario o la contraseña son incorrectos",
+                confirmButtonText: "Entendido",
+            });
+        }
         txtUsuarioLogin.classList.add("input-invalid");
         txtContrasennaLogin.classList.add("input-invalid");
     } else {
@@ -66,3 +84,4 @@ const validarCredenciales = (usuarioLogin, contrasennaLogin) => {
             });
     }
 };
+inicializarListas();
