@@ -65,29 +65,30 @@
     margin-bottom: 10px;
 }
 
+/* examenes lab tab */
 #exp-lab {
     background-color: darkslategrey;
+    font-size: 18px;
+    text-align: center;
 }
 
 #exp-lab #frm-lab {
-    height: 200px;
     padding-left: 5%;
     padding-right: 5%;
-    margin-bottom: 3%;
-    margin-top: 3%;
     width: 700px;
 }
 
 #exp-principal {
     color: black;
-    background-color: #228b22;
-    height: 81vh;
+    background-color: #4f9c558a;
+    height: calc(100vh - 188px);
+
 }
 
 #exp-medicamentos {
     color: #000;
     background-color: #8fbc8f;
-    height: 81vh;
+    height: calc(100vh - 188px);
 }
 
 fieldset {
@@ -97,7 +98,7 @@ fieldset {
 
 #exp-rx {
     background-color: black;
-    height: 81vh;
+    height: calc(100vh - 188px);
 }
 
 .exp-save {
@@ -169,9 +170,14 @@ fieldset {
 }
 
 #frm-lab-exp {
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
-    height: 250px;
+}
+
+.txt-lab{
+    margin: 10px 0;
+    text-align: start;
+    padding: 0 10%;
 }
 
 .frm-medicamentosTable {
@@ -298,17 +304,13 @@ fieldset {
     width: 300px;
     height: 400px;
     margin-top: 5%;
-    margin-right: 50px;
-    margin-left: 50px;
 }
 
 .sct-tabs {
     padding-top: 0%;
-    height: 1900px;
-    position: relative;
-    top: 120px;
-    height: 81vh;
+    margin-top: 120px;
     overflow: hidden;
+    height: calc(100vh - 188px);
 }
 
 .signos {
@@ -347,12 +349,6 @@ fieldset {
     width: 1050px;
 }
 
-#txt-examen {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
 #txt-examen input {
     width: 549px;
 }
@@ -364,50 +360,33 @@ fieldset {
     padding-right: 1.5%;
 }
 
-#txt-pet {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 #txt-pet input {
     width: 549px;
 }
 
-#txt-mascota {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
 
 #txt-mascota input {
-    width: 530px;
+    width: 549px;
 }
 
-#txt-owner {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 #txt-owner input {
     width: 549px;
 }
 
 #txt-propietario input {
-    width: 530px;
+    width: 549px;
 }
 
-#txt-resultados {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 #txt-resultados input {
     width: 549px;
 }
 
-footer.footer-expediente {
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    flex-wrap: wrap;
+input{
+    margin-bottom: 5px ;
 }

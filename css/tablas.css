@@ -59,10 +59,10 @@ tbody tr:nth-child(even) {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  padding: 5px 10px;
+  padding: 5px;
   font-weight: 800;
   cursor: pointer;
-  width: 50px;
+  width: 55px;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -85,16 +85,17 @@ tbody tr:nth-child(even) {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  padding: 5px 5px;
+  padding: 5px;
   font-weight: 800;
   cursor: pointer;
   color: #fff;
   transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  width: 50px;
+  transition: -o-transition;
+  -webkit-transition: -o-transition;
+  -moz-transition: -o-transition;
+  -ms-transition: -o-transition;
+  -o-transition: -o-transition;
+  width: 55px;
 }
 
 .btn-eliminar:hover {

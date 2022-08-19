@@ -27,21 +27,22 @@ const llenarTabla = () => {
         let tdAcciones = fila.insertCell();
 
         //Creación del botón de editar
-        let btnEditar = document.createElement('button');
-        btnEditar.textContent = 'Pagar';
-        btnEditar.type = 'button';
-        btnEditar.classList.add('btn-editar');
+        let btnPagar = document.createElement('button');
+        btnPagar.textContent = 'Pagar';
+        btnPagar.type = 'button';
+        btnPagar.classList.add('btn-editar');
+
 
         //Creación del botón de eliminar
-        let btnEliminar = document.createElement('button');
-        btnEliminar.textContent = 'Eliminar';
-        btnEliminar.type = 'button';
-        btnEliminar.classList.add('btn-eliminar');
+        let btnEliminar = document.createElement("button");
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        btnEliminar.type = "button";
+        btnEliminar.classList.add("btn-eliminar");
 
         //Agregar el botón de editar y eliminar a la celda de acciones
-        tdAcciones.appendChild(btnEditar);
+        tdAcciones.appendChild(btnPagar);
         tdAcciones.appendChild(btnEliminar);
-        btnEditar.addEventListener('click', () => {
+        btnPagar.addEventListener('click', () => {
             Swal.fire({
                 title: '¿Está seguro que desea pagar la factura?',
                 text: "Se producirá una versión imprimible de la factura",
