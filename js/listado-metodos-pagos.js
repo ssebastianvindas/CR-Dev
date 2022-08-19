@@ -1,59 +1,69 @@
-const cuerpoTabla = document.querySelector("#tbl-users tbody");
+"use strict";
+const cuerpoTabla = document.querySelector("#tbl-factura tbody");
+const inputfiltro = document.getElementById("txt-filter");
+let listaMetodos = [];
 
-const llenarTabla = () => {
-  // limpia el contenido que tiene el cuerpo de la tabla
-  //   cuerpoTabla.innerHTML = "";
-
-  metodosPago.forEach((metodoPago) => {
-    let fila = cuerpoTabla.insertRow(); //crea una fila
-    fila.insertCell().textContent = metodoPago.titular;
-    fila.insertCell().textContent = metodoPago.tipo;
-    fila.insertCell().textContent = metodoPago.numero;
-
-    // creacion de las celdas de los botones
-    let tdAcciones = fila.insertCell();
-
-    // creacion de los botones de las acciones editar y eliminar
-    //Para iteracion solo debe mostrar un mensaje
-
-    // boton de editar
-    let btnEditar = document.createElement("button");
-    btnEditar.textContent = "Editar";
-    btnEditar.type = "button";
-    btnEditar.classList.add("btn-editar");
-
-    // boton de borrar
-    let btnBorrar = document.createElement("button");
-    btnBorrar.textContent = "Eliminar";
-    btnBorrar.type = "button";
-    btnBorrar.classList.add("btn-eliminar");
-
-    btnBorrar.addEventListener("click", () => {
-      Swal.fire({
-        title: "¿Esta seguro que desea eliminar el método de pago?",
-        text: "¡La acción no se puede revertir!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#18b158",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Si, eliminar!",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire({
-            title:"El método de pago se ha  eliminado correctamente",
-            confirmButtonText: "Entendido",
-            confirmButtonColor: "#18b158",
-        });
-        }
-      });
-    });
-
-    // agregar boton de editar a la celda de acciones
-    tdAcciones.appendChild(btnEditar);
-
-    // agregar boton de Eliminar a la celda de acciones
-    tdAcciones.appendChild(btnBorrar);
-  });
+const inicializarListas = async () => {
+  listaMetodos = await getDatos("/obtener-metodoDePago");
+  mostrarTabla();
 };
 
-llenarTabla();
+const mostrarTabla = async () => {
+  cuerpoTabla.innerHTML = "";
+  listaMetodos.forEach((MetodoPago) => {
+    if (
+      MetodoPago.titular
+        .toLowerCase()
+        .includes(inputfiltro.value.toLowerCase()) ||
+      MetodoPago.numerotarjeta
+        .toLowerCase()
+        .includes(inputfiltro.value.toLowerCase())
+    ) {
+      let fila = cuerpoTabla.insertRow();
+      let numerot = String(MetodoPago.numerotarjeta);
+      fila.insertCell().innerText = MetodoPago.titular;
+      fila.insertCell().innerText = "************" + numerot.slice(-4);
+      fila.insertCell().innerText = MetodoPago.tipo;
+      fila.insertCell().innerText = MetodoPago.fechaExpiracion;
+
+      let tdAcciones = fila.insertCell();
+      //Creación del botón de editar
+      let btnEditar = document.createElement("button");
+      btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+      btnEditar.type = "button";
+      btnEditar.classList.add("btn-editar");
+
+      //Creación del botón de eliminar
+      let btnEliminar = document.createElement("button");
+      btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+      btnEliminar.type = "button";
+      btnEliminar.classList.add("btn-eliminar");
+
+      //Agregar el botón de editar y eliminar a la celda de acciones
+      tdAcciones.appendChild(btnEditar);
+      tdAcciones.appendChild(btnEliminar);
+      btnEliminar.addEventListener("click", () => {
+        Swal.fire({
+          title: "¿Está seguro que desea eliminar la información?",
+          text: "La acción no se puede revertir",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "¡Sí, eliminar!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            eliminarDatos("/eliminar-metodoDePago", MetodoPago._id);
+            Swal.fire(
+              "Usuario eliminado!",
+              "El metodo de pago fue borrado",
+              "success"
+            );
+          }
+        });
+      });
+    }
+  });
+};
+inicializarListas();
+inputfiltro.addEventListener("keyup", inicializarListas);
