@@ -32,9 +32,7 @@ let validarForm = () => {
                 title: 'Cita agendada',
                 text: 'Se ha creado la cita',
                 confirmButtonText: "Entendido"
-            }).then(() => {
-                regresarPrincipal();
-            });
+            }).then(() => {});
 
 
         }

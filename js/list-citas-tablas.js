@@ -1,14 +1,21 @@
 const cuerpoTabla = document.querySelector('#tbl-users tbody');
+let citas = [];
+let user = JSON.parse(localStorage.getItem("usuarioConectado"));
+
+const inicializarListaCitasByUser = async() => {
+    citas = await getDatosByUser('obtener-citas-usuario', user.usuario);
+    llenarTablaList();
+};
 
 
-const llenarTablaList = () => {
+
+const llenarTablaList = async() => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
-    cuerpoTabla.innerHTML = '';
+    cuerpoTabla.innerHTML = "";
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
-    citas.forEach(cita => {
+    citas.forEach((cita) => {
 
         let fila = cuerpoTabla.insertRow();
-
         fila.insertCell().textContent = cita.fecha;
         fila.insertCell().textContent = cita.hora;
         fila.insertCell().textContent = cita.nombreMascota;
@@ -61,4 +68,4 @@ const llenarTablaList = () => {
     });
 };
 
-llenarTablaList();
+inicializarListaCitasByUser();

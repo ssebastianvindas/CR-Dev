@@ -66,4 +66,22 @@ router.delete("/eliminar-cita", (req, res) => {
 
 });
 
+//Ruta por usuario
+router.post("/obtener-citas-usuario", (req, res) => {
+    let usuario = req.body.usuario;
+    Cita.find({ nombreduenno: usuario }, function(error, lista) {
+        if (error) {
+            res.json({
+                msj: "No se encontrarion citas",
+                error,
+            });
+        } else {
+            res.json({
+                msj: "Citas listadas",
+                lista,
+            });
+        }
+    });
+});
+
 module.exports = router;
