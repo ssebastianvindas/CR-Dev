@@ -2,9 +2,8 @@
 
 const mongoose = require("mongoose");
 
-const schemaReporteVete = new mongoose.Schema({
+const schemaReporteHotel = new mongoose.Schema({
     fecha: { type: Date, required: true },
     monto: { type: Number, required: true },
 });
-
-module.exports = mongoose.model("ReporteVete", schemaReporteVete, "reportevete");
+module.exports = mongoose.model("ReporteHotel", schemaReporteHotel, "reportehotel");
