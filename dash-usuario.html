@@ -81,22 +81,22 @@
         </div>
         <div id="appointment" class="tabcontent">
           <form class="frm-citas-new center-form">
-            <h3>Módulo de Citas</h3>
+           
             <div id="img-citas">
               <fieldset class="frm-cita center-fieldset">
                 <legend>Crear una nueva cita</legend>
                 <div id="hofe">
                   <label for="newCita-date">Fecha:</label>
                   <input type="date" id="newCita-date" />
-                  <label for="newCita-date">Hora:</label>
-                  <input type="time" id="newCita-date" />
+                  <label for="newCita-hour">Hora:</label>
+                  <input type="time" id="newCita-hour" />
                 </div>
                 <div class="txt-citas">
                   <label class="label-cita-cliente">Nombre de la mascota</label>
                   <input
                     type="text"
                     class="frm-citas"
-                    placeholder="Nombre de la mascota"
+                    placeholder="Nombre de la mascota" id="newCita-name-pet"
                   />
                 </div>
                 <div class="txt-citas">
@@ -104,7 +104,7 @@
                   <input
                     type="text"
                     class="frm-citas"
-                    placeholder="Nombre del dueño"
+                    placeholder="Nombre del dueño" id="newCita-name-user"
                   />
                 </div>
                 <div class="txt-citas">
@@ -112,7 +112,7 @@
                   <input
                     type="text"
                     class="frm-citas"
-                    placeholder="Procedimiento"
+                    placeholder="Procedimiento" id="newCita-procedimientos"
                   />
                 </div>
                 <div class="txt-citas">
@@ -147,7 +147,7 @@
         </div>
         <div id="reservation" class="tabcontent">
           <form class="center-form">
-            <h3>Reservaciones del Hotel</h3>
+            
             <fieldset class="fieldset-hotel center-fieldset">
               <legend class="label-reservacion-cliente">Registro de Nueva Reserva</legend>
   
@@ -215,6 +215,9 @@
         </footer>
 
         <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+        <script src="js/servicio-general.js"></script>
         <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/navUser.js"></script>

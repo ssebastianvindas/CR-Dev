@@ -44,18 +44,18 @@ const validarReserva = () => {
 const obtenerDatosRegistro = () => {
     //variable tipo JSON
     let reserva = {
-        'date': inputEntrada1.value,
-        'cant-cuartos': inputSalida1.value,
-        'cant-animales': inputAnimales1.value
+        fechaEntrada: inputEntrada1.value,
+        fechaSalida: inputSalida1.value,
+        numMascotas: inputAnimales1.value
     };
-    console.log(reserva);
+
     Swal.fire({
         'icon': 'success',
         'title': 'Reserva realizada exitosamente',
         'text': 'Su numero de confirmacion le llegara al correo',
         'confirmButtonText': 'Continuar'
     }).then(() => {
-        window.location.href = '../reserva-listado.html'
+        registrarDatos('registrar-reservas', reserva);
 
     });
 

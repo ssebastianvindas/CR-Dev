@@ -81,7 +81,7 @@ const llenarTablaDoctor = () => {
         if (cita.doctor == seleccion.value) {
             let fila = cuerpoTablaDoctor.insertRow();
 
-            fila.insertCell().textContent = cita.fecha;
+            fila.insertCell().textContent = moment(cita.fecha).format('DD-MM-YYYY');
             fila.insertCell().textContent = cita.hora;
             fila.insertCell().textContent = cita.nombremascota;
             fila.insertCell().textContent = cita.nombreduenno;
@@ -137,7 +137,7 @@ const llenarTablaDoctores = () => {
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     citas.forEach(cita => {
         let fila = cuerpoTablaDoctor.insertRow();
-        fila.insertCell().textContent = cita.fecha;
+        fila.insertCell().textContent = moment(cita.fecha).format('DD-MM-YYYY');
         fila.insertCell().textContent = cita.hora;
         fila.insertCell().textContent = cita.nombremascota;
         fila.insertCell().textContent = cita.nombreduenno;
@@ -194,7 +194,7 @@ const llenarTablaPendientes = () => {
 
         let fila = cuerpoTablaPendiente.insertRow();
 
-        fila.insertCell().textContent = cita.fecha;
+        fila.insertCell().textContent = moment(cita.fecha).format('DD-MM-YYYY');
         fila.insertCell().textContent = cita.hora;
         fila.insertCell().textContent = cita.nombremascota;
         fila.insertCell().textContent = cita.nombreduenno;
