@@ -5,6 +5,7 @@ const span = document.getElementsByClassName("close")[0];
 
 let imgMascota = document.querySelector(".input-img");
 let inputImg = document.querySelector("#img");
+const cuidados = document.getElementById('cuidados-pet');
 
 const seleccionArchivos = document.querySelector("#seleccionArchivos"),
     imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
@@ -68,22 +69,12 @@ let validar = () => {
             confirmButtonText: "Entendido",
         })
     } else {
-        Swal.fire({
-            title: "Campos completos",
-            text: "La mascota se ha registrado correctamente",
-            icon: "success",
-            confirmButtonColor: "#18b158",
-            confirmButtonText: "Entendido",
-        }).then(() => {
-            window.location.href = 'perfil-usuario.html';
-            obtenerDatosMascota;
-        })
+        obtenerDatosMascota();
     }
 };
 
 const obtenerDatosMascota = () => {
     let user = JSON.parse(localStorage.getItem("usuarioConectado"))
-
 
     let mascota = {
         petUser: user.usuario,
@@ -91,8 +82,8 @@ const obtenerDatosMascota = () => {
         petName: txtNombreMascota.value,
         petPhoto: seleccionArchivos.value,
         petCare: cuidados.value,
-
     };
+
     Swal.fire({
         'icon': 'success',
         'title': 'Mascota registrada',
@@ -100,6 +91,7 @@ const obtenerDatosMascota = () => {
         'confirmButtonText': 'Continuar'
     }).then(() => {
         registrarDatos('registrar-mascota', mascota);
+        window.location.href = 'perfil-usuario.html'
     });
 }
 

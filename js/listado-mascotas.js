@@ -10,13 +10,14 @@ const inicializarListaMascotaByUser = async() => {
 
 };
 
+/*
 console.log(listaMascotas)
 const inicializarListaMascota = async() => {
     listaMascotas = await getDatos('obtener-mascotas');
     showTable();
 
 };
-
+*/
 const showTable = async() => {
     tableBody.innerHTML = "";
 
