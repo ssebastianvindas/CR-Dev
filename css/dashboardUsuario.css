@@ -7,15 +7,14 @@ html {
 }
 
 .container-dashboard-usuario {
-    position: relative;
-    top: 120px;
+    margin-top: 120px;
     flex-direction: row;
     flex-wrap: nowrap;
     background-image: url(../imgs/users/background-user-dashboard.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 81vh;
+    height: calc(100vh - 188px);
 }
 
 .form-title-appointment,
