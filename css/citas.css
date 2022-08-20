@@ -86,7 +86,6 @@ input {
 
 .tabcontent {
     display: none;
-    border: 1px solid rgb(255, 255, 255);
     border-top: none;
 }
 
