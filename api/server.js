@@ -72,3 +72,4 @@ app.use("/api", require("./routes/reservas.routes"));
 app.use("/api", require("./routes/ingresosHotel.routes"));
 app.use("/api", require("./routes/ingresosVete.routes"));
 app.use("/api", require("./routes/metodos-de-pago.routes"));
+app.use("/api", require("./routes/mascotas.routes"));

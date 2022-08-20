@@ -43,6 +43,29 @@ const getDatos = async(endpoint) => {
     return listaDatos;
 };
 
+const getDatosByUser = async(endpoint, user) => {
+    let url = `http://localhost:3000/api/${endpoint}`;
+    let listaDatos = [];
+    await axios({
+            'url': url,
+            'method': 'post',
+            'responseType': 'json',
+            'data': {
+                usuario: user
+            }
+        })
+        .then(response => {
+            listaDatos = response.data.lista;
+        }).catch(error => {
+            Swal.fire({
+                icon: 'error',
+                text: error
+            });
+        });
+
+    return listaDatos;
+};
+
 const eliminarDatos = async(endpoint, _id) => {
     let url = `http://localhost:3000/api/${endpoint}`;
     await axios({
