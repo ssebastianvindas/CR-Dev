@@ -19,6 +19,15 @@ const mostrarTabla = async () => {
         .includes(inputfiltro.value.toLowerCase()) ||
       MetodoPago.numerotarjeta
         .toLowerCase()
+        .includes(inputfiltro.value.toLowerCase()) ||
+      MetodoPago.numerotarjeta
+        .toLowerCase()
+        .includes(inputfiltro.value.toLowerCase()) ||
+      MetodoPago.tipo
+        .toLowerCase()
+        .includes(inputfiltro.value.toLowerCase()) ||
+      MetodoPago.fechaExpiracion
+        .toLowerCase()
         .includes(inputfiltro.value.toLowerCase())
     ) {
       let fila = cuerpoTabla.insertRow();
