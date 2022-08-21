@@ -47,7 +47,29 @@ router.get("/obtener-citas", (req, res) => {
 });
 
 // ruta para modificar la información de un usuario
-router.put("/actualizar-cita", (req, res) => {});
+router.put("/actualizar-cita", (req, res) => {
+    let idStorageEditar = localStorage.getItem("idStorage");
+    Cita.findByIdAndUpdate(idStorageEditar, {
+        nombremascota: req.body.nombremascota,
+        nombreduenno: req.body.nombreduenno,
+        procedimiento: req.body.procedimiento,
+        fecha: req.body.fecha,
+        hora: req.body.hora,
+        doctor: req.body.doctor,
+        estado: 'activa'
+    }, error);
+    if (error) {
+        res.json({
+            msj: "No se pudo editar la cita",
+            error,
+        });
+    } else {
+        res.json({
+            msj: "Cita editada correctamente",
+        });
+    }
+
+});
 
 // ruta para eliminar la información de cada usuario
 router.delete("/eliminar-cita", (req, res) => {

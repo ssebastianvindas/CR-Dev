@@ -93,6 +93,32 @@ const eliminarDatos = async(endpoint, _id) => {
             });
         });
 };
+const editarDatos = async(endpoint, data) => {
+    let url = `http://localhost:3000/api/${endpoint}`;
+
+    await axios({
+            url: url,
+            method: "put",
+            responseType: "json",
+            data: data,
+        })
+        .then((response) => {
+            Swal.fire({
+                icon: "success",
+                title: "Felicidades",
+                text: response.data.msj,
+            }).then(() => {
+                window.location.reload();
+            });
+        })
+        .catch((error) => {
+            Swal.fire({
+                icon: "error",
+                title: "Ha ocurrido un error",
+                text: error,
+            });
+        });
+};
 const obtenerNombreRol = (idRol) => {
     let nombreRol = "";
 
