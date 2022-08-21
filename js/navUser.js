@@ -10,3 +10,22 @@ window.onclick = function (e) {
     menu.classList.toggle("ocultar-menu");
   }
 };
+
+let cambiarFotoPerfil = () => {
+  switch (usuarioConectado.rol) {
+    case 1:
+      document.getElementById("img-perfil").innerHTML = usuarioConectado.foto;
+      break;
+    case 2:
+      document.getElementById("img-perfil").innerHTML = usuarioConectado.foto;
+      break;
+    case 3:
+      document.getElementById("img-perfil").innerHTML = usuarioConectado.foto;
+      break;
+    case 4:
+      document.getElementById("img-perfil").innerHTML = usuarioConectado.foto;
+      break;
+  }
+};
+
+window.addEventListener("load", cambiarFotoPerfil);
