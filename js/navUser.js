@@ -14,19 +14,35 @@ window.onclick = function (e) {
 let cambiarFotoPerfil = () => {
   switch (usuarioConectado.rol) {
     case 1:
-      document.getElementById("img-perfil").src = usuarioConectado.foto;
+      if ((usuarioConectado.foto == "")) {
+        document.getElementById("img-perfil").src ="../imgs/users/user-admin.jpg";
+      } else {
+        document.getElementById("img-perfil").src = usuarioConectado.foto;
+      }
 
       break;
     case 2:
-      document.getElementById("img-perfil").src = usuarioConectado.foto;
+      if ((usuarioConectado.foto == "")) {
+        document.getElementById("img-perfil").src ="../imgs/users/user-secretary.jpg";
+      } else {
+        document.getElementById("img-perfil").src = usuarioConectado.foto;
+      }
 
       break;
     case 3:
-      document.getElementById("img-perfil").src = usuarioConectado.foto;
+      if ((usuarioConectado.foto == "")) {
+        document.getElementById("img-perfil").src ="../imgs/users/user-vet.jpg";
+      } else {
+        document.getElementById("img-perfil").src = usuarioConectado.foto;
+      }
 
       break;
     case 4:
-      document.getElementById("img-perfil").src = usuarioConectado.foto;
+      if ((usuarioConectado.foto == "")) {
+        document.getElementById("img-perfil").src ="../imgs/users/user-cliente.jpg";
+      } else {
+        document.getElementById("img-perfil").src = usuarioConectado.foto;
+      }
 
       break;
   }
