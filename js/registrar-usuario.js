@@ -6,6 +6,8 @@ const txtUsuarioRegister = document.getElementById("register-user");
 const txtNumero = document.getElementById("register-number");
 const txtCorreoRegister = document.getElementById("register-email");
 const txtContrasennaRegister = document.getElementById("register-password2");
+const txtFoto = document.getElementById("register-foto");
+
 const btnRegistrar = document.querySelector(
   ".container-btn-register #btn-register-form"
 );
@@ -79,7 +81,7 @@ const obtenerDatosRegister = () => {
     numero: txtNumero.value,
     correo: txtCorreoRegister.value,
     contrasenna: txtContrasennaRegister.value,
-    foto: "",
+    foto: txtFoto.value,
     rol: 4,
   };
   registrarDatos("registrar-usuario", usuario, "consultar-usuarios.html");

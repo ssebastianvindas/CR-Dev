@@ -14,16 +14,20 @@ window.onclick = function (e) {
 let cambiarFotoPerfil = () => {
   switch (usuarioConectado.rol) {
     case 1:
-      document.getElementById("img-perfil").innerHTML = usuarioConectado.foto;
+      document.getElementById("img-perfil").src = usuarioConectado.foto;
+
       break;
     case 2:
-      document.getElementById("img-perfil").innerHTML = usuarioConectado.foto;
+      document.getElementById("img-perfil").src = usuarioConectado.foto;
+
       break;
     case 3:
-      document.getElementById("img-perfil").innerHTML = usuarioConectado.foto;
+      document.getElementById("img-perfil").src = usuarioConectado.foto;
+
       break;
     case 4:
-      document.getElementById("img-perfil").innerHTML = usuarioConectado.foto;
+      document.getElementById("img-perfil").src = usuarioConectado.foto;
+
       break;
   }
 };

@@ -118,3 +118,4 @@ btnPassword2.addEventListener("click", password2);
 const btnFormLogin = document.querySelector("#btn-login-form");
 const formularioLogin = document.querySelector("#form-login");
 const inputsLogin = document.querySelectorAll("#form-login input");
+
