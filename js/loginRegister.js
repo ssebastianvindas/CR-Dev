@@ -43,45 +43,43 @@ const validarCredenciales = (usuarioLogin, contrasennaLogin) => {
             if (objUsuario.usuario == usuarioLogin && objUsuario.contrasenna == contrasennaLogin && objUsuario.estado == 1) {
                 usuarioValidado = true;
                 localStorage.setItem("usuarioConectado", JSON.stringify(objUsuario));
-            } else if(objUsuario.estado == 2){
+            }
+            if (objUsuario.usuario == usuarioLogin && objUsuario.contrasenna == contrasennaLogin && objUsuario.estado != 1) {
+                usuarioValidado = false;
                 usuarioInactivo = true
                 localStorage.setItem("usuarioConectado", JSON.stringify(objUsuario));
             }
 
     });
-
-    if (usuarioValidado == false) {
-        if(usuarioInactivo = true){
-            Swal.fire({
-                icon: "warning",
-                title: "usuario Inactivo",
-                text: "Por favor ponerse en contacto con el administador",
-                confirmButtonText: "Entendido",
-            });
-        }else{
-            Swal.fire({
-                icon: "warning",
-                title: "No se ha podido iniciar sesión",
-                text: "El correo del usuario o la contraseña son incorrectos",
-                confirmButtonText: "Entendido",
-            });
-        }
-        txtUsuarioLogin.classList.add("input-invalid");
-        txtContrasennaLogin.classList.add("input-invalid");
-    } else {
-        txtUsuarioLogin.classList.remove("input-invalid");
-        txtContrasennaLogin.classList.remove("input-invalid");
-        txtUsuarioLogin.classList.add("input-valid");
-        txtContrasennaLogin.classList.add("input-valid");
+    if (usuarioValidado == false && usuarioInactivo == true) {
+        console.log("hola")
         Swal.fire({
-                icon: "success",
-                title: "Inicio de sesión correcto",
-                text: "Bienvenido",
-                confirmButtonText: "Entendido",
-            })
-            .then(() => {
-                rederigirUsuarios();
-            });
-    }
+            icon: "warning",
+            title: "Usuario inactivo",
+            text: "Por favor pongase en contacto con el administador",
+            confirmButtonText: "Entendido",
+        });
+    }else if (usuarioValidado == false && usuarioInactivo == false) {
+                Swal.fire({
+                    icon: "warning",
+                    title: "No se ha podido iniciar sesión",
+                    text: "El correo del usuario o la contraseña son incorrectos",
+                    confirmButtonText: "Entendido",
+                });
+            txtUsuarioLogin.classList.add("input-invalid");
+            txtContrasennaLogin.classList.add("input-invalid");
+        } else {
+            txtUsuarioLogin.classList.remove("input-invalid");
+            txtContrasennaLogin.classList.remove("input-invalid");
+            Swal.fire({
+                    icon: "success",
+                    title: "Inicio de sesión correcto",
+                    text: "Bienvenido",
+                    confirmButtonText: "Entendido",
+                })
+                .then(() => {
+                    rederigirUsuarios();
+                });
+        }
 };
 inicializarListas();
