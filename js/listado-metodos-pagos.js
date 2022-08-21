@@ -55,7 +55,7 @@ const mostrarTabla = async () => {
           confirmButtonText: "¡Sí, eliminar!",
         }).then((result) => {
           if (result.isConfirmed) {
-            eliminarDatos("/eliminar-metodoDePago", MetodoPago._id);
+            eliminarDatos("eliminar-metodoDePago", MetodoPago._id);
             Swal.fire(
               "Usuario eliminado!",
               "El metodo de pago fue borrado",

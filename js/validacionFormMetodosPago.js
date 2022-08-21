@@ -71,16 +71,17 @@ let validarFormRegister = () => {
 };
 
 const obtenerDatosRegister = () => {
-  let user = JSON.parse(localStorage.getItem("usuarioConectado"))
+  let user = JSON.parse(localStorage.getItem("usuarioConectado"));
   let metodoDePago = {
     idUser: user.usuario,
     titular: titular.value,
     numerotarjeta: numeroTarjeta.value,
     tipo: tipo.value,
-    fechaExpiracion: mes.value + '/' + anno.value,
+    fechaExpiracion: mes.value + "/" + anno.value,
     cvv: cvv.value,
   };
-  registrarDatos("registrar-metodoDePago", metodoDePago," ");
+  registrarDatos("registrar-metodoDePago", metodoDePago, "");
+
 };
 btnGuardar.addEventListener("click", validarFormRegister);
 

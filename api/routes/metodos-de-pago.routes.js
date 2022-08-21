@@ -23,6 +23,7 @@ router.post("/registrar-metodoDePago", (req, res) => {
     } else {
       res.json({
         msj: "El método de pago se registró exitosamente",
+        
       });
     }
   });

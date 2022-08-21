@@ -12,8 +12,9 @@ const registrarDatos = async(endpoint, data) => {
                 icon: "success",
                 title: "Felicidades",
                 text: response.data.msj,
-
-            }).then(() => {});
+            }).then(() => {
+                window.location.reload();
+            });
         })
         .catch((error) => {
             Swal.fire({
