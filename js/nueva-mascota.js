@@ -78,7 +78,6 @@ const obtenerDatosMascota = () => {
 
     let mascota = {
         petUser: user.usuario,
-
         petName: txtNombreMascota.value,
         petPhoto: seleccionArchivos.value,
         petCare: cuidados.value,

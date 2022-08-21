@@ -3,6 +3,7 @@
 const mongoose = require("mongoose");
 
 const schemaMetodoPago = new mongoose.Schema({
+  idUser: { type: String, required: false},
   titular: { type: String, required: false },
   numerotarjeta: { type: String, required: true, unique: true },
   tipo: { type: String, required: true },

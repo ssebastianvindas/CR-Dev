@@ -71,7 +71,9 @@ let validarFormRegister = () => {
 };
 
 const obtenerDatosRegister = () => {
+  let user = JSON.parse(localStorage.getItem("usuarioConectado"))
   let metodoDePago = {
+    idUser: user.usuario,
     titular: titular.value,
     numerotarjeta: numeroTarjeta.value,
     tipo: tipo.value,

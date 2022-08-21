@@ -7,6 +7,7 @@ const MetodosDePago = require("../models/metodos-de-pago.model");
 // ruta para registrar un usuario
 router.post("/registrar-metodoDePago", (req, res) => {
   let nuevoMetodoDePago = new MetodosDePago({
+    idUser: req.body.idUser,
     titular: req.body.titular,
     numerotarjeta: req.body.numerotarjeta,
     tipo: req.body.tipo,
@@ -24,6 +25,22 @@ router.post("/registrar-metodoDePago", (req, res) => {
         msj: "El método de pago se registró exitosamente",
       });
     }
+  });
+});
+router.post("/obtener-tarjeta-usuario", (req, res) => {
+  let usuario = req.body.usuario
+  MetodosDePago.find({ idUser: usuario }, function(error, lista) {
+      if (error) {
+          res.json({
+              msj: "No se encontraron mascotas",
+              error,
+          });
+      } else {
+          res.json({
+              msj: "Mascotas listadas",
+              lista,
+          });
+      }
   });
 });
 
