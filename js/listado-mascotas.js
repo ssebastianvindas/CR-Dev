@@ -53,7 +53,7 @@ const showTable = async () => {
         confirmButtonText: "¡Sí, eliminar!",
       }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire("¡Factura eliminado!", "La factura fue borrado", "success");
+          eliminarDatos("/eliminar-mascota", mascota._id);
         }
       });
     });

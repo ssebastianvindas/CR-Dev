@@ -59,4 +59,24 @@ router.get("/obtener-mascotas", (req, res) => {
     });
 });
 
+// ruta para eliminar la información de cada usuario
+router.delete("/eliminar-mascota", (req, res) => {
+    let body = req.body;
+    Mascota.remove({ _id: body._id }, (err, result) => {
+      if (err) {
+        res.json({
+          resultado: false,
+          msj: "No se pudo eliminar los datos: ",
+          err,
+        });
+      } else {
+        res.json({
+          resultado: true,
+          msj: "Los datos se eliminarion de manera correcta",
+          result,
+        });
+      }
+    });
+  });
+
 module.exports = router;
