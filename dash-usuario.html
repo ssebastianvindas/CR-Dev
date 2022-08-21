@@ -80,7 +80,7 @@
           </button>
         </div>
         <div id="appointment" class="tabcontent">
-          <form class="frm-citas-new center-form">
+          <form class="center-form">
            
             <div id="img-citas">
               <fieldset class="frm-cita center-fieldset">
@@ -146,11 +146,14 @@
           </form>
         </div>
         <div id="reservation" class="tabcontent">
-          <form class="center-form">
+          <form class ="hotel-form">
             
-            <fieldset class="fieldset-hotel center-fieldset">
-              <legend class="label-reservacion-cliente">Registro de Nueva Reserva</legend>
-  
+            <fieldset class="frm-cita center-fieldset">
+              <legend>Registro de Nueva Reserva</legend>
+              <div class="div-mascota">
+                <label for="frm-mascota-reserva">Nombre de la(s) Mascota(s):</label>
+                <input type="text" id="frm-mascota-reserva" />
+              </div>
               <div class="div-date">
                 <label for="txt-date" class="label-reservacion-cliente">Fecha de Entrada</label>
                 <input type="date" name="" id="fecha-entrada" />
@@ -162,6 +165,10 @@
               <div class="div-animales">
                 <label for="cantidad-animales" class="label-reservacion-cliente">Numero de animales</label>
                 <input type="number" name="" id="cantidad-animales" min="0" />
+              </div>
+              <div class="div-monto">
+                <label for="frm-monto-reserva">Monto de la reservación:</label>
+                <input type="number" id="frm-monto-reserva" />
               </div>
               <div>
                 <button type="button" class="btn-ver" id="btn-registrar">

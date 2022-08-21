@@ -7,6 +7,8 @@ const Reservas = require("../models/reservas.model");
 // ruta para registrar un usuario
 router.post("/registrar-reservas", (req, res) => {
     let nuevaReserva = new Reservas({
+        usuario: req.body.usuario,
+        mascota: req.body.mascota,
         fechaEntrada: req.body.fechaEntrada,
         fechaSalida: req.body.fechaSalida,
         numMascotas: req.body.numMascotas,

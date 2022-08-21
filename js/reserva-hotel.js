@@ -3,9 +3,10 @@ const inputSalida = document.getElementById('fecha-salida');
 const inputAnimales = document.getElementById('cantidad-animales');
 const btnGuardar = document.getElementById('btn-registrar');
 const inputMonto = document.getElementById('frm-monto-reserva');
+const inputMascota = document.getElementById('frm-mascota-reserva');
+let usuarioRegistroReserva = JSON.parse(localStorage.getItem("usuarioConectado"));
 
-
-const validarReserva = () => {
+const validarReservaUser = () => {
 
     let error = false;
 
@@ -29,7 +30,12 @@ const validarReserva = () => {
     } else {
         inputAnimales.classList.remove('input-invalid')
     }
-
+    if (inputMascota.value == '') {
+        error = true;
+        inputMascota.classList.add('input-invalid');
+    } else {
+        inputMascota.classList.remove('input-invalid')
+    }
 
     if (error == true) {
         Swal.fire({
@@ -40,13 +46,15 @@ const validarReserva = () => {
         });
 
     } else {
-        obtenerDatosRegistro();
+        obtenerDatosRegistroUser();
     }
 
 };
-const obtenerDatosRegistro = () => {
+const obtenerDatosRegistroUser = () => {
     //variable tipo JSON
     let reserva = {
+        'usuario': usuarioRegistroReserva.usuario,
+        'mascota': inputMascota.value,
         'fechaEntrada': inputEntrada.value,
         'fechaSalida': inputSalida.value,
         'numMascotas': inputAnimales.value,
@@ -90,4 +98,4 @@ inputAnimales.addEventListener('keyup', function(e) {
         inputMonto.value = monto;
     }
 });
-btnGuardar.addEventListener('click', validarReserva);
+btnGuardar.addEventListener('click', validarReservaUser);

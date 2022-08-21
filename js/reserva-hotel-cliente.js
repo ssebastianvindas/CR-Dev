@@ -2,8 +2,11 @@ const inputEntrada1 = document.getElementById('fecha-entrada');
 const inputSalida1 = document.getElementById('fecha-salida');
 const inputAnimales1 = document.getElementById('cantidad-animales');
 const btnGuardar1 = document.getElementById('btn-registrar');
+const inputMonto1 = document.getElementById('frm-monto-reserva');
+const inputMascota1 = document.getElementById('frm-mascota-reserva');
+let usuarioRegistroReserva = JSON.parse(localStorage.getItem("usuarioConectado"));
 
-const validarReserva = () => {
+const validarReservaUser = () => {
 
     let error = false;
 
@@ -27,6 +30,12 @@ const validarReserva = () => {
     } else {
         inputAnimales1.classList.remove('input-invalid')
     }
+    if (inputMascota1.value == '') {
+        error = true;
+        inputMascota1.classList.add('input-invalid');
+    } else {
+        inputMascota1.classList.remove('input-invalid')
+    }
 
     if (error == true) {
         Swal.fire({
@@ -37,16 +46,19 @@ const validarReserva = () => {
         });
 
     } else {
-        obtenerDatosRegistro();
+        obtenerDatosRegistroUser();
     }
 
 };
-const obtenerDatosRegistro = () => {
+const obtenerDatosRegistroUser = () => {
     //variable tipo JSON
     let reserva = {
-        fechaEntrada: inputEntrada1.value,
-        fechaSalida: inputSalida1.value,
-        numMascotas: inputAnimales1.value
+        'usuario': usuarioRegistroReserva.usuario,
+        'mascota': inputMascota1.value,
+        'fechaEntrada': inputEntrada1.value,
+        'fechaSalida': inputSalida1.value,
+        'numMascotas': inputAnimales1.value,
+        'monto': inputMonto1.value
     };
 
     Swal.fire({
@@ -55,10 +67,35 @@ const obtenerDatosRegistro = () => {
         'text': 'Su numero de confirmacion le llegara al correo',
         'confirmButtonText': 'Continuar'
     }).then(() => {
-        registrarDatos('registrar-reservas', reserva);
 
+        registrarDatos('registrar-reservas', reserva);
     });
 
 };
 
-btnGuardar1.addEventListener('click', validarReserva);
+
+function getNumberOfDays(start, end) {
+    const date1 = new Date(start);
+    const date2 = new Date(end);
+
+    // One day in milliseconds
+    const oneDay = 1000 * 60 * 60 * 24;
+
+    // Calculating the time difference between two dates
+    const diffInTime = date2.getTime() - date1.getTime();
+
+    // Calculating the no. of days between two dates
+    const diffInDays = Math.round(diffInTime / oneDay);
+
+    return diffInDays;
+}
+
+inputAnimales1.addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') {
+        let dias = getNumberOfDays(inputEntrada1.value, inputSalida1.value);
+        let monto = 0;
+        monto = parseInt(inputAnimales1.value) * (dias * 5000);
+        inputMonto1.value = monto;
+    }
+});
+btnGuardar1.addEventListener('click', validarReservaUser);
