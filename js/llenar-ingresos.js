@@ -37,7 +37,7 @@ let registrarIngresosVete = () => {
         fecha: fechaVeterinaria.value,
         monto: montoVeterinaria.value
     };
-    registrarDatos("registrar-ingresosVete", ingresosVeterinaria);
+    registrarDatos("registrar-reporteVete", ingresosVeterinaria);
 };
 
 btnIngresosVete.addEventListener('click', registrarIngresosVete)
