@@ -12,6 +12,8 @@ router.post("/registrar-expediente", (req, res) => {
         mascotaId: req.body.mascotaId,
         owner: req.body.owner,
         ownerId: req.body.ownerId,
+        correo: req.body.correo,
+        telefono: req.body.telefono,
         veterinario: req.body.veterinario,
         quejaprincipal: req.body.quejaprincipal,
         tos: req.body.tos,

@@ -8,6 +8,8 @@ const schemaExpediente = new mongoose.Schema({
     mascotaId: { type: Number, required: true },
     owner: { type: String, required: true },
     ownerId: { type: Number, required: true },
+    correo: { type: String, required: true },
+    telefono: { type: String, required: true },
     veterinario: { type: String, required: true },
     quejaprincipal: { type: String, required: false },
     tos: { type: Boolean, required: false },

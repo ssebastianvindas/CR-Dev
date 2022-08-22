@@ -12,6 +12,38 @@ const inputCantidad = document.getElementById('txt-cantidad');
 const inputProcedimiento = document.getElementById('txt-procedimientos');
 const inputPrecio = document.getElementById('txt-precio');
 const btnImprimir = document.getElementById('btn-imprimir');
+let registrosProcedimientos = [];
+let registrosExpediente = [];
+let mayor = 0;
+let mascotaIdentificacion = 0;
+let price = 0;
+
+function padTo2Digits(num) {
+    return num.toString().padStart(2, '0');
+}
+
+function formatDate(date = new Date()) {
+    return [
+        date.getFullYear(),
+        padTo2Digits(date.getMonth() + 1),
+        padTo2Digits(date.getDate()),
+    ].join('-');
+}
+
+const llenarFactura = async() => {
+    registrosProcedimientos = await getDatos("obtener-tratamientos");
+    registrosExpediente = await getDatos("obtener-expediente");
+    registrosFactura = await getDatos("obtener-facturas");
+    registrosFactura.forEach((factura) => {
+        if (mayor < factura.consecutivo) {
+            mayor = factura.consecutivo;
+        }
+
+    });
+    inputConsecutivo.value = mayor + 1;
+    inputFecha.value = formatDate();
+
+};
 
 const validar = () => {
     let error = false;
@@ -170,6 +202,50 @@ const obtenerDatos = () => {
         window.location.href = 'lista-facturas.html';
     });
 };
+const llenarFormFactura = () => {
+    registrosExpediente.forEach((expediente) => {
 
+        if (parseInt(expediente.ownerId) === parseInt(inputJuridica.value)) {
+            inputCliente.value = expediente.owner;
+            inputEmail.value = expediente.correo;
+            inputTelefono.value = expediente.telefono;
+            inputPaciente.value = expediente.mascota;
+            mascotaIdentificacion = expediente.mascotaId;
+        }
+    });
+    registrosProcedimientos.forEach((tx) => {
+        if (parseInt(tx.mascotaId) === parseInt(mascotaIdentificacion) && moment(tx.fecha).add('1', 'd').format('YYYY-MM-DD') === inputFecha.value) {
+            inputProcedimiento.value = tx.tratamiento;
+            inputCantidad.value = 1;
+            switch (tx.tratamiento) {
+                case 'vacunacion':
+                    price = 5000;
+                    break;
+                case 'desparasitacion':
+                    price = 10000;
+                    break;
+                case 'castracion':
+                    price = 50000;
+                    break;
+                case 'jhjhgjgj':
+                    price = 23000;
+                    break;
+                default:
+                    price = 0;
+                    break;
 
+            }
+        }
+
+    });
+    inputPrecio.value = price;
+
+};
+llenarFactura();
+
+inputJuridica.addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') {
+        llenarFormFactura();
+    }
+});
 btnImprimir.addEventListener('click', validar);

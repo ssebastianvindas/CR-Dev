@@ -26,6 +26,7 @@ const expGetMascota = document.getElementById('name-pet');
 const expGetMascotaId = document.getElementById('exp-id');
 const expGetOwner = document.getElementById('name-owner');
 const expGetOwnerId = document.getElementById('exp-idowner');
+const expGetcorreo = document.getElementById('exp-email');
 const expGetVet = document.getElementById('exp-vet');
 const expGetQueja = document.getElementById('expQPrincipal');
 const expChkTos = document.getElementById('chk-tos');
@@ -66,6 +67,7 @@ let AlmacenarDatos = () => {
         mascotaId: expGetMascotaId.value,
         owner: expGetOwner.value,
         ownerId: expGetOwnerId.value,
+        correo: expGetcorreo.value,
         veterinario: expGetVet.value,
         quejaprincipal: expGetQueja.value,
         tos: expChkTos.checked,
