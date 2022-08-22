@@ -14,32 +14,44 @@ window.onclick = function (e) {
 let cambiarFotoPerfil = () => {
   switch (usuarioConectado.rol) {
     case 1:
-      if ((usuarioConectado.foto == "")) {
-        document.getElementById("img-perfil").src ="../imgs/users/user-admin.jpg";
+      if (usuarioConectado.foto == "") {
+        document.getElementById("img-perfil").src =
+          "../imgs/users/user-admin.jpg";
+        document.getElementById("img-user").src =
+          "../imgs/users/user-admin.jpg";
       } else {
         document.getElementById("img-perfil").src = usuarioConectado.foto;
+        document.getElementById("img-user").src = usuarioConectado.foto;
       }
 
       break;
     case 2:
-      if ((usuarioConectado.foto == "")) {
-        document.getElementById("img-perfil").src ="../imgs/users/user-secretary.jpg";
+      if (usuarioConectado.foto == "") {
+        document.getElementById("img-perfil").src =
+          "../imgs/users/user-secretary.jpg";
+        document.getElementById("img-user").src =
+          "../imgs/users/user-secretary.jpg";
       } else {
         document.getElementById("img-perfil").src = usuarioConectado.foto;
       }
 
       break;
     case 3:
-      if ((usuarioConectado.foto == "")) {
-        document.getElementById("img-perfil").src ="../imgs/users/user-vet.jpg";
+      if (usuarioConectado.foto == "") {
+        document.getElementById("img-perfil").src =
+          "../imgs/users/user-vet.jpg";
+        document.getElementById("img-user").src = "../imgs/users/user-vet.jpg";
       } else {
         document.getElementById("img-perfil").src = usuarioConectado.foto;
       }
 
       break;
     case 4:
-      if ((usuarioConectado.foto == "")) {
-        document.getElementById("img-perfil").src ="../imgs/users/user-cliente.jpg";
+      if (usuarioConectado.foto == "") {
+        document.getElementById("img-perfil").src =
+          "../imgs/users/user-cliente.jpg";
+        document.getElementById("img-user").src =
+          "../imgs/users/user-cliente.jpg";
       } else {
         document.getElementById("img-perfil").src = usuarioConectado.foto;
       }
