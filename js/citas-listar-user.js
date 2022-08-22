@@ -3,13 +3,25 @@ const seleccion = document.getElementById('cita-listar-doctores');
 let usuarioConectadoUser = JSON.parse(localStorage.getItem("usuarioConectado"));
 let citasUser = [];
 
+const inputs = document.querySelectorAll("input");
+const modal = document.getElementById("modal-citas");
+const btnRol = document.getElementsByClassName("btn-ver");
+const span = document.getElementsByClassName("close")[0];
+const btnSave = document.getElementById('btn-save');
+
+let closeModal = () => {
+    modal.style.display = "none";
+}
+
+let displayModal = () => {
+    modal.style.display = "block";
+}
+
 const llenarCitasUser = async() => {
 
     citasUser = await getDatos('obtener-citas');
 
     llenarTablaUser();
-
-
 
 };
 
@@ -44,11 +56,29 @@ const llenarTablaUser = () => {
             btnEliminar.type = 'button';
             btnEliminar.classList.add('btn-eliminar');
 
+            let btnCalificar = document.createElement('button');
+            btnCalificar.textContent = "Calificar";
+            btnCalificar.type = 'button';
+            btnCalificar.classList.add('btn-ver');
+
             //Agregar el boton de editar a la celda acciones
             tdAcciones.appendChild(btnEditar);
 
             //Agregar el boton de eliminar a la celda acciones
             tdAcciones.appendChild(btnEliminar);
+
+            //Agregar el boton de calificar a la celda acciones
+            tdAcciones.appendChild(btnCalificar);
+            //Itera la cantidad de botones de calificar presentes
+            for (const ver of btnRol) {
+                ver.addEventListener('click', displayModal);
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
 
             btnEliminar.addEventListener('click', () => {
                 Swal.fire({
@@ -71,3 +101,31 @@ const llenarTablaUser = () => {
 };
 
 llenarCitasUser();
+
+let validar = () => {
+    for (const input of inputs) {
+        if (input.checked) {
+            input.classList.remove('input-invalid');
+            input.classList.add('input-invalid');
+            Swal.fire({
+                icon: 'success',
+                title: 'Listo',
+                text: 'Has registrado la calificacion',
+                confirmButtonText: 'Entendido',
+            })
+            break;
+        } else {
+            input.classList.add('input-invalid');
+            input.classList.remove('input-invalid');
+            Swal.fire({
+                icon: 'warning',
+                title: 'Campos incompletos',
+                text: 'Por favor, seleccione al menos una opcion.',
+                confirmButtonText: 'Entendido',
+            })
+        }
+    };
+
+}
+btnSave.addEventListener('click', validar);
+span.addEventListener('click', closeModal);
