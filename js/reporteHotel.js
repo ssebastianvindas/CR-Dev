@@ -44,7 +44,7 @@ const llenarTablaHotel = () => {
 
         btnEliminar.addEventListener("click", () => {
             Swal.fire({
-                title: "Está seguro que desea eliminar el registro?",
+                title: "Está seguro que desea eliminar el reporte de ingresos del hotel?",
                 text: "La acción no se puede revertir!",
                 icon: "warning",
                 showCancelButton: true,

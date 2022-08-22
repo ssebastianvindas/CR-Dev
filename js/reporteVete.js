@@ -46,7 +46,7 @@ const llenarTablaVete = () => {
 
         btnEliminar.addEventListener("click", () => {
             Swal.fire({
-                title: "Está seguro que desea cancelar la cita?",
+                title: "Está seguro que desea cancelar el reporte de ingresos de la veterinaria?",
                 text: "La acción no se puede revertir!",
                 icon: "warning",
                 showCancelButton: true,
