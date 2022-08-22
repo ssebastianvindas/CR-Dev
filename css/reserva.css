@@ -3,6 +3,28 @@ h1 {
     font-weight: bold;
     text-align: center;
 }
-.input-error{
+
+.input-error {
     border: 1px solid red;
+}
+
+.div-animales {
+    margin-top: 15px;
+    margin-left: -380px;
+}
+
+.div-mascota {
+    margin-top: 15px;
+}
+
+.div-fecha-entrada {
+    margin-top: 15px;
+}
+
+.div-fecha-salida {
+    margin-top: 15px;
+}
+
+.fieldset-hotel center-fieldset {
+    width: 670px;
 }
