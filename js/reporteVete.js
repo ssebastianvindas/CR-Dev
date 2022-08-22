@@ -1,13 +1,13 @@
 'use strict'
 
-const cuerpoTabla = document.querySelectorId('tbl-pendientes');
+const cuerpoTablaVete = document.querySelector('#tbl-pendientes tbody');
 let reporteVete = [];
 
 const llenarReporteVete = async() => {
 
     reporteVete = await getDatos('obtener-reporteVete');
 
-    llenarReporteVete();
+    llenarTablaVete();
 
 };
 const llenarTablaVete = () => {
