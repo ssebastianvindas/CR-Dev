@@ -14,7 +14,7 @@ const llenarTablaVete = () => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
     cuerpoTablaVete.innerHTML = "";
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
-    reporteHotel.forEach((cita) => {
+    reporteVete.forEach((cita) => {
         let fila = cuerpoTablaVete.insertRow();
 
         fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
