@@ -1,7 +1,7 @@
 'use strict';
 const fechaVeterinaria = document.getElementById('frm-vet-fecha');
 const montoVeterinaria = document.getElementById('frm-vet-monto');
-const btnIngresosHotel = document.getElementById('btn-ingresos-veterinaria');
+const btnIngresosVete = document.getElementById('btn-ingresos-veterinaria');
 
 let ingresos = [];
 let montoTotal = 0;
@@ -19,13 +19,20 @@ const llenarRegistrosIngresos = async() => {
 
     montoVeterinaria.value = montoTotal;
 };
+const veteRegistrarIngreso = () => {
+    let ingresosVete = {
+        fecha: fechaVeterinaria.value,
+        monto: montoVeterinaria.value
+    };
+    registrarDatos('registrar-reporteVete', ingresosVete);
+};
 
 fechaVeterinaria.addEventListener('keyup', function(e) {
     if (e.key === 'Enter') {
         llenarRegistrosIngresos();
     }
 });
-let registrarIngresos = () => {
+let registrarIngresosVete = () => {
     let ingresosVeterinaria = {
         fecha: fechaVeterinaria.value,
         monto: montoVeterinaria.value
@@ -33,4 +40,4 @@ let registrarIngresos = () => {
     registrarDatos("registrar-ingresosVete", ingresosVeterinaria);
 };
 
-btnIngresosHotel.addEventListener('click', registrarIngresos)
+btnIngresosVete.addEventListener('click', registrarIngresosVete)
