@@ -43,7 +43,7 @@ const llenarTablaHotel = () => {
 
         btnEliminar.addEventListener("click", () => {
             Swal.fire({
-                title: "Está seguro que desea cancelar la cita?",
+                title: "Está seguro que desea eliminar el registro?",
                 text: "La acción no se puede revertir!",
                 icon: "warning",
                 showCancelButton: true,
