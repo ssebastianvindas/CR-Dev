@@ -5,7 +5,7 @@ let txtNumero = document.querySelector(".numero-container .txt-numero");
 let txtDireccion = document.querySelector(
   ".direccion-container .txt-direccion"
 );
-let fotoPerfil = document.querySelector(".img-perfil-content");
+let imgUser = document.querySelector(".img-perfil-container #img-perfil");
 let cambiarInfoPerfil = () => {
   switch (usuarioConectado.rol) {
     case 1:
@@ -14,7 +14,11 @@ let cambiarInfoPerfil = () => {
       txtCorreo.textContent = usuarioConectado.correo;
       txtNumero.textContent = usuarioConectado.numero;
       txtDireccion.textContent = usuarioConectado.direccion;
-      document.getElementById("img-perfil").src = "../imgs/users/user-admin.jpg";
+      if (usuarioConectado.foto == "") {
+        imgUser.src = "imgs/users/user-admin.jpg";
+      } else {
+        imgUser.src = usuarioConectado.foto;
+      }
       break;
     case 2:
       nicknamePerfil.textContent = usuarioConectado.usuario;
@@ -22,7 +26,11 @@ let cambiarInfoPerfil = () => {
       txtCorreo.textContent = usuarioConectado.correo;
       txtNumero.textContent = usuarioConectado.numero;
       txtDireccion.textContent = usuarioConectado.direccion;
-      document.getElementById("img-perfil").src = "../imgs/users/user-secretary.jpg";
+      if (usuarioConectado.foto == "") {
+        imgUser.src = "imgs/users/user-secretary.jpg";
+      } else {
+        imgUser.src = usuarioConectado.foto;
+      }
 
       break;
     case 3:
@@ -31,7 +39,11 @@ let cambiarInfoPerfil = () => {
       txtCorreo.textContent = usuarioConectado.correo;
       txtNumero.textContent = usuarioConectado.numero;
       txtDireccion.textContent = usuarioConectado.direccion;
-      document.getElementById("img-perfil").src = "../imgs/users/user-vet.jpg";
+      if (usuarioConectado.foto == "") {
+        imgUser.src = "imgs/users/user-vet.jpg";
+      } else {
+        imgUser.src = usuarioConectado.foto;
+      }
       break;
     case 4:
       nicknamePerfil.textContent = usuarioConectado.usuario;
@@ -39,6 +51,11 @@ let cambiarInfoPerfil = () => {
       txtCorreo.textContent = usuarioConectado.correo;
       txtNumero.textContent = usuarioConectado.numero;
       txtDireccion.textContent = usuarioConectado.direccion;
+      if (usuarioConectado.foto == "") {
+        imgUser.src = "imgs/users/user-cliente.jpg";
+      } else {
+        imgUser.src = usuarioConectado.foto;
+      }
       document.getElementById("img-perfil").src = usuarioConectado.foto;
       break;
   }
