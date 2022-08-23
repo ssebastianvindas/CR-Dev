@@ -39,6 +39,7 @@ tbody tr td {
   border-bottom: 2px solid #000;
   padding: 10px 1px !important;
   width: 300px;
+  color: #000;
 }
 
 thead {
