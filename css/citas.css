@@ -41,10 +41,10 @@ input {
 }
 
 .tab {
+    background-color: rgb(47, 50, 58);
+    overflow: hidden;
     position: relative;
     top: 0px;
-    overflow: hidden;
-    background-color: rgb(47, 50, 58);
 }
 
 
@@ -52,17 +52,17 @@ input {
 
 .tab button {
     background-color: inherit;
-    float: left;
     border: none;
-    outline: none;
+    color: #269c57;
     cursor: pointer;
+    float: left;
+    font-size: 17px;
+    font-weight: 600;
+    height: 50px;
+    outline: none;
     padding: 14px 16px;
     transition: 0.3s;
-    font-weight: 600;
-    font-size: 17px;
-    color: #269c57;
     width: 250px;
-    height: 50px;
 }
 
 
@@ -85,8 +85,8 @@ input {
 /* Style the tab content */
 
 .tabcontent {
-    display: none;
     border-top: none;
+    display: none;
 }
 
 .txt-citas input {
@@ -94,32 +94,42 @@ input {
 }
 
 .txt-citas {
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin: 10px 0;
+}
+.txt-citas select {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    font-size: 15px;
+    text-align: center;
+    width: 150px;
+    display: block;
 }
 
 
 /*Botones de los tabs*/
 
 .btn-ver {
-    margin-right: 5px;
     background-color: #575757;
-    color: #fff;
     border: 2px solid transparent;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    padding: 5px 10px;
-    font-weight: 800;
+    color: #fff;
     cursor: pointer;
-    width: fit-content;
+    font-weight: 800;
+    margin-right: 5px;
+    padding: 5px 10px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    width: fit-content;
 }
 
 .btn-ver:hover {
