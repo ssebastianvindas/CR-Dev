@@ -17,7 +17,7 @@ const llenarTablaHotel = () => {
     reporteHotel.forEach((cita) => {
         let fila = cuerpoTablaHotel.insertRow();
 
-        fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
+        fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
         fila.insertCell().textContent = cita.monto;
 
 

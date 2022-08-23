@@ -20,6 +20,7 @@ const hotelRegistrarIngreso = () => {
         fecha: fechaHotel.value,
         monto: montoHotel.value
     };
+    console.log(fechaHotel.value);
     registrarDatos('registrar-reporteHotel', ingresosHotel);
 };
 fechaHotel.addEventListener('keyup', function(e) {
