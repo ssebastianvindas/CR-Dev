@@ -27,16 +27,17 @@ const llenarTablaUsers = () => {
             // Creación de la celda para los botones
             let tdAcciones = fila.insertCell();
 
-            //Creación del boton editar
-            let btnEditar = document.createElement('button');
-            btnEditar.textContent = 'Editar';
-            btnEditar.type = 'button';
-            btnEditar.classList.add('btn-editar');
-            //Creacion del boton eliminar
-            let btnEliminar = document.createElement('button');
-            btnEliminar.textContent = 'Eliminar';
-            btnEliminar.type = 'button';
-            btnEliminar.classList.add('btn-eliminar');
+        //Creación del boton editar
+        let btnEditar = document.createElement("button");
+        btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+        btnEditar.type = "button";
+        btnEditar.classList.add("btn-editar");
+
+        //Creación del botón de eliminar
+        let btnEliminar = document.createElement("button");
+        btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        btnEliminar.type = "button";
+        btnEliminar.classList.add("btn-eliminar");
 
             //Agregar el boton de editar a la celda acciones
             tdAcciones.appendChild(btnEditar);
