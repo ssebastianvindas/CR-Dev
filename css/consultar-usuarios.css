@@ -7,3 +7,6 @@ H1 {
 .container-usuarios {
     margin-top: 9%;
 }
+.tbl-container{
+    overflow: scroll;
+}

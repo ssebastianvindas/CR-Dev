@@ -23,9 +23,7 @@ const mostrarTabla = async () => {
       MetodoPago.numerotarjeta
         .toLowerCase()
         .includes(inputfiltro.value.toLowerCase()) ||
-      MetodoPago.tipo
-        .toLowerCase()
-        .includes(inputfiltro.value.toLowerCase()) ||
+      MetodoPago.tipo.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
       MetodoPago.fechaExpiracion
         .toLowerCase()
         .includes(inputfiltro.value.toLowerCase())
@@ -38,11 +36,11 @@ const mostrarTabla = async () => {
       fila.insertCell().innerText = MetodoPago.fechaExpiracion;
 
       let tdAcciones = fila.insertCell();
-      //Creación del botón de editar
-      let btnEditar = document.createElement("button");
-      btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
-      btnEditar.type = "button";
-      btnEditar.classList.add("btn-editar");
+      // //Creación del botón de editar
+      // let btnEditar = document.createElement("button");
+      // btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+      // btnEditar.type = "button";
+      // btnEditar.classList.add("btn-editar");
 
       //Creación del botón de eliminar
       let btnEliminar = document.createElement("button");
@@ -51,7 +49,7 @@ const mostrarTabla = async () => {
       btnEliminar.classList.add("btn-eliminar");
 
       //Agregar el botón de editar y eliminar a la celda de acciones
-      tdAcciones.appendChild(btnEditar);
+      // tdAcciones.appendChild(btnEditar);
       tdAcciones.appendChild(btnEliminar);
       btnEliminar.addEventListener("click", () => {
         Swal.fire({
@@ -77,4 +75,5 @@ const mostrarTabla = async () => {
   });
 };
 inicializarListas();
+
 inputfiltro.addEventListener("keyup", inicializarListas);

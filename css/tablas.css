@@ -152,5 +152,13 @@ tbody tr:nth-child(even) {
 }
 .input-filter{
   font-size: 20px;
-  width: 200px;
+  text-align: start;
+}
+.txt-filtro{
+    border: 1px solid red;
+    text-align: start;
+}
+.filter-container{
+  text-align: start;
+  padding-left: 30px !important;
 }
