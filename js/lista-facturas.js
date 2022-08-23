@@ -1,11 +1,23 @@
 const cuerpoTabla = document.querySelector("#tbl-factura tbody");
 const botonDashboard = document.getElementById("btn-dash");
+const inputfiltro = document.getElementById("txt-filter");
 const llenarTabla = () => {
   cuerpoTabla.innerHTML = "";
 
   facturas.forEach((facturaTemp) => {
-    let fila = cuerpoTabla.insertRow();
 
+    if (
+      usuario.juridica.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+      usuario.direccion.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+      usuario.usuario.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+      usuario.numero.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+      usuario.correo.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+      obtenerNombreRol(usuario.rol).toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+      obtenerNombreEstado(usuario.estado).toLowerCase().includes(inputfiltro.value.toLowerCase()) 
+    ) {
+
+
+    let fila = cuerpoTabla.insertRow();
     fila.insertCell().textContent = facturaTemp.juridica;
     fila.insertCell().textContent = facturaTemp.consecutivo;
     fila.insertCell().textContent = facturaTemp.fecha;
@@ -50,6 +62,8 @@ const llenarTabla = () => {
         }
       });
     });
+  }
   });
 };
 llenarTabla();
+inputfiltro.addEventListener("keyup", llenarTabla);

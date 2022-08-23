@@ -1,6 +1,7 @@
 const cuerpoTablaFactura = document.querySelector('#tbl-factura tbody');
 const botonDashboard = document.getElementById("btn-dash");
 const nickname = document.querySelector('.nickname');
+const inputfiltro = document.getElementById("txt-filter");
 let facturasDatos = [];
 const llenarRegistros = async() => {
     facturasDatos = await getDatos("obtener-facturas");
@@ -9,10 +10,15 @@ const llenarRegistros = async() => {
 
 const llenarTabla = () => {
     cuerpoTablaFactura.innerHTML = '';
-
     facturasDatos.forEach(facturaTemp => {
+        if (
+            facturaTemp.juridica.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+            facturaTemp.cliente.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+            facturaTemp.email.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+            facturaTemp.telefono.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+            facturaTemp.paciente.toLowerCase().includes(inputfiltro.value.toLowerCase()) 
+          ) {
         let fila = cuerpoTablaFactura.insertRow();
-
         fila.insertCell().textContent = facturaTemp.juridica;
         fila.insertCell().textContent = facturaTemp.consecutivo;
         fila.insertCell().textContent = moment(facturaTemp.fecha).format('DD-MM-YYYY');
@@ -77,7 +83,9 @@ const llenarTabla = () => {
                 }
             })
         });
+    }
 
     });
 };
 llenarRegistros();
+inputfiltro.addEventListener("keyup", llenarRegistros);
