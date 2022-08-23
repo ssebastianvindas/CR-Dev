@@ -1,73 +1,73 @@
 "use strict";
 // register
-const txtNombre = document.getElementById("new-user-fullname");
-const txtDireccion = document.getElementById("new-user-direction");
-const txtUsuarioRegister = document.getElementById("new-user-name");
-const txtNumero = document.getElementById("new-user-number");
-const txtCorreoRegister = document.getElementById("new-user-email");
-const txtContrasennaRegister = document.getElementById("new-user-password");
-const rolesUsers = document.getElementById("roles");
-const btnRegistrar = document.querySelector(
+const txtNombreU = document.getElementById("new-user-fullname");
+const txtDireccionU = document.getElementById("new-user-direction");
+const txtUsuarioRegisterU = document.getElementById("new-user-name");
+const txtNumeroU = document.getElementById("new-user-number");
+const txtCorreoRegisterU = document.getElementById("new-user-email");
+const txtContrasennaRegisterU = document.getElementById("new-user-password");
+const rolesUsersU = document.getElementById("roles");
+const btnRegistrarU = document.querySelector(
   "#btn-userAdd"
 );
 
-let validarFormRegister = () => {
+let validarFormRegisterU = () => {
   let error = false;
-  if (txtNombre.value == "") {
+  if (txtNombreU.value == "") {
     error = true;
-    txtNombre.classList.add("input-invalid");
-    txtNombre.classList.remove("input-valid");
+    txtNombreU.classList.add("input-invalid");
+    txtNombreU.classList.remove("input-valid");
   } else {
-    txtNombre.classList.add("input-valid");
-    txtNombre.classList.remove("input-invalid");
+    txtNombreU.classList.add("input-valid");
+    txtNombreU.classList.remove("input-invalid");
   }
-  if (txtDireccion.value == "") {
+  if (txtDireccionU.value == "") {
     error = true;
-    txtDireccion.classList.add("input-invalid");
+    txtDireccionU.classList.add("input-invalid");
     txtDireccion.classList.remove("input-valid");
   } else {
-    txtDireccion.classList.add("input-valid");
-    txtDireccion.classList.remove("input-invalid");
+    txtDireccionU.classList.add("input-valid");
+    txtDireccionU.classList.remove("input-invalid");
   }
-  if (txtUsuarioRegister.value == "") {
+  if (txtUsuarioRegisterU.value == "") {
     error = true;
-    txtUsuarioRegister.classList.add("input-invalid");
-    txtUsuarioRegister.classList.remove("input-valid");
+    txtUsuarioRegisterU.classList.add("input-invalid");
+    txtUsuarioRegisterU.classList.remove("input-valid");
   } else {
-    txtUsuarioRegister.classList.add("input-valid");
-    txtUsuarioRegister.classList.remove("input-invalid");
+    txtUsuarioRegisterU.classList.add("input-valid");
+    txtUsuarioRegisterU.classList.remove("input-invalid");
   }
-  if (txtNumero.value == "") {
+  if (txtNumeroU.value == "") {
     error = true;
-    txtNumero.classList.add("input-invalid");
-    txtNumero.classList.remove("input-valid");
+    txtNumeroU.classList.add("input-invalid");
+    txtNumeroU.classList.remove("input-valid");
   } else {
-    txtNumero.classList.add("input-valid");
-    txtNumero.classList.remove("input-invalid");
+    txtNumeroU.classList.add("input-valid");
+    txtNumeroU.classList.remove("input-invalid");
   }
-  if (txtCorreoRegister.value == "") {
+  if (txtCorreoRegisterU.value == "") {
     error = true;
-    txtCorreoRegister.classList.add("input-invalid");
-    txtCorreoRegister.classList.remove("input-valid");
+    txtCorreoRegisterU.classList.add("input-invalid");
+    txtCorreoRegisterU.classList.remove("input-valid");
   } else {
-    txtCorreoRegister.classList.add("input-valid");
-    txtCorreoRegister.classList.remove("input-invalid");
+    txtCorreoRegisterU.classList.add("input-valid");
+    txtCorreoRegisterU.classList.remove("input-invalid");
   }
-  if (txtContrasennaRegister.value == "") {
+  if (txtContrasennaRegisterU.value == "") {
     error = true;
-    txtContrasennaRegister.classList.add("input-invalid");
-    txtContrasennaRegister.classList.remove("input-valid");
+    txtContrasennaRegisterU.classList.add("input-invalid");
+    txtContrasennaRegisterU.classList.remove("input-valid");
   } else {
-    txtContrasennaRegister.classList.add("input-valid");
-    txtContrasennaRegister.classList.remove("input-invalid");
+    txtContrasennaRegisterU.classList.add("input-valid");
+    txtContrasennaRegisterU.classList.remove("input-invalid");
   }
-  if (rolesUsers.value == "") {
+  if (rolesUsersU.value == "") {
     error = true;
-    rolesUsers.classList.add("input-invalid");
-    rolesUsers.classList.remove("input-valid");
+    rolesUsersU.classList.add("input-invalid");
+    rolesUsersU.classList.remove("input-valid");
   } else {
-    rolesUsers.classList.add("input-valid");
-    rolesUsers.classList.remove("input-invalid");
+    rolesUsersU.classList.add("input-valid");
+    rolesUsersU.classList.remove("input-invalid");
   }
   if (error == true) {
     Swal.fire({
@@ -76,11 +76,11 @@ let validarFormRegister = () => {
       text: "Complete los campos resaltados en color rojo",
     });
   } else {
-    obtenerDatosRegister();
+    obtenerDatosRegisterU();
   }
 };
 
-const obtenerDatosRegister = ()=>{
+const obtenerDatosRegisterU = ()=>{
   let usuario = {
     nombre: txtNombre.value,
     direccion: txtDireccion.value,
@@ -93,7 +93,7 @@ const obtenerDatosRegister = ()=>{
 };
 registrarDatos("registrar-usuario",usuario, 'consultar-usuarios.html' );
 }
-btnRegistrar.addEventListener("click", validarFormRegister);
+btnRegistrarU.addEventListener("click", validarFormRegisterU);
 
 //   Swal.fire({
 //     icon: "success",

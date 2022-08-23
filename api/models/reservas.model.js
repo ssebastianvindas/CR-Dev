@@ -3,7 +3,7 @@
 const mongoose = require("mongoose");
 
 const schemaReserva = new mongoose.Schema({
-    usuario: { type: String, required: true, unique: true },
+    usuario: { type: String, required: true },
     mascota: { type: String, required: true },
     fechaEntrada: { type: Date, required: true },
     fechaSalida: { type: Date, required: true },

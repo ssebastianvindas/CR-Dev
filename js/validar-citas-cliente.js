@@ -42,14 +42,7 @@ let validarForm = () => {
     namePetCita.classList.remove("input-invalid");
     namePetCita.classList.add("input-valid");
   }
-  if (nameUserCita.value == "") {
-    error = true;
-    nameUserCita.classList.add("input-invalid");
-    nameUserCita.classList.remove("input-valid");
-  } else {
-    nameUserCita.classList.remove("input-invalid");
-    nameUserCita.classList.add("input-valid");
-  }
+
   if (procedimientosCita.value == "") {
     error = true;
     procedimientosCita.classList.add("input-invalid");
@@ -83,4 +76,8 @@ const obtenerDatos = () => {
   registrarDatos("registrar-cita", citasUser);
 };
 
+const llenarNombre=()=>{
+  nameUserCita.value = usuarioConectado.nombre
+}
+window.onload = llenarNombre
 btnAgregar1.addEventListener("click", validarForm);
