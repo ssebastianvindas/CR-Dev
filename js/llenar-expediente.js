@@ -209,6 +209,7 @@ const llenarLaboratorios = () => {
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     laboratorios.forEach(lab => {
         if (expId.value === lab.mascotaId) {
+
             let fila = cuerpoTablaLaboratorios.insertRow();
 
             fila.insertCell().textContent = moment(lab.fecha).format('DD-MM-YYYY');
@@ -357,4 +358,8 @@ let llenarExpediente = () => {
 };
 
 
-expId.addEventListener('keyup', llenarRegExpediente);
+expId.addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') {
+        llenarRegExpediente();
+    }
+});
