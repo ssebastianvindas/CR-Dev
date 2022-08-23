@@ -1,4 +1,3 @@
-const campos1 = document.querySelectorAll(".frm-citas-new input");
 const btnAgregar1 = document.querySelector("#btn-citasNew");
 const selector = document.querySelector("#citas-doctores");
 const dateCita = document.querySelector("#newCita-date");
@@ -42,7 +41,6 @@ let validarForm = () => {
     namePetCita.classList.remove("input-invalid");
     namePetCita.classList.add("input-valid");
   }
-
   if (procedimientosCita.value == "") {
     error = true;
     procedimientosCita.classList.add("input-invalid");
@@ -80,4 +78,5 @@ const llenarNombre=()=>{
   nameUserCita.value = usuarioConectado.nombre
 }
 window.onload = llenarNombre
+
 btnAgregar1.addEventListener("click", validarForm);
