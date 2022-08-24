@@ -6,6 +6,8 @@ const expId = document.getElementById('exp-id');
 const nameOwner = document.getElementById('name-owner');
 const expIdOwner = document.getElementById('exp-idowner');
 const expVet = document.getElementById('exp-vet');
+const expCorreo = document.getElementById('exp-email');
+const expTelefono = document.getElementById('exp-phone');
 const expQueja = document.getElementById('exp-queja');
 const chkTos = document.getElementById('chk-tos');
 const chkResfrio = document.getElementById('chk-resfrio');
@@ -333,6 +335,8 @@ let llenarExpediente = () => {
             expId.value = exp.mascotaId;
             nameOwner.value = exp.owner;
             expIdOwner.value = exp.ownerId;
+            expCorreo.value = exp.correo;
+            expTelefono.value = exp.telefono;
             expVet.value = exp.veterinario;
             expQueja.value = exp.quejaprincipal;
             chkTos.checked = exp.tos;

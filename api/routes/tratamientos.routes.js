@@ -7,7 +7,7 @@ const Tratamientos = require("../models/tratamientos.model");
 // ruta para registrar un usuario
 router.post("/registrar-tratamientos", (req, res) => {
     let nuevoTratamiento = new Tratamientos({
-        mascotaId: req.body.mascotaid,
+        mascotaId: req.body.mascotaId,
         fecha: req.body.fecha,
         tratamiento: req.body.tratamiento,
 

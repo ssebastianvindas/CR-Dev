@@ -13,7 +13,12 @@ const registrarDatos = async(endpoint, data) => {
                 title: "Felicidades",
                 text: response.data.msj,
             }).then(() => {
-                window.location.reload();
+                let expediente = localStorage.getItem('expediente');
+                if (expediente = true) {
+
+                } else {
+                    window.location.reload();
+                }
             });
         })
         .catch((error) => {

@@ -27,6 +27,7 @@ const expGetMascotaId = document.getElementById('exp-id');
 const expGetOwner = document.getElementById('name-owner');
 const expGetOwnerId = document.getElementById('exp-idowner');
 const expGetcorreo = document.getElementById('exp-email');
+const expGetTelefono = document.getElementById('exp-phone');
 const expGetVet = document.getElementById('exp-vet');
 const expGetQueja = document.getElementById('expQPrincipal');
 const expChkTos = document.getElementById('chk-tos');
@@ -58,6 +59,17 @@ const expEdad = document.getElementById('exp-edad');
 
 let contador = 0;
 
+function padTo2Digits(num) {
+    return num.toString().padStart(2, '0');
+}
+
+function formatDate(date = new Date()) {
+    return [
+        date.getFullYear(),
+        padTo2Digits(date.getMonth() + 1),
+        padTo2Digits(date.getDate()),
+    ].join('-');
+}
 
 
 let AlmacenarDatos = () => {
@@ -68,6 +80,7 @@ let AlmacenarDatos = () => {
         owner: expGetOwner.value,
         ownerId: expGetOwnerId.value,
         correo: expGetcorreo.value,
+        telefono: expGetTelefono.value,
         veterinario: expGetVet.value,
         quejaprincipal: expGetQueja.value,
         tos: expChkTos.checked,
@@ -100,7 +113,8 @@ let AlmacenarDatos = () => {
 
 
     };
-
+    let expedienteVar = true;
+    localStorage.setItem('expediente', expedienteVar);
     registrarDatos('registrar-expediente', Datos);
 
 };
@@ -113,7 +127,8 @@ let almacenarTx = () => {
         fecha: InputTextDate.value,
         tratamiento: InputTextEvol.value
     };
-
+    let expedienteVar = true;
+    localStorage.setItem('expediente', expedienteVar);
     registrarDatos('registrar-tratamientos', tratamientoDatos);
 
 };
@@ -129,7 +144,8 @@ let almacenarLab = () => {
         doctor: formLabSelect.value
 
     };
-
+    let expedienteVar = true;
+    localStorage.setItem('expediente', expedienteVar);
     registrarDatos('registrar-laboratorios', LabDatos);
 
 };
@@ -144,7 +160,8 @@ let almacenarMed = () => {
 
 
     };
-
+    let expedienteVar = true;
+    localStorage.setItem('expediente', expedienteVar);
     registrarDatos('registrar-medicamentos', MedDatos);
 
 };
@@ -405,8 +422,8 @@ let validarVac = () => {
                 fecha: vacFecha.value,
                 vacuna: vacNombre.value
             };
-
-
+            let expedienteVar = true;
+            localStorage.setItem('expediente', expedienteVar);
             registrarDatos('registrar-vacunas', vacunasDatos)
 
         });
@@ -458,10 +475,37 @@ let validarTx = () => {
 
 };
 
+let llenarFechas = () => {
+    expGetFecha.value = formatDate();
+    vacFecha.value = formatDate();
+    InputTextDate.value = formatDate();
+    formLabDate.value = formatDate();
+    MedDate.value = formatDate();
+
+};
+let llenarMascota = () => {
+    formLabPet.value = expGetMascota.value;
+    MedPet.value = expGetMascota.value;
+
+
+};
+let llenarOwner = () => {
+    formLabOwner.value = expGetOwner.value;
+};
+
+let llenarVet = () => {
+    formLabSelect.value = expGetVet.value;
+    MedSelect.value = expGetVet.value;
+
+};
+
+llenarFechas();
 btnMed.addEventListener("click", validarMed)
 btnLab.addEventListener("click", validarLab)
 btnVac.addEventListener("click", validarVac)
 botonTx.addEventListener('click', validarTx)
-
+expGetMascota.addEventListener('keyup', llenarMascota)
+expGetOwner.addEventListener('keyup', llenarOwner)
+expGetVet.addEventListener('keyup', llenarVet)
 btnRegister.addEventListener('mouseover', confirmar)
 btnRegister.addEventListener('click', validarForm)
