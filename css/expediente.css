@@ -65,7 +65,9 @@
     margin-bottom: 10px;
 }
 
+
 /* examenes lab tab */
+
 #exp-lab {
     background-color: darkslategrey;
     font-size: 18px;
@@ -80,9 +82,8 @@
 
 #exp-principal {
     color: black;
-    background-color: #4f9c558a;
+    background-color: #66CDAA;
     height: calc(100vh - 188px);
-
 }
 
 #exp-medicamentos {
@@ -174,7 +175,7 @@ fieldset {
     padding: 10px;
 }
 
-.txt-lab{
+.txt-lab {
     margin: 10px 0;
     text-align: start;
     padding: 0 10%;
@@ -356,18 +357,13 @@ fieldset {
     padding-right: 1.5%;
 }
 
-
-
 #txt-pet input {
     width: 549px;
 }
 
-
 #txt-mascota input {
     width: 549px;
 }
-
-
 
 #txt-owner input {
     width: 549px;
@@ -377,19 +373,19 @@ fieldset {
     width: 549px;
 }
 
-
-
 #txt-resultados input {
     width: 549px;
 }
 
-input{
-    margin-bottom: 5px ;
+input {
+    margin-bottom: 5px;
 }
-legend{
+
+legend {
     font-size: 22px;
     padding: 10px 0;
 }
-input{
+
+input {
     font-size: 20px;
 }
