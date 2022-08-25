@@ -3,24 +3,19 @@ const cuerpoTablaCalificaciones = document.querySelector("#tbl-calificaciones tb
 let califica = [];
 
 const llenarCalificaciones = async() => {
-    califica = await getDatos("obtener-reservas");
+    califica = await getDatos("obtener-calificacionvets");
 
     llenarTabla();
 };
 const llenarTabla = () => {
     cuerpoTablaReportes.innerHTML = ""; //limpia el contenido del html
 
-    reservas.forEach((reservaTemporal) => {
+    califica.forEach((calif) => {
         let fila = cuerpoTablaReportes.insertRow(); //Crea una fila
 
-        fila.insertCell().textContent = moment(reservaTemporal.fechaEntrada)
-            .add(1, "d")
-            .format("DD-MM-YYYY");
-        fila.insertCell().textContent = moment(reservaTemporal.fechaSalida)
-            .add(1, "d")
-            .format("DD-MM-YYYY");
-        fila.insertCell().textContent = reservaTemporal.numMascotas;
-        fila.insertCell().textContent = reservaTemporal.monto;
+        fila.insertCell().textContent = calif.nombreusuario;
+        fila.insertCell().textContent = calif.nombreveterinario;
+        fila.insertCell().textContent = calif.calificacion;
 
         // Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
