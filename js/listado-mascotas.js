@@ -1,8 +1,9 @@
 "use strict";
 //tbl-users
-const tableBody = document.querySelector("#tbl-users tbody");
+const tableBody = document.querySelector("#tbl-mascota tbody");
 let listaMascotas = [];
 let user = JSON.parse(localStorage.getItem("usuarioConectado"));
+const inputfiltro = document.getElementById("txt-filter");
 
 const inicializarListaMascotaByUser = async () => {
   listaMascotas = await getDatosByUser("obtener-mascota-usuario", user.usuario);
@@ -21,17 +22,24 @@ const showTable = async () => {
   tableBody.innerHTML = "";
 
   listaMascotas.forEach((mascota) => {
+    if (
+      mascota.petName.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+      mascota.petEspecie.toLowerCase().includes(inputfiltro.value.toLowerCase()) ||
+      mascota.petSexo.toLowerCase().includes(inputfiltro.value.toLowerCase()) 
+    ) {
     let fila = tableBody.insertRow();
     let idReducido = String(mascota._id);
     fila.insertCell().innerText = idReducido.slice(-5);
     fila.insertCell().innerText = mascota.petName;
+    fila.insertCell().innerText = mascota.petEspecie;
+    fila.insertCell().innerText = mascota.petSexo;
 
     let tdAcciones = fila.insertCell();
     //Creación del botón de editar
-    let btnEditar = document.createElement("button");
-    btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
-    btnEditar.type = "button";
-    btnEditar.classList.add("btn-editar");
+    let btnVerPerfil = document.createElement("button");
+    btnVerPerfil.innerHTML = 'Ver perfil';
+    btnVerPerfil.type = "button";
+    btnVerPerfil.classList.add("btn-ver-perfil");
 
     //Creación del botón de eliminar
     let btnEliminar = document.createElement("button");
@@ -40,7 +48,7 @@ const showTable = async () => {
     btnEliminar.classList.add("btn-eliminar");
 
     //Agregar el botón de editar y eliminar a la celda de acciones
-    tdAcciones.appendChild(btnEditar);
+    tdAcciones.appendChild(btnVerPerfil);
     tdAcciones.appendChild(btnEliminar);
     btnEliminar.addEventListener("click", () => {
       Swal.fire({
@@ -57,10 +65,10 @@ const showTable = async () => {
         }
       });
     });
+  }
   });
 };
 
-inicializarListaMascotaByUser();
 
 const btnsBorrar = document.querySelectorAll(".btn-eliminar");
 btnsBorrar.forEach((btnBorrar) => {
@@ -84,3 +92,6 @@ btnsBorrar.forEach((btnBorrar) => {
     });
   });
 });
+
+inicializarListaMascotaByUser();
+inputfiltro.addEventListener("keyup", inicializarListaMascotaByUser);

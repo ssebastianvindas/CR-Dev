@@ -70,25 +70,26 @@
         </div>
         <div class="tbl-container">
           <h2 class="title-tbl">Mis mascotas</h2>
-          <table id="tbl-users" class="tbl-general">
+          <table id="tbl-mascota" class="tbl-general tbl-mascota">
             <thead>
               <tr>
-                <th class="id-mascota ">Filtrar:</th>
-                <th><input type="text"></th>
+                <th colspan="4" class="filter-container"><span><i class="fa-solid fa-filter"></i> Filtrar: </span><input type="text" id="txt-filter" class="input-filter" placeholder=""></th>
                 <th><button type="button" class="btn-ver btn-agregar" id="btn-rol">Agregar</button></th>
               </tr>
               <tr>
                 <th class="id-mascota">ID</th>
-                <th>Nombre de la mascota</th>
+                <th>Mascota</th>
+                <th>Especie</th>
+                <th>Sexo</th>
                 <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
 
-        </tbody>
+            </tbody>
         </table>
         </div>
-        <div class="modal-rol" id="modal-register-mascota">
+        <div class="modal-nueva-mascota" id="modal-register-mascota">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="modal-username">
@@ -105,9 +106,35 @@
                                 </div>
                             </div>
                             <div class="pet-info">
-                                <div class="content-nombre-mascota">
+                                <div class="content-nombre-mascota display-flex">
+                                  <div>
                                     <label for="txt-nombre-mascota" class="nombre-mascota">Nombre de la mascota</label>
                                     <input type="text" id="txt-nombre-mascota">
+                                  </div>
+                                  <div>
+                                    <label for="txt-nombre-mascota" class="nombre-mascota">sexo</label>
+                                    <select name="sexo" id="sexo-mascota" class="sexo-mascota">
+                                      <option value="" selected>-- sexo --</option>
+                                      <option value="Macho">Macho</option>
+                                      <option value="Hembra">Hembra</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="content-nombre-mascota display-flex">
+                                    <div>
+                                      <label for="txt-especie-mascota" class="especie-mascota">Especie</label>
+                                      <input type="text" id="txt-especie">
+                                    </div>
+                                    <div>
+                                      <label for="txt-tamanno-mascota" class="tamanno-mascota">Tamaño</label>
+                                      <input type="text" id="txt-tamanno">
+                                    </div>
+                                </div>
+                                <div class="content-nombre-mascota display-flex">
+                                    <div>
+                                      <label for="txt-nombre-mascota" class="color-mascota">Color</label>
+                                      <input type="text" id="txt-color">
+                                    </div>
                                 </div>
                                 <div class="content-nombre-mascota">
                                     <label for="txt-nombre-mascota" class="nombre-mascota">Cuidados</label>

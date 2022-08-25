@@ -163,3 +163,33 @@ tbody tr:nth-child(even) {
   text-align: start;
   padding-left: 30px !important;
 }
+
+.tbl-mascota{
+  margin-left: -20px;
+  width: 108% !important;
+}
+.btn-ver-perfil{
+  background-color: #575757;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+  margin: 5px;
+  padding: 5px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  width: 85px;
+}
+.btn-ver-perfil:hover {
+  background-color: #f5a31a;
+  border: 2px solid rgb(0, 0, 0);
+  color: #000;
+}

@@ -2,10 +2,13 @@ const btnSave = document.getElementById("btn-save");
 const modal = document.getElementById("modal-register-mascota");
 const btnAgregar = document.getElementById("btn-rol");
 const span = document.getElementsByClassName("close")[0];
-
 let imgMascota = document.querySelector(".input-img");
 let inputImg = document.querySelector("#img");
 const cuidados = document.getElementById("cuidados-pet");
+const sexoMascota = document.getElementById("sexo-mascota");
+const txtEspecie = document.getElementById("txt-especie");
+const txtTamanno = document.getElementById("txt-tamanno");
+const txtColor = document.getElementById("txt-color");
 
 const txtNombreMascota = document.querySelector(
   ".content-nombre-mascota #txt-nombre-mascota"
@@ -55,6 +58,34 @@ let validar = () => {
     txtNombreMascota.classList.remove("input-invalido");
     txtNombreMascota.classList.add("input-valido");
   }
+  if (sexoMascota.value == "") {
+    sexoMascota.classList.add("input-invalido");
+    error = true;
+  } else {
+    sexoMascota.classList.remove("input-invalido");
+    sexoMascota.classList.add("input-valido");
+  }
+  if (txtEspecie.value == "") {
+    txtEspecie.classList.add("input-invalido");
+    error = true;
+  } else {
+    txtEspecie.classList.remove("input-invalido");
+    txtEspecie.classList.add("input-valido");
+  }
+  if (txtTamanno.value == "") {
+    txtTamanno.classList.add("input-invalido");
+    error = true;
+  } else {
+    txtTamanno.classList.remove("input-invalido");
+    txtTamanno.classList.add("input-valido");
+  }
+  if (txtColor.value == "") {
+    txtColor.classList.add("input-invalido");
+    error = true;
+  } else {
+    txtColor.classList.remove("input-invalido");
+    txtColor.classList.add("input-valido");
+  }
   if (seleccionArchivos.value == "") {
     imagenPrevisualizacion.classList.add("input-invalido");
     error = true;
@@ -81,6 +112,9 @@ const obtenerDatosMascota = () => {
   let mascota = {
     petUser: user.usuario,
     petName: txtNombreMascota.value,
+    petSexo: sexoMascota.value,
+    petEspecie: txtEspecie.value,
+    petColor: txtColor.value,
     petPhoto: seleccionArchivos.value,
     petCare: cuidados.value,
   };

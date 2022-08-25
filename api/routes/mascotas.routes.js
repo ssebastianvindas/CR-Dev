@@ -9,6 +9,9 @@ router.post("/registrar-mascota", (req, res) => {
     let nuevaMascota = new Mascota({
         petUser: req.body.petUser,
         petName: req.body.petName,
+        petSexo: req.body.petSexo,
+        petEspecie: req.body.petEspecie,
+        petColor: req.body.petColor,
         petPhoto: req.body.petPhoto,
         petCare: req.body.petCare,
     });

@@ -1,4 +1,4 @@
-.modal-rol {
+.modal-nueva-mascota {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -6,7 +6,7 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: none; /* Enable scroll if needed */
+  overflow: none   ; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
@@ -22,14 +22,22 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 250px auto;
-  padding: 25px;
-  width: 35%;
+  margin: 150px auto;
+  padding: 15px;
+  width: 45%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  overflow: scroll;
+}
+.modal-nueva-mascota textarea{
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 /* The Close Button */
@@ -59,7 +67,7 @@
 }
 #btn-save {
   background-color: #2f323a;
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px;
   border-radius: 7px;
   color: #18b158;
@@ -80,7 +88,7 @@
   background-color: #18b158;
 
   color: #ffffff;
-  font-size: 22px;
+  font-size: 20px;
 }
 .form-mascota {
   padding: 20px 0;
@@ -126,7 +134,7 @@ div#div_file {
   background-color: #303c44;
   -webkit-border-radius: 5px;
   -webkit-box-shadow: 0px 7px 0px #586268;
-  font-size: 20px;
+  font-size: 18px;
   height: 40px;
   transition: all .5s ease;
   -webkit-transition: all .5s ease;
@@ -141,7 +149,7 @@ div#div_file:hover {
   background-color: #18b158;
   -webkit-border-radius: 5px;
   -webkit-box-shadow: 0px 3px 0px #586268;
-  font-size: 22px;
+  font-size: 20px;
   color: #ffffff;
 }
 div#div_file:hover p{
@@ -159,7 +167,7 @@ input.btn-seleccionar-foto {
   opacity: 0;
 }
 .content-nombre-mascota label{
-  font-size: 25px;
+  font-size: 18px;
   padding: 10px 0;
 }
 .content-nombre-mascota input{
@@ -167,7 +175,12 @@ input.btn-seleccionar-foto {
   color: #303c44;
   outline: none;
   padding: 5px;
-  font-size: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .input-invalido{
@@ -179,4 +192,25 @@ input.btn-seleccionar-foto {
 
 html {
   overflow: none;
+}
+
+
+.display-flex{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.display-flex input, .display-flex label{
+  display: block;
+
+}
+.sexo-mascota{
+  font-size: 18px;
+  padding: 6px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-align: center;
 }
