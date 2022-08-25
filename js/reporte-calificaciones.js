@@ -3,15 +3,15 @@ const cuerpoTablaCalificaciones = document.querySelector("#tbl-calificaciones tb
 let califica = [];
 
 const llenarCalificaciones = async() => {
-    califica = await getDatos("obtener-calificacionvets");
+    califica = await getDatos("obtener-calificacionVet");
 
-    llenarTabla();
+    llenarTablaCalificar();
 };
-const llenarTabla = () => {
-    cuerpoTablaReportes.innerHTML = ""; //limpia el contenido del html
+const llenarTablaCalificar = () => {
+    cuerpoTablaCalificaciones.innerHTML = ""; //limpia el contenido del html
 
     califica.forEach((calif) => {
-        let fila = cuerpoTablaReportes.insertRow(); //Crea una fila
+        let fila = cuerpoTablaCalificaciones.insertRow(); //Crea una fila
 
         fila.insertCell().textContent = calif.nombreusuario;
         fila.insertCell().textContent = calif.nombreveterinario;
