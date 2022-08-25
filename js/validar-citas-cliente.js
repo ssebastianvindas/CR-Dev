@@ -17,7 +17,6 @@ let llenarMascotas = async() => {
         option.value = valor;
         option.text = valor;
         select.appendChild(option);
-
     });
 };
 

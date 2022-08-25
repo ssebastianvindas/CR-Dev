@@ -24,11 +24,8 @@ let displayModal = () => {
 }
 
 const llenarCitasUser = async() => {
-
     citasUser = await getDatos('obtener-citas');
-
     llenarTablaUser();
-
 };
 
 const llenarTablaUser = () => {
@@ -108,6 +105,15 @@ const llenarTablaUser = () => {
 llenarCitasUser();
 
 let validar = () => {
+
+    var elemento = document.getElementsByName('estrellas');
+    for (var i = 0, length = elemento.length; i < length; i++) {
+        if (elemento[i].checked) {
+            calificacionTotal = elemento[i].value
+            console.log(elemento[i].value);
+        }
+    }
+
     for (const input of inputs) {
         if (input.checked) {
             input.classList.remove('input-invalid');
@@ -118,6 +124,7 @@ let validar = () => {
                 text: 'Has registrado la calificacion',
                 confirmButtonText: 'Entendido',
             })
+            enviarCalificacion();
             break;
         } else {
             input.classList.add('input-invalid');
@@ -132,29 +139,18 @@ let validar = () => {
     };
 
 }
+
 btnSave.addEventListener('click', validar);
 span.addEventListener('click', closeModal);
 
-
-let getCalificacion = () => {
-    if (califInput1.checked) {
-        calificacionTotal = 3;
-    } else if (califInput2.checked) {
-        calificacionTotal = 2;
-    } else if (califInput3.checked) {
-        calificacionTotal = 1;
-    }
-    console.log(calificacionTotal);
-}
-
 let enviarCalificacion = () => {
-    let user = JSON.parse(localStorage.getItem("usuarioConectado"));
 
     let calificacion = {
-        nombreusuario: user.usuarioConectado,
+        nombreusuario: usuarioConectadoUser.usuario,
         nombreveterinario: "nose",
         calificacion: calificacionTotal,
     };
+    console.log(calificacion);
 
     Swal.fire({
         icon: "success",
@@ -164,9 +160,5 @@ let enviarCalificacion = () => {
 
     }).then(() => {
         registrarDatos("registrar-calificacionVet", calificacion);
-        window.location.href = "list-citas.html";
     });
 };
-getCalificacion();
-console.log(getCalificacion());
-console.log("hola");
