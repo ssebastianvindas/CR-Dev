@@ -84,7 +84,8 @@ const obtenerDatosRegister = () => {
     foto: txtFoto.value,
     rol: 4,
   };
-  registrarDatos("registrar-usuario", usuario, "consultar-usuarios.html");
+  registrarDatos("registrar-usuario", usuario, "");
+
 };
 
 btnRegistrar.addEventListener("click", validarFormRegister);
