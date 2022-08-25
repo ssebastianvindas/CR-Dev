@@ -19,7 +19,7 @@ const llenarTablaCliente = () => {
         if (cita.nombreduenno === usuarioConectadoCliente.nombre) {
             let fila = cuerpoTablaCliente.insertRow();
 
-            fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
+            fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
             fila.insertCell().textContent = cita.hora;
             fila.insertCell().textContent = cita.nombremascota;
             fila.insertCell().textContent = cita.nombreduenno;

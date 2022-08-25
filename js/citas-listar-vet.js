@@ -24,7 +24,7 @@ const llenarTablaDiaVet = () => {
         if (cita.doctor === usuarioConectadoVet.nombre) {
             let fila = cuerpoTablaVet.insertRow();
 
-            fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
+            fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
             fila.insertCell().textContent = cita.hora;
             fila.insertCell().textContent = cita.nombremascota;
             fila.insertCell().textContent = cita.nombreduenno;
@@ -82,7 +82,7 @@ const llenarTablaDoctorVet = () => {
         if (cita.doctor == seleccionVet.value) {
             let fila = cuerpoTablaDoctorVet.insertRow();
 
-            fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
+            fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
             fila.insertCell().textContent = cita.hora;
             fila.insertCell().textContent = cita.nombremascota;
             fila.insertCell().textContent = cita.nombreduenno;
@@ -139,7 +139,7 @@ const llenarTablaPendientesVet = () => {
         if (cita.doctor === usuarioConectadoVet.nombre) {
             let fila = cuerpoTablaPendienteVet.insertRow();
 
-            fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
+            fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
             fila.insertCell().textContent = cita.hora;
             fila.insertCell().textContent = cita.nombremascota;
             fila.insertCell().textContent = cita.nombreduenno;
