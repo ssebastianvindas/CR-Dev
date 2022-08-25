@@ -144,6 +144,7 @@ let almacenarLab = () => {
         doctor: formLabSelect.value
 
     };
+    console.log(LabDatos);
     let expedienteVar = true;
     localStorage.setItem('expediente', expedienteVar);
     registrarDatos('registrar-laboratorios', LabDatos);
