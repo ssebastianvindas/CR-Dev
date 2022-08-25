@@ -20,7 +20,7 @@ const llenarTablaDia = () => {
     citas.forEach((cita) => {
         let fila = cuerpoTabla.insertRow();
 
-        fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
+        fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
         fila.insertCell().textContent = cita.hora;
         fila.insertCell().textContent = cita.nombremascota;
         fila.insertCell().textContent = cita.nombreduenno;
@@ -95,7 +95,7 @@ const llenarTablaDoctor = () => {
         if (cita.doctor == seleccion.value) {
             let fila = cuerpoTablaDoctor.insertRow();
 
-            fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
+            fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
             fila.insertCell().textContent = cita.hora;
             fila.insertCell().textContent = cita.nombremascota;
             fila.insertCell().textContent = cita.nombreduenno;
@@ -165,7 +165,7 @@ const llenarTablaDoctores = () => {
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
     citas.forEach((cita) => {
         let fila = cuerpoTablaDoctor.insertRow();
-        fila.insertCell().textContent = moment(cita.fecha).format("DD-MM-YYYY");
+        fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
         fila.insertCell().textContent = cita.hora;
         fila.insertCell().textContent = cita.nombremascota;
         fila.insertCell().textContent = cita.nombreduenno;
