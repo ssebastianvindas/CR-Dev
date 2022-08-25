@@ -7,7 +7,7 @@ const CalificacionPet = require("../models/calificaciones-pet.model");
 router.post("/registrar-calificacionPet", (req, res) => {
     let nuevaCalificacionPet = new CalificacionPet({
         nombreVeterinario: req.body.nombreVeterinario,
-        nombreUsuario: req.body.nombreUsuario,
+        nombrePet: req.body.nombrePet,
         calificacion: req.body.calificacion,
     });
     nuevaCalificacionPet.save((error) => {

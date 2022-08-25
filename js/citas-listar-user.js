@@ -9,11 +9,12 @@ const btnRol = document.getElementsByClassName("btn-ver");
 const span = document.getElementsByClassName("close")[0];
 const btnSave = document.getElementById('btn-save');
 
-const califInput1 = document.getElementById("radio1");
-const califInput2 = document.getElementById("radio2");
-const califInput3 = document.getElementById("radio3");
 let calificacionTotal;
 let doctorName;
+
+let miTabla = document.getElementById('tbl-userClient');
+
+let rowFirstCellText;
 
 let closeModal = () => {
     modal.style.display = "none";
@@ -21,6 +22,19 @@ let closeModal = () => {
 
 let displayModal = () => {
     modal.style.display = "block";
+
+    miTabla.addEventListener('click', function(e) {
+        let button = e.target;
+        let cell = button.parentNode;
+        let row = cell.parentNode;
+        rowFirstCellText = row.querySelector('td:nth-child(6)').innerHTML;
+
+        console.log(button);
+        console.log(cell);
+        console.log(row);
+        console.log(rowFirstCellText);
+
+    }, false);
 }
 
 const llenarCitasUser = async() => {
@@ -74,15 +88,39 @@ const llenarTablaUser = () => {
             //Agregar el boton de calificar a la celda acciones
             tdAcciones.appendChild(btnCalificar);
             //Itera la cantidad de botones de calificar presentes
+
             for (const ver of btnRol) {
                 ver.addEventListener('click', displayModal);
             }
 
+
             window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
                 }
-            }
+                /*
+                miTabla.addEventListener('click', function(e) {
+                    let button = e.target;
+                    let cell = button.parentNode;
+                    let row = cell.parentNode;
+                    let rowFirstCellText = row.querySelector('td:nth-child(6)').innerHTML;
+
+                    console.log(button);
+                    console.log(cell);
+                    console.log(row);
+                    console.log(rowFirstCellText);
+
+                    if (rowFirstCellText === cita.doctor) {
+                        for (const ver of btnRol) {
+                            ver.addEventListener('click', displayModal);
+                        }
+                    } else {
+                        console.log("nimodo");
+                    }
+
+                }, false);
+                */
 
             btnEliminar.addEventListener('click', () => {
                 Swal.fire({
@@ -107,12 +145,6 @@ const llenarTablaUser = () => {
 llenarCitasUser();
 
 let validar = () => {
-
-    citasUser.forEach(cita => {
-        if (usuarioConectadoUser.nombre === cita.nombreduenno) {
-            doctorName = cita.doctor;
-        }
-    });
 
     let elemento = document.getElementsByName('estrellas');
     for (var i = 0, length = elemento.length; i < length; i++) {
@@ -155,7 +187,7 @@ let enviarCalificacion = () => {
 
     let calificacion = {
         nombreusuario: usuarioConectadoUser.usuario,
-        nombreveterinario: doctorName,
+        nombreveterinario: rowFirstCellText,
         calificacion: calificacionTotal,
     };
     console.log(calificacion);
