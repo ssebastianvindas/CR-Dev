@@ -55,7 +55,10 @@ const expTemperatura = document.getElementById('exp-temp');
 const expPeso = document.getElementById('exp-peso');
 const expTalla = document.getElementById('exp-talla');
 const expEdad = document.getElementById('exp-edad');
-
+const TablaVacunas = document.querySelector('#tbl-vacuna tbody');
+const TablaLaboratorios = document.querySelector('#tbl-lab tbody');
+const TablaProcemientos = document.querySelector('#tbl-procedimiento tbody');
+const TablaRecetas = document.querySelector('#tbl-receta tbody');
 
 let contador = 0;
 
@@ -309,6 +312,7 @@ let validarLab = () => {
             'text': 'El registro se ha creado adecuadamente',
             'confirmButtonText': 'Entendido'
         }).then(() => {
+            llenarLaboratorios();
             almacenarLab();
         });
     }
@@ -372,6 +376,7 @@ let validarMed = () => {
             'text': 'La receta se ha creado adecuadamente',
             'confirmButtonText': 'Entendido'
         }).then(() => {
+            llenarRecetas();
             almacenarMed();
         });
     }
@@ -416,7 +421,7 @@ let validarVac = () => {
             'text': 'La vacuna se ha ingresado adecuadamente',
             'confirmButtonText': 'Entendido'
         }).then(() => {
-
+            llenarVacunas();
 
             let vacunasDatos = {
                 mascotaId: expGetMascotaId.value,
@@ -470,6 +475,7 @@ let validarTx = () => {
             'text': 'La factura se ha creado adecuadamente',
             'confirmButtonText': 'Entendido'
         }).then(() => {
+            llenarProcedimientos();
             almacenarTx();
         });
     }
@@ -497,6 +503,270 @@ let llenarOwner = () => {
 let llenarVet = () => {
     formLabSelect.value = expGetVet.value;
     MedSelect.value = expGetVet.value;
+
+};
+const llenarVacunas = () => {
+    //Limpia el contenido que tiene el cuerpo de la tabla.
+    //TablaVacunas.innerHTML = '';
+    //Para cada usuario que se encuentre dentro de la coleccion de usuarios
+
+
+    let fila = TablaVacunas.insertRow();
+
+    fila.insertCell().textContent = vacFecha.value;
+    fila.insertCell().textContent = vacNombre.value;
+
+
+
+    // Creación de la celda para los botones
+    let tdAccionesVac = fila.insertCell();
+
+    //Creación del boton editar
+    let btnEditar = document.createElement("button");
+    btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+    btnEditar.type = "button";
+    btnEditar.classList.add("btn-editar");
+
+
+    //Creación del botón de eliminar
+    let btnEliminar = document.createElement("button");
+    btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    btnEliminar.type = "button";
+    btnEliminar.classList.add("btn-eliminar");
+
+    //Agregar el boton de editar a la celda acciones
+    tdAccionesVac.appendChild(btnEditar);
+
+    //Agregar el boton de eliminar a la celda acciones
+    tdAccionesVac.appendChild(btnEliminar);
+
+
+    btnEliminar.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Está seguro que desea eliminar la vacuna?',
+            text: "La acción no se puede revertir!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, eliminar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Eliminado!',
+                    'La vacuna fue eliminada.',
+                    'success'
+                )
+            }
+            TablaVacunas.innerHTML = '';
+        })
+    });
+
+
+
+
+};
+
+const llenarProcedimientos = () => {
+    //Limpia el contenido que tiene el cuerpo de la tabla.
+    //TablaProcemientos.innerHTML = '';
+    //Para cada usuario que se encuentre dentro de la coleccion de usuarios
+
+    let fila = TablaProcemientos.insertRow();
+
+    fila.insertCell().textContent = InputTextDate.value;
+    fila.insertCell().textContent = InputTextEvol.value;
+
+
+    // Creación de la celda para los botones
+    let tdAccionesProc = fila.insertCell();
+
+    //Creación del boton editar
+    let btnEditar = document.createElement("button");
+    btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+    btnEditar.type = "button";
+    btnEditar.classList.add("btn-editar");
+
+
+    //Creación del botón de eliminar
+    let btnEliminar = document.createElement("button");
+    btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    btnEliminar.type = "button";
+    btnEliminar.classList.add("btn-eliminar");
+    //Agregar el boton de editar a la celda acciones
+    tdAccionesProc.appendChild(btnEditar);
+
+    //Agregar el boton de eliminar a la celda acciones
+    tdAccionesProc.appendChild(btnEliminar);
+
+
+    btnEliminar.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Está seguro que desea eliminar el procedimiento?',
+            text: "La acción no se puede revertir!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, eliminar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Eliminado!',
+                    'El procedimiento fue eliminado.',
+                    'success'
+                )
+            }
+            TablaProcemientos.innerHTML = '';
+        })
+    });
+
+    btnEditar.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Está seguro que desea modificar el procedimiento?',
+            text: "La acción no se puede revertir!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, Asignar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Eliminado!',
+                    'El procedimiento fue modificado.',
+                    'success'
+                )
+            }
+
+        })
+    });
+
+
+};
+
+const llenarLaboratorios = () => {
+    //Limpia el contenido que tiene el cuerpo de la tabla.
+    //TablaLaboratorios.innerHTML = '';
+    //Para cada usuario que se encuentre dentro de la coleccion de usuarios
+
+
+    let fila = TablaLaboratorios.insertRow();
+
+    fila.insertCell().textContent = formLabDate.value;
+    fila.insertCell().textContent = formLabPet.value;
+    fila.insertCell().textContent = formLabOwner.value;
+    fila.insertCell().textContent = formLabTest.value;
+    fila.insertCell().textContent = formLabResult.value;
+    fila.insertCell().textContent = formLabSelect.value;
+
+
+    // Creación de la celda para los botones
+    let tdAccionesLab = fila.insertCell();
+
+    //Creación del boton editar
+    let btnEditar = document.createElement("button");
+    btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+    btnEditar.type = "button";
+    btnEditar.classList.add("btn-editar");
+
+
+    //Creación del botón de eliminar
+    let btnEliminar = document.createElement("button");
+    btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    btnEliminar.type = "button";
+    btnEliminar.classList.add("btn-eliminar");
+
+    //Agregar el boton de editar a la celda acciones
+    tdAccionesLab.appendChild(btnEditar);
+
+    //Agregar el boton de eliminar a la celda acciones
+    tdAccionesLab.appendChild(btnEliminar);
+
+
+    btnEliminar.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Está seguro que desea cancelar el Laboratorio?',
+            text: "La acción no se puede revertir!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, eliminar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Eliminado!',
+                    'El laboratorio fue cancelado.',
+                    'success'
+                )
+            }
+            TablaLaboratorios.innerHTML = '';
+        })
+    });
+
+
+
+};
+
+const llenarRecetas = () => {
+    //Limpia el contenido que tiene el cuerpo de la tabla.
+    //TablaRecetas.innerHTML = '';
+    //Para cada usuario que se encuentre dentro de la coleccion de usuarios
+
+
+    let fila = TablaRecetas.insertRow();
+
+    fila.insertCell().textContent = MedDate.value;
+    fila.insertCell().textContent = MedPet.value;
+    fila.insertCell().textContent = MedSelect.value;
+    fila.insertCell().textContent = MedMed.value;
+
+
+    // Creación de la celda para los botones
+    let tdAccionesMed = fila.insertCell();
+
+    //Creación del boton editar
+    let btnEditar = document.createElement("button");
+    btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+    btnEditar.type = "button";
+    btnEditar.classList.add("btn-editar");
+
+
+    //Creación del botón de eliminar
+    let btnEliminar = document.createElement("button");
+    btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    btnEliminar.type = "button";
+    btnEliminar.classList.add("btn-eliminar");
+
+    //Agregar el boton de editar a la celda acciones
+    tdAccionesMed.appendChild(btnEditar);
+
+    //Agregar el boton de eliminar a la celda acciones
+    tdAccionesMed.appendChild(btnEliminar);
+
+
+    btnEliminar.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Está seguro que desea eliminar el registro?',
+            text: "La acción no se puede revertir!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, eliminar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Eliminado!',
+                    'El registro fue eliminado.',
+                    'success'
+                )
+            }
+            TablaRecetas.innerHTML = '';
+        })
+    });
+
 
 };
 
