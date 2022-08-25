@@ -165,7 +165,6 @@ label{
     height: calc(100vh - 188px);
     margin: auto;
     display: none;
-    border: 1px solid red;
     overflow: auto;
 
 }
