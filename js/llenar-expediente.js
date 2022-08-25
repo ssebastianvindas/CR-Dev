@@ -87,15 +87,17 @@ const llenarVacunas = () => {
             let tdAccionesVac = fila.insertCell();
 
             //Creación del boton editar
-            let btnEditar = document.createElement('button');
-            btnEditar.textContent = 'Editar';
-            btnEditar.type = 'button';
-            btnEditar.classList.add('btn-editar');
-            //Creacion del boton eliminar
-            let btnEliminar = document.createElement('button');
-            btnEliminar.textContent = 'Eliminar';
-            btnEliminar.type = 'button';
-            btnEliminar.classList.add('btn-eliminar');
+            let btnEditar = document.createElement("button");
+            btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+            btnEditar.type = "button";
+            btnEditar.classList.add("btn-editar");
+
+
+            //Creación del botón de eliminar
+            let btnEliminar = document.createElement("button");
+            btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+            btnEliminar.type = "button";
+            btnEliminar.classList.add("btn-eliminar");
 
             //Agregar el boton de editar a la celda acciones
             tdAccionesVac.appendChild(btnEditar);
@@ -145,16 +147,17 @@ const llenarProcedimientos = () => {
             let tdAccionesProc = fila.insertCell();
 
             //Creación del boton editar
-            let btnEditar = document.createElement('button');
-            btnEditar.textContent = 'Editar';
-            btnEditar.type = 'button';
-            btnEditar.classList.add('btn-editar');
-            //Creacion del boton eliminar
-            let btnEliminar = document.createElement('button');
-            btnEliminar.textContent = 'Eliminar';
-            btnEliminar.type = 'button';
-            btnEliminar.classList.add('btn-eliminar');
+            let btnEditar = document.createElement("button");
+            btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+            btnEditar.type = "button";
+            btnEditar.classList.add("btn-editar");
 
+
+            //Creación del botón de eliminar
+            let btnEliminar = document.createElement("button");
+            btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+            btnEliminar.type = "button";
+            btnEliminar.classList.add("btn-eliminar");
             //Agregar el boton de editar a la celda acciones
             tdAccionesProc.appendChild(btnEditar);
 
@@ -226,15 +229,17 @@ const llenarLaboratorios = () => {
             let tdAccionesLab = fila.insertCell();
 
             //Creación del boton editar
-            let btnEditar = document.createElement('button');
-            btnEditar.textContent = 'Editar';
-            btnEditar.type = 'button';
-            btnEditar.classList.add('btn-editar');
-            //Creacion del boton eliminar
-            let btnEliminar = document.createElement('button');
-            btnEliminar.textContent = 'Eliminar';
-            btnEliminar.type = 'button';
-            btnEliminar.classList.add('btn-eliminar');
+            let btnEditar = document.createElement("button");
+            btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+            btnEditar.type = "button";
+            btnEditar.classList.add("btn-editar");
+
+
+            //Creación del botón de eliminar
+            let btnEliminar = document.createElement("button");
+            btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+            btnEliminar.type = "button";
+            btnEliminar.classList.add("btn-eliminar");
 
             //Agregar el boton de editar a la celda acciones
             tdAccionesLab.appendChild(btnEditar);
@@ -286,15 +291,17 @@ const llenarRecetas = () => {
             let tdAccionesMed = fila.insertCell();
 
             //Creación del boton editar
-            let btnEditar = document.createElement('button');
-            btnEditar.textContent = 'Editar';
-            btnEditar.type = 'button';
-            btnEditar.classList.add('btn-editar');
-            //Creacion del boton eliminar
-            let btnEliminar = document.createElement('button');
-            btnEliminar.textContent = 'Eliminar';
-            btnEliminar.type = 'button';
-            btnEliminar.classList.add('btn-eliminar');
+            let btnEditar = document.createElement("button");
+            btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+            btnEditar.type = "button";
+            btnEditar.classList.add("btn-editar");
+
+
+            //Creación del botón de eliminar
+            let btnEliminar = document.createElement("button");
+            btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+            btnEliminar.type = "button";
+            btnEliminar.classList.add("btn-eliminar");
 
             //Agregar el boton de editar a la celda acciones
             tdAccionesMed.appendChild(btnEditar);
