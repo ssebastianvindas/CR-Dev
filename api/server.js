@@ -73,3 +73,4 @@ app.use("/api", require("./routes/reporteHotel.routes"));
 app.use("/api", require("./routes/reporteVete.routes"));
 app.use("/api", require("./routes/metodos-de-pago.routes"));
 app.use("/api", require("./routes/mascotas.routes"));
+app.use("/api", require("./routes/calificaciones-vet.routes"));

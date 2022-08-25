@@ -9,6 +9,12 @@ const btnRol = document.getElementsByClassName("btn-ver");
 const span = document.getElementsByClassName("close")[0];
 const btnSave = document.getElementById('btn-save');
 
+const califInput1 = document.getElementById("radio1");
+const califInput2 = document.getElementById("radio2");
+const califInput3 = document.getElementById("radio3");
+let calificacionTotal;
+
+
 let closeModal = () => {
     modal.style.display = "none";
 }
@@ -40,7 +46,6 @@ const llenarTablaUser = () => {
             fila.insertCell().textContent = cita.procedimiento;
             fila.insertCell().textContent = cita.doctor;
             fila.insertCell().textContent = cita.estado;
-
 
             // Creación de la celda para los botones
             let tdAcciones = fila.insertCell();
@@ -129,3 +134,39 @@ let validar = () => {
 }
 btnSave.addEventListener('click', validar);
 span.addEventListener('click', closeModal);
+
+
+let getCalificacion = () => {
+    if (califInput1.checked) {
+        calificacionTotal = 3;
+    } else if (califInput2.checked) {
+        calificacionTotal = 2;
+    } else if (califInput3.checked) {
+        calificacionTotal = 1;
+    }
+    console.log(calificacionTotal);
+}
+
+let enviarCalificacion = () => {
+    let user = JSON.parse(localStorage.getItem("usuarioConectado"));
+
+    let calificacion = {
+        nombreusuario: user.usuarioConectado,
+        nombreveterinario: "nose",
+        calificacion: calificacionTotal,
+    };
+
+    Swal.fire({
+        icon: "success",
+        title: "Calificacion registrada",
+        text: "La calificacion ha sido registrada",
+        confirmButtonText: "Continuar",
+
+    }).then(() => {
+        registrarDatos("registrar-calificacionVet", calificacion);
+        window.location.href = "list-citas.html";
+    });
+};
+getCalificacion();
+console.log(getCalificacion());
+console.log("hola");
