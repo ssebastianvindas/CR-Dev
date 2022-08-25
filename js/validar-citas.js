@@ -49,6 +49,7 @@ let validarForm = () => {
                 };
                 registrarDatos("registrar-cita", cita);
 
+
             });
 
 
