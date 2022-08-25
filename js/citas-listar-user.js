@@ -13,7 +13,7 @@ const califInput1 = document.getElementById("radio1");
 const califInput2 = document.getElementById("radio2");
 const califInput3 = document.getElementById("radio3");
 let calificacionTotal;
-
+let doctorName;
 
 let closeModal = () => {
     modal.style.display = "none";
@@ -36,7 +36,7 @@ const llenarTablaUser = () => {
         if (usuarioConectadoUser.nombre === cita.nombreduenno) {
             let fila = cuerpoTablaUser.insertRow();
 
-            fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format('DD-MM-YYYY');
+            fila.insertCell().textContent = moment(cita.fecha).format('DD-MM-YYYY');
             fila.insertCell().textContent = cita.hora;
             fila.insertCell().textContent = cita.nombremascota;
             fila.insertCell().textContent = cita.nombreduenno;
@@ -106,7 +106,13 @@ llenarCitasUser();
 
 let validar = () => {
 
-    var elemento = document.getElementsByName('estrellas');
+    citasUser.forEach(cita => {
+        if (usuarioConectadoUser.nombre === cita.nombreduenno) {
+            doctorName = cita.doctor;
+        }
+    });
+
+    let elemento = document.getElementsByName('estrellas');
     for (var i = 0, length = elemento.length; i < length; i++) {
         if (elemento[i].checked) {
             calificacionTotal = elemento[i].value
@@ -147,7 +153,7 @@ let enviarCalificacion = () => {
 
     let calificacion = {
         nombreusuario: usuarioConectadoUser.usuario,
-        nombreveterinario: "nose",
+        nombreveterinario: doctorName,
         calificacion: calificacionTotal,
     };
     console.log(calificacion);
