@@ -6,6 +6,24 @@ const selectFiltroTablaVet = document.getElementById("cita-listar-doctores");
 let usuarioConectadoVet = JSON.parse(localStorage.getItem("usuarioConectado"));
 let citasVet = [];
 
+//Modal
+const inputs2 = document.querySelectorAll("input");
+const modal2 = document.getElementById("modal-citas");
+const btnRol2 = document.getElementsByClassName("btn-ver");
+const span2 = document.getElementsByClassName("close")[0];
+const btnSave2 = document.getElementById('btn-save');
+
+let calificacionTotalPets;
+let userName;
+
+let closeModal = () => {
+    modal2.style.display = "none";
+}
+
+let displayModal = () => {
+    modal2.style.display = "block";
+}
+
 const llenarCitasVet = async() => {
     citasVet = await getDatos("obtener-citas");
 
@@ -20,7 +38,6 @@ const llenarTablaDiaVet = () => {
     //Para cada usuario que se encuentre dentro de la coleccion de usuarios
 
     citasVet.forEach((cita) => {
-
         if (cita.doctor === usuarioConectadoVet.nombre) {
             let fila = cuerpoTablaVet.insertRow();
 
@@ -54,7 +71,6 @@ const llenarTablaDiaVet = () => {
             //Agregar el boton de eliminar a la celda acciones
             tdAcciones.appendChild(btnEliminar);
 
-
             btnEliminar.addEventListener("click", () => {
                 Swal.fire({
                     title: "Está seguro que desea cancelar la cita?",
@@ -73,63 +89,6 @@ const llenarTablaDiaVet = () => {
         }
     });
 };
-const llenarTablaDoctorVet = () => {
-    //Limpia el contenido que tiene el cuerpo de la tabla.
-    cuerpoTablaDoctorVet.innerHTML = "";
-    //Para cada usuario que se encuentre dentro de la coleccion de usuarios
-    citasVet.forEach((cita) => {
-
-        if (cita.doctor == seleccionVet.value) {
-            let fila = cuerpoTablaDoctorVet.insertRow();
-
-            fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
-            fila.insertCell().textContent = cita.hora;
-            fila.insertCell().textContent = cita.nombremascota;
-            fila.insertCell().textContent = cita.nombreduenno;
-            fila.insertCell().textContent = cita.procedimiento;
-            fila.insertCell().textContent = cita.doctor;
-            fila.insertCell().textContent = cita.estado;
-
-            // Creación de la celda para los botones
-            let tdAcciones = fila.insertCell();
-
-            let btnEditar = document.createElement("button");
-            btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
-            btnEditar.type = "button";
-            btnEditar.classList.add("btn-editar");
-
-            //Creación del botón de eliminar
-            let btnEliminar = document.createElement("button");
-            btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-            btnEliminar.type = "button";
-            btnEliminar.classList.add("btn-eliminar");
-
-            //Agregar el boton de editar a la celda acciones
-            tdAcciones.appendChild(btnEditar);
-
-            //Agregar el boton de eliminar a la celda acciones
-            tdAcciones.appendChild(btnEliminar);
-
-            btnEliminar.addEventListener("click", () => {
-                Swal.fire({
-                    title: "Está seguro que desea cancelar la cita?",
-                    text: "La acción no se puede revertir!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#3085d6",
-                    cancelButtonColor: "#d33",
-                    confirmButtonText: "Sí, eliminar!",
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        eliminarDatos("eliminar-cita", cita._id);
-                    }
-                });
-            });
-        }
-    });
-};
-
-
 
 const llenarTablaPendientesVet = () => {
     //Limpia el contenido que tiene el cuerpo de la tabla.
@@ -185,7 +144,7 @@ const llenarTablaPendientesVet = () => {
                 });
             });
 
-            btnEditar.addEventListener("click", () => {
+            btnAgregar.addEventListener("click", () => {
                 Swal.fire({
                     title: "Está seguro que desea agendarse la cita?",
                     text: "La acción no se puede revertir!",
@@ -201,6 +160,140 @@ const llenarTablaPendientesVet = () => {
                 });
             });
         }
+    });
+};
+
+const llenarTablaDoctorVet = () => {
+    //Limpia el contenido que tiene el cuerpo de la tabla.
+    cuerpoTablaDoctorVet.innerHTML = "";
+    //Para cada usuario que se encuentre dentro de la coleccion de usuarios
+    citasVet.forEach((cita) => {
+        /*
+        if (cita.doctor == seleccionVet.value) {
+        */
+        if (cita.doctor === usuarioConectadoVet.nombre) {
+            let fila = cuerpoTablaDoctorVet.insertRow();
+
+            fila.insertCell().textContent = moment(cita.fecha).add('1', 'd').format("DD-MM-YYYY");
+            fila.insertCell().textContent = cita.hora;
+            fila.insertCell().textContent = cita.nombremascota;
+            fila.insertCell().textContent = cita.nombreduenno;
+            fila.insertCell().textContent = cita.procedimiento;
+            fila.insertCell().textContent = cita.doctor;
+            fila.insertCell().textContent = cita.estado;
+
+            // Creación de la celda para los botones
+            let tdAcciones = fila.insertCell();
+
+            let btnEditar = document.createElement("button");
+            btnEditar.innerHTML = '<i class="fa-solid fa-ranking-star"></i>';
+            btnEditar.type = "button";
+            btnEditar.classList.add("btn-ver");
+
+            //Creación del botón de eliminar
+            let btnEliminar = document.createElement("button");
+            btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+            btnEliminar.type = "button";
+            btnEliminar.classList.add("btn-eliminar");
+
+            //Agregar el boton de editar a la celda acciones
+            tdAcciones.appendChild(btnEditar);
+
+            //Agregar el boton de eliminar a la celda acciones
+            tdAcciones.appendChild(btnEliminar);
+
+            for (const ver2 of btnRol2) {
+                ver2.addEventListener('click', displayModal);
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+            }
+
+            btnEliminar.addEventListener("click", () => {
+                Swal.fire({
+                    title: "Está seguro que desea cancelar la cita?",
+                    text: "La acción no se puede revertir!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Sí, eliminar!",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        eliminarDatos("eliminar-cita", cita._id);
+                    }
+                });
+            });
+        }
+    });
+};
+
+let validar = () => {
+
+    citasVet.forEach(cita => {
+        if (usuarioConectadoVet.nombre === cita.doctor) {
+            userName = cita.nombreduenno;
+            console.log(cita)
+        }
+    });
+
+    let elemento2 = document.getElementsByName('estrellas');
+    for (var i = 0, length = elemento2.length; i < length; i++) {
+        if (elemento2[i].checked) {
+            calificacionTotalPets = elemento2[i].value
+            console.log(elemento2[i].value);
+        }
+    }
+
+    for (const input of inputs2) {
+        if (input.checked) {
+            input.classList.remove('input-invalid');
+            input.classList.add('input-invalid');
+            Swal.fire({
+                icon: 'success',
+                title: 'Listo',
+                text: 'Has registrado la calificacion',
+                confirmButtonText: 'Entendido',
+            })
+            enviarCalificacion();
+            break;
+        } else {
+            input.classList.add('input-invalid');
+            input.classList.remove('input-invalid');
+            Swal.fire({
+                icon: 'warning',
+                title: 'Campos incompletos',
+                text: 'Por favor, seleccione al menos una opcion.',
+                confirmButtonText: 'Entendido',
+            })
+        }
+    };
+
+}
+
+btnSave2.addEventListener('click', validar);
+span2.addEventListener('click', closeModal);
+
+let enviarCalificacion = () => {
+
+    let calificacion = {
+        nombreVeterinario: usuarioConectadoVet.nombre,
+        nombreUsuario: userName,
+        calificacion: calificacionTotalPets,
+    };
+    console.log(calificacion);
+
+    Swal.fire({
+        icon: "success",
+        title: "Calificacion registrada",
+        text: "La calificacion ha sido registrada",
+        confirmButtonText: "Continuar",
+
+    }).then(() => {
+        registrarDatos("registrar-calificacionPet", calificacion);
     });
 };
 

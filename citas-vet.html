@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="css/citas.css" />
     <link rel="stylesheet" href="css/menuUser.css" />
     <link rel="stylesheet" href="css/header-Admin.css" />
+
+    <link rel="stylesheet" href="css/list-expediente.css" />
+    <link rel="stylesheet" href="css/list-citas.css" />
+    <link rel="stylesheet" href="css/ranking-citas.css" />
+
     <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
     <title>Citas del día</title>
     <!-- fonts -->
@@ -174,6 +179,30 @@
         </div>
       </div>
     </section>
+
+    <div class="modal-expediente" id="modal-citas">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-ranking">
+          <form class="form-ranking">
+            <h2>Ranking</h2>
+            <div class="clasificacion">
+              <p>Calificacion a brindar al veterinario</p>
+              <input id="radio1" type="radio" name="estrellas" value="3" />
+              <label for="radio1" class="estrellas">★</label>
+              <input id="radio2" type="radio" name="estrellas" value="2" />
+              <label for="radio2" class="estrellas">★</label>
+              <input id="radio3" type="radio" name="estrellas" value="1" />
+              <label for="radio3" class="estrellas">★</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-save">
+          <button type="button" id="btn-save">Calificar</button>
+        </div>
+      </div>
+    </div>
+
     <div class="menu-user-container ocultar-menu">
       <div class="menu-user">
         <div class="img-user-container">
