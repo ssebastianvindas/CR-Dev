@@ -66,7 +66,7 @@ let validarPay = () => {
             console.log(rowFirstCellText);
 
         }, false);
-        window.location.href = '../list-pagos.html'
+        window.location.href = '../factura-imprimir.html'
     })
 };
 
@@ -81,7 +81,8 @@ const mostrarFacturasUsuario = () => {
 
         if (usuarioConectadoFactura.nombre === facturaTemp.cliente) {
             fila = cuerpoTablaFacturaUsuario.insertRow();
-            fila.insertCell().textContent = facturaTemp.fecha;
+            fila.insertCell().textContent = moment(facturaTemp.fecha).add('1', 'd').format('DD-MM-YYYY');
+            fila.insertCell().textContent = facturaTemp.consecutivo;
             fila.insertCell().textContent = facturaTemp.paciente;
             fila.insertCell().textContent = facturaTemp.cliente;
             fila.insertCell().textContent = facturaTemp.total;
