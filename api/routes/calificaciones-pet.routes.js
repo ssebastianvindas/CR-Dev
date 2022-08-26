@@ -24,7 +24,7 @@ router.post("/registrar-calificacionPet", (req, res) => {
     });
 });
 
-router.get("/obtener-calificacionVet", (req, res) => {
+router.get("/obtener-calificacionPet", (req, res) => {
     CalificacionPet.find((error, lista) => {
         if (error) {
             res.json({

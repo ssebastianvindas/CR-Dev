@@ -57,16 +57,21 @@
         </button>
         <button
           class="tablinks"
-          onclick="openCity(event, 'reportes-calificaciones')"
-        >
-          Calificaciones
-        </button>
-        <button
-          class="tablinks"
           onclick="openCity(event, 'reportes-reserva-hotel')"
         >
           Reservaciones del Hotel
         </button>
+        <button
+        class="tablinks"
+        onclick="openCity(event, 'reportes-calificaciones-veterinarios')"
+      >
+        Calif. Veterinarios
+      </button>
+      <button
+      class="tablinks"
+      onclick="openCity(event, 'reportes-calificaciones-mascotas')">
+      Calif.Mascotas
+      </button>
       </div>
 
       <!-- Tab content -->
@@ -169,35 +174,6 @@
         </div>
       </div>
 
-      <div id="reportes-calificaciones" class="tabcontent">
-        <div class="tbl-container">
-          <h1>Reportes de las Calificaciones</h1>
-          <table id="tbl-calificaciones" class="tbl-general">
-            <thead>
-              <tr>
-                <th>Dueño</th>
-                <th>Veterinario</th>
-                <th>Calificación</th>
-                <th>Acciones</th>
-                
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>02/11/2022</td>
-                <td>10:30am</td>
-                <td>Dusty</td>
-                <td>Alberto Coto Calvo</td>
-                <td>Vacuna</td>
-                <td>Dr. Luis Zumbado</td>
-                <td>Pendiente</td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
       <div id="reportes-reserva-hotel" class="tabcontent">
         <div class="tbl-container">
           <h1>Reservas del Hotel</h1>
@@ -221,6 +197,56 @@
                 <td>Dr. Luis Zumbado</td>
                 <td>Pendiente</td>
                 <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="reportes-calificaciones-veterinarios" class="tabcontent">
+        <div class="tbl-container">
+          <h1>Reportes de las Calificaciones</h1>
+          <table id="tbl-calificaciones" class="tbl-general">
+            <thead>
+              <tr>
+                <th>Dueño</th>
+                <th>Veterinario</th>
+                <th>Calificación</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>02/11/2022</td>
+                <td>10:30am</td>
+                <td>Dusty</td>
+                <td>Alberto Coto Calvo</td>
+                <td>Vacuna</td>
+                <td>Dr. Luis Zumbado</td>
+                <td>Pendiente</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="reportes-calificaciones-mascotas" class="tabcontent">
+        <div class="tbl-container">
+          <h1>Reportes de las Calificaciones</h1>
+          <table id="tbl-calificaciones2" class="tbl-general">
+            <thead>
+              <tr>
+                <th>Dueño</th>
+                <th>Veterinario</th>
+                <th>Calificación</th>
+                <th>Acciones</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
               </tr>
             </tbody>
           </table>
