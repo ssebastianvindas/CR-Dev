@@ -4,7 +4,6 @@ const clienteFactura = document.getElementById('factura-pagar-cliente');
 const fechaFactura = document.getElementById('factura-pagar-fecha');
 const mascotaFactura = document.getElementById('factura-pagar-mascota');
 const facturaFactura = document.getElementById('factura-pagar-numero');
-let FacturaID = JSON.parse(window.localStorage.getItem('facturaId'));
 const subtotalFactura = document.getElementById('subtotal');
 const impuestoFactura = document.getElementById('impuesto');
 const totalFactura = document.getElementById('total');
@@ -19,7 +18,8 @@ const llenarRegistros = async() => {
 
 const facturaLlenar = () => {
     facturaPrint.forEach(fact => {
-        if (FacturaID.consecutivo === fact.consecutivo) {
+
+        if (parseInt(FacturaID) === parseInt(fact.consecutivo)) {
             clienteFactura.textContent = fact.cliente;
             fechaFactura.textContent = moment(fact.fecha).format('DD-MM-YYYY');
             mascotaFactura.textContent = fact.paciente;
@@ -35,7 +35,7 @@ const llenarTablaFact = () => {
 
     facturaPrint.forEach(facturaTemp => {
 
-        if (FacturaID.consecutivo === facturaTemp.consecutivo) {
+        if (parseInt(FacturaID) === parseInt(facturaTemp.consecutivo)) {
             let fila = cuerpoTablaFact.insertRow();
             fila.insertCell().textContent = facturaTemp.cantidad;
             fila.insertCell().textContent = facturaTemp.procedimiento;

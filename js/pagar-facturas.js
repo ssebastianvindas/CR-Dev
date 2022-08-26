@@ -66,7 +66,7 @@ let validarPay = () => {
             console.log(rowFirstCellText);
 
         }, false);
-        window.location.href = '../factura-imprimir.html'
+        window.open('../factura-imprimir.html', '_blank');
     })
 };
 
@@ -77,7 +77,7 @@ closeModalPago.addEventListener("click", closeModalPay);
 const mostrarFacturasUsuario = () => {
     cuerpoTablaFacturaUsuario.innerHTML = "";
     facturasDatos.forEach(facturaTemp => {
-        console.log(facturaTemp.cliente);
+
 
         if (usuarioConectadoFactura.nombre === facturaTemp.cliente) {
             fila = cuerpoTablaFacturaUsuario.insertRow();
@@ -102,7 +102,10 @@ const mostrarFacturasUsuario = () => {
             }
 
             window.onclick = function(event) {
+                let facturaId = facturaTemp.consecutivo;
+                window.localStorage.setItem('facturaId', facturaId);
                 if (event.target == modalPay) {
+
                     modalPay.style.display = "none";
                 }
             }
