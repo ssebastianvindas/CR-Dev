@@ -368,7 +368,14 @@ let llenarExpediente = () => {
 
 };
 
-
+window.onload = () => {
+    let mascotaID = localStorage.getItem('mascotaID');
+    console.log(mascotaID);
+    if (mascotaID !== null) {
+        expId.value = mascotaID;
+        llenarRegExpediente();
+    }
+};
 expId.addEventListener('keyup', function(e) {
     if (e.key === 'Enter') {
         llenarRegExpediente();
