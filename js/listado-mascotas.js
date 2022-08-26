@@ -11,14 +11,14 @@ const btnRolPerfil = document.getElementsByClassName("btn-ver-perfil");
 const spanPerfil = document.getElementsByClassName("close")[0];
 const btnSavePerfil = document.getElementById('btn-save-perfil');
 
-let cuidadosPerfil = document.querySelector("#cuidados-pet-perfil");
+let cuidadosPerfil = document.querySelector("#txt-cuidados-pet-perfil");
 let sexoMascotaPerfil = document.querySelector("#sexo-mascota-perfil");
 let txtEspeciePerfil = document.querySelector("#txt-especie-perfil");
 let txtTamannoPerfil = document.querySelector("#txt-tamanno-perfil");
 let txtColorPerfil = document.querySelector("#txt-color-perfil");
 
 let txtNombreMascotaPerfil = document.querySelector(
-    ".content-nombre-mascota #txt-nombre-mascota-perfil"
+    ".content-nombre-mascota-perfil #txt-nombre-mascota-perfil"
 );
 
 let seleccionArchivosPerfil = document.querySelector("#seleccionArchivos-perfil"),
@@ -110,15 +110,9 @@ const showTable = async() => {
                     txtNombreMascotaPerfil.textContent = mascota.petName;
                     sexoMascotaPerfil.textContent = mascota.petSexo;
                     txtEspeciePerfil.textContent = mascota.petEspecie;
-                    txtTamannoPerfil.textContent = mascota;
+                    txtTamannoPerfil.textContent = mascota.petTamanno;
                     txtColorPerfil.textContent = mascota.petColor;
                     cuidadosPerfil.textContent = mascota.petCare;
-                    imagenPrevisualizacionPerfil.src = mascota.petPhoto;
-                    console.log(mascota.petColor);
-                    console.log(mascota.petName);
-                    console.log(mascota.petSexo);
-                    console.log(mascota.petCare);
-                    console.log(mascota.petPhoto);
                 } else {
                     console.log("nimodo");
                 }
@@ -176,7 +170,7 @@ const cargarPerfilMascota = () => {
             txtNombreMascotaPerfil.textContent = mascota.petName;
             sexoMascotaPerfil.textContent = mascota.petSexo;
             txtEspeciePerfil.textContent = mascota.petEspecie;
-            txtTamannoPerfil.textContent = mascota;
+            txtTamannoPerfil.textContent = mascota.petTammano;
             txtColorPerfil.textContent = mascota.petColor;
             cuidadosPerfil.textContent = mascota.petCare;
             imagenPrevisualizacionPerfil.src = mascota.petPhoto;

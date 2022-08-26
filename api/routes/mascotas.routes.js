@@ -10,6 +10,7 @@ router.post("/registrar-mascota", (req, res) => {
         petUser: req.body.petUser,
         petName: req.body.petName,
         petSexo: req.body.petSexo,
+        petTamanno: req.body.petTamanno,
         petEspecie: req.body.petEspecie,
         petColor: req.body.petColor,
         petPhoto: req.body.petPhoto,
@@ -66,20 +67,20 @@ router.get("/obtener-mascotas", (req, res) => {
 router.delete("/eliminar-mascota", (req, res) => {
     let body = req.body;
     Mascota.remove({ _id: body._id }, (err, result) => {
-      if (err) {
-        res.json({
-          resultado: false,
-          msj: "No se pudo eliminar los datos: ",
-          err,
-        });
-      } else {
-        res.json({
-          resultado: true,
-          msj: "Los datos se eliminarion de manera correcta",
-          result,
-        });
-      }
+        if (err) {
+            res.json({
+                resultado: false,
+                msj: "No se pudo eliminar los datos: ",
+                err,
+            });
+        } else {
+            res.json({
+                resultado: true,
+                msj: "Los datos se eliminarion de manera correcta",
+                result,
+            });
+        }
     });
-  });
+});
 
 module.exports = router;

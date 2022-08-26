@@ -186,7 +186,8 @@ input.btn-seleccionar-foto {
 }
 
 .content-nombre-mascota label,
-.content-nombre-mascota p {
+.content-nombre-mascota p,
+.content-nombre-mascota input {
     font-size: 18px;
     padding: 10px 0;
 }
@@ -203,6 +204,28 @@ input.btn-seleccionar-foto {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+
+.content-nombre-mascota-perfil label,
+.content-nombre-mascota-perfil p,
+.content-nombre-mascota-perfil input {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.content-nombre-mascota-perfil input,
+.content-nombre-mascota-perfil p {
+    color: #18b158;
+    outline: none;
+    font-size: 18px;
+    /*
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    */
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-bottom: #303c44 solid 1px;
 }
 
 .input-invalido {
