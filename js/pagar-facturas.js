@@ -47,7 +47,28 @@ window.onclick = function(event) {
 // Selecciona mediante el observer todos los botones que se encuentren en la tabla y llama la funcion display
 
 
+let validarPay = () => {
+    Swal.fire({
+        icon: "success",
+        title: "Pagado",
+        text: "El pago realizado con éxito",
+        confirmButtonText: "Entendido",
+    }).then(() => {
+        miTabla.addEventListener('click', function(e) {
+            let button = e.target;
+            let cell = button.parentNode;
+            let row = cell.parentNode;
+            rowFirstCellText = row.querySelector('td:nth-child(4)').innerHTML;
 
+            console.log(button);
+            console.log(cell);
+            console.log(row);
+            console.log(rowFirstCellText);
+
+        }, false);
+        window.location.href = '../list-pagos.html'
+    })
+};
 
 //btnPayModal.addEventListener("click", displayModalPay); // cambiar cuando se pase al main
 //btnPayModal.addEventListener("click", displayModalPay);
@@ -111,29 +132,6 @@ const escogerMetodoPago = () => {
             btnPagarFactura.classList.add("btn-ver");
 
             tdAccionesPagar.appendChild(btnPagarFactura);
-
-
-            let validarPay = () => {
-                btnPagarFactura.addEventListener('click', () => {
-                    Swal.fire({
-                        title: '¿Está seguro que desea pagar la factura?',
-                        text: "Se producirá una versión imprimible de la factura",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: '¡Sí, pagar!'
-                    }).then((result) => {
-                        facturasDatos.forEach(facturaTemporal => {
-                            const infoFactura = {
-                                consecutivo: facturaTemporal.consecutivo
-                            }
-                            window.localStorage.setItem('facturaId', JSON.stringify(infoFactura));
-                            window.open('../factura-imprimir.html', '_blank');
-                        })
-                    })
-                });
-            };
 
             for (const check of btnPayModal) {
                 check.addEventListener('click', validarPay);
