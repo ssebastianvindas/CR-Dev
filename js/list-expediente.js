@@ -34,7 +34,6 @@ const llenarTablaExp = () => {
             //Creación del boton editar
             let btnEditar = document.createElement("button");
             btnEditar.innerHTML = '<i class="fa-solid fa-folder"></i>';
-            btnEditar.textContent = 'Expediente';
             btnEditar.type = "button";
             btnEditar.classList.add("btn-editar");
 
@@ -52,8 +51,8 @@ const llenarTablaExp = () => {
             tdAcciones.appendChild(btnEliminar);
 
             btnEditar.addEventListener("click", () => {
-                let mascid = expe.macotaId;
-                localStorage.setItem('MascotaID', mascid);
+                let mascid = expe.mascotaId;
+                localStorage.setItem('mascotaID', mascid);
                 window.location.href = 'expediente-consultar.html';
             });
 
