@@ -118,8 +118,9 @@ const escogerMetodoPago = () => {
         console.log(metodoSelected.titular);
         if (usuarioConectadoFactura.nombre === metodoSelected.titular) {
             let fila = cuerpoTablaEscogerMetodo.insertRow();
+            let tarjetaReducida = String(metodoSelected.numerotarjeta);
             fila.insertCell().textContent = metodoSelected.titular;
-            fila.insertCell().textContent = metodoSelected.numerotarjeta;
+            fila.insertCell().innerHTML = "************" + tarjetaReducida.slice(-4);
             fila.insertCell().textContent = metodoSelected.tipo;
             fila.insertCell().textContent = metodoSelected.fechaExpiracion;
 
