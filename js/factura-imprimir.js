@@ -4,6 +4,7 @@ const clienteFactura = document.getElementById('factura-pagar-cliente');
 const fechaFactura = document.getElementById('factura-pagar-fecha');
 const mascotaFactura = document.getElementById('factura-pagar-mascota');
 const facturaFactura = document.getElementById('factura-pagar-numero');
+let FacturaID = window.localStorage.getItem('facturaId');
 const subtotalFactura = document.getElementById('subtotal');
 const impuestoFactura = document.getElementById('impuesto');
 const totalFactura = document.getElementById('total');
