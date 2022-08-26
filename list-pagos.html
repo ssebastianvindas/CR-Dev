@@ -57,31 +57,19 @@
                         <th></th>
                         <th></th>
                         <th></th>
+                        <th></th>
                     </tr>
                     <tr>
                         <th>Fecha</th>
                         <th>Paciente</th>
+                        <th>Usuario</th>
                         <th>Monto</th>
-                        <th>Estado</th>
+                        <th>Procedimiento</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>28/07/2022</td>
-                        <td>Coquito</td>
-                        <td>60000</td>
-                        <td>Pendiente de pago</td>
-                        <td><button class="btn-ver btn-pagar-factura">Pagar</button></td>
-                    </tr>
 
-                    <tr>
-                        <td>28/07/2022</td>
-                        <td>Juls</td>
-                        <td>0</td>
-                        <td>Cita fue cancelada</td>
-                        <td><button class="btn-ver btn-pagar-factura">Pagar</button></td>
-                    </tr>
                 </tbody>
             </table>
     </section>
@@ -100,6 +88,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal-pagar-facturas" id="modal-metodo-pagar">
         <div class="modal-content-pay">
             <span class="close-modal">&times;</span>
@@ -107,55 +96,22 @@
                 <label>Pagar factura</label>
             </div>
             <div class="modal-form-pay">
-                <form class="form-pagar">
-                    <div class="container-info-pagar">
-                        <div class="img-container-pay"><img src="imgs/logo/logo-moka.png" alt="Logo de  Veterinaria Moka"></div>
-                        <div>
-                            <div class="inputs-container">
-                                <label for="txt-nombre">Nombre del titular de la tarjeta</label>
-                                <input type="text" id="txt-nombre" />
-                            </div>
-                            <div class="inputs-container">
-                                <label for="num-tarjeta">Número de tarjeta</label>
-                                <input type="number" id="num-tarjeta" />
-                                <i class="fa-solid fa-credit-card"></i>
-                            </div>
-                            <div class="inputs-container">
-                                <label for="tipo">Tipo</label>
-                                <div class="grupo-tipo">
-                                    <select name="tipo" id="tipo" class="slt-tipo">
-                        <option value="">--- Seleccione el tipo de tarjeta ---</option>
-                        <option value="Visa">Visa</option>
-                        <option value="MasterCard">MasterCard</option>
-                        <option value="Otro">Otro</option>
-                      </select>
-                                </div>
-                            </div>
-                            <div class="grupo-c">
-                                <div class="inputs-container grupo-expiracion">
-                                    <label for="num-mes num-año">Fecha de expiración</label>
-                                    <div>
-                                        <input type="number" class="input-mes" id="num-mes" />
-                                        <span class="slash">/</span>
-                                        <input type="number" class="input-año" id="num-año" />
-                                    </div>
-                                </div>
-                                <div class="inputs-container grupo-cvv">
-                                    <label for="num-cvv">CVV</label>
-                                    <input type="number" class="input-cvv" id="num-cvv" />
-                                </div>
-                            </div>
-                            <div class="inputs-container">
-                                <label for="txt-direccion">Dirección de facturación</label>
-                                <input type="text" id="txt-direccion" />
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <table id="tbl-choose-method" class="tbl-general">
+                    <thead>
+                        <tr>
+                            <th>Titular</th>
+                            <th>Numero de tarjeta </th>
+                            <th>Tipo</th>
+                            <th>Fecha Expiración</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
             </div>
-            <div class="modal-btn-pay">
-                <button type="button" class="btn-pagar" id="btn-pay">Pagar</button>
-            </div>
+
         </div>
     </div>
     <footer>
@@ -178,11 +134,12 @@
     </footer>
     <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/servicio-general.js"></script>
+    <script src="js/pagar-facturas.js"></script>
     <script src="js/navUser.js"></script>
-    <script src="js/list-pagos.js"></script>
     <script src="js/regresar-dashboard.js"></script>
     <script src="js/cambiar-nickname.js"></script>
-    <script src="js/pagar-facturas.js"></script>
 
 </body>
 
