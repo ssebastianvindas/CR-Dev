@@ -4,6 +4,7 @@ const cuerpoTablaEscogerMetodo = document.querySelector('#tbl-choose-method tbod
 //const btnPay = document.getElementById("btn-pay");
 const modalPay = document.getElementById("modal-metodo-pagar");
 const btnPayModal = document.getElementsByClassName("btn-ver"); //cambiar cuando se pase al main
+const btnSelectMethod = document.getElementsByClassName("btn-ver-pago");
 const closeModalPago = document.getElementsByClassName("close-modal")[0];
 let inputsPay = document.querySelectorAll(".form-pagar input");
 const selectTipoPay = document.querySelector('#tipo');
@@ -58,12 +59,6 @@ let validarPay = () => {
             let button = e.target;
             let cell = button.parentNode;
             let row = cell.parentNode;
-            rowFirstCellText = row.querySelector('td:nth-child(4)').innerHTML;
-
-            console.log(button);
-            console.log(cell);
-            console.log(row);
-            console.log(rowFirstCellText);
 
         }, false);
         window.open('../factura-imprimir.html', '_blank');
@@ -133,11 +128,11 @@ const escogerMetodoPago = () => {
             let btnPagarFactura = document.createElement("button");
             btnPagarFactura.innerHTML = '<i class="fa-solid fa-money-bill-wave"></i>';
             btnPagarFactura.type = "button";
-            btnPagarFactura.classList.add("btn-ver");
+            btnPagarFactura.classList.add("btn-ver-pago");
 
             tdAccionesPagar.appendChild(btnPagarFactura);
 
-            for (const check of btnPayModal) {
+            for (const check of btnSelectMethod) {
                 check.addEventListener('click', validarPay);
             }
 
