@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/headerUser.css" />
+    <link rel="stylesheet" href="css/listado-mascotas.css">
+    <link rel="stylesheet" href="css/vista-perfil-usuario.css" />
+    <link rel="stylesheet" href="css/menuUser.css" />
+    <link rel="stylesheet" href="css/nueva-mascota.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/tablas.css">
+    <link rel="stylesheet" href="css/perfilMascota.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-varela.css" />
+
+</head>
+
+<body>
+    <header class="header-container">
+        <div>
+            <a href="#" id="btn-usuario">
+                <i class="fa-solid fa-user"></i><span class="nickname"></span>
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+        </div>
+        <div class="logo-container">
+            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+        </div>
+        <div class="menu-icons">
+            <a href="dashboard-admin.html"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+        </div>
+    </header>
+    <nav class="menu-header">
+        <a href="#" class="btn-dashboard-principal" id="btn-reservaAtras">Dashboard Principal</a
+      >
+    </nav>
+    <section class="sct-perfil">
+      <div class="content">
+        <div class="img-perfil-container">
+          <img id="img-perfil"  src="" alt="Foto de perfil" />
+        </div>
+          <h1><span class="nickname-perfil"></span></h1>
+        <div class="content-info">
+          <div class="nombre-container">
+            <span><i class="fa-solid fa-user"></i>Nombre completo</span>
+            <p class="txt-nombre"></p>
+          </div>
+          <div class="email-container">
+            <span><i class="fa-solid fa-at"></i>Correo Electrónico</span>
+            <p class="txt-correo"></p>
+          </div>
+        </div>
+        <div class="content-info">
+          <div class="numero-container">
+            <span><i class="fa-solid fa-phone"></i>Número</span>
+            <p class="txt-numero"></p>
+          </div>
+          <div class="direccion-container">
+            <span><i class="fa-solid fa-map-pin"></i>Dirección</span>
+            <p class="txt-direccion"></p>
+          </div>
+        </div>
+        <div class="tbl-container">
+          <h2 class="title-tbl">Mis mascotas</h2>
+          <table id="tbl-mascota" class="tbl-general tbl-mascota">
+            <thead>
+              <tr>
+                <th colspan="4" class="filter-container"><span><i class="fa-solid fa-filter"></i> Filtrar: </span><input type="text" id="txt-filter" class="input-filter" placeholder=""></th>
+                <th><button type="button" class="btn-ver btn-agregar" id="btn-rol">Agregar</button></th>
+              </tr>
+              <tr>
+                <th class="id-mascota">ID</th>
+                <th>Mascota</th>
+                <th>Especie</th>
+                <th>Sexo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        </div>
+        <div class="modal-nueva-mascota" id="modal-register-mascota">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-username">
+                    <label>Nueva mascota</label>
+                </div>
+                <div class="modal-roles">
+                    <form class="form-mascota">
+                        <div class="container-info-mascota">
+                            <div class="img-mascota-container">
+                                <img id="imagenPrevisualizacion">
+                                <div id="div_file">
+                                    <p id="texto">Agregar foto</p>
+                                    <input type="file" id="seleccionArchivos" class="btn-seleccionar-foto" accept="image/*">
+                                </div>
+                            </div>
+                            <div class="pet-info">
+                                <div class="content-nombre-mascota display-flex">
+                                  <div>
+                                    <label for="txt-nombre-mascota" class="nombre-mascota">Nombre de la mascota</label>
+                                    <input type="text" id="txt-nombre-mascota">
+                                  </div>
+                                  <div>
+                                    <label for="txt-nombre-mascota" class="nombre-mascota">sexo</label>
+                                    <select name="sexo" id="sexo-mascota" class="sexo-mascota">
+                                      <option value="" selected>-- sexo --</option>
+                                      <option value="Macho">Macho</option>
+                                      <option value="Hembra">Hembra</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="content-nombre-mascota display-flex">
+                                    <div>
+                                      <label for="txt-especie-mascota" class="especie-mascota">Especie</label>
+                                      <input type="text" id="txt-especie">
+                                    </div>
+                                    <div>
+                                      <label for="txt-tamanno-mascota" class="tamanno-mascota">Tamaño</label>
+                                      <input type="text" id="txt-tamanno">
+                                    </div>
+                                </div>
+                                <div class="content-nombre-mascota display-flex">
+                                    <div>
+                                      <label for="txt-nombre-mascota" class="color-mascota">Color</label>
+                                      <input type="text" id="txt-color">
+                                    </div>
+                                </div>
+                                <div class="content-nombre-mascota">
+                                    <label for="txt-nombre-mascota" class="nombre-mascota">Cuidados</label>
+                                    <textarea name="cuidados" id="cuidados-pet" cols="20" rows="5" placeholder="opcional"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-save">
+                    <button type="button" id="btn-save">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+      </section>
+
+      <div class="modal-nueva-mascota" id="modal-perfil-mascota">
+        <div class="modal-content">
+            <div class="modal-username">
+                <label>Perfil</label>
+            </div>
+            <div class="modal-roles">
+                    <div class="container-info-mascota">
+                      <!--
+                        <div class="img-mascota-container">
+                            <img id="imagenPrevisualizacion-perfil" src="" alt="Foto de perfil">
+                        </div>
+                        -->
+                        <div class="pet-info">
+                            <div class="content-nombre-mascota-perfil display-flex">
+                              <div>
+                                <label for="txt-nombre-mascota" class="nombre-mascota">Nombre de la mascota</label>
+                                <p id="txt-nombre-mascota-perfil"></p>
+                              </div>
+                            </div>
+                            <div class="content-nombre-mascota-perfil display-flex">
+                              <div>
+                                <label for="txt-nombre-mascota" class="nombre-mascota">Sexo</label>
+                                <p id="sexo-mascota-perfil"></p>
+                              </div>
+                            </div>
+                            <div class="content-nombre-mascota-perfil display-flex">
+                                <div>
+                                  <label for="txt-nombre-mascota" class="nombre-mascota">Especie</label>
+                                  <p id="txt-especie-perfil"></p>
+                                </div>
+                            </div>
+                            <div class="content-nombre-mascota-perfil display-flex">
+                                <div>
+                                  <label for="txt-nombre-mascota" class="nombre-mascota">Tamaño</label>
+                                  <p id="txt-tamanno-perfil"></p>
+                                </div>
+                            </div>
+                            <div class="content-nombre-mascota-perfil display-flex">
+                                <div>
+                                  <label for="txt-nombre-mascota" class="nombre-mascota">Color</label>
+                                  <p id="txt-color-perfil"></p>
+                                </div>
+                            </div>
+                            <div class="content-nombre-mascota-perfil display-flex">
+                              <div>
+                                <label for="txt-nombre-mascota" class="nombre-mascota">Cuidados</label>
+                                <p id="txt-cuidados-pet-perfil"></p>
+                              </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+        <div class="menu-user-container ocultar-menu">
+            <div class="menu-user">
+                <div class="img-user-container">
+                  <img id="img-menu" class="img-user" src="" alt="" />
+                </div>
+                <div class="enleces">
+                    <a href="perfil-usuario.html"><i class="fa-solid fa-gear"></i>Perfil</a
+        >
+        <a href="#"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
+        <a href="#"><i class="fa-solid fa-paw"></i>Mis mascotas</a>
+        <a href="listadoMetodosPago.html"><i class="fa-solid fa-wallet"></i>Métodos de pago</a
+        >
+        <a href="#"
+          ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
+        >
+        <a href="vet-moka.html"
+          ><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a
+        >
+      </div>
+    </div>
+  </div>
+    <footer>
+    <div class="footer">
+        <div class="footer-direction">
+            <p>Curridabat, San Jose</p>
+        </div>
+        <div class="footer-email">
+            <p>mokaclinic@vetpet.com</p>
+        </div>
+        <div class="footer-redes">
+            <a href="#"><img src="imgs/icons/iconsDark/facebook-dark.png" alt="" /></a>
+        <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
+        <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
+        </div>
+        </div>
+        <div class="create-by">
+            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+        </div>
+        </footer>
+        <!-- js -->
+        <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="js/servicio-general.js"></script>
+        <script src="js/nueva-mascota.js"></script>
+        <script src="js/listado-mascotas.js"></script>
+        <script src="js/regresar-dashboard.js"></script>
+        <script src="js/navUser.js"></script>
+        <script src="js/perfil-info.js"></script>
+        <script src="js/cambiar-nickname.js"></script>
+</body>
+
+</html>

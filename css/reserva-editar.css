@@ -1,0 +1,18 @@
+.container-editar {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fieldset-reserva-editar {
+    border: 2px solid #000;
+    font-size: 25px;
+    margin-top: 15%;
+    text-align: center;
+    width: 670px;
+}
+
+#btn-editar-reserva {
+    margin-left: 550px;
+}

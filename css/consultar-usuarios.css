@@ -1,0 +1,12 @@
+H1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-usuarios {
+    margin-top: 9%;
+}
+.tbl-container{
+    overflow: scroll;
+}

@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+div.hotel-img-head {
+    background-image: url(../img/1.jpg);
+    background-size: cover;
+    height: 700px;
+    justify-content: center;
+}
+
+.sct-hotel {
+    position: relative;
+    top: 81px;
+}
+
+.img-hospedaje {
+    width: 100%;
+    height: 600px;
+}
+
+.img-hospedaje img {
+    width: 100%;
+    height: 100%;
+}
+
+.info-hotel-container {
+    font-family: "Varela Round", sans-serif;
+    position: relative;
+    top: 0px;
+    padding: 20px 0;
+}
+
+.info-hotel-container h1 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 700;
+    color: #358a35b2;
+}
+
+.info-hotel-container p {
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+    width: 450px;
+}
+
+.img-animales-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 500px;
+    height: 200px;
+    padding: 20px 0;
+}
+
+.img-perro,
+.img-gato {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+}
+
+.img-perro img,
+.img-gato img {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 150px;
+}
+
+.img-perro .txt-perros {
+    font-family: "Varela Round", sans-serif;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.img-perro .txt-gato {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.sct-perros {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.img-sct-container {
+    width: 400px;
+    height: 600px;
+}
+
+.img-sct-container img {
+    width: 100%;
+    height: 110%;
+}
+
+.img-info-container {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.img-info-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.sct-perros h2,
+.sct-gatos h2 {
+    font-family: "Varela Round", sans-serif;
+    text-align: center;
+    font-size: 35px;
+    padding: 20px 0 0 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #358a35b2;
+}
+
+.sct-perros p,
+.sct-gatos p {
+    font-family: "Varela Round", sans-serif;
+    text-align: center;
+    width: 400px;
+    font-size: 25px;
+    padding: 15px 0 0 0;
+}
+
+.sct-gatos {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+}

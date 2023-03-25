@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url(../imgs/users/background-user-dashboard.png);
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 188px);
+    margin-top: 120px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.container h1 {
+    padding: 40px;
+    text-align: center;
+}
+
+.tbl-container {
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px 0;
+    width: 90%;
+}
+
+table {
+    background-color: #fff;
+    font-size: 20px;
+    margin: 10px auto 0;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+tr th {
+    padding: 10px 0 !important;
+    width: 100px;
+}
+
+tbody tr td {
+    border-bottom: 2px solid #000;
+    padding: 10px 1px !important;
+    width: 300px;
+    color: #000;
+}
+
+thead {
+    background: #000;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background: rgb(17, 139, 88);
+    color: #fff;
+}
+
+.btn-editar {
+    background-color: #575757;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 800;
+    margin: 5px;
+    padding: 5px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    width: 55px;
+}
+
+.btn-agregar {
+    background-color: #575757;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 800;
+    margin: 5px;
+    padding: 5px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    width: auto;
+}
+
+.btn-agregar:hover {
+    background-color: #f5a31a;
+    border: 2px solid rgb(0, 0, 0);
+    color: #000;
+}
+
+.btn-editar:hover {
+    background-color: #f5a31a;
+    border: 2px solid rgb(0, 0, 0);
+    color: #000;
+}
+
+.btn-eliminar {
+    background-color: #d32626da;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 800;
+    padding: 5px;
+    transition: all 0.5s ease;
+    transition: -o-transition;
+    -webkit-transition: -o-transition;
+    -moz-transition: -o-transition;
+    -ms-transition: -o-transition;
+    -o-transition: -o-transition;
+    width: 55px;
+}
+
+.btn-eliminar:hover {
+    border: 2px solid rgb(0, 0, 0);
+    color: #000;
+}
+
+.tbl-container h1 {
+    color: #18b158;
+    font-size: 40px;
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+
+.btn-agragar {
+    background-color: #18b158;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.fa-filter-list {
+    background-color: #fff;
+    color: #fff;
+}
+
+.input-filter {
+    font-size: 20px;
+    text-align: start;
+}
+
+.txt-filtro {
+    border: 1px solid red;
+    text-align: start;
+}
+
+.filter-container {
+    text-align: start;
+    padding-left: 30px !important;
+}
+
+.tbl-mascota {
+    margin-left: -20px;
+    width: 108% !important;
+}
+
+.btn-ver-perfil,
+.btn-ver-pago {
+    background-color: #575757;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 800;
+    margin: 5px;
+    padding: 5px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    width: 85px;
+}
+
+.btn-ver-perfil:hover,
+.btn-ver-pago:hover {
+    background-color: #f5a31a;
+    border: 2px solid rgb(0, 0, 0);
+    color: #000;
+}

@@ -1,0 +1,221 @@
+div[id] {
+  scroll-margin-top: 170px;
+}
+.procedimientos-container {
+  text-align: center;
+  color: #fff;
+}
+.procedimientos-container h1 {
+  font-size: 40px;
+}
+.background-procedimientos {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/imgs/imgsindex/andrew-s-ouo1hbizWwo-unsplash.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0;
+}
+.procedimientos-container .procedimientos {
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  max-width: 885px;
+  padding: 20px 0;
+  font-size: 22px;
+}
+.procedimientos-container .procedimientos a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 25px;
+  text-align: center;
+}
+.procedimientos-container .procedimientos a i {
+  padding-right: 5px;
+  font-size: 17px;
+}
+
+.procedimientos a {
+  --s: 0.1em;
+  /*thethicknessoftheline*/
+  --c: #30da7a;
+  /*thecolor*/
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  font-family: Arial;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.procedimientos a:hover {
+  --_p: 100%;
+  color: #30da7a;
+}
+
+.services-container {
+  text-align: center;
+}
+
+.services-container a {
+  text-decoration: none;
+}
+.cards-container {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: auto;
+  padding: 20px 0;
+}
+.info-card {
+  margin: auto;
+}
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 6% 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card p {
+  padding: 0 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.img-container {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0 0;
+  -webkit-border-radius: 15px 15px 0 0;
+  -moz-border-radius: 15px 15px 0 0;
+  -ms-border-radius: 15px 15px 0 0;
+  -o-border-radius: 15px 15px 0 0;
+}
+
+.card {
+  width: 325px;
+  height: 345px;
+  background-color: #f1f1f1;
+  position: relative;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  margin-bottom: 45px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.btn-readMore {
+  transform: translate(-50%, 0%);
+  width: 30%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #007a35af;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+}
+
+/*Hover*/
+.card:hover {
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.568);
+}
+
+.card:hover .btn-readMore {
+  transform: translate(-50%, -25%);
+  opacity: 1;
+  -webkit-transform: translate(-50%, -25%);
+  -moz-transform: translate(-50%, -25%);
+  -ms-transform: translate(-50%, -25%);
+  -o-transform: translate(-50%, -25%);
+  visibility: visible;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translate(-50%, -20%);
+    -webkit-transform: translate(-50%, -20%);
+    -moz-transform: translate(-50%, -20%);
+    -ms-transform: translate(-50%, -20%);
+    -o-transform: translate(-50%, -20%);
+  }
+  40% {
+    transform: translate(-50%, -30%);
+    -webkit-transform: translate(-50%, -30%);
+    -moz-transform: translate(-50%, -30%);
+    -ms-transform: translate(-50%, -30%);
+    -o-transform: translate(-50%, -30%);
+  }
+  80% {
+    transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -40%);
+    -moz-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    -o-transform: translate(-50%, -40%);
+  }
+}
+
+.btn-readMore:hover {
+  animation: bounce 1s;
+  background-color: #009942af;
+  color: #000;
+  font-weight: bold;
+}
+
+/* images */
+.castraciones-img {
+  background-image: url(/imgs/imgsservicios/castracion.gif);
+}
+.cirugia-img {
+  background-image: url(/imgs/imgsservicios/cx.gif);
+}
+.desparacitaciones-img {
+  background-image: url(/imgs/imgsservicios/desparasitaciones.gif);
+}
+.grooming-img {
+  background-image: url(/imgs/imgsservicios/grooming.gif);
+}
+.odontologia-img {
+  background-image: url(/imgs/imgsservicios/odontovet.gif);
+}
+.rx-img {
+  background-image: url(/imgs/imgsservicios/rayosx.jpg);
+}
+.vacunacion-img {
+  background-image: url(/imgs/imgsservicios/vacuna.gif);
+}
+.emergencias-img {
+  background-image: url(/imgs/imgsservicios/er.gif);
+  background-position: -20px 10px;
+}
+
+.card-select{
+  border: 2px solid#30da7a;
+}

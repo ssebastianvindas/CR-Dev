@@ -1,0 +1,397 @@
+html {
+    font-family: "Varela Round", sans-serif;
+}
+
+
+/* beneficios */
+
+.beneficios-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.beneficios-container h2 {
+    font-size: 30px;
+    padding: 15px;
+    width: 800px;
+    margin: auto;
+    background-color: #225a3b;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.beneficios {
+    margin-top: 25px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficios p {
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.beneficios ul li {
+    list-style-type: disc;
+    width: 600px;
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.beneficios .img-beneficios-container {
+    width: 500px;
+    height: 300px;
+}
+
+.beneficios .img-beneficios-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* modificaciones */
+
+.color {
+    color: #000;
+}
+
+.container-servicios {
+    position: relative;
+    top: 80px;
+}
+
+.create-by {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: #007a35af;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 3%;
+}
+
+
+/* footer */
+
+.footer {
+    margin-top: 150px;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+    box-shadow: 0 0 5px #000;
+}
+
+.footer-direction p {
+    font-size: 18px;
+    margin: auto;
+}
+
+.footer-email {
+    margin: auto;
+    position: relative;
+    left: -25px;
+    font-size: 18px;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-redes a img {
+    width: 30px;
+}
+
+.hola {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0px 3%;
+    margin-top: -150px;
+}
+
+.hola2 {
+    margin: 80px auto;
+}
+
+.hola .info-container-servicio .info ul li {
+    list-style-type: disc;
+    width: 600px;
+    font-size: 20px;
+    margin-left: 15%;
+    padding-left: 5%;
+    text-align: left;
+}
+
+.hola .info-container-servicio .info .img-info-container {
+    max-width: 100%;
+    height: 450px;
+    margin-top: 250px;
+    box-shadow: 1px 1px 10px #000;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+html::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+html::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+html::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #196b3c;
+    border-radius: 3px;
+    border: 2px solid #00000077;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+html::-webkit-scrollbar-track {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.img-info-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.img-servicio-container {
+    max-width: 600px;
+    height: 400px;
+}
+
+.img-servicio-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.info ol li {
+    padding-left: 10%;
+}
+
+.hola .info-container-servicio .info p {
+    text-align: left;
+    padding-bottom: 2%;
+}
+
+.info-header-servicio {
+    width: 545px;
+    text-align: center;
+}
+
+.info-header-servicio h1 {
+    font-size: 60px;
+    color: #7ed957;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+.info-header-servicio p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
+/* parte de info general  */
+
+.info-container-servicio {
+    background: transparent;
+    max-width: 800px;
+}
+
+.info-container-servicio .info h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    color: #ffffff;
+    width: 800px;
+    margin: 40px auto;
+    background-color: #225a3b;
+}
+
+.info-container-servicio .info p {
+    padding: 0 30px;
+    text-align: left;
+    font-size: 20px;
+    max-width: 850px;
+    line-height: 30px;
+}
+
+.info-container-servicio .info .incluyente-cirugias p {
+    text-align: left;
+    list-style-type: lower-latin;
+}
+
+.info-container-servicio .info {
+    padding: 0 30px;
+    text-align: center;
+    font-size: 20px;
+    max-width: 850px;
+    line-height: 30px;
+}
+
+.info-container-servicio .info .division-bar {
+    color: #7ed957;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+.mas-servicios-container {
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.mas-servicios-container h2 {
+    position: relative;
+    top: -50px;
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+    color: #7ed957;
+}
+
+.menu-servicios {
+    padding: 20px 20px;
+    position: relative;
+    top: -20px;
+    align-self: flex-start;
+    justify-self: start;
+}
+
+.menu-servicios a {
+    display: block;
+    text-decoration: none;
+    text-align: start;
+    width: 250px;
+    padding: 10px 5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    margin: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.menu-servicios .fa-bone {
+    font-size: 22px;
+    padding-left: 15px;
+    padding-right: 5px;
+    color: #000000;
+}
+
+.menu-servicios .top {
+    position: relative;
+    top: 15px;
+}
+
+.menu-servicios .space {
+    padding-left: 45px;
+}
+
+.menu-servicios a::before,
+.menu-servicios a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.menu-servicios a::before {
+    left: -15px;
+    background: #606d67;
+}
+
+.menu-servicios a::after {
+    right: -15px;
+    background: #006636;
+}
+
+.menu-servicios a:hover::before,
+.menu-servicios a:hover::after {
+    width: 59%;
+}
+
+.menu-servicios a:hover .fa-bone {
+    color: #ffffff;
+    transition: 0.3s;
+    font-size: 22px;
+    text-align: center;
+}
+
+.menu-servicios a:hover .txt {
+    color: #ffffff;
+    transition: 0.3s;
+    font-size: 22px;
+    text-align: center;
+}
+
+.menu-servicios .txt {
+    color: #28794c;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+}
+
+.service-header {
+    background-image: url(/imgs/imgsservicios/pet_care_2.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    height: 515px;
+    padding: 50px 3%;
+}

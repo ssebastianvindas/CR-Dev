@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservaciones</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/menuUser.css" />
+    <link rel="stylesheet" href="css/headerUser.css" />
+    <link rel="stylesheet" href="css/dashboardUsuario.css" />
+    <link rel="stylesheet" href="css/tablas.css" />
+    <link rel="stylesheet" href="css/list-expediente.css" />
+    <link rel="stylesheet" href="css/list-citas.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/font-varela.css" />
+  </head>
+
+  <body>
+    <header class="header-container">
+      <div>
+        <a href="#" id="btn-usuario">
+          <i class="fa-solid fa-user"></i><span class="nickname"></span>
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+      </div>
+      <div class="logo-container">
+        <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+      </div>
+      <div class="menu-icons">
+        <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+      </div>
+    </header>
+
+    <nav class="menu-header">
+      <a href="#" class="btn-dashboard-principal" id="btn-reservaAtras"
+        >Dashboard Principal</a
+      >
+    </nav>
+
+    <div class="menu-user-container ocultar-menu">
+      <div class="menu-user">
+        <div class="img-user-container">
+          <img id="img-menu" src="" alt="" />
+        </div>
+        <div class="enleces">
+          <a href="perfil-usuario.html"
+            ><i class="fa-solid fa-gear"></i>Perfil</a
+          >
+          <a href="list-citas.html"
+            ><i class="fa-solid fa-calendar-days"></i>Mis citas</a
+          >
+          <a href="perfil-usuario.html"
+            ><i class="fa-solid fa-paw"></i>Mis mascotas</a
+          >
+          <a href="listadoMetodosPago.html"
+            ><i class="fa-solid fa-wallet"></i>Métodos de pago</a
+          >
+          <a href="#"
+            ><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a
+          >
+          <a href="vet-moka.html"
+            ><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="container">
+      <div class="tbl-container">
+        <h1>Listado de reservaciones</h1>
+        <table id="tbl-users" class="tbl-general">
+          <thead>
+            <tr>
+              <th colspan="2" class="filter-container">
+                <span><i class="fa-solid fa-filter"></i> Filtrar: </span
+                ><input
+                  type="text"
+                  id="txt-filter"
+                  class="input-filter"
+                  placeholder=""
+                />
+              </th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <th>Mascota</th>
+              <th>Check in</th>
+              <th>Check out</th>
+              <th>Numero de cuartos</th>
+              <th>Monto</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Coquito</td>
+              <td>20/07/22</td>
+              <td>25/07/22</td>
+              <td>1</td>
+              <td>
+                <button class="btn-ver" id="btn-expediente">
+                  Ver reservación
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Juls</td>
+              <td>23/07/22</td>
+              <td>27/07/22</td>
+              <td>1</td>
+              <td>
+                <button class="btn-ver" id="btn-expediente">
+                  Ver reservación
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="footer-direction">
+          <p>Curridabat, San Jose</p>
+        </div>
+        <div class="footer-email">
+          <p>mokaclinic@vetpet.com</p>
+        </div>
+        <div class="footer-redes">
+          <a href="#"
+            ><img src="imgs/icons/iconsDark/facebook-dark.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="imgs/icons/iconsDark/instagram-dark.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="/imgs/icons/iconsDark/twitter-dark.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="create-by">
+        <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="js/servicio-general.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c02f88807d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/navUser.js"></script>
+    <script src="js/reserva-listar-user.js"></script>
+    <!-- <script src="js/list-expediente.js"></script> -->
+    <script src="js/regresar-dashboard.js"></script>
+    <script src="js/cambiar-nickname.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+form p {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+form label {
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    color: grey;
+}
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: center;
+}
+
+label:hover,
+label:hover~label {
+    color: orange;
+}
+
+input[type="radio"]:checked~label {
+    color: orange;
+}
+
+.form-ranking h2 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    color: #18b158;
+}
+
+.form-ranking p {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.modal-citas {
+    height: 500px;
+}
+
+.modal-ranking {
+    width: 100%;
+    height: 80%;
+}
+
+.modal-content {
+    padding: 15px;
+    width: 500px;
+    height: 300px;
+}
+
+.modal-save {
+    width: 82px;
+    margin: auto;
+}
+
+#btn-save {
+    font-size: 18px;
+}
+
+.estrellas {
+    font-size: 35px;
+}
+
+.close:hover {
+    color: red;
+}

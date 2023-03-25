@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+}
+
+#container-lab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+
+#dv-labFecha {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.dv-signos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 200px;
+    padding-top: 4%;
+    width: 400px;
+}
+
+#dv-signosMain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dv-tableLab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    width: 1000px;
+}
+
+#dv-tx {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+
+#dv-vacuna {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+.exp-examen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#exp-examen-doctores {
+    margin-left: 582px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* examenes lab tab */
+
+#exp-lab {
+    background-color: darkslategrey;
+    font-size: 18px;
+    text-align: center;
+}
+
+#exp-lab #frm-lab {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 700px;
+}
+
+#exp-principal {
+    color: black;
+    background-color: #66CDAA;
+    height: calc(100vh - 188px);
+}
+
+#exp-medicamentos {
+    color: #000;
+    background-color: #8fbc8f;
+    height: calc(100vh - 188px);
+}
+
+fieldset {
+    text-align: center;
+    border: 1px solid #000;
+}
+
+#exp-rx {
+    background-color: black;
+    height: calc(100vh - 188px);
+}
+
+.exp-save {
+    margin-right: 3%;
+}
+
+#fecha-tx {
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+}
+
+#fecha-vacuna {
+    display: flex;
+    justify-content: space-between;
+    width: 325px;
+}
+
+#frameprincipal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.frm-datos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-grow: column;
+    flex-wrap: wrap;
+    height: 200px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.frm-datos div {
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 13%;
+}
+
+.frm-dNombreMasc {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#frm-dNombreMedico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 9.8%;
+    width: 900px;
+}
+
+#frm-dNombreMedico input {
+    width: 330px;
+    padding-left: 2%;
+}
+
+.frm-evolucion {
+    padding-bottom: 1%;
+    height: 450px;
+}
+
+#frm-lab-exp {
+    margin: 20px;
+    padding: 10px;
+}
+
+.txt-lab {
+    margin: 10px 0;
+    text-align: start;
+    padding: 0 10%;
+}
+
+.frm-medicamentosTable {
+    height: 300px;
+}
+
+.frm-padecimientos {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+    margin-top: 3%;
+    width: 1475px;
+}
+
+.frm-qp {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.frm-qp input {
+    font-size: 20px;
+    height: 40px;
+    width: 1200px;
+    margin: auto;
+}
+
+.frm-medicamentosData {
+    width: 700px;
+}
+
+#form-receta-fecha {
+    margin-left: 500px;
+}
+
+.frm-signos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    width: 450px;
+}
+
+.frm-vacunas {
+    margin-top: 2%;
+    width: 950px;
+    height: 460px;
+    margin-bottom: 2%;
+}
+
+.input-invalid {
+    border: 4px solid red;
+}
+
+.input-valid {
+    border: transparent;
+}
+
+#lab-doctores {
+    margin-left: 285px;
+}
+
+#labo-doctores {
+    margin-left: 285px;
+}
+
+#med-doctores {
+    margin-left: 520px;
+}
+
+#med-med {
+    width: 492px;
+}
+
+#med-pet {
+    width: 532px;
+}
+
+#name-owner {
+    width: 551px;
+}
+
+#name-pet {
+    width: 530px;
+}
+
+#nombre-vacuna input {
+    width: 400px;
+}
+
+.pd-chk {
+    width: 280px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.pd-chkbox {
+    border: transparent;
+}
+
+.rx {
+    width: 300px;
+    height: 400px;
+}
+
+.rxframe {
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 400px;
+    margin-top: 5%;
+}
+
+.sct-tabs {
+    padding-top: 0%;
+    margin-top: 120px;
+    overflow: hidden;
+    height: calc(100vh - 188px);
+}
+
+.signos {
+    display: flex;
+    flex-direction: column;
+    margin: -100px auto;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px 20px;
+    height: 81vh;
+    overflow: auto;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+#tx-evolucionado #input-txEvol {
+    width: 1050px;
+}
+
+#txt-examen input {
+    width: 549px;
+}
+
+#txt-fecha {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.5%;
+}
+
+#txt-pet input {
+    width: 549px;
+}
+
+#txt-mascota input {
+    width: 549px;
+}
+
+#txt-owner input {
+    width: 549px;
+}
+
+#txt-propietario input {
+    width: 549px;
+}
+
+#txt-resultados input {
+    width: 549px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+legend {
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+input {
+    font-size: 20px;
+}

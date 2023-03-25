@@ -1,0 +1,12 @@
+
+.container-editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.container-editar legend {
+    font-size: 25px;
+    text-align: center;
+}

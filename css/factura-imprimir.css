@@ -1,0 +1,47 @@
+.btn-factura-imprimir {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#btn-factura-imprimir {
+    margin-right: 100px;
+}
+
+.frm-fieldset-factura-imprimir .factura-imprimir-total {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.frm-fieldset-factura-imprimir .frm-fieldset-factura-imprimir-line1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.frm-fieldset-factura-imprimir {
+    border: 4px solid #000;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.sct-factura-imprimir {
+    margin-top: 10%;
+    margin-left: 0%;
+}
+
+#tbl-factura-pagar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

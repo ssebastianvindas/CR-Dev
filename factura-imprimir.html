@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imprimir Factura</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/menuUser.css" />
+    <link rel="stylesheet" href="css/headerUser.css" />
+    <link rel="stylesheet" href="css/tablas.css" />
+    <link rel="stylesheet" href="css/factura-imprimir.css" />
+
+
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-varela.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <div>
+            <a href="#" id="btn-usuario">
+                <i class="fa-solid fa-user"></i><span class="nickname"></span>
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+        </div>
+        <div class="logo-container">
+            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+        </div>
+        <div class="menu-icons">
+            <a href="login.html"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+        </div>
+    </header>
+
+    <nav class="menu-header">
+        <a href="#" class="btn-dashboard-principal" id="btn-reservaAtras">Dashboard Principal</a>
+    </nav>
+
+    <div class="menu-user-container ocultar-menu">
+        <div class="menu-user">
+            <div class="img-user-container">
+                <img id="img-menu" src="" alt="" />
+            </div>
+            <div class="enleces">
+                <a href="perfil-usuario.html"><i class="fa-solid fa-gear"></i>Perfil</a>
+                <a href="list-citas.html"><i class="fa-solid fa-calendar-days"></i>Mis citas</a>
+                <a href="perfil-usuario.html"><i class="fa-solid fa-paw"></i>Mis mascotas</a>
+                <a href="listadoMetodosPago.html"><i class="fa-solid fa-wallet"></i>Métodos de pago</a>
+                <a href="list-pagos.html"><i class="fa-solid fa-file-invoice-dollar"></i>Facturas</a>
+                <a href="vet-moka.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Cerrar sesión</a>
+            </div>
+        </div>
+    </div>
+    <section class="sct-factura-imprimir">
+        <div id="imp1">
+            <form class="frm-factura-imprimir">
+                <fieldset class="frm-fieldset-factura-imprimir">
+                    <legend>Factura Emitida</legend>
+                    <div class="factura-imprimir-logo">
+                        <img src="imgs/logo/logo-moka.png" alt="logo Veterinaria Moka">
+                    </div>
+                    <div class="frm-fieldset-factura-imprimir-line1">
+                        <div>
+                            <label>Nombre del Cliente:</label>
+                            <label id="factura-pagar-cliente">Monica Carvajal Perez</label>
+                        </div>
+                        <div class="dv-factura-fecha">
+                            <label>Fecha:</label>
+                            <label id="factura-pagar-fecha">17/05/2022</label>
+                        </div>
+                    </div>
+                    <div class="frm-fieldset-factura-imprimir-line1">
+
+                        <div>
+                            <label>Nombre de la mascota:</label>
+                            <label id="factura-pagar-mascota">Olivia</label>
+                        </div>
+                        <div>
+                            <label>Factura #:</label>
+                            <label id="factura-pagar-numero">10001001001001</label>
+                        </div>
+                    </div>
+                    <table id="tbl-factura-pagar" class="tbl-general">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Cantidad
+                                </th>
+                                <th>
+                                    Procedimiento
+                                </th>
+                                <th>
+                                    Precio Unitario
+                                </th>
+                                <th>
+                                    Precio Total
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                    <div class="factura-imprimir-total">
+                        <div>
+                            <label>Subtotal:</label>
+                            <label id="subtotal">100,000 colones</label>
+                        </div>
+                        <div>
+                            <label>Impuesto:</label>
+                            <label id="impuesto">13,000 colones</label>
+                        </div>
+                        <div>
+                            <label>Total:</label>
+                            <label id="total">113,000 colones</label>
+                        </div>
+
+                    </div>
+                </fieldset>
+        </div>
+        <div class="btn-factura-imprimir">
+            <button type="button" id="btn-factura-imprimir">Imprimir</button>
+            <button type="button" id="btn-factura-enviar">Enviar</button>
+        </div>
+        </form>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-direction">
+                <p>Curridabat, San Jose</p>
+            </div>
+            <div class="footer-email">
+                <p>mokaclinic@vetpet.com</p>
+            </div>
+            <div class="footer-redes">
+                <a href="#"><img src="imgs/icons/iconsDark/facebook-dark.png" alt="" /></a>
+                <a href="#"><img src="imgs/icons/iconsDark/instagram-dark.png" alt="" /></a>
+                <a href="#"><img src="/imgs/icons/iconsDark/twitter-dark.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="create-by">
+            <p>Pagina creada por <a href="" class="cr-dev">CR-Dev</a></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="js/servicio-general.js"></script>
+    <script src="js/factura-imprimir.js"></script>
+    <script src="js/navUser.js"></script>
+    <script src="js/regresar-dashboard.js"></script>
+    <script src="js/cambiar-nickname.js"></script>
+    <script src="js/factura-enviar.js"></script>
+</body>
+
+</html>

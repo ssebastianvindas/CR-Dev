@@ -1,24 +1,24 @@
 .banner-contrato {
-    background-image: url('../images/contrato.jpg');
-    background-size: cover;
+    align-items: center;
+    background-image: url('../imgs/contrato.jpg');
     background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 100vh;
-    width: 100%;
     justify-content: center;
+    width: 100%;
 }
 
 .footer {
     align-items: center;
+    align-items: center;
     background-image: linear-gradient(to right, #1d1c21, #2196F3);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 3%;
-    padding-left: 3%;
     height: 80px;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
     text-decoration: none;
 }
 
@@ -28,13 +28,13 @@
 }
 
 .footer .btn-celeste {
+    align-items: center;
     background-color: #07528b;
     border-radius: 5px;
     display: flex;
     height: 40px;
-    width: 140px;
     justify-content: center;
-    align-items: center;
+    width: 140px;
 }
 
 .footer .btn-celeste {
@@ -49,19 +49,19 @@
 /* Configuracion del formulario */
 
 .box {
-    display: flex;
     background-color: rgba(8, 83, 140, 0.4);
-    width: 500px;
+    border-radius: 10px;
+    display: flex;
     justify-content: center;
     padding: 30px;
-    border-radius: 10px;
+    width: 500px;
 }
 
 #sct-contact {
     display: flex;
-    width: 100%;
     height: 100vh;
     justify-content: center;
+    width: 100%;
 }
 
 #sct-contact #name:hover,
@@ -69,8 +69,8 @@
 #sct-contact #service:hover,
 #sct-contact #email:hover,
 #sct-contact #phone:hover {
-    transition: 0.4s;
     color: #000;
+    transition: 0.4s;
 }
 
 #sct-contact #name,
@@ -78,14 +78,14 @@
 #sct-contact #service,
 #sct-contact #email,
 #sct-contact #phone {
-    position: relative;
     outline-color: #07528b;
+    position: relative;
 }
 
 #sct-contact .input {
-    padding: 10px;
     border-radius: 5px;
     outline-color: #07528b;
+    padding: 10px;
 }
 
 #sct-contact #name,
@@ -104,8 +104,8 @@
 
 #sct-contact #phone {
     left: 240px;
-    width: 150px;
     top: -09px;
+    width: 150px;
 }
 
 #sct-contact #email {
@@ -114,17 +114,17 @@
 }
 
 #sct-contact .submit-button {
-    position: relative;
-    width: 90px;
-    height: 40px;
-    font-size: 15px;
     background-color: yellowgreen;
-    color: #000;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: width .5s;
     border-radius: .5s;
+    color: #000;
+    cursor: pointer;
+    font-size: 15px;
+    height: 40px;
+    position: relative;
+    transition: width .5s;
+    width: 90px;
 }
 
 #sct-contact .submit-button * {
@@ -138,12 +138,12 @@
 }
 
 #sct-contact .submit-button:focus {
-    width: 50px;
     background-color: yellowgreen;
-    border-radius: 50%;
-    background-image: url("../images/check-fill.png");
-    background-repeat: no-repeat;
+    background-image: url("../imgs/check-fill.png");
     background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 50px;
 }
 
 #sct-contact .submit-button:focus .text {
@@ -156,13 +156,21 @@
 }
 
 #sct-contact .info {
-    position: relative;
-    width: 400px;
-    padding: 20px;
-    display: flex;
     align-items: center;
     background-color: rgba(8, 83, 140, 0.4);
     border-radius: 5px;
     color: #fff;
+    display: flex;
+    padding: 20px;
+    position: relative;
     top: -20px;
+    width: 400px;
+}
+
+.input-invalid {
+    border: 1px solid red;
+}
+
+.input-valid {
+    border: 1px solid green;
 }

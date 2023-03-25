@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veterinaria Moka</title>
+    <link rel="shortcut icon" href="imgs/logo/favicon-32x32.png" type="image/x-icon" />
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/c02f88807d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-varela.css" />
+    <!-- css reset-->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/index-moka.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/procedimientos.css" />
+    <link rel="stylesheet" href="css/carrousel.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/formularioContacto.css" />
+    <!-- mapbox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- header - nav -->
+    <header class="header-container">
+        <div class="logo-container">
+            <img src="imgs/logo/logo-moka.png" alt="logo moka" />
+        </div>
+        <div class="home"><a href="vet-moka.html">Inicio</a></div>
+        <nav class="menu-icons">
+            <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+            <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>Login</a
+        >
+      </nav>
+    </header>
+    <!-- nuestros servicios creado por alberto -->
+    <section class="procedimientos-container">
+      <div class="background-procedimientos">
+        <h1>Nuestros servicios</h1>
+        <div class="procedimientos">
+          <a href="#sct-castraciones" id="castraciones"
+            ><i class="fa-solid fa-syringe"></i> Castraciones</a
+          >
+          <a href="#sct-cirugias" id="cirugias"
+            ><i class="fa-solid fa-syringe"></i>Cirugías</a
+          >
+          <a href="#sct-desparasitaciones" id="desparacitaciones"
+            ><i class="fa-solid fa-syringe"></i>Desparasitaciones</a
+          >
+          <a href="#sct-grooming" id="grooming">
+            <i class="fa-solid fa-syringe"></i>Grooming</a
+          >
+          <a href="#sct-odontovet" id="odontovet">
+            <i class="fa-solid fa-syringe"></i>Odontología veterinaria</a
+          >
+          <a href="#sct-radio" id="radio">
+            <i class="fa-solid fa-syringe"></i>Radiografías</a
+          >
+          <a href="#sct-vacuna" id="vacunacion">
+            <i class="fa-solid fa-syringe"></i>Vacunación</a
+          >
+          <a href="#sct-emergencias" id="emergencias">
+            <i class="fa-solid fa-syringe"></i>Emergencias</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- sobre nosotros -->
+    <section class="sct-nosotros">
+      <div class="nosotros-container">
+        <div class="img-nosotros-container">
+          <img
+            src="imgs/imgsindex/autri-taheri-l0Gq4BmboYY-unsplash.jpg"
+            alt="imagen sobre moka"
+          />
+        </div>
+        <div class="info-nosotros-container">
+          <h3>Sobre <span>Moka</span></h3>
+          <p class="txt-container">
+            En Moka clínica veterinaria, situados en Curridabat. Así, con
+            nuestra dedicación y compromiso ofrecemos los mejores servicios
+            disponibles para su mascota. Lo más importante es la satisfacción de
+            nuestros clientes y, sobre todo, el bienestar de sus mascotas.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- profesionoles creado por javier -->
+    <section class="sct-profesionales">
+      <h2>Nuestros profesionales</h2>
+      <div class="container">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="imgs/carrusel/img1.jpg" alt="" />
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Dr.Amir Gupta</h4>
+                </div>
+                <div class="card-text">
+                  <p>Licenciado en Veterinaria por la Universidad CEU.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/carrusel/img4.jpg" alt="" />
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Dra.Rosa Sánchez</h4>
+                </div>
+                <div class="card-text">
+                  <p>Licenciada en Veterinaria por la Universidad UAB.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/carrusel/3.jpg" alt="" />
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Dr.Oriol Puig</h4>
+                </div>
+                <div class="card-text">
+                  <p>Licenciado en Veterinaria por la Universidad UNA.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/carrusel/4.jpg" alt="" />
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Dr.Pedro Sanchez</h4>
+                </div>
+                <div class="card-text">
+                  <p>Licenciado en Veterinaria por la Universidad UNA.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/carrusel/img3.jpg" alt="" />
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Dra.Elizabeth Olsen</h4>
+                </div>
+                <div class="card-text">
+                  <p>Licenciada en Veterinaria por la Universidad UNA.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/carrusel/img2.jpg" alt="" />
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Dr.Manuel Rodríguez</h4>
+                </div>
+                <div class="card-text">
+                  <p>Licenciado en Veterinaria por la Universidad UCR.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hotel creado por guillermo -->
+    <section class="sct-hotel">
+      <h2>Hotel Canino y Felino</h2>
+      <div class="info-hotel">
+        <div class="card-photo-cat">
+          <div class="glass">
+            <img
+              src="imgs/imgsindex/kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="card-wrapped">
+          <div class="text-glass">
+            <div class="text">
+              <p>
+                Si quiere disfrutar de unas vacaciones, podrá dejar a través de
+                nuestro hotel veterinario 5 estrellas, a su mascota con todas
+                las comodidades y cuidados necesarios.
+              </p>
+              <p>El mejor hotel para mascotas de Centroamérica</p>
+              <p>
+                Contamos con 3 diferentes tipos de habitaciones para el confort
+                de su mascota
+              </p>
+            </div>
+          </div>
+          <div class="title">
+            <h3>Hotel Moka</h3>
+          </div>
+          <a href="hotel.html" class="cta">
+            <span class="hover-underline-animation"
+              >Más sobre el hotel <i class="fa-solid fa-arrow-right-long"></i
+            ></span>
+          </a>
+            </div>
+            </div>
+            </section>
+            <!-- seccion de todos los servicios -->
+            <section class="services-container">
+                <h2>Servicios</h2>
+                <div class="cards-container">
+                    <!-- card castraciones -->
+                    <div class="card" id="sct-castraciones">
+                        <div class="img-container castraciones-img"></div>
+                        <div class="info-card">
+                            <h3>Castración</h3>
+                            <p>
+                                Hoy en día se ha vuelto de vital importancia el control de la natalidad animal.
+                            </p>
+                            <p>Además, ayuda a mejorar el temperamento de su mascota.</p>
+                        </div>
+                        <a href="servicios/castraciones.html" class="btn-readMore">Leer más</a
+          >
+        </div>
+        <!-- card cirugias -->
+        <div class="card" id="sct-cirugias">
+          <div class="img-container cirugia-img"></div>
+          <div class="info-card">
+            <h3>Cirugías para mascotas</h3>
+            <p>Ofrecemos cirugías de rutina, cirugías ortopédicas.</p>
+            <p>Además de todo tipo de procedimientos quirúrgicos.</p>
+          </div>
+          <a href="servicios/cirugias.html" class="btn-readMore">Leer más</a>
+                    </div>
+                    <!-- card desparacitaciones -->
+                    <div class="card" id="sct-desparasitaciones">
+                        <div class="img-container desparacitaciones-img"></div>
+                        <div class="info-card">
+                            <h3>Desparasitaciones</h3>
+                            <p>Nuestros amigos peludos merecen salud y confort.</p>
+                            <p>Por esta razón realiza las desparasitaciones cada 3 meses.</p>
+                        </div>
+                        <a href="servicios/desparasitaciones.html" class="btn-readMore">Leer más</a
+          >
+        </div>
+        <!-- card grooming -->
+        <div class="card" id="sct-grooming">
+          <div class="img-container grooming-img"></div>
+          <div class="info-card">
+            <h3>Grooming</h3>
+            <p>
+              Hoy en día es uno de los servicios más apetecidos por nuestros
+              clientes.
+            </p>
+            <p>
+              Nada mejor que consentir a nuestros peludos con el servicio de
+              peluquería.
+            </p>
+          </div>
+          <a href="servicios/grooming.html" class="btn-readMore">Leer más</a>
+                    </div>
+                    <!-- card odontologia -->
+                    <div class="card" id="sct-odontovet">
+                        <div class="img-container odontologia-img"></div>
+                        <div class="info-card">
+                            <h3>Odontología</h3>
+                            <p>
+                                Usualmente no pensamos en esta parte pero es de gran importancia para la salud.
+                            </p>
+                            <p>
+                                A nadie le gusta el dolor o mal aliento, por eso visitanos cada 6 meses.
+                            </p>
+                        </div>
+                        <a href="servicios/odontologia.html" class="btn-readMore">Leer más</a>
+                    </div>
+                    <!-- card rayos x -->
+                    <div class="card" id="sct-radio">
+                        <div class="img-container rx-img"></div>
+                        <div class="info-card">
+                            <h3>Radiografías y Ultrasonidos</h3>
+                            <p>
+                                Ofrecemos todo en radiografías animales. Tórax, cabeza y cuello, entre otras.
+                            </p>
+                            <p>
+                                Contamos con los mejores equipos fijos y móviles de ultrasonido veterinarios.
+                            </p>
+                        </div>
+                        <a href="servicios/radiografias.html" class="btn-readMore">Leer más</a
+          >
+        </div>
+        <!-- card vacunacion -->
+        <div class="card" id="sct-vacuna">
+          <div class="img-container vacunacion-img"></div>
+          <div class="info-card">
+            <h3>Vacunación</h3>
+            <p>
+              Un procedimiento simple que puede salvar la vida de tu amigo
+              peludo.
+            </p>
+            <p>Ven e inscribe a tu mascota en nuestro sistema de vacunación.</p>
+          </div>
+          <a href="servicios/vacunacion.html" class="btn-readMore">Leer más</a>
+                    </div>
+                    <!-- card emergencias -->
+                    <div class="card" id="sct-emergencias">
+                        <div class="img-container emergencias-img"></div>
+                        <div class="info-card">
+                            <h3>Emergencias</h3>
+                            <p>
+                                Porque nunca se sabe cuando un segundo puede hacer la diferencia.
+                            </p>
+                            <p>
+                                Contamos con emergencias 24/7. Nuestros especialistas están a la espera siempre.
+                            </p>
+                        </div>
+                        <a href="servicios/emergencias.html" class="btn-readMore">Leer más</a>
+                    </div>
+                </div>
+            </section>
+            <!-- nav y contacto creado por jim -->
+            <section class="contact-container">
+                <div class="glass">
+                    <div class="map-container">
+                        <h3>Dirección</h3>
+                        <div class="map">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                    <div class="more-info"><a href="">Más Información</a></div>
+                    <div class="info-contact-container">
+                        <h3>Contacto</h3>
+                        <div class="info-contact">
+                            <div class="info-container">
+                                <div class="icon">
+                                    <a href="https://github.com/drcoto/Veterinaria-Moka" target="_blank"><img src="imgs/icons/iconsWhite/phone.png" alt="" /></a>
+                                </div>
+                                <span>Llámenos</span>
+                                <span>2254-6737</span>
+                            </div>
+                            <div class="info-container">
+                                <div class="icon">
+                                    <a href="https://github.com/drcoto/Veterinaria-Moka" target="_blank"><img src="imgs/icons/iconsWhite/whatsApp.png" alt="" /></a>
+                                </div>
+                                <span>WhatsApp</span>
+                                <span>(+506)6040-2233</span>
+                            </div>
+                            <div class="info-container">
+                                <div class="icon">
+                                    <a href="https://github.com/drcoto/Veterinaria-Moka" target="_blank"><img src="imgs/icons/iconsWhite/email.png" alt="" /></a>
+                                </div>
+                                <span>Escribanos</span>
+                                <span>mokaclinic@vetpet.com</span>
+                            </div>
+                            <div class="info-container horarios">
+                                <div class="icon">
+                                    <a href="https://github.com/drcoto/Veterinaria-Moka" target="_blank"><img src="imgs/icons/iconsWhite/clock.png" alt="" /></a>
+                                </div>
+                                <span>Horarios</span>
+                                <span>Lunes a Domingo 24 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <div class="blur-container">
+                    <div class="form-container">
+                        <div class="formTitle">
+                            <h2>Contáctenos</h2>
+                        </div>
+                        <form>
+                            <div>
+                                <div class="division">
+                                    <div class="box-nameArea">
+                                        <input type="text" id="name" required />
+                                        <label for="name"><i class="fa-solid fa-user"></i> Nombre</label
+                  >
+                </div>
+                <div class="box-petNameArea">
+                  <input type="text" id="petName" required />
+                  <label for="petName"
+                    ><i class="fa-solid fa-paw"></i> Tipo de animal</label
+                  >
+                </div>
+              </div>
+              <div class="division">
+                <div class="box-phone">
+                  <input type="number" id="phone" required />
+                  <label for="phone"
+                    ><i class="fa-solid fa-phone"></i> Número de teléfono</label
+                  >
+                </div>
+                <div class="box-email">
+                  <input type="email" id="email" required />
+                  <label for="email"
+                    ><i class="fa-solid fa-envelope"></i> Correo
+                    electrónico</label
+                  >
+                </div>
+              </div>
+              <div class="infoBox">
+                <textarea id="message" rows="3" required></textarea>
+                <label for="message"
+                  ><i class="fa-solid fa-info"></i> Información</label
+                >
+              </div>
+              <div class="checksBoxes">
+                <div class="checkCall">
+                  <input type="checkbox" id="call" /> Recibir llamada
+                </div>
+                <div class="checkMail">
+                  <input type="checkbox" id="mail" /> Recibir correo
+                </div>
+                <div class="checkWhats">
+                  <input type="checkbox" id="whats" /> Recibir mensaje
+                </div>
+              </div>
+              <button type="button" id="btn-send">
+                Enviar <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+            <div>
+              <div id="form-map"></div>
+              <div class="box-direction">
+                <input
+                  type="text"
+                  id="textDirection"
+                  placeholder="Danos una referencia para mayor exactitud"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer-direction">
+          <p>Curridabat, San José</p>
+        </div>
+        <div class="footer-email">
+          <p>mokaclinic@vetpet.com</p>
+        </div>
+        <div class="footer-redes">
+          <a href="#"
+            ><img src="imgs/icons/iconsDark/facebook-dark.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="imgs/icons/iconsDark/instagram-dark.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="/imgs/icons/iconsDark/twitter-dark.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="create-by">
+        <p>Página creada por <a href="" class="cr-dev">CR-Dev</a></p>
+      </div>
+    </footer>
+    <!-- scripst -->
+    <script src="js/mapForm.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbe_yIKBbi4YG3-tlEvw9Qb_UbM1Or74k&callback=initMap"></script>
+    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/carrousel.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>
